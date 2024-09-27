@@ -2,9 +2,13 @@ package parse
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
+
+	"github.com/sirupsen/logrus"
 )
 
 type CidrResponse struct {
@@ -32,18 +36,25 @@ func capitalizeFirstLetterLowerRest(s string) string {
 	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
 }
 
+func toCamelCase(str string) string {
+	// Replace all - and . with spaces
+	str = strings.ReplaceAll(str, "-", " ")
+	str = strings.ReplaceAll(str, ".", " ")
+	str = strings.ReplaceAll(str, "_", " ")
+
+	// Split the string by spaces
+	parts := strings.Fields(str)
+
+	// Convert each part to TitleCase (CamelCase)
+	for i, part := range parts {
+		parts[i] = strings.Title(part)
+	}
+
+	// Join them back together to form CamelCase
+	return strings.Join(parts, "")
+}
+
 func ParseFSM(name string, template string) {
-	// scanner := bufio.NewScanner(strings.NewReader(template))
-	// for scanner.Scan() {
-	// 	if strings.HasPrefix(scanner.Text(), "Value") {
-
-	// 		match, _ := regexp.MatchString("^Value\\s", scanner.Text())
-	// 		fmt.Println(match.)
-	// 	}
-	// }
-
-	name = strings.ReplaceAll(name, "-", "_")
-	name = strings.ReplaceAll(name, ".", "_")
 
 	r, _ := regexp.Compile(`(?m)^\s*Value\s+((List,?|Required,?|Fillup,?|Filldown,?|Key,?)+)?\s?(\w+)`)
 	entries := r.FindAllStringSubmatch(template, -1)
@@ -53,6 +64,8 @@ func ParseFSM(name string, template string) {
 
 	check(err)
 	defer f.Close()
+
+	name = toCamelCase(name)
 
 	f.WriteString("package models\n\n")
 	f.WriteString(fmt.Sprintf("type %v struct {\n", capitalizeFirstLetter(name)))
@@ -65,4 +78,20 @@ func ParseFSM(name string, template string) {
 	}
 	f.WriteString("}")
 
+}
+
+func GenerateFSMStructs() {
+	items, _ := ioutil.ReadDir("./templates")
+
+	for _, item := range items {
+		template, err := os.ReadFile("./templates/" + item.Name())
+
+		if err != nil {
+			logrus.Error(err)
+		}
+		name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
+
+		ParseFSM(name, string(template))
+
+	}
 }
