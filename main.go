@@ -2,9 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"go-ntc-templates/models"
-	"go-ntc-templates/parse"
 	"os"
 
 	"github.com/melbahja/goph"
@@ -27,58 +25,42 @@ func testSsh(client *goph.Client, command string) string {
 	return string(out)
 }
 
-func parseOutput[T any](input string, template string) (T, error) {
-	var model T // Declare a variable of type T
+func parseOutput[T any](input string, template string) ([]T, error) {
+	var model []T
 
 	fsm := gotextfsm.TextFSM{}
 	err := fsm.ParseString(template)
 	if err != nil {
 		logrus.Error(err)
-		return model, err // Return zero value and error
+		return model, err
 	}
 
 	parser := gotextfsm.ParserOutput{}
 	err = parser.ParseTextString(input, fsm, true)
 	if err != nil {
 		logrus.Error(err)
-		return model, err // Return zero value and error
+		return model, err
 	}
 
 	str, err := json.Marshal(parser.Dict)
 	if err != nil {
-		fmt.Println("Error during marshaling:", err)
-		return model, err // Return zero value and error
+		logrus.Error("Error during marshaling:", err)
+		return model, err
 	}
-	fmt.Println("Marshalled JSON:", string(str))
 
-	// Unmarshal into the struct
 	err = json.Unmarshal(str, &model)
 	if err != nil {
-		fmt.Println("Error during unmarshaling:", err)
-		return model, err // Return zero value and error
+		logrus.Error("Error during unmarshaling:", err)
+		return model, err
 	}
 
-	return model, nil // Return the populated model and nil error
+	return model, nil
 }
 
 func main() {
 
-	// items, _ := ioutil.ReadDir("./templates")
-
-	// for _, item := range items {
-	// 	template, err := os.ReadFile("./templates/" + item.Name())
-
-	// 	if err != nil {
-	// 		logrus.Error(err)
-	// 	}
-	// 	name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
-
-	// 	parse.ParseFSM(name, string(template))
-
-	// }
-
-	command := "show interfaces"
-	template, err := os.ReadFile("./templates/" + "cisco_ios_show_interfaces" + ".textfsm")
+	command := "show ip route"
+	template, err := os.ReadFile("./templates/" + "cisco_ios_show_ip_route" + ".textfsm")
 	if err != nil {
 		logrus.Fatal(err)
 	}
@@ -90,13 +72,13 @@ func main() {
 
 	commandReturn := testSsh(client, command)
 
-	parsedCommand, err := parseOutput[[]models.Cisco_ios_show_interfaces](commandReturn, string(template))
+	parsedCommand, err := parseOutput[models.CiscoIosShowIpRoute](commandReturn, string(template))
 	if err != nil {
 		logrus.Error(err)
 	}
 
-	logrus.Info(parsedCommand)
-
-	parse.ParseFSM("cisco_ios_show_interfaces", string(template))
+	for _, intf := range parsedCommand {
+		logrus.Info(intf.Network)
+	}
 
 }
