@@ -5,10 +5,7 @@ import (
 	"fmt"
 	"go-ntc-templates/models"
 	"go-ntc-templates/parse"
-	"io/ioutil"
 	"os"
-	"path/filepath"
-	"strings"
 
 	"github.com/melbahja/goph"
 	"github.com/sirikothe/gotextfsm"
@@ -30,63 +27,76 @@ func testSsh(client *goph.Client, command string) string {
 	return string(out)
 }
 
-func parseOutput(input string, template string) any {
+func parseOutput[T any](input string, template string) (T, error) {
+	var model T // Declare a variable of type T
 
 	fsm := gotextfsm.TextFSM{}
 	err := fsm.ParseString(template)
 	if err != nil {
 		logrus.Error(err)
+		return model, err // Return zero value and error
 	}
+
 	parser := gotextfsm.ParserOutput{}
-	err = parser.ParseTextString(string(input), fsm, true)
+	err = parser.ParseTextString(input, fsm, true)
 	if err != nil {
 		logrus.Error(err)
+		return model, err // Return zero value and error
 	}
 
 	str, err := json.Marshal(parser.Dict)
 	if err != nil {
 		fmt.Println("Error during marshaling:", err)
+		return model, err // Return zero value and error
 	}
 	fmt.Println("Marshalled JSON:", string(str))
 
 	// Unmarshal into the struct
-	model := []models.Cisco_ios_show_version{}
 	err = json.Unmarshal(str, &model)
 	if err != nil {
 		fmt.Println("Error during unmarshaling:", err)
+		return model, err // Return zero value and error
 	}
 
-	return model
+	return model, nil // Return the populated model and nil error
 }
 
 func main() {
 
-	items, _ := ioutil.ReadDir("./templates")
+	// items, _ := ioutil.ReadDir("./templates")
 
-	logrus.Info(items)
+	// for _, item := range items {
+	// 	template, err := os.ReadFile("./templates/" + item.Name())
 
-	for _, item := range items {
-		template, err := os.ReadFile("./templates/" + item.Name())
+	// 	if err != nil {
+	// 		logrus.Error(err)
+	// 	}
+	// 	name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
 
-		if err != nil {
-			logrus.Error(err)
-		}
-		name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
+	// 	parse.ParseFSM(name, string(template))
 
-		parse.ParseFSM(name, string(template))
+	// }
 
+	command := "show interfaces"
+	template, err := os.ReadFile("./templates/" + "cisco_ios_show_interfaces" + ".textfsm")
+	if err != nil {
+		logrus.Fatal(err)
 	}
 
-	// client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
-	// if err != nil {
-	// 	logrus.Error(err)
-	// }
-	// commandReturn := testSsh(client, command)
+	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
+	if err != nil {
+		logrus.Error(err)
+	}
 
-	// parsedCommand := parseOutput(commandReturn, string(template))
+	commandReturn := testSsh(client, command)
 
-	// logrus.Info(parsedCommand)
+	parsedCommand, err := parseOutput[[]models.Cisco_ios_show_interfaces](commandReturn, string(template))
+	if err != nil {
+		logrus.Error(err)
+	}
 
-	// parse.ParseFSM("cisco_ios_show_interfaces", string(template))
+	logrus.Info(parsedCommand)
+
+	parse.ParseFSM("cisco_ios_show_interfaces", string(template))
 
 }

@@ -42,7 +42,10 @@ func ParseFSM(name string, template string) {
 	// 	}
 	// }
 
-	r, _ := regexp.Compile(`Value\s(List|Required)?\s?(\w+)`)
+	name = strings.ReplaceAll(name, "-", "_")
+	name = strings.ReplaceAll(name, ".", "_")
+
+	r, _ := regexp.Compile(`(?m)^\s*Value\s+((List,?|Required,?|Fillup,?|Filldown,?|Key,?)+)?\s?(\w+)`)
 	entries := r.FindAllStringSubmatch(template, -1)
 
 	pwd, _ := os.Getwd()
@@ -54,11 +57,11 @@ func ParseFSM(name string, template string) {
 	f.WriteString("package models\n\n")
 	f.WriteString(fmt.Sprintf("type %v struct {\n", capitalizeFirstLetter(name)))
 	for _, entry := range entries {
-		if entry[1] == "List" {
-			f.WriteString(fmt.Sprintf("\t%v\t[]string\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[2]), entry[2]))
+		if entry[2] == "List" {
+			f.WriteString(fmt.Sprintf("\t%v\t[]string\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
 			continue
 		}
-		f.WriteString(fmt.Sprintf("\t%v\tstring\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[2]), entry[2]))
+		f.WriteString(fmt.Sprintf("\t%v\tstring\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
 	}
 	f.WriteString("}")
 
