@@ -4,7 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"go-ntc-templates/models"
+	"go-ntc-templates/parse"
+	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/melbahja/goph"
@@ -58,23 +61,32 @@ func parseOutput(input string, template string) any {
 
 func main() {
 
-	command := "show version"
+	items, _ := ioutil.ReadDir("./templates")
 
-	template, err := os.ReadFile("./templates/cisco_ios_" + strings.ReplaceAll(command, " ", "_") + ".textfsm")
-	if err != nil {
-		logrus.Error(err)
+	logrus.Info(items)
+
+	for _, item := range items {
+		template, err := os.ReadFile("./templates/" + item.Name())
+
+		if err != nil {
+			logrus.Error(err)
+		}
+		name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
+
+		parse.ParseFSM(name, string(template))
+
 	}
 
-	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
-	if err != nil {
-		logrus.Error(err)
-	}
-	commandReturn := testSsh(client, command)
+	// client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
+	// if err != nil {
+	// 	logrus.Error(err)
+	// }
+	// commandReturn := testSsh(client, command)
 
-	parsedCommand := parseOutput(commandReturn, string(template))
+	// parsedCommand := parseOutput(commandReturn, string(template))
 
-	logrus.Info(parsedCommand)
+	// logrus.Info(parsedCommand)
 
-	//parse.ParseFSM("cisco_ios_show_interfaces", string(template))
+	// parse.ParseFSM("cisco_ios_show_interfaces", string(template))
 
 }
