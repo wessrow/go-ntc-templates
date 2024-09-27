@@ -11,7 +11,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func testSsh(template string) error {
+func testSsh(template string) models.Cisco_ios_show_version {
 
 	fsm := gotextfsm.TextFSM{}
 	err := fsm.ParseString(string(template))
@@ -34,23 +34,26 @@ func testSsh(template string) error {
 		logrus.Fatal(err)
 	}
 
-	logrus.Info(string(out))
-
 	parser := gotextfsm.ParserOutput{}
 	err = parser.ParseTextString(string(out), fsm, true)
 	if err != nil {
 		logrus.Error(err)
 	}
 
-	str, err := json.Marshal(parser.Dict)
+	str, err := json.Marshal(parser.Dict[0])
 	if err != nil {
-		fmt.Printf("Unable to convert dict to json \n", err)
+		fmt.Println("Error during marshaling:", err)
+	}
+	fmt.Println("Marshalled JSON:", string(str))
+
+	// Unmarshal into the struct
+	model := models.Cisco_ios_show_version{}
+	err = json.Unmarshal(str, &model)
+	if err != nil {
+		fmt.Println("Error during unmarshaling:", err)
 	}
 
-	logrus.Info(string(str))
-
-	model := models.Cisco_ios_show_version{}
-	return json.Unmarshal(str, &model)
+	return model
 }
 
 func main() {
@@ -59,9 +62,8 @@ func main() {
 	if err != nil {
 		logrus.Error(err)
 	}
-
 	test := testSsh(string(template))
-	logrus.Info(test)
+	logrus.Info(test.MAC_ADDRESS)
 	// parse.ParseFSM("cisco_ios_show_version", string(template))
 
 }
