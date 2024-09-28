@@ -25,7 +25,7 @@ func testSsh(client *goph.Client, command string) string {
 
 func main() {
 
-	command := "show ip route"
+	command := "show version"
 
 	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
 	if err != nil {
@@ -34,13 +34,15 @@ func main() {
 
 	commandReturn := testSsh(client, command)
 
-	test, err := parse.ParseCommand[models.CiscoIosShowIpRoute](commandReturn)
+	test, err := parse.ParseCommand[models.CiscoIosShowVersion](commandReturn)
 	if err != nil {
 		logrus.Error(err)
+		return
 	}
 
-	for _, result := range test {
-		logrus.Info(result.Network)
-	}
+	logrus.Info(test[0].Hardware)
+	// for _, result := range test {
+	// 	logrus.Info(result.Mac_address)
+	// }
 
 }

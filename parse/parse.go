@@ -80,6 +80,10 @@ func ParseCommand[returnModel any](input string) ([]returnModel, error) {
 		return nil, err
 	}
 
+	if len(parsedCommand) == 0 {
+		return nil, errors.New("could not parse string to chosen struct")
+	}
+
 	return parsedCommand, nil
 
 }
