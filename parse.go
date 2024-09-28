@@ -1,4 +1,4 @@
-package parse
+package main
 
 import (
 	"encoding/json"
@@ -69,8 +69,7 @@ func ParseCommand[returnModel any](input string) ([]returnModel, error) {
 		return nil, err
 	}
 
-	pwd, _ := os.Getwd()
-	template, err := os.ReadFile(pwd + "/templates/" + platform + "_" + command + ".textfsm")
+	template, err := os.ReadFile("./templates/" + platform + "_" + command + ".textfsm")
 	if err != nil {
 		return nil, err
 	}

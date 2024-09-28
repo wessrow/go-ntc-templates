@@ -2,10 +2,10 @@ package main
 
 import (
 	"go-ntc-templates/models"
-	"go-ntc-templates/parse"
 
 	"github.com/melbahja/goph"
 	"github.com/sirupsen/logrus"
+	"github.com/wessrow/go-ntc-templates/models"
 )
 
 func testSsh(client *goph.Client, command string) string {
@@ -23,7 +23,7 @@ func testSsh(client *goph.Client, command string) string {
 	return string(out)
 }
 
-func main() {
+func asdf() {
 
 	command := "show version"
 
@@ -34,7 +34,7 @@ func main() {
 
 	commandReturn := testSsh(client, command)
 
-	test, err := parse.ParseCommand[models.CiscoIosShowVersion](commandReturn)
+	test, err := ParseCommand[models.CiscoIosShowVersion](commandReturn)
 	if err != nil {
 		logrus.Error(err)
 		return

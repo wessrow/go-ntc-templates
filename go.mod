@@ -1,4 +1,4 @@
-module go-ntc-templates
+module github.com/wessrow/go-ntc-templates
 
 go 1.23.0
 
