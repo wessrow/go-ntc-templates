@@ -1,97 +1,92 @@
 package parse
 
 import (
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"go-ntc-templates/models"
 	"os"
-	"path/filepath"
-	"regexp"
 	"strings"
 
+	"github.com/sirikothe/gotextfsm"
 	"github.com/sirupsen/logrus"
 )
 
-type CidrResponse struct {
-	ID       string `json:"id"`
-	Progress string `json:"progress"`
-}
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
-func capitalizeFirstLetter(s string) string {
-	if len(s) == 0 {
-		return s // return the original string if it's empty
-	}
-	return strings.ToUpper(string(s[0])) + s[1:]
-}
-
-func capitalizeFirstLetterLowerRest(s string) string {
-	if len(s) == 0 {
-		return s // return the original string if it's empty
-	}
-	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
-}
-
-func toCamelCase(str string) string {
-	// Replace all - and . with spaces
-	str = strings.ReplaceAll(str, "-", " ")
-	str = strings.ReplaceAll(str, ".", " ")
-	str = strings.ReplaceAll(str, "_", " ")
-
-	// Split the string by spaces
-	parts := strings.Fields(str)
-
-	// Convert each part to TitleCase (CamelCase)
-	for i, part := range parts {
-		parts[i] = strings.Title(part)
+func getModel(platform, command string) (interface{}, error) {
+	// Create a map linking platform and command strings to struct constructors
+	modelMap := map[string]map[string]func() interface{}{
+		"cisco_ios": {
+			"show_ip_route":          func() interface{} { return &models.CiscoIosShowIpRoute{} },
+			"show_interfaces_status": func() interface{} { return &models.CiscoIosShowInterfacesStatus{} },
+		},
+		// Add more platforms and commands as needed
 	}
 
-	// Join them back together to form CamelCase
-	return strings.Join(parts, "")
+	// Check if the platform exists
+	if platformMap, ok := modelMap[platform]; ok {
+		// Check if the command exists for the platform
+		if constructor, ok := platformMap[command]; ok {
+			// Return the struct instance
+			return constructor(), nil
+		}
+		return nil, fmt.Errorf("command %s not found for platform %s", command, platform)
+	}
+	return nil, fmt.Errorf("platform %s not found", platform)
 }
 
-func ParseFSM(name string, template string) {
+func ParseOutput(input string, template string, model interface{}) (interface{}, error) {
 
-	r, _ := regexp.Compile(`(?m)^\s*Value\s+((List,?|Required,?|Fillup,?|Filldown,?|Key,?)+)?\s?(\w+)`)
-	entries := r.FindAllStringSubmatch(template, -1)
+	fsm := gotextfsm.TextFSM{}
+	err := fsm.ParseString(template)
+	if err != nil {
+		logrus.Error(err)
+		return model, err
+	}
+
+	parser := gotextfsm.ParserOutput{}
+	err = parser.ParseTextString(input, fsm, true)
+	if err != nil {
+		logrus.Error(err)
+		return model, err
+	}
+
+	str, err := json.Marshal(parser.Dict)
+	if err != nil {
+		logrus.Error("Error during marshaling:", err)
+		return model, err
+	}
+
+	err = json.Unmarshal(str, &model)
+	if err != nil {
+		logrus.Error("Error during unmarshaling:", err)
+		return model, err
+	}
+
+	return model, nil
+}
+
+func ParseCommand(command string, input string, platform string) interface{} {
+
+	command = strings.ReplaceAll(command, " ", "_")
 
 	pwd, _ := os.Getwd()
-	f, err := os.Create(pwd + "/models/" + name + ".go")
-
-	check(err)
-	defer f.Close()
-
-	name = toCamelCase(name)
-
-	f.WriteString("package models\n\n")
-	f.WriteString(fmt.Sprintf("type %v struct {\n", capitalizeFirstLetter(name)))
-	for _, entry := range entries {
-		if entry[2] == "List" {
-			f.WriteString(fmt.Sprintf("\t%v\t[]string\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
-			continue
-		}
-		f.WriteString(fmt.Sprintf("\t%v\tstring\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
+	template, err := os.ReadFile(pwd + "/templates/" + platform + "_" + command + ".textfsm")
+	if err != nil {
+		logrus.Fatal(err)
 	}
-	f.WriteString("}")
 
-}
-
-func GenerateFSMStructs() {
-	items, _ := ioutil.ReadDir("./templates")
-
-	for _, item := range items {
-		template, err := os.ReadFile("./templates/" + item.Name())
-
-		if err != nil {
-			logrus.Error(err)
-		}
-		name := strings.TrimSuffix(item.Name(), filepath.Ext(item.Name()))
-
-		ParseFSM(name, string(template))
+	testmodel, err := getModel(platform, command)
+	if err != nil {
 
 	}
+
+	parsedCommand, err := ParseOutput(input, string(template), testmodel)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return parsedCommand
+
+	// for _, intf := range parsedCommand {
+	// 	logrus.Info(intf.Network)
+	// }
 }
