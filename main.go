@@ -25,7 +25,7 @@ func testSsh(client *goph.Client, command string) string {
 
 func main() {
 
-	command := "show interfaces status"
+	command := "show ip route"
 
 	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
 	if err != nil {
@@ -34,30 +34,13 @@ func main() {
 
 	commandReturn := testSsh(client, command)
 
-	test, err := parse.ParseCommand[models.CiscoIosShowInterfacesStatus](command, commandReturn, "cisco_ios")
+	test, err := parse.ParseCommand[models.CiscoIosShowIpRoute](commandReturn)
 	if err != nil {
 		logrus.Error(err)
 	}
 
 	for _, result := range test {
-		logrus.Info(result.Vlan_id)
+		logrus.Info(result.Network)
 	}
-
-	// MERGE ALL BELOW LOGIC!
-	// template, err := os.ReadFile("./templates/" + "cisco_ios_show_ip_route" + ".textfsm")
-	// if err != nil {
-	// 	logrus.Fatal(err)
-	// }
-
-	// parsedCommand, err := parse.ParseOutput[models.CiscoIosShowIpRoute](commandReturn, string(template))
-	// if err != nil {
-	// 	logrus.Error(err)
-	// }
-
-	// for _, intf := range parsedCommand {
-	// 	logrus.Info(intf.Network)
-	// }
-
-	// generate.GenerateFSMStructs()
 
 }
