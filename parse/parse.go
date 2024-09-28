@@ -2,8 +2,6 @@ package parse
 
 import (
 	"encoding/json"
-	"fmt"
-	"go-ntc-templates/models"
 	"os"
 	"strings"
 
@@ -11,29 +9,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func getModel(platform, command string) (interface{}, error) {
-	// Create a map linking platform and command strings to struct constructors
-	modelMap := map[string]map[string]func() interface{}{
-		"cisco_ios": {
-			"show_ip_route":          func() interface{} { return &models.CiscoIosShowIpRoute{} },
-			"show_interfaces_status": func() interface{} { return &models.CiscoIosShowInterfacesStatus{} },
-		},
-		// Add more platforms and commands as needed
-	}
-
-	// Check if the platform exists
-	if platformMap, ok := modelMap[platform]; ok {
-		// Check if the command exists for the platform
-		if constructor, ok := platformMap[command]; ok {
-			// Return the struct instance
-			return constructor(), nil
-		}
-		return nil, fmt.Errorf("command %s not found for platform %s", command, platform)
-	}
-	return nil, fmt.Errorf("platform %s not found", platform)
-}
-
-func ParseOutput(input string, template string, model interface{}) (interface{}, error) {
+func parseOutput[returnModel any](input string, template string) ([]returnModel, error) {
+	var model []returnModel
 
 	fsm := gotextfsm.TextFSM{}
 	err := fsm.ParseString(template)
@@ -64,7 +41,7 @@ func ParseOutput(input string, template string, model interface{}) (interface{},
 	return model, nil
 }
 
-func ParseCommand(command string, input string, platform string) interface{} {
+func ParseCommand[returnModel any](command string, input string, platform string) ([]returnModel, error) {
 
 	command = strings.ReplaceAll(command, " ", "_")
 
@@ -74,19 +51,11 @@ func ParseCommand(command string, input string, platform string) interface{} {
 		logrus.Fatal(err)
 	}
 
-	testmodel, err := getModel(platform, command)
-	if err != nil {
-
-	}
-
-	parsedCommand, err := ParseOutput(input, string(template), testmodel)
+	parsedCommand, err := parseOutput[returnModel](input, string(template))
 	if err != nil {
 		logrus.Error(err)
 	}
 
-	return parsedCommand
+	return parsedCommand, nil
 
-	// for _, intf := range parsedCommand {
-	// 	logrus.Info(intf.Network)
-	// }
 }

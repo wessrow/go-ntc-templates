@@ -1,6 +1,7 @@
 package main
 
 import (
+	"go-ntc-templates/models"
 	"go-ntc-templates/parse"
 
 	"github.com/melbahja/goph"
@@ -24,7 +25,7 @@ func testSsh(client *goph.Client, command string) string {
 
 func main() {
 
-	command := "show ip route"
+	command := "show interfaces status"
 
 	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
 	if err != nil {
@@ -33,9 +34,14 @@ func main() {
 
 	commandReturn := testSsh(client, command)
 
-	test := parse.ParseCommand(command, commandReturn, "cisco_ios")
+	test, err := parse.ParseCommand[models.CiscoIosShowInterfacesStatus](command, commandReturn, "cisco_ios")
+	if err != nil {
+		logrus.Error(err)
+	}
 
-	logrus.Info(test)
+	for _, result := range test {
+		logrus.Info(result.Vlan_id)
+	}
 
 	// MERGE ALL BELOW LOGIC!
 	// template, err := os.ReadFile("./templates/" + "cisco_ios_show_ip_route" + ".textfsm")
