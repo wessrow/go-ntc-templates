@@ -1,4 +1,4 @@
-package main
+package gontctemplates
 
 import (
 	"encoding/json"
