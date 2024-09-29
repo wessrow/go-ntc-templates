@@ -1,0 +1,44 @@
+package models
+
+type ExtremeExosShowSharing struct {
+	Config_master	string	`json:"CONFIG_MASTER"`
+	Current_master	string	`json:"CURRENT_MASTER"`
+	Agg_control	string	`json:"AGG_CONTROL"`
+	Ld_share_algorithm	[]string	`json:"LD_SHARE_ALGORITHM"`
+	Ld_share_group	[]string	`json:"LD_SHARE_GROUP"`
+	Agg_mbr	[]string	`json:"AGG_MBR"`
+	Link_state	[]string	`json:"LINK_STATE"`
+	Link_up_transitions	[]string	`json:"LINK_UP_TRANSITIONS"`
+}
+
+var ExtremeExosShowSharing_Template = `Value Filldown CONFIG_MASTER (\d+)
+Value Filldown CURRENT_MASTER (\d+)
+Value Filldown AGG_CONTROL (\S+)
+Value List LD_SHARE_ALGORITHM (L2|L3|L3_L4|custom)
+Value List LD_SHARE_GROUP (\d+)
+Value List AGG_MBR (\S+)
+Value List LINK_STATE (A|D|R|NP|L)
+Value List LINK_UP_TRANSITIONS (\d+)
+
+Start
+  ^\s*Load\s+Sharing\s+Monitor\s*$$
+  ^\s*Config\s+Current\s+Agg\s+Ld\s+Share\s+Ld\s+Share\s+Agg\s+Link\s+Link\s+Up\s*$$ -> SharingTable
+  ^\s*
+  ^. -> Error
+
+SharingTable
+  ^\s*Master\s+Master\s+Control\s+Algorithm\s+Group\s+Mbr\s+State\s+Transitions\s*$$
+  ^(\s*=+)+\s*$$
+  ^\s*\d.*$$ -> Continue.Record
+  ^\s+${CONFIG_MASTER}(?:\s+${CURRENT_MASTER})?\s+${AGG_CONTROL}\s+${LD_SHARE_ALGORITHM}\s+${LD_SHARE_GROUP}\s+${AGG_MBR}\s+${LINK_STATE}\s+${LINK_UP_TRANSITIONS}\s*$$
+  ^\s+${LD_SHARE_ALGORITHM}\s+${LD_SHARE_GROUP}\s+${AGG_MBR}\s+${LINK_STATE}\s+${LINK_UP_TRANSITIONS}\s*$$
+  ^\s*Link\s+State:\s+A-Active,\s+D-Disabled,\s+R-Ready,\s+NP-Port\s+not\s+present,\s+L-Loopback\s*$$
+  ^\s*Load\s+Sharing\s+Algorithm:\s+\(L2\)\s+Layer\s+2\s+address\s+based,\s+\(L3\)\s+Layer\s+3\s+address\s+based\s*$$
+  ^\s*\(L3_L4\)\s+Layer\s+3\s+address\s+and\s+Layer\s+4\s+port\s+based\s*$$
+  ^\s*\(custom\)\s+User-selected\s+address-based\s+configuration\s*$$
+  ^\s*Custom\s+Algorithm\s+Configuration:\s+.*\s*$$
+  ^\s*Number\s+of\s+load\s+sharing\s+trunks:\s+\d+\s*$$
+  ^\s*
+  ^. -> Error
+
+`
