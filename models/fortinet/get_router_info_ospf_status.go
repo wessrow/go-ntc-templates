@@ -1,0 +1,54 @@
+package fortinet 
+
+type GetRouterInfoOspfStatus struct {
+	Process_name	string	`json:"PROCESS_NAME"`
+	Process_id	string	`json:"PROCESS_ID"`
+	Process_status	string	`json:"PROCESS_STATUS"`
+	Attached_areas_number	string	`json:"ATTACHED_AREAS_NUMBER"`
+	Attached_area	[]string	`json:"ATTACHED_AREA"`
+	Attached_area_interfaces	[]string	`json:"ATTACHED_AREA_INTERFACES"`
+	Attached_area_fully_adjacent_neighbors	[]string	`json:"ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS"`
+}
+
+var GetRouterInfoOspfStatus_Template = `Value PROCESS_NAME (.*)
+Value PROCESS_ID (\S+)
+Value PROCESS_STATUS (.+)
+Value ATTACHED_AREAS_NUMBER (\d+)
+Value List ATTACHED_AREA (.*)
+Value List ATTACHED_AREA_INTERFACES (\S+)
+Value List ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS (\d+)
+
+
+Start
+  ^\s*Routing\s+Process\s+\".*\".* -> Continue.Record
+  ^\s*Routing\s+Process\s+\"${PROCESS_NAME}\"\s+with\s+ID\s+${PROCESS_ID}\s*$$
+  ^\s*Process\s+is\s+${PROCESS_STATUS}\s*$$
+  ^\s*Process\s+bound.*$$
+  ^\s*Conforms\s+to.*$$
+  ^\s*Supports\s+only.*$$
+  ^\s*Supports\s+opaque.*$$
+  ^\s*Do\s+not\s+support\s+Restarting.*$$
+  ^\s*SPF\s+schedule\s+delay\s+.*$$
+  ^\s*Refresh\s+timer.*$$
+  ^\s*Number\s+of\s+incomming\s+current\s+DD\s+exchange\s+neighbors\s+.*$$
+  ^\s*Number\s+of\s+outgoing\s+current\s+DD\s+exchange\s+neighbors\s+.*$$
+  ^\s*Number\s+of\s+external\s+LSA\s+\d+\.\s+Checksum\s+.*$$
+  ^\s*Number\s+of\s+opaque\s+AS\s+LSA\s+\d+\.\s+Checksum\s+.*$$
+  ^\s*Number\s+of\s+non\-default\s+external\s+LSA\s+.*$$
+  ^\s*External\s+LSA\s+database\s+.*$$
+  ^\s*Number\s+of\s+LSA\s+originated.*$$
+  ^\s*Number\s+of\s+LSA\s+received.*$$
+  ^\s*Number\s+of\s+areas\s+attached\s+to\s+this\s+router\:\s+${ATTACHED_AREAS_NUMBER}\s*$$ -> Areas
+  ^\s*$$
+  ^. -> Error
+
+Areas
+  ^\s*Routing\s+Process\s+\".*\".* -> Continue.Record
+  ^\s*Area\s+(?!has)${ATTACHED_AREA}\s*$$
+  ^\s*Number\s+of\s+interfaces\s+in\s+this\s+area\s+is\s+${ATTACHED_AREA_INTERFACES}\s*$$
+  ^\s*Number\s+of\s+fully\s+adjacent\s+neighbors\s+in\s+this\s+area\s+is\s+${ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS}\s*$$
+  ^\s*Area\s+has\s+.*$$
+  ^\s*SPF\s+algorithm\s+last\s+executed\s+.*$$
+  ^\s*SPF\s+algorithm\s+executed\s+.*$$
+  ^\s*Number\s+of\s+LSA\s+.*$$ -> Areas
+`

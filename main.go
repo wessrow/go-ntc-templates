@@ -1,8 +1,7 @@
 package main
 
 import (
-	"go-ntc-templates/models/cisco_ios"
-	"go-ntc-templates/parse"
+	"go-ntc-templates/generate"
 
 	"github.com/melbahja/goph"
 	"github.com/sirupsen/logrus"
@@ -25,25 +24,25 @@ func testSsh(client *goph.Client, command string) string {
 
 func main() {
 
-	command := "show ip arp"
+	// command := "show ip arp"
 
-	client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
-	if err != nil {
-		logrus.Error(err)
-	}
+	// client, err := goph.New("admin", "10.0.100.208", goph.Password("Netw0rking!"))
+	// if err != nil {
+	// 	logrus.Error(err)
+	// }
 
-	commandReturn := testSsh(client, command)
+	// commandReturn := testSsh(client, command)
 
-	test, err := parse.ParseCommand[cisco_ios.ShowIpArp](commandReturn, cisco_ios.ShowIpArp_Template)
-	if err != nil {
-		logrus.Error(err)
-		return
-	}
+	// test, err := parse.ParseCommand[cisco_ios.ShowIpArp](commandReturn, cisco_ios.ShowIpArp_Template)
+	// if err != nil {
+	// 	logrus.Error(err)
+	// 	return
+	// }
 
-	logrus.Info(test[0].Mac_address)
+	// logrus.Info(test[0].Mac_address)
 	// for _, result := range test {
 	// 	logrus.Info(result.Mac_address)
 	// }
-	// generate.GenerateFSMStructs()
+	generate.GenerateFSMStructs()
 
 }

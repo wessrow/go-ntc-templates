@@ -11,8 +11,25 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+func containsAny(str string, substrings []string) bool {
+	for _, substring := range substrings {
+		if strings.Contains(str, substring) {
+			return true
+		}
+	}
+	return false
+}
+
 func getPlatform(s string) string {
-	regex := regexp.MustCompile(`^([a-zA-Z0-9]+_[a-zA-Z0-9]+)`)
+
+	exceptions := []string{"edgecore", "eltex", "fortinet", "linux", "yamaha"}
+
+	regexPattern := `^([a-zA-Z0-9]+_[a-zA-Z0-9]+)`
+	if containsAny(s, exceptions) {
+		regexPattern = `^([a-zA-Z0-9]+)`
+	}
+
+	regex := regexp.MustCompile(regexPattern)
 
 	return regex.FindString(s)
 }
