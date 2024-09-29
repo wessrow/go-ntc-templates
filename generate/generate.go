@@ -17,6 +17,12 @@ func check(e error) {
 	}
 }
 
+func getPlatform(s string) string {
+	regex := regexp.MustCompile(`^([a-zA-Z0-9]+_[a-zA-Z0-9]+)`)
+
+	return regex.FindString(s)
+}
+
 func capitalizeFirstLetter(s string) string {
 	if len(s) == 0 {
 		return s // return the original string if it's empty
@@ -54,25 +60,34 @@ func parseFSM(name string, template string) {
 	r, _ := regexp.Compile(`(?m)^\s*Value\s+((List,?|Required,?|Fillup,?|Filldown,?|Key,?)+)?\s?(\w+)`)
 	entries := r.FindAllStringSubmatch(template, -1)
 
-	pwd, _ := os.Getwd()
-	f, err := os.Create(pwd + "/models/" + name + ".go")
+	platform := getPlatform(name)
+	name = strings.TrimPrefix(name, platform+"_")
 
-	check(err)
-	defer f.Close()
+	if platform != "" {
 
-	name = toCamelCase(name)
+		pwd, _ := os.Getwd()
 
-	f.WriteString("package models\n\n")
-	f.WriteString(fmt.Sprintf("type %v struct {\n", capitalizeFirstLetter(name)))
-	for _, entry := range entries {
-		if entry[2] == "List" {
-			f.WriteString(fmt.Sprintf("\t%v\t[]string\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
-			continue
+		os.Mkdir(pwd+"/models/"+platform, os.ModePerm)
+		f, err := os.Create(pwd + "/models/" + platform + "/" + name + ".go")
+
+		check(err)
+		defer f.Close()
+
+		name = toCamelCase(name)
+
+		f.WriteString(fmt.Sprintf("package %v \n\n", platform))
+		f.WriteString(fmt.Sprintf("type %v struct {\n", capitalizeFirstLetter(name)))
+		for _, entry := range entries {
+			if entry[2] == "List" {
+				f.WriteString(fmt.Sprintf("\t%v\t[]string\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
+				continue
+			}
+			f.WriteString(fmt.Sprintf("\t%v\tstring\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
 		}
-		f.WriteString(fmt.Sprintf("\t%v\tstring\t`json:\"%v\"`\n", capitalizeFirstLetterLowerRest(entry[3]), entry[3]))
+		f.WriteString("}\n\n")
+		f.WriteString(fmt.Sprintf("var %v = `", capitalizeFirstLetter(name)+"_Template"))
+		f.WriteString(template + "`")
 	}
-	f.WriteString("}")
-
 }
 
 func GenerateFSMStructs() {

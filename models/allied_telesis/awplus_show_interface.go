@@ -1,0 +1,71 @@
+package allied_telesis 
+
+type AwplusShowInterface struct {
+	Interface	string	`json:"INTERFACE"`
+	Link_status	string	`json:"LINK_STATUS"`
+	Protocol_status	string	`json:"PROTOCOL_STATUS"`
+	Hardware_type	string	`json:"HARDWARE_TYPE"`
+	Vrf	string	`json:"VRF"`
+	Mac_address	string	`json:"MAC_ADDRESS"`
+	Description	string	`json:"DESCRIPTION"`
+	Mtu	string	`json:"MTU"`
+	Duplex	string	`json:"DUPLEX"`
+	Speed	string	`json:"SPEED"`
+	Ip_address	string	`json:"IP_ADDRESS"`
+	Prefix_length	string	`json:"PREFIX_LENGTH"`
+}
+
+var AwplusShowInterface_Template = `Value Required INTERFACE (\S+)
+Value LINK_STATUS (\w+)
+Value PROTOCOL_STATUS (\w+)
+Value HARDWARE_TYPE (\w+)
+Value VRF (\S+)
+Value MAC_ADDRESS (\S+)
+Value DESCRIPTION (\S.*)
+Value MTU (\d+)
+Value DUPLEX (([Ff]ull|[Aa]uto|[Hh]alf|[Aa]-).*?)
+Value SPEED (\w+)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+Value PREFIX_LENGTH (\d+)
+
+Start
+  ^Interface\s\S+ -> Continue.Record
+  ^Interface\s${INTERFACE}
+  ^\s+Scope:
+  ^\s+Thrash-limiting
+  ^\s+Status\s+Not\s+Detected
+  ^\s+Link is ${LINK_STATUS},\sadministrative state is ${PROTOCOL_STATUS}
+  ^\s+Hardware is ${HARDWARE_TYPE}, address is ${MAC_ADDRESS}
+  ^\s+Hardware is ${HARDWARE_TYPE}
+  ^\s+IPv4\s+address\s+${IP_ADDRESS}/${PREFIX_LENGTH}\s+broadcast
+  ^\s+Description:\s${DESCRIPTION}
+  ^\s+VRF\s+Binding:\s+Associated\s+with\s+${VRF}
+  ^\s+VRF\s+Binding:\s+Not\s+bound
+  ^\s+index\s+\d+\s+metric\s+\d+\s+m[tr]u\s+${MTU}
+  ^\s+index\s+\d+\s+metric
+  ^\s+arp\s+ageing\s+timeout
+  ^\s+Bandwidth
+  ^\s+input\s+packets
+  ^\s+output\s+packets
+  ^\s+current\s+duplex\s+
+  ^\s+configured\s+duplex\s+${DUPLEX},\s+configured\s+speed\s+${SPEED},\s+
+  ^\s+<.*>
+  ^\s+SNMP\s+link-status\s+traps
+  ^\s+SNMP\s+mac-change\s+traps
+  ^\s+DHCP\s+subscriber-id\s+substitution
+  ^\s+DHCP\s+subscriber-id\s+is
+  ^\s+Unknown\s+unicast\s+flooding\s+blocking
+  ^\s+Link-status\s+trap\s+delay
+  ^\s+input\s+packets
+  ^\s+output\s+packets
+  ^\s+input\s+average
+  ^\s+output\s+average
+  ^\s+input\s+peak
+  ^\s+output\s+peak
+  ^\s+Router\s+Advertisement\s+is
+  ^\s+Router\s+Advertisement\s+default\s+routes
+  ^\s+Router\s+Advertisement\s+prefix
+  ^\s+Egress\s+Rate\s+Limit
+  ^\s+Time\s+since\s+last\s+state\s+change
+  ^. -> Error
+`
