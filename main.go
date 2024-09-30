@@ -1,7 +1,9 @@
 package main
 
-import "github.com/sirupsen/logrus"
+import (
+	"github.com/wessrow/go-ntc-templates/generate"
+)
 
 func main() {
-	logrus.Info("hello")
+	generate.GenerateFSMStructs("/Users/gustav/Documents/test-templates/")
 }

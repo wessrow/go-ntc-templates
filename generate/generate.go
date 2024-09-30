@@ -22,7 +22,7 @@ func containsAny(str string, substrings []string) bool {
 
 func getPlatform(s string) string {
 
-	exceptions := []string{"edgecore", "eltex", "fortinet", "linux", "yamaha"}
+	exceptions := []string{"custom", "edgecore", "eltex", "fortinet", "linux", "yamaha"}
 
 	regexPattern := `^([a-zA-Z0-9]+_[a-zA-Z0-9]+)`
 	if containsAny(s, exceptions) {
@@ -146,13 +146,16 @@ func parseFSM(name string, template string) error {
 	return nil
 }
 
-func GenerateFSMStructs() {
+func GenerateFSMStructs(path string) {
 
-	
-	items, _ := ioutil.ReadDir("./templates")
+	if path == "" {
+		path = "./templates/"
+	}
+
+	items, _ := ioutil.ReadDir(path)
 
 	for _, item := range items {
-		template, err := os.ReadFile("./templates/" + item.Name())
+		template, err := os.ReadFile(path + item.Name())
 
 		if err != nil {
 			logrus.Error(err)
