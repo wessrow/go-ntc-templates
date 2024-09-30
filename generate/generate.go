@@ -147,6 +147,8 @@ func parseFSM(name string, template string) error {
 }
 
 func GenerateFSMStructs() {
+
+	
 	items, _ := ioutil.ReadDir("./templates")
 
 	for _, item := range items {

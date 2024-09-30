@@ -32,6 +32,8 @@ The ntc-template to parse the data against.
 
 > WIP: The hope is to abstract this input away...
 
+#### Example
+
 ```golang
 // If the target device is of model cisco_ios, and command is ex. "show version"
 command := "show version"
@@ -55,7 +57,7 @@ The string representation of textfsm-template is usable via `cisco_ios.ShowVersi
 
 ## Full Usage Example
 
-_This Example uses the popular Golang SSH-client `goph` - though any SSH-client that returns data as `[]byte` or `string` would work_
+_This Example uses the popular Golang SSH-client `goph` - though any SSH-client that returns data as `[]byte` or `string` would work to be able to pass string to `ParseCommand`_
 
 ```golang
 package main
@@ -68,7 +70,15 @@ import (
 	"github.com/wessrow/go-ntc-templates/models/cisco_ios"
 )
 
-func testSsh(client *goph.Client, command string) string {
+func main() {
+
+	command := "show version"
+
+	// Initiate goph client.
+	client, err := goph.New("<user>", "<host-ip>", goph.Password("<password>"))
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	// Defer closing the network connection.
 	defer client.Close()
@@ -80,23 +90,10 @@ func testSsh(client *goph.Client, command string) string {
 		fmt.Println(err)
 	}
 
-	return string(out)
-}
-
-func main() {
-
-	command := "show version"
-
-	client, err := goph.New("<username>", "<host-ip>", goph.Password("<password>"))
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	commandReturn := testSsh(client, command)
-
-	test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](commandReturn, cisco_ios.ShowVersion_Template)
+	test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](string(out), cisco_ios.ShowVersion_Template)
 
 	fmt.Println(test[0].Hardware)
 
 }
+
 ```
