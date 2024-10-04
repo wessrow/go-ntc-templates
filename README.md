@@ -53,7 +53,9 @@ The string representation of textfsm-template is usable via `cisco_ios.ShowVersi
 
 ### Return
 
-`ParseCommand` returns a list of the passed model. This is because
+`ParseCommand` returns a list of the passed model. This is because of how TextFSM templates are parsed. For endpoints that return multiple outputs of the same type (interfaces, vlans, etc.) should be returned as a list of said output.
+
+This package takes the same approach and returns a slice containing the parsed struct for each output.
 
 ## Full Usage Example
 
