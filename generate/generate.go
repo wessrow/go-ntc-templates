@@ -149,13 +149,17 @@ func parseFSM(name string, template string) error {
 func GenerateFSMStructs(path string) {
 
 	if path == "" {
-		path = "./templates/"
+		path = "./tmp/ntc_templates/templates"
 	}
 
 	items, _ := ioutil.ReadDir(path)
 
 	for _, item := range items {
-		template, err := os.ReadFile(path + item.Name())
+		if item.Name() == "index" {
+			continue
+		}
+
+		template, err := os.ReadFile(path + "/" + item.Name())
 
 		if err != nil {
 			logrus.Error(err)
