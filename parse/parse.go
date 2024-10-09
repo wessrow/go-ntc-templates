@@ -1,4 +1,4 @@
-package gontc
+package parse
 
 import (
 	"encoding/json"
