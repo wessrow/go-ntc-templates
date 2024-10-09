@@ -1,2 +1,2 @@
-templates/*
-!templates/.gitkeep
+tmp/*
+!tmp/.gitkeep
