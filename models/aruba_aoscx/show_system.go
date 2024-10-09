@@ -43,13 +43,11 @@ Start
   ^Base MAC Address\s+:\s+${BASE_MAC}	
   ^ArubaOS-CX Version\s+:\s+${VERSION}
   ^Time Zone\s+:\s+${TIME_ZONE}
-  ^Up Time\s+:\s+${UPTIME_WEEKS}\sweek -> Continue
-  ^.*${UPTIME_DAYS}\s+(day|days) -> Continue
-  ^.*${UPTIME_HOURS}\s+(hour|hours) -> Continue
-  ^.*${UPTIME_MINUTES}\s+(minute|minutes) -> Record
+  ^Up Time\s+:(\s+${UPTIME_WEEKS}\s+weeks?,?)?(\s+${UPTIME_DAYS}\s+days?,?)?(\s+${UPTIME_HOURS}\s+hours?,?)?(\s+(${UPTIME_MINUTES}|under\s+a)\s+minutes?)? -> Record
   ^CPU
   ^Memory
   ^-+$$
   ^\*+$$
   ^\s*$$
-  ^. -> Error "LINE NOT FOUND"`
+  ^. -> Error "LINE NOT FOUND"
+`

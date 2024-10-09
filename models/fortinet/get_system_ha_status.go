@@ -1,7 +1,7 @@
 package fortinet 
 
 type GetSystemHaStatus struct {
-	Ha_health	string	`json:"HA_HEALTH"`
+	Ha_health	[]string	`json:"HA_HEALTH"`
 	Model	string	`json:"MODEL"`
 	Ha_mode	string	`json:"HA_MODE"`
 	Ha_group	string	`json:"HA_GROUP"`
@@ -22,7 +22,7 @@ var GetSystemHaStatus_Template = `#
 # FG Version: 5.6, 6.0, 6.2, 6.4, 7.0
 # HW        : varied
 #
-Value HA_HEALTH (\S+|.*)
+Value List HA_HEALTH (\S+(?:.*))
 Value MODEL (\S+)
 Value HA_MODE ([\S\s]+)
 Value HA_GROUP (\S+)
@@ -40,7 +40,7 @@ Value HA_SLAVE_UNIT_INDEX (\S+)
 
 Start
   ^HA\s+Health\s+Status:\s+${HA_HEALTH}
-  ^HA\s+Health\s+Status:$$ -> UnhealthyStatus
+  ^HA\s+Health\s+Status: -> UnhealthyStatus
   ^Model:\s+${MODEL}
   ^Mode:\s+${HA_MODE}
   ^Group:\s+${HA_GROUP}
@@ -58,7 +58,7 @@ Start
 
 UnhealthyStatus
   # semicolon necessary to anchor
-  ^${HA_HEALTH};$$
+  ^\s+${HA_HEALTH};\s*$$
   ^Model:\s+${MODEL} -> Start
 
 Configuration_Status
