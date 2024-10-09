@@ -26,12 +26,6 @@ This package is really simple, and for parsing purposes only includes one public
 
 The data to be parsed as a string.
 
-#### template
-
-The ntc-template to parse the data against.
-
-> WIP: The hope is to abstract this input away...
-
 #### Example
 
 ```golang
@@ -48,8 +42,6 @@ The generated `golang structs` are sorted under the `models` package. All `ntc-t
 `/models/<manufacturer_os>/<template>`
 
 The textfsm template for `cisco_ios_show_version` would therefore be usable via `cisco_ios.ShowVersion`
-
-The string representation of textfsm-template is usable via `cisco_ios.ShowVersion_Template`
 
 ### Return
 
@@ -92,7 +84,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](string(out), cisco_ios.ShowVersion_Template)
+	test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](string(out))
 
 	fmt.Println(test[0].Hardware)
 
