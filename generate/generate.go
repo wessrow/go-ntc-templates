@@ -1,4 +1,4 @@
-package generate
+package main
 
 import (
 	"fmt"
@@ -154,6 +154,19 @@ func GenerateFSMStructs(path string) {
 
 	items, _ := ioutil.ReadDir(path)
 
+	f, err := os.Create("models/map.go")
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	f.WriteString(`package models
+
+import (
+	"reflect"
+)` + "\n\n")
+
+	f.WriteString("var TemplateMap = map[reflect.Type]string{\n")
+
 	for _, item := range items {
 		if item.Name() == "index" {
 			continue
@@ -169,7 +182,25 @@ func GenerateFSMStructs(path string) {
 		err = parseFSM(name, string(template))
 		if err != nil {
 			logrus.Error(err)
+			continue
+		}
+
+		platform := getPlatform(name)
+		structName := toCamelCase(strings.TrimPrefix(name, platform+"_"))
+		_, err = fmt.Fprintf(f, "reflect.TypeOf(%[1]v.%[2]v{}): %[1]v.%[2]v_Template,\n", platform, structName)
+		if err != nil {
+			logrus.Error(err)
 		}
 
 	}
+
+	// dirs, _ := os.ReadDir("models/")
+	// for _, dir := range dirs {
+	// 	logrus.Info(dir.Name())
+	// }
+	f.WriteString("}\n")
+}
+
+func main() {
+	GenerateFSMStructs("")
 }

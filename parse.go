@@ -1,11 +1,15 @@
+//go:generate bash -c "./get_latest_templates.sh && go run generate/generate.go"
+
 package gontc
 
 import (
 	"encoding/json"
 	"errors"
+	"reflect"
 
 	"github.com/sirikothe/gotextfsm"
 	"github.com/sirupsen/logrus"
+	"github.com/wessrow/go-ntc-templates/models"
 )
 
 func parseOutput[returnModel any](input string, template string) ([]returnModel, error) {
@@ -37,7 +41,15 @@ func parseOutput[returnModel any](input string, template string) ([]returnModel,
 	return model, nil
 }
 
-func ParseCommand[returnModel any](input string, template string) ([]returnModel, error) {
+func ParseCommand[returnModel any](input string) ([]returnModel, error) {
+
+	modelType := reflect.TypeOf((*returnModel)(nil)).Elem()
+
+	// Find the corresponding template
+	template, ok := models.TemplateMap[modelType]
+	if !ok {
+		return nil, errors.New("template not found for the given model")
+	}
 
 	parsedCommand, err := parseOutput[returnModel](input, template)
 	if err != nil {
