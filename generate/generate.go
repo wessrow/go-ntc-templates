@@ -1,4 +1,4 @@
-package generate
+package main
 
 import (
 	"fmt"
@@ -199,4 +199,8 @@ import (
 	// 	logrus.Info(dir.Name())
 	// }
 	f.WriteString("}\n")
+}
+
+func main() {
+	GenerateFSMStructs("")
 }

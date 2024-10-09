@@ -1,4 +1,6 @@
-package parse
+//go:generate bash -c "./get_latest_templates.sh && go run generate/generate.go"
+
+package gontc
 
 import (
 	"encoding/json"
