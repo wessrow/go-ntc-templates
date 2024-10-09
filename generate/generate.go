@@ -155,6 +155,10 @@ func GenerateFSMStructs(path string) {
 	items, _ := ioutil.ReadDir(path)
 
 	for _, item := range items {
+		if item.Name() == "index" {
+			continue
+		}
+
 		template, err := os.ReadFile(path + "/" + item.Name())
 
 		if err != nil {
