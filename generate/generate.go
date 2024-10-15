@@ -46,7 +46,7 @@ func createPlatformDirectory(platform string) error {
 	return os.MkdirAll(dirPath, os.ModePerm)
 }
 
-func capitalizeFirstLetterLowerRest(s string) string {
+func capitalizeFirstLetter(s string) string {
 	if len(s) == 0 {
 		return s
 	}
@@ -106,7 +106,7 @@ func generateStruct(structName string, template string, fields map[string]string
 	}
 
 	for fieldName, fieldType := range fields {
-		structFieldName := capitalizeFirstLetterLowerRest(fieldName)
+		structFieldName := capitalizeFirstLetter(fieldName)
 		jsonTag := "`json:\"" + fieldName + "\"`"
 		field := &ast.Field{
 			Names: []*ast.Ident{ast.NewIdent(structFieldName)},
