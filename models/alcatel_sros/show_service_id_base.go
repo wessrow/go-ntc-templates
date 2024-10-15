@@ -1,17 +1,17 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowServiceIdBase struct {
-	Service_id	string	`json:"SERVICE_ID"`
-	Customer_id	string	`json:"CUSTOMER_ID"`
-	Description	string	`json:"DESCRIPTION"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Oper_state	string	`json:"OPER_STATE"`
-	Sap_count	string	`json:"SAP_COUNT"`
-	Sdp_count	string	`json:"SDP_COUNT"`
-	Mtu	string	`json:"MTU"`
+	Oper_state  string `json:"OPER_STATE"`
+	Sap_count   string `json:"SAP_COUNT"`
+	Sdp_count   string `json:"SDP_COUNT"`
+	Mtu         string `json:"MTU"`
+	Service_id  string `json:"SERVICE_ID"`
+	Customer_id string `json:"CUSTOMER_ID"`
+	Description string `json:"DESCRIPTION"`
+	Admin_state string `json:"ADMIN_STATE"`
 }
 
-var ShowServiceIdBase_Template = `Value SERVICE_ID (\d+)
+var ShowServiceIdBase_Template string = `Value SERVICE_ID (\d+)
 Value CUSTOMER_ID (\d+)
 Value DESCRIPTION ([\w|\s]+|\(Not\sSpecified\))
 Value ADMIN_STATE ([uU][pP]|[Dd][oO][wW][nN])

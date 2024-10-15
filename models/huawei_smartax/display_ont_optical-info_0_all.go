@@ -1,17 +1,17 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntOpticalInfo0All struct {
-	Ont_id	string	`json:"ONT_ID"`
-	Rx_power	string	`json:"RX_POWER"`
-	Tx_power	string	`json:"TX_POWER"`
-	Olt_rx_ont	string	`json:"OLT_RX_ONT"`
-	Temperature	string	`json:"TEMPERATURE"`
-	Voltage	string	`json:"VOLTAGE"`
-	Current	string	`json:"CURRENT"`
-	Distance	string	`json:"DISTANCE"`
+	Temperature string `json:"TEMPERATURE"`
+	Voltage     string `json:"VOLTAGE"`
+	Current     string `json:"CURRENT"`
+	Distance    string `json:"DISTANCE"`
+	Ont_id      string `json:"ONT_ID"`
+	Rx_power    string `json:"RX_POWER"`
+	Tx_power    string `json:"TX_POWER"`
+	Olt_rx_ont  string `json:"OLT_RX_ONT"`
 }
 
-var DisplayOntOpticalInfo0All_Template = `Value Key ONT_ID (\d+)
+var DisplayOntOpticalInfo0All_Template string = `Value Key ONT_ID (\d+)
 Value RX_POWER (\S+)
 Value TX_POWER (\S+)
 Value OLT_RX_ONT (\S+)

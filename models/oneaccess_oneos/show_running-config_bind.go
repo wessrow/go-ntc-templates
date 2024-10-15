@@ -1,13 +1,13 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRunningConfigBind struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Interface	[]string	`json:"INTERFACE"`
-	Acl	string	`json:"ACL"`
-	Vrf	[]string	`json:"VRF"`
+	Protocol  string   `json:"PROTOCOL"`
+	Interface []string `json:"INTERFACE"`
+	Acl       string   `json:"ACL"`
+	Vrf       []string `json:"VRF"`
 }
 
-var ShowRunningConfigBind_Template = `Value Required PROTOCOL (ssh|telnet)
+var ShowRunningConfigBind_Template string = `Value Required PROTOCOL (ssh|telnet)
 Value List INTERFACE (\S+.*\d+)
 Value ACL (\S+)
 Value List VRF (\S+)

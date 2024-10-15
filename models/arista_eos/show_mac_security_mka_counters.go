@@ -1,14 +1,14 @@
-package arista_eos 
+package arista_eos
 
 type ShowMacSecurityMkaCounters struct {
-	Interface	string	`json:"INTERFACE"`
-	Rx_success	string	`json:"RX_SUCCESS"`
-	Rx_failure	string	`json:"RX_FAILURE"`
-	Tx_success	string	`json:"TX_SUCCESS"`
-	Tx_failure	string	`json:"TX_FAILURE"`
+	Interface  string `json:"INTERFACE"`
+	Rx_success string `json:"RX_SUCCESS"`
+	Rx_failure string `json:"RX_FAILURE"`
+	Tx_success string `json:"TX_SUCCESS"`
+	Tx_failure string `json:"TX_FAILURE"`
 }
 
-var ShowMacSecurityMkaCounters_Template = `Value INTERFACE (\S+)
+var ShowMacSecurityMkaCounters_Template string = `Value INTERFACE (\S+)
 Value RX_SUCCESS (\S+)
 Value RX_FAILURE (\S+)
 Value TX_SUCCESS (\S+)

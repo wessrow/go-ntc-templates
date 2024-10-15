@@ -1,13 +1,13 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowInterfaceSwitchport struct {
-	Interface	string	`json:"INTERFACE"`
-	Mode	string	`json:"MODE"`
-	Native_vlan	string	`json:"NATIVE_VLAN"`
-	Trunking_vlans	[]string	`json:"TRUNKING_VLANS"`
+	Interface      string   `json:"INTERFACE"`
+	Mode           string   `json:"MODE"`
+	Native_vlan    string   `json:"NATIVE_VLAN"`
+	Trunking_vlans []string `json:"TRUNKING_VLANS"`
 }
 
-var AwplusShowInterfaceSwitchport_Template = `Value Required INTERFACE (\S+)
+var AwplusShowInterfaceSwitchport_Template string = `Value Required INTERFACE (\S+)
 Value MODE (\S+)
 Value NATIVE_VLAN (\d+|None)
 Value List TRUNKING_VLANS (\d+|\d)

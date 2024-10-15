@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowMplsL2transportVc struct {
-	Interface	string	`json:"INTERFACE"`
-	Local_circuit	string	`json:"LOCAL_CIRCUIT"`
-	Dest_address	string	`json:"DEST_ADDRESS"`
-	Vc_id	string	`json:"VC_ID"`
-	Status	string	`json:"STATUS"`
+	Dest_address  string `json:"DEST_ADDRESS"`
+	Vc_id         string `json:"VC_ID"`
+	Status        string `json:"STATUS"`
+	Interface     string `json:"INTERFACE"`
+	Local_circuit string `json:"LOCAL_CIRCUIT"`
 }
 
-var ShowMplsL2transportVc_Template = `Value INTERFACE ([a-zA-Z0-9\-/.]+)
+var ShowMplsL2transportVc_Template string = `Value INTERFACE ([a-zA-Z0-9\-/.]+)
 Value LOCAL_CIRCUIT (.*)
 Value DEST_ADDRESS (\S+)
 Value VC_ID (\d+)

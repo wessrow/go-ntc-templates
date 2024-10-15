@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpOspfDatabase struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Vrf	string	`json:"VRF"`
-	Area	string	`json:"AREA"`
-	Link_id	string	`json:"LINK_ID"`
-	Adv_router	string	`json:"ADV_ROUTER"`
-	Age	string	`json:"AGE"`
-	Link_count	string	`json:"LINK_COUNT"`
-	Tag	string	`json:"TAG"`
+	Router_id  string `json:"ROUTER_ID"`
+	Adv_router string `json:"ADV_ROUTER"`
+	Process_id string `json:"PROCESS_ID"`
+	Vrf        string `json:"VRF"`
+	Area       string `json:"AREA"`
+	Link_id    string `json:"LINK_ID"`
+	Age        string `json:"AGE"`
+	Link_count string `json:"LINK_COUNT"`
+	Tag        string `json:"TAG"`
 }
 
-var ShowIpOspfDatabase_Template = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+var ShowIpOspfDatabase_Template string = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown PROCESS_ID (\d+)
 Value Filldown VRF (\S+)
 Value Filldown AREA (\d+\.\d+\.\d+\.\d+|\d+)

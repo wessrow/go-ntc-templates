@@ -1,12 +1,12 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayBoardSerialNumber struct {
-	Slot_id	string	`json:"SLOT_ID"`
-	Board_name	string	`json:"BOARD_NAME"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
+	Slot_id       string `json:"SLOT_ID"`
+	Board_name    string `json:"BOARD_NAME"`
+	Serial_number string `json:"SERIAL_NUMBER"`
 }
 
-var DisplayBoardSerialNumber_Template = `Value Key SLOT_ID (\d+)
+var DisplayBoardSerialNumber_Template string = `Value Key SLOT_ID (\d+)
 Value BOARD_NAME (\w*)
 Value SERIAL_NUMBER (\w*)
 

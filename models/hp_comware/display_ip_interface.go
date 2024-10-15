@@ -1,15 +1,15 @@
-package hp_comware 
+package hp_comware
 
 type DisplayIpInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Line_status	string	`json:"LINE_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Route_map	string	`json:"ROUTE_MAP"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	Mtu	string	`json:"MTU"`
+	Line_status     string   `json:"LINE_STATUS"`
+	Protocol_status string   `json:"PROTOCOL_STATUS"`
+	Route_map       string   `json:"ROUTE_MAP"`
+	Ip_address      []string `json:"IP_ADDRESS"`
+	Mtu             string   `json:"MTU"`
+	Interface       string   `json:"INTERFACE"`
 }
 
-var DisplayIpInterface_Template = `Value INTERFACE (\S+)
+var DisplayIpInterface_Template string = `Value INTERFACE (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value ROUTE_MAP (\S+)

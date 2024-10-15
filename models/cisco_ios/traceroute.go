@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type Traceroute struct {
-	Hop_num	string	`json:"HOP_NUM"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Fqdn	string	`json:"FQDN"`
-	Rtt_response	[]string	`json:"RTT_RESPONSE"`
-	Details	string	`json:"DETAILS"`
+	Details      string   `json:"DETAILS"`
+	Hop_num      string   `json:"HOP_NUM"`
+	Ip_address   string   `json:"IP_ADDRESS"`
+	Fqdn         string   `json:"FQDN"`
+	Rtt_response []string `json:"RTT_RESPONSE"`
 }
 
-var Traceroute_Template = `Value Required,Filldown HOP_NUM (\d+)
+var Traceroute_Template string = `Value Required,Filldown HOP_NUM (\d+)
 Value IP_ADDRESS ((?:\d{1,3}\.){3}\d{1,3})
 Value FQDN (\S+)
 # Captures RTT (in milliseconds), or faults, like

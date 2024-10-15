@@ -1,15 +1,15 @@
-package arista_eos 
+package arista_eos
 
 type ShowClock struct {
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Dayweek	string	`json:"DAYWEEK"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
+	Month    string `json:"MONTH"`
+	Day      string `json:"DAY"`
+	Year     string `json:"YEAR"`
+	Time     string `json:"TIME"`
+	Timezone string `json:"TIMEZONE"`
+	Dayweek  string `json:"DAYWEEK"`
 }
 
-var ShowClock_Template = `Value TIME (\d+:\d+:\d+)
+var ShowClock_Template string = `Value TIME (\d+:\d+:\d+)
 Value TIMEZONE (\S+)
 Value DAYWEEK (\w+)
 Value MONTH (\w+)

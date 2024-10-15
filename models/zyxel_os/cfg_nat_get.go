@@ -1,20 +1,20 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgNatGet struct {
-	Index	string	`json:"INDEX"`
-	Name	string	`json:"NAME"`
-	Enabled	string	`json:"ENABLED"`
-	Originating_ip	string	`json:"ORIGINATING_IP"`
-	Server_ip	string	`json:"SERVER_IP"`
-	Wan_interface	string	`json:"WAN_INTERFACE"`
-	Start_port	string	`json:"START_PORT"`
-	End_port	string	`json:"END_PORT"`
-	Transl_start_port	string	`json:"TRANSL_START_PORT"`
-	Transl_end_port	string	`json:"TRANSL_END_PORT"`
-	Protocol	string	`json:"PROTOCOL"`
+	Transl_start_port string `json:"TRANSL_START_PORT"`
+	Transl_end_port   string `json:"TRANSL_END_PORT"`
+	Name              string `json:"NAME"`
+	Enabled           string `json:"ENABLED"`
+	Originating_ip    string `json:"ORIGINATING_IP"`
+	Start_port        string `json:"START_PORT"`
+	End_port          string `json:"END_PORT"`
+	Protocol          string `json:"PROTOCOL"`
+	Index             string `json:"INDEX"`
+	Server_ip         string `json:"SERVER_IP"`
+	Wan_interface     string `json:"WAN_INTERFACE"`
 }
 
-var CfgNatGet_Template = `Value INDEX (\d+)
+var CfgNatGet_Template string = `Value INDEX (\d+)
 Value NAME (.+?)
 Value ENABLED (0|1)
 Value ORIGINATING_IP (\d+\.\d+\.\d+\.\d+|N\/A)

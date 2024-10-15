@@ -1,15 +1,15 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type Ipv6NeighborPrintWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Status	string	`json:"STATUS"`
+	Mac_address  string `json:"MAC_ADDRESS"`
+	Status       string `json:"STATUS"`
+	Index        string `json:"INDEX"`
+	Flags        string `json:"FLAGS"`
+	Ipv6_address string `json:"IPV6_ADDRESS"`
+	Interface    string `json:"INTERFACE"`
 }
 
-var Ipv6NeighborPrintWithoutPaging_Template = `Value Key INDEX (\d+)
+var Ipv6NeighborPrintWithoutPaging_Template string = `Value Key INDEX (\d+)
 Value FLAGS ([R]+)
 Value IPV6_ADDRESS (\S+)
 Value INTERFACE (\S+)

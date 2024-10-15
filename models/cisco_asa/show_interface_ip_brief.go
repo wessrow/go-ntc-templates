@@ -1,13 +1,13 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowInterfaceIpBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Proto	string	`json:"PROTO"`
+	Interface  string `json:"INTERFACE"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Status     string `json:"STATUS"`
+	Proto      string `json:"PROTO"`
 }
 
-var ShowInterfaceIpBrief_Template = `Value INTERFACE (\S+)
+var ShowInterfaceIpBrief_Template string = `Value INTERFACE (\S+)
 Value IP_ADDRESS (\S+)
 Value STATUS (up|down|administratively down)
 Value PROTO (up|down)

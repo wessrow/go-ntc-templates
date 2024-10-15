@@ -1,13 +1,13 @@
-package cisco_xr 
+package cisco_xr
 
 type AdminShowPlatform struct {
-	Node	string	`json:"NODE"`
-	Type	string	`json:"TYPE"`
-	State	string	`json:"STATE"`
-	Config_state	string	`json:"CONFIG_STATE"`
+	Node         string `json:"NODE"`
+	Type         string `json:"TYPE"`
+	State        string `json:"STATE"`
+	Config_state string `json:"CONFIG_STATE"`
 }
 
-var AdminShowPlatform_Template = `Value NODE (\S+)
+var AdminShowPlatform_Template string = `Value NODE (\S+)
 Value TYPE (\S+)
 Value STATE ((\S+(\s\S+)*))
 Value CONFIG_STATE (\S+)

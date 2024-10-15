@@ -1,21 +1,21 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpRoute struct {
-	Vrf	string	`json:"VRF"`
-	Protocol	string	`json:"PROTOCOL"`
-	Type	string	`json:"TYPE"`
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_vrf	string	`json:"NEXTHOP_VRF"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
-	Uptime	string	`json:"UPTIME"`
-	Flag	string	`json:"FLAG"`
+	Nexthop_vrf   string `json:"NEXTHOP_VRF"`
+	Uptime        string `json:"UPTIME"`
+	Flag          string `json:"FLAG"`
+	Vrf           string `json:"VRF"`
+	Protocol      string `json:"PROTOCOL"`
+	Nexthop_ip    string `json:"NEXTHOP_IP"`
+	Distance      string `json:"DISTANCE"`
+	Metric        string `json:"METRIC"`
+	Nexthop_if    string `json:"NEXTHOP_IF"`
+	Type          string `json:"TYPE"`
+	Network       string `json:"NETWORK"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
 }
 
-var ShowIpRoute_Template = `Value Filldown VRF (\S+)
+var ShowIpRoute_Template string = `Value Filldown VRF (\S+)
 Value Filldown PROTOCOL (\w)
 Value Filldown TYPE (\w{0,2})
 Value Required,Filldown NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})

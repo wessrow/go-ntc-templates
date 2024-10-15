@@ -1,12 +1,12 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowVersion struct {
-	Version	string	`json:"VERSION"`
-	Build_date	string	`json:"BUILD_DATE"`
-	Last_reboot	string	`json:"LAST_REBOOT"`
+	Version     string `json:"VERSION"`
+	Build_date  string `json:"BUILD_DATE"`
+	Last_reboot string `json:"LAST_REBOOT"`
 }
 
-var ShowVersion_Template = `Value VERSION (\S+)
+var ShowVersion_Template string = `Value VERSION (\S+)
 Value BUILD_DATE (.+)
 Value LAST_REBOOT (.+)
 

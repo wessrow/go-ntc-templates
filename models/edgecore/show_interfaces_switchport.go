@@ -1,34 +1,34 @@
-package edgecore 
+package edgecore
 
 type ShowInterfacesSwitchport struct {
-	Interface	string	`json:"INTERFACE"`
-	Broadcast_threshold	string	`json:"BROADCAST_THRESHOLD"`
-	Multicast_threshold	string	`json:"MULTICAST_THRESHOLD"`
-	Unicast_threshold	string	`json:"UNICAST_THRESHOLD"`
-	Unknown_unicast_threshold	string	`json:"UNKNOWN_UNICAST_THRESHOLD"`
-	Lacp_status	string	`json:"LACP_STATUS"`
-	Ingress_rate_limit	string	`json:"INGRESS_RATE_LIMIT"`
-	Egress_rate_limit	string	`json:"EGRESS_RATE_LIMIT"`
-	Vlan_membership_mode	string	`json:"VLAN_MEMBERSHIP_MODE"`
-	Ingress_rule	string	`json:"INGRESS_RULE"`
-	Acceptable_frame_type	string	`json:"ACCEPTABLE_FRAME_TYPE"`
-	Native_vlan	string	`json:"NATIVE_VLAN"`
-	Priority_for_untagged_traffic	string	`json:"PRIORITY_FOR_UNTAGGED_TRAFFIC"`
-	Gvrp_status	string	`json:"GVRP_STATUS"`
-	Allowed_vlan	[]string	`json:"ALLOWED_VLAN"`
-	Allowed_vlan_tag	[]string	`json:"ALLOWED_VLAN_TAG"`
-	Forbidden_vlan	[]string	`json:"FORBIDDEN_VLAN"`
-	Forbidden_vlan_tag	[]string	`json:"FORBIDDEN_VLAN_TAG"`
-	Private_vlan_mode	string	`json:"PRIVATE_VLAN_MODE"`
-	Private_vlan_host_association	string	`json:"PRIVATE_VLAN_HOST_ASSOCIATION"`
-	Private_vlan_mapping	string	`json:"PRIVATE_VLAN_MAPPING"`
-	Tunnel_status_802_1q	string	`json:"TUNNEL_STATUS_802_1Q"`
-	Tunnel_mode_802_1q	string	`json:"TUNNEL_MODE_802_1Q"`
-	Tunnel_tpid_802_1q	string	`json:"TUNNEL_TPID_802_1Q"`
-	Layer_2_protocol_tunnel	string	`json:"LAYER_2_PROTOCOL_TUNNEL"`
+	Private_vlan_mode             string   `json:"PRIVATE_VLAN_MODE"`
+	Private_vlan_host_association string   `json:"PRIVATE_VLAN_HOST_ASSOCIATION"`
+	Private_vlan_mapping          string   `json:"PRIVATE_VLAN_MAPPING"`
+	Interface                     string   `json:"INTERFACE"`
+	Lacp_status                   string   `json:"LACP_STATUS"`
+	Egress_rate_limit             string   `json:"EGRESS_RATE_LIMIT"`
+	Acceptable_frame_type         string   `json:"ACCEPTABLE_FRAME_TYPE"`
+	Native_vlan                   string   `json:"NATIVE_VLAN"`
+	Tunnel_mode_802_1q            string   `json:"TUNNEL_MODE_802_1Q"`
+	Multicast_threshold           string   `json:"MULTICAST_THRESHOLD"`
+	Unicast_threshold             string   `json:"UNICAST_THRESHOLD"`
+	Unknown_unicast_threshold     string   `json:"UNKNOWN_UNICAST_THRESHOLD"`
+	Tunnel_status_802_1q          string   `json:"TUNNEL_STATUS_802_1Q"`
+	Ingress_rate_limit            string   `json:"INGRESS_RATE_LIMIT"`
+	Ingress_rule                  string   `json:"INGRESS_RULE"`
+	Tunnel_tpid_802_1q            string   `json:"TUNNEL_TPID_802_1Q"`
+	Layer_2_protocol_tunnel       string   `json:"LAYER_2_PROTOCOL_TUNNEL"`
+	Allowed_vlan_tag              []string `json:"ALLOWED_VLAN_TAG"`
+	Forbidden_vlan                []string `json:"FORBIDDEN_VLAN"`
+	Forbidden_vlan_tag            []string `json:"FORBIDDEN_VLAN_TAG"`
+	Broadcast_threshold           string   `json:"BROADCAST_THRESHOLD"`
+	Vlan_membership_mode          string   `json:"VLAN_MEMBERSHIP_MODE"`
+	Priority_for_untagged_traffic string   `json:"PRIORITY_FOR_UNTAGGED_TRAFFIC"`
+	Gvrp_status                   string   `json:"GVRP_STATUS"`
+	Allowed_vlan                  []string `json:"ALLOWED_VLAN"`
 }
 
-var ShowInterfacesSwitchport_Template = `Value INTERFACE (.*)
+var ShowInterfacesSwitchport_Template string = `Value INTERFACE (.*)
 Value BROADCAST_THRESHOLD (.*)
 Value MULTICAST_THRESHOLD (.*)
 Value UNICAST_THRESHOLD (.*)

@@ -1,12 +1,12 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpDhcpRelayAddress struct {
-	Interface	string	`json:"INTERFACE"`
-	Relay_address	string	`json:"RELAY_ADDRESS"`
-	Vrf	string	`json:"VRF"`
+	Vrf           string `json:"VRF"`
+	Interface     string `json:"INTERFACE"`
+	Relay_address string `json:"RELAY_ADDRESS"`
 }
 
-var ShowIpDhcpRelayAddress_Template = `Value INTERFACE (\S+)
+var ShowIpDhcpRelayAddress_Template string = `Value INTERFACE (\S+)
 Value RELAY_ADDRESS (\d+.\d+.\d+.\d+)
 Value VRF (\S+)
 

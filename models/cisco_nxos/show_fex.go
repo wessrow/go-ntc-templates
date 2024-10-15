@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowFex struct {
-	Number	string	`json:"NUMBER"`
-	Descr	string	`json:"DESCR"`
-	State	string	`json:"STATE"`
-	Model	string	`json:"MODEL"`
-	Serial	string	`json:"SERIAL"`
+	Model  string `json:"MODEL"`
+	Serial string `json:"SERIAL"`
+	Number string `json:"NUMBER"`
+	Descr  string `json:"DESCR"`
+	State  string `json:"STATE"`
 }
 
-var ShowFex_Template = `Value NUMBER (\d+)
+var ShowFex_Template string = `Value NUMBER (\d+)
 Value DESCR ((\S+)(\s+\S+)*)
 Value STATE (\S+)
 Value MODEL (\S+)

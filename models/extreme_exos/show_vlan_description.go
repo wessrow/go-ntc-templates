@@ -1,12 +1,12 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowVlanDescription struct {
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Description	string	`json:"DESCRIPTION"`
+	Vlan_name   string `json:"VLAN_NAME"`
+	Vlan_id     string `json:"VLAN_ID"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var ShowVlanDescription_Template = `Value VLAN_NAME (\S+)
+var ShowVlanDescription_Template string = `Value VLAN_NAME (\S+)
 Value VLAN_ID (\d+)
 Value DESCRIPTION (.*)
 

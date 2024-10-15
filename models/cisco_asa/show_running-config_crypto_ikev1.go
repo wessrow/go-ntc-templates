@@ -1,16 +1,16 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowRunningConfigCryptoIkev1 struct {
-	Ike_version	string	`json:"IKE_VERSION"`
-	Policy_id	string	`json:"POLICY_ID"`
-	Auth_method	string	`json:"AUTH_METHOD"`
-	Encryption	string	`json:"ENCRYPTION"`
-	Auth_algorithm	string	`json:"AUTH_ALGORITHM"`
-	Dh_group	string	`json:"DH_GROUP"`
-	Lifetime	string	`json:"LIFETIME"`
+	Lifetime       string `json:"LIFETIME"`
+	Ike_version    string `json:"IKE_VERSION"`
+	Policy_id      string `json:"POLICY_ID"`
+	Auth_method    string `json:"AUTH_METHOD"`
+	Encryption     string `json:"ENCRYPTION"`
+	Auth_algorithm string `json:"AUTH_ALGORITHM"`
+	Dh_group       string `json:"DH_GROUP"`
 }
 
-var ShowRunningConfigCryptoIkev1_Template = `Value IKE_VERSION (\d+)
+var ShowRunningConfigCryptoIkev1_Template string = `Value IKE_VERSION (\d+)
 Value POLICY_ID (\d+)
 Value AUTH_METHOD (\S+)
 Value ENCRYPTION (\S+)

@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVrf struct {
-	Name	string	`json:"NAME"`
-	Default_rd	string	`json:"DEFAULT_RD"`
-	Protocols	string	`json:"PROTOCOLS"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Name       string   `json:"NAME"`
+	Default_rd string   `json:"DEFAULT_RD"`
+	Protocols  string   `json:"PROTOCOLS"`
+	Interfaces []string `json:"INTERFACES"`
 }
 
-var ShowVrf_Template = `Value Required NAME (\S+)
+var ShowVrf_Template string = `Value Required NAME (\S+)
 Value DEFAULT_RD ((\d+|\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):\d+|<not set>)
 Value PROTOCOLS (\S+)
 Value List INTERFACES (\S+)

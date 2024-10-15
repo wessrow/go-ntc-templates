@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowFabricpathRoute struct {
-	Ftag	string	`json:"FTAG"`
-	Switch_id	string	`json:"SWITCH_ID"`
-	Subswitch_id	string	`json:"SUBSWITCH_ID"`
-	Ports	[]string	`json:"PORTS"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
+	Metric       string   `json:"METRIC"`
+	Ftag         string   `json:"FTAG"`
+	Switch_id    string   `json:"SWITCH_ID"`
+	Subswitch_id string   `json:"SUBSWITCH_ID"`
+	Ports        []string `json:"PORTS"`
+	Distance     string   `json:"DISTANCE"`
 }
 
-var ShowFabricpathRoute_Template = `Value Filldown FTAG (\d+)
+var ShowFabricpathRoute_Template string = `Value Filldown FTAG (\d+)
 Value Filldown SWITCH_ID (\d+)
 Value SUBSWITCH_ID (\d+)
 Value Required,List PORTS (\S+)

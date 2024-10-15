@@ -1,11 +1,11 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowRunningConfigSnmpEnable struct {
-	Trap	string	`json:"TRAP"`
-	Status	string	`json:"STATUS"`
+	Trap   string `json:"TRAP"`
+	Status string `json:"STATUS"`
 }
 
-var ShowRunningConfigSnmpEnable_Template = `Value TRAP (linkUp|linkDown)
+var ShowRunningConfigSnmpEnable_Template string = `Value TRAP (linkUp|linkDown)
 Value STATUS (\w+)
 
 

@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowDhcpIpv4ProxyBinding struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	State	string	`json:"STATE"`
-	Lease_remaining	string	`json:"LEASE_REMAINING"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Vrf	string	`json:"VRF"`
-	Sublabel	string	`json:"SUBLABEL"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	State           string `json:"STATE"`
+	Lease_remaining string `json:"LEASE_REMAINING"`
+	Mac_address     string `json:"MAC_ADDRESS"`
+	Interface       string `json:"INTERFACE"`
+	Vrf             string `json:"VRF"`
+	Sublabel        string `json:"SUBLABEL"`
 }
 
-var ShowDhcpIpv4ProxyBinding_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowDhcpIpv4ProxyBinding_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value STATE (\S+)
 Value LEASE_REMAINING (\S+)
 Value MAC_ADDRESS (\S+)

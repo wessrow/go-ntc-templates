@@ -1,21 +1,21 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayServicePortAll struct {
-	Index	string	`json:"INDEX"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_attr	string	`json:"VLAN_ATTR"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Fsp	string	`json:"FSP"`
-	Ont_id	string	`json:"ONT_ID"`
-	Gem_index	string	`json:"GEM_INDEX"`
-	Flow_type	string	`json:"FLOW_TYPE"`
-	Vlan_access	string	`json:"VLAN_ACCESS"`
-	Rx	string	`json:"RX"`
-	Tx	string	`json:"TX"`
-	State	string	`json:"STATE"`
+	Flow_type   string `json:"FLOW_TYPE"`
+	Tx          string `json:"TX"`
+	Port_type   string `json:"PORT_TYPE"`
+	Ont_id      string `json:"ONT_ID"`
+	Vlan_attr   string `json:"VLAN_ATTR"`
+	Fsp         string `json:"FSP"`
+	Gem_index   string `json:"GEM_INDEX"`
+	Vlan_access string `json:"VLAN_ACCESS"`
+	Rx          string `json:"RX"`
+	State       string `json:"STATE"`
+	Index       string `json:"INDEX"`
+	Vlan_id     string `json:"VLAN_ID"`
 }
 
-var DisplayServicePortAll_Template = `Value INDEX (\d+)
+var DisplayServicePortAll_Template string = `Value INDEX (\d+)
 Value VLAN_ID (\d+)
 Value VLAN_ATTR (\S+)
 Value PORT_TYPE (\S+)

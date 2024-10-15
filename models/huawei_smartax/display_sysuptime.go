@@ -1,13 +1,13 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplaySysuptime struct {
-	Day	string	`json:"DAY"`
-	Hour	string	`json:"HOUR"`
-	Minute	string	`json:"MINUTE"`
-	Second	string	`json:"SECOND"`
+	Day    string `json:"DAY"`
+	Hour   string `json:"HOUR"`
+	Minute string `json:"MINUTE"`
+	Second string `json:"SECOND"`
 }
 
-var DisplaySysuptime_Template = `Value DAY (\d+)
+var DisplaySysuptime_Template string = `Value DAY (\d+)
 Value HOUR (\d+)
 Value MINUTE (\d+)
 Value SECOND (\d+)

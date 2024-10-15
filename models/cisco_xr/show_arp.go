@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	State	string	`json:"STATE"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Cpu	string	`json:"CPU"`
+	State       string `json:"STATE"`
+	Type        string `json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Cpu         string `json:"CPU"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Age         string `json:"AGE"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowArp_Template = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowArp_Template string = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
 Value Required MAC_ADDRESS (\S+)
 Value Required STATE (\S+)

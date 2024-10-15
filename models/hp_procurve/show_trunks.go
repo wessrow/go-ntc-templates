@@ -1,14 +1,14 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowTrunks struct {
-	Local_port	string	`json:"LOCAL_PORT"`
-	Int_name	string	`json:"INT_NAME"`
-	Int_type	string	`json:"INT_TYPE"`
-	Trunk	string	`json:"TRUNK"`
-	Trunk_type	string	`json:"TRUNK_TYPE"`
+	Int_type   string `json:"INT_TYPE"`
+	Trunk      string `json:"TRUNK"`
+	Trunk_type string `json:"TRUNK_TYPE"`
+	Local_port string `json:"LOCAL_PORT"`
+	Int_name   string `json:"INT_NAME"`
 }
 
-var ShowTrunks_Template = `Value Required LOCAL_PORT (\S+)
+var ShowTrunks_Template string = `Value Required LOCAL_PORT (\S+)
 Value INT_NAME (.*?)
 Value INT_TYPE (.*?)
 Value TRUNK (\S+)

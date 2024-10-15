@@ -1,17 +1,17 @@
-package vyatta_vyos 
+package vyatta_vyos
 
 type ShowIpBgpSummary struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Msg_rcvd	string	`json:"MSG_RCVD"`
-	Msg_sent	string	`json:"MSG_SENT"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	Msg_rcvd     string `json:"MSG_RCVD"`
+	Msg_sent     string `json:"MSG_SENT"`
+	Up_down      string `json:"UP_DOWN"`
+	State_pfxrcd string `json:"STATE_PFXRCD"`
+	Router_id    string `json:"ROUTER_ID"`
+	Local_as     string `json:"LOCAL_AS"`
+	Bgp_neigh    string `json:"BGP_NEIGH"`
+	Neigh_as     string `json:"NEIGH_AS"`
 }
 
-var ShowIpBgpSummary_Template = `Value Filldown ROUTER_ID (\S+)
+var ShowIpBgpSummary_Template string = `Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\d+)
 Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
 Value NEIGH_AS (\d+)

@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowLldpNeighbors struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Capabilities       string `json:"CAPABILITIES"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
 }
 
-var ShowLldpNeighbors_Template = `Value Required NEIGHBOR_NAME (.{0,20}(?<! ))
+var ShowLldpNeighbors_Template string = `Value Required NEIGHBOR_NAME (.{0,20}(?<! ))
 Value Required LOCAL_INTERFACE (\S+)
 Value CAPABILITIES (\S*)
 Value Required NEIGHBOR_INTERFACE (\S+)

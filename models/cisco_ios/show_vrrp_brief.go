@@ -1,19 +1,19 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVrrpBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Group	string	`json:"GROUP"`
-	Addr_family	string	`json:"ADDR_FAMILY"`
-	Priority	string	`json:"PRIORITY"`
-	Time	string	`json:"TIME"`
-	Own	string	`json:"OWN"`
-	Preempt	string	`json:"PREEMPT"`
-	State	string	`json:"STATE"`
-	Master_ip_address	string	`json:"MASTER_IP_ADDRESS"`
-	Virtual_ip_address	string	`json:"VIRTUAL_IP_ADDRESS"`
+	Master_ip_address  string `json:"MASTER_IP_ADDRESS"`
+	Virtual_ip_address string `json:"VIRTUAL_IP_ADDRESS"`
+	Addr_family        string `json:"ADDR_FAMILY"`
+	Time               string `json:"TIME"`
+	Own                string `json:"OWN"`
+	Preempt            string `json:"PREEMPT"`
+	State              string `json:"STATE"`
+	Interface          string `json:"INTERFACE"`
+	Group              string `json:"GROUP"`
+	Priority           string `json:"PRIORITY"`
 }
 
-var ShowVrrpBrief_Template = `Value INTERFACE (\S+)
+var ShowVrrpBrief_Template string = `Value INTERFACE (\S+)
 Value GROUP (\d+)
 Value ADDR_FAMILY (\S+)
 Value PRIORITY (\d+)

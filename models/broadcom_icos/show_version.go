@@ -1,24 +1,24 @@
-package broadcom_icos 
+package broadcom_icos
 
 type ShowVersion struct {
-	Description	string	`json:"DESCRIPTION"`
-	Switch_type	string	`json:"SWITCH_TYPE"`
-	Switch_model	string	`json:"SWITCH_MODEL"`
-	Serial	string	`json:"SERIAL"`
-	Fru_number	string	`json:"FRU_NUMBER"`
-	Part_number	string	`json:"PART_NUMBER"`
-	Maintenance_level	string	`json:"MAINTENANCE_LEVEL"`
-	Manufacturer	string	`json:"MANUFACTURER"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Version	string	`json:"VERSION"`
-	Os_version	string	`json:"OS_VERSION"`
-	Network_processing_device	string	`json:"NETWORK_PROCESSING_DEVICE"`
-	Cpld_version	string	`json:"CPLD_VERSION"`
-	Board_revision	string	`json:"BOARD_REVISION"`
-	Additional_packages	[]string	`json:"ADDITIONAL_PACKAGES"`
+	Switch_type               string   `json:"SWITCH_TYPE"`
+	Switch_model              string   `json:"SWITCH_MODEL"`
+	Version                   string   `json:"VERSION"`
+	Cpld_version              string   `json:"CPLD_VERSION"`
+	Board_revision            string   `json:"BOARD_REVISION"`
+	Description               string   `json:"DESCRIPTION"`
+	Fru_number                string   `json:"FRU_NUMBER"`
+	Mac_address               string   `json:"MAC_ADDRESS"`
+	Os_version                string   `json:"OS_VERSION"`
+	Network_processing_device string   `json:"NETWORK_PROCESSING_DEVICE"`
+	Additional_packages       []string `json:"ADDITIONAL_PACKAGES"`
+	Serial                    string   `json:"SERIAL"`
+	Part_number               string   `json:"PART_NUMBER"`
+	Maintenance_level         string   `json:"MAINTENANCE_LEVEL"`
+	Manufacturer              string   `json:"MANUFACTURER"`
 }
 
-var ShowVersion_Template = `Value DESCRIPTION (.+)
+var ShowVersion_Template string = `Value DESCRIPTION (.+)
 Value SWITCH_TYPE (.+)
 Value SWITCH_MODEL (.+)
 Value SERIAL (.+)

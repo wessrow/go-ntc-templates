@@ -1,16 +1,16 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowLldpNeighborsDetail struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_port_description	string	`json:"NEIGHBOR_PORT_DESCRIPTION"`
-	Neighbor_port_type	string	`json:"NEIGHBOR_PORT_TYPE"`
-	Neighbor_port_id	string	`json:"NEIGHBOR_PORT_ID"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	Management_ip	string	`json:"MANAGEMENT_IP"`
+	Management_ip             string `json:"MANAGEMENT_IP"`
+	Local_interface           string `json:"LOCAL_INTERFACE"`
+	Chassis_id                string `json:"CHASSIS_ID"`
+	Neighbor_port_description string `json:"NEIGHBOR_PORT_DESCRIPTION"`
+	Neighbor_port_type        string `json:"NEIGHBOR_PORT_TYPE"`
+	Neighbor_port_id          string `json:"NEIGHBOR_PORT_ID"`
+	Neighbor                  string `json:"NEIGHBOR"`
 }
 
-var AwplusShowLldpNeighborsDetail_Template = `Value LOCAL_INTERFACE (\w+\.\w+\.\w+)
+var AwplusShowLldpNeighborsDetail_Template string = `Value LOCAL_INTERFACE (\w+\.\w+\.\w+)
 Value CHASSIS_ID (.+)
 Value NEIGHBOR_PORT_DESCRIPTION (.+)
 Value NEIGHBOR_PORT_TYPE (.+)

@@ -1,15 +1,15 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowInterfaceHardware struct {
-	Interface	string	`json:"INTERFACE"`
-	Id	string	`json:"ID"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	State	string	`json:"STATE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Id          string `json:"ID"`
+	Speed       string `json:"SPEED"`
+	Duplex      string `json:"DUPLEX"`
+	State       string `json:"STATE"`
 }
 
-var ShowInterfaceHardware_Template = `Value INTERFACE (\S+)
+var ShowInterfaceHardware_Template string = `Value INTERFACE (\S+)
 Value ID (\S+)
 Value SPEED (\[n/a\]|\S+)
 Value DUPLEX (\[n/a\]|\S+)

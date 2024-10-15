@@ -1,11 +1,11 @@
-package arista_eos 
+package arista_eos
 
 type ShowBootConfig struct {
-	Version	string	`json:"VERSION"`
-	Console	string	`json:"CONSOLE"`
+	Version string `json:"VERSION"`
+	Console string `json:"CONSOLE"`
 }
 
-var ShowBootConfig_Template = `Value VERSION (\S+)
+var ShowBootConfig_Template string = `Value VERSION (\S+)
 Value CONSOLE (.*)
 
 Start

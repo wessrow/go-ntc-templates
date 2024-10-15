@@ -1,13 +1,13 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowForwardingIpv4Route struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Nexthop	[]string	`json:"NEXTHOP"`
-	Interface	[]string	`json:"INTERFACE"`
+	Ip_address    string   `json:"IP_ADDRESS"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Nexthop       []string `json:"NEXTHOP"`
+	Interface     []string `json:"INTERFACE"`
 }
 
-var ShowForwardingIpv4Route_Template = `Value IP_ADDRESS (\d+(\.\d+){3})
+var ShowForwardingIpv4Route_Template string = `Value IP_ADDRESS (\d+(\.\d+){3})
 Value PREFIX_LENGTH (\d{1,2})
 Value Required,List NEXTHOP (Drop|Receive|Attached|\d+(\.\d+){3})
 Value List INTERFACE (\S+)

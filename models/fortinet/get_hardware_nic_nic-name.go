@@ -1,39 +1,39 @@
-package fortinet 
+package fortinet
 
 type GetHardwareNicNicName struct {
-	Description	string	`json:"DESCRIPTION"`
-	Driver_name	string	`json:"DRIVER_NAME"`
-	Board	string	`json:"BOARD"`
-	Lif_id	string	`json:"LIF_ID"`
-	Lif_oid	string	`json:"LIF_OID"`
-	Netdev_oid	string	`json:"NETDEV_OID"`
-	Current_hwaddr	string	`json:"CURRENT_HWADDR"`
-	Permanent_hwaddr	string	`json:"PERMANENT_HWADDR"`
-	Admin	string	`json:"ADMIN"`
-	Netdev_status	string	`json:"NETDEV_STATUS"`
-	Autonego_setting	string	`json:"AUTONEGO_SETTING"`
-	Link_setting	string	`json:"LINK_SETTING"`
-	Speed_setting	string	`json:"SPEED_SETTING"`
-	Duplex_setting	string	`json:"DUPLEX_SETTING"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Rx_packets	string	`json:"RX_PACKETS"`
-	Rx_bytes	string	`json:"RX_BYTES"`
-	Tx_packets	string	`json:"TX_PACKETS"`
-	Tx_bytes	string	`json:"TX_BYTES"`
-	Host_rx_packets	string	`json:"HOST_RX_PACKETS"`
-	Host_rx_bytes	string	`json:"HOST_RX_BYTES"`
-	Host_tx_packets	string	`json:"HOST_TX_PACKETS"`
-	Host_tx_bytes	string	`json:"HOST_TX_BYTES"`
-	Host_tx_dropped	string	`json:"HOST_TX_DROPPED"`
-	Fragtxcreate	string	`json:"FRAGTXCREATE"`
-	Fragtxok	string	`json:"FRAGTXOK"`
-	Fragtxdrop	string	`json:"FRAGTXDROP"`
-	Member_ports	[]string	`json:"MEMBER_PORTS"`
+	Netdev_oid       string   `json:"NETDEV_OID"`
+	Admin            string   `json:"ADMIN"`
+	Rx_packets       string   `json:"RX_PACKETS"`
+	Host_rx_bytes    string   `json:"HOST_RX_BYTES"`
+	Member_ports     []string `json:"MEMBER_PORTS"`
+	Driver_name      string   `json:"DRIVER_NAME"`
+	Permanent_hwaddr string   `json:"PERMANENT_HWADDR"`
+	Host_tx_dropped  string   `json:"HOST_TX_DROPPED"`
+	Current_hwaddr   string   `json:"CURRENT_HWADDR"`
+	Tx_packets       string   `json:"TX_PACKETS"`
+	Rx_bytes         string   `json:"RX_BYTES"`
+	Duplex_setting   string   `json:"DUPLEX_SETTING"`
+	Speed_setting    string   `json:"SPEED_SETTING"`
+	Host_tx_bytes    string   `json:"HOST_TX_BYTES"`
+	Lif_id           string   `json:"LIF_ID"`
+	Lif_oid          string   `json:"LIF_OID"`
+	Duplex           string   `json:"DUPLEX"`
+	Link_status      string   `json:"LINK_STATUS"`
+	Tx_bytes         string   `json:"TX_BYTES"`
+	Host_tx_packets  string   `json:"HOST_TX_PACKETS"`
+	Fragtxcreate     string   `json:"FRAGTXCREATE"`
+	Description      string   `json:"DESCRIPTION"`
+	Link_setting     string   `json:"LINK_SETTING"`
+	Fragtxok         string   `json:"FRAGTXOK"`
+	Fragtxdrop       string   `json:"FRAGTXDROP"`
+	Netdev_status    string   `json:"NETDEV_STATUS"`
+	Autonego_setting string   `json:"AUTONEGO_SETTING"`
+	Speed            string   `json:"SPEED"`
+	Host_rx_packets  string   `json:"HOST_RX_PACKETS"`
+	Board            string   `json:"BOARD"`
 }
 
-var GetHardwareNicNicName_Template = `Value DESCRIPTION (.+)
+var GetHardwareNicNicName_Template string = `Value DESCRIPTION (.+)
 Value DRIVER_NAME (.+)
 Value BOARD (\w+)
 Value LIF_ID (\d+)

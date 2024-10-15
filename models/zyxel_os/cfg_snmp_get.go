@@ -1,18 +1,18 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgSnmpGet struct {
-	Agent	string	`json:"AGENT"`
-	Get_community	string	`json:"GET_COMMUNITY"`
-	Set_community	string	`json:"SET_COMMUNITY"`
-	Trap_community	string	`json:"TRAP_COMMUNITY"`
-	System_name	string	`json:"SYSTEM_NAME"`
-	System_location	string	`json:"SYSTEM_LOCATION"`
-	System_contact	string	`json:"SYSTEM_CONTACT"`
-	Domain_name	string	`json:"DOMAIN_NAME"`
-	Trap_dest	string	`json:"TRAP_DEST"`
+	Agent           string `json:"AGENT"`
+	System_name     string `json:"SYSTEM_NAME"`
+	System_location string `json:"SYSTEM_LOCATION"`
+	Get_community   string `json:"GET_COMMUNITY"`
+	Set_community   string `json:"SET_COMMUNITY"`
+	Trap_community  string `json:"TRAP_COMMUNITY"`
+	System_contact  string `json:"SYSTEM_CONTACT"`
+	Domain_name     string `json:"DOMAIN_NAME"`
+	Trap_dest       string `json:"TRAP_DEST"`
 }
 
-var CfgSnmpGet_Template = `Value AGENT (\S*)
+var CfgSnmpGet_Template string = `Value AGENT (\S*)
 Value GET_COMMUNITY (\S*)
 Value SET_COMMUNITY (\S*)
 Value TRAP_COMMUNITY (\S*)

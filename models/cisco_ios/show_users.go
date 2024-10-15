@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowUsers struct {
-	Line	string	`json:"LINE"`
-	User	string	`json:"USER"`
-	Hosts	string	`json:"HOSTS"`
-	Idle	string	`json:"IDLE"`
-	Location	string	`json:"LOCATION"`
+	Location string `json:"LOCATION"`
+	Line     string `json:"LINE"`
+	User     string `json:"USER"`
+	Hosts    string `json:"HOSTS"`
+	Idle     string `json:"IDLE"`
 }
 
-var ShowUsers_Template = `Value LINE ((\*\s+)?\d+\s+(con|aux|tty|vty)\s+\d+)
+var ShowUsers_Template string = `Value LINE ((\*\s+)?\d+\s+(con|aux|tty|vty)\s+\d+)
 Value USER (\S+)
 Value HOSTS (\S+)
 Value IDLE (\S+)

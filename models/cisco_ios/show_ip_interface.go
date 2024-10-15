@@ -1,19 +1,19 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	Prefix_length	[]string	`json:"PREFIX_LENGTH"`
-	Vrf	string	`json:"VRF"`
-	Mtu	string	`json:"MTU"`
-	Ip_helper	[]string	`json:"IP_HELPER"`
-	Outgoing_acl	string	`json:"OUTGOING_ACL"`
-	Inbound_acl	string	`json:"INBOUND_ACL"`
+	Link_status     string   `json:"LINK_STATUS"`
+	Ip_address      []string `json:"IP_ADDRESS"`
+	Vrf             string   `json:"VRF"`
+	Ip_helper       []string `json:"IP_HELPER"`
+	Inbound_acl     string   `json:"INBOUND_ACL"`
+	Interface       string   `json:"INTERFACE"`
+	Protocol_status string   `json:"PROTOCOL_STATUS"`
+	Prefix_length   []string `json:"PREFIX_LENGTH"`
+	Mtu             string   `json:"MTU"`
+	Outgoing_acl    string   `json:"OUTGOING_ACL"`
 }
 
-var ShowIpInterface_Template = `Value Required INTERFACE (\S+)
+var ShowIpInterface_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
 Value List IP_ADDRESS (\S+?)

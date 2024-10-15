@@ -1,20 +1,20 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowIsisAdjacency struct {
-	Context	string	`json:"CONTEXT"`
-	Interface	string	`json:"INTERFACE"`
-	System_id	string	`json:"SYSTEM_ID"`
-	State	string	`json:"STATE"`
-	Lev	string	`json:"LEV"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Snpa	string	`json:"SNPA"`
-	Pri	string	`json:"PRI"`
-	Mt	string	`json:"MT"`
-	Nsf	string	`json:"NSF"`
-	Af	string	`json:"AF"`
+	Hold_time string `json:"HOLD_TIME"`
+	Mt        string `json:"MT"`
+	Context   string `json:"CONTEXT"`
+	Interface string `json:"INTERFACE"`
+	System_id string `json:"SYSTEM_ID"`
+	Pri       string `json:"PRI"`
+	Nsf       string `json:"NSF"`
+	Af        string `json:"AF"`
+	State     string `json:"STATE"`
+	Lev       string `json:"LEV"`
+	Snpa      string `json:"SNPA"`
 }
 
-var ShowIsisAdjacency_Template = `Value Filldown CONTEXT (\d+)
+var ShowIsisAdjacency_Template string = `Value Filldown CONTEXT (\d+)
 Value Required INTERFACE (\S+)
 Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value STATE (\S+)

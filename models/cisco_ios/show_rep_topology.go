@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowRepTopology struct {
-	Switch	string	`json:"SWITCH"`
-	Interface	string	`json:"INTERFACE"`
-	Edge	string	`json:"EDGE"`
-	Role	string	`json:"ROLE"`
+	Switch    string `json:"SWITCH"`
+	Interface string `json:"INTERFACE"`
+	Edge      string `json:"EDGE"`
+	Role      string `json:"ROLE"`
 }
 
-var ShowRepTopology_Template = `Value SWITCH (\S+)
+var ShowRepTopology_Template string = `Value SWITCH (\S+)
 Value INTERFACE (\S+)
 Value EDGE (Pri|Sec)
 Value ROLE (Alt|Open)

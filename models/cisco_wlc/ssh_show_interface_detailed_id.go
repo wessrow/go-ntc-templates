@@ -1,16 +1,16 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowInterfaceDetailedId struct {
-	Interface_name	string	`json:"INTERFACE_NAME"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Gateway	string	`json:"GATEWAY"`
-	Primary_dhcp_server	string	`json:"PRIMARY_DHCP_SERVER"`
-	Secondary_dhcp_server	string	`json:"SECONDARY_DHCP_SERVER"`
+	Interface_name        string `json:"INTERFACE_NAME"`
+	Mac_address           string `json:"MAC_ADDRESS"`
+	Ip_address            string `json:"IP_ADDRESS"`
+	Netmask               string `json:"NETMASK"`
+	Gateway               string `json:"GATEWAY"`
+	Primary_dhcp_server   string `json:"PRIMARY_DHCP_SERVER"`
+	Secondary_dhcp_server string `json:"SECONDARY_DHCP_SERVER"`
 }
 
-var SshShowInterfaceDetailedId_Template = `Value INTERFACE_NAME (\S+)
+var SshShowInterfaceDetailedId_Template string = `Value INTERFACE_NAME (\S+)
 Value MAC_ADDRESS (\w+\.\w+\.\w+|\w+\:\w+\:\w+\:\w+\:\w+\:\w+)
 Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value NETMASK (\d+.\d+.\d+.\d+)

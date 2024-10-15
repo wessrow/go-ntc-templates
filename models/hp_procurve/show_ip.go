@@ -1,15 +1,15 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowIp struct {
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Config	string	`json:"CONFIG"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Subnet_mask	string	`json:"SUBNET_MASK"`
-	Proxy	string	`json:"PROXY"`
-	Local	string	`json:"LOCAL"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Subnet_mask string `json:"SUBNET_MASK"`
+	Proxy       string `json:"PROXY"`
+	Local       string `json:"LOCAL"`
+	Vlan_name   string `json:"VLAN_NAME"`
+	Config      string `json:"CONFIG"`
 }
 
-var ShowIp_Template = `Value VLAN_NAME (.+?)
+var ShowIp_Template string = `Value VLAN_NAME (.+?)
 Value CONFIG (\S+)
 Value IP_ADDRESS (\S+)
 Value SUBNET_MASK (\S+)

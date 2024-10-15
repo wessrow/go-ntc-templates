@@ -1,20 +1,20 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpBgp struct {
-	Status	string	`json:"STATUS"`
-	Path_selection	string	`json:"PATH_SELECTION"`
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Network	string	`json:"NETWORK"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Metric	string	`json:"METRIC"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	As_path	string	`json:"AS_PATH"`
-	Origin	string	`json:"ORIGIN"`
-	Vrf	string	`json:"VRF"`
+	Path_selection string `json:"PATH_SELECTION"`
+	Route_source   string `json:"ROUTE_SOURCE"`
+	Next_hop       string `json:"NEXT_HOP"`
+	Metric         string `json:"METRIC"`
+	Local_pref     string `json:"LOCAL_PREF"`
+	As_path        string `json:"AS_PATH"`
+	Origin         string `json:"ORIGIN"`
+	Status         string `json:"STATUS"`
+	Network        string `json:"NETWORK"`
+	Weight         string `json:"WEIGHT"`
+	Vrf            string `json:"VRF"`
 }
 
-var ShowIpBgp_Template = `# Status: s-suppressed, x-deleted, S-stale, d-dampened, h-history, *-valid, >-best
+var ShowIpBgp_Template string = `# Status: s-suppressed, x-deleted, S-stale, d-dampened, h-history, *-valid, >-best
 Value STATUS ([sxSdh*])
 # ? \| multipath
 Value PATH_SELECTION ([> |])

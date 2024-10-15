@@ -1,13 +1,13 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type RoutingBgpPeerPrintStatus struct {
-	Bgp_neighbor	string	`json:"BGP_NEIGHBOR"`
-	Neighbor_as	string	`json:"NEIGHBOR_AS"`
-	Up_down	string	`json:"UP_DOWN"`
-	State	string	`json:"STATE"`
+	Neighbor_as  string `json:"NEIGHBOR_AS"`
+	Up_down      string `json:"UP_DOWN"`
+	State        string `json:"STATE"`
+	Bgp_neighbor string `json:"BGP_NEIGHBOR"`
 }
 
-var RoutingBgpPeerPrintStatus_Template = `Value BGP_NEIGHBOR (\S+)
+var RoutingBgpPeerPrintStatus_Template string = `Value BGP_NEIGHBOR (\S+)
 Value NEIGHBOR_AS (\d+)
 Value UP_DOWN (\S+)
 Value STATE (\S+)

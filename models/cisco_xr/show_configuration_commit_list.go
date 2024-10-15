@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowConfigurationCommitList struct {
-	Number	string	`json:"NUMBER"`
-	Commit	string	`json:"COMMIT"`
-	User	string	`json:"USER"`
-	Line	string	`json:"LINE"`
-	Client	string	`json:"CLIENT"`
-	Date_time	string	`json:"DATE_TIME"`
+	Number    string `json:"NUMBER"`
+	Commit    string `json:"COMMIT"`
+	User      string `json:"USER"`
+	Line      string `json:"LINE"`
+	Client    string `json:"CLIENT"`
+	Date_time string `json:"DATE_TIME"`
 }
 
-var ShowConfigurationCommitList_Template = `Value NUMBER (\d+)
+var ShowConfigurationCommitList_Template string = `Value NUMBER (\d+)
 Value COMMIT (\S+)
 Value USER (\S+)
 Value LINE (\S+)

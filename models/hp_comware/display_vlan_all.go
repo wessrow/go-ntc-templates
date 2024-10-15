@@ -1,16 +1,16 @@
-package hp_comware 
+package hp_comware
 
 type DisplayVlanAll struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Type	string	`json:"TYPE"`
-	Route_interface	string	`json:"ROUTE_INTERFACE"`
-	Ipv4_address	string	`json:"IPV4_ADDRESS"`
-	Ipv4_subnet	string	`json:"IPV4_SUBNET"`
+	Description     string `json:"DESCRIPTION"`
+	Type            string `json:"TYPE"`
+	Route_interface string `json:"ROUTE_INTERFACE"`
+	Ipv4_address    string `json:"IPV4_ADDRESS"`
+	Ipv4_subnet     string `json:"IPV4_SUBNET"`
+	Vlan_id         string `json:"VLAN_ID"`
+	Vlan_name       string `json:"VLAN_NAME"`
 }
 
-var DisplayVlanAll_Template = `Value Required VLAN_ID (\d+)
+var DisplayVlanAll_Template string = `Value Required VLAN_ID (\d+)
 Value Required VLAN_NAME (.*)
 Value DESCRIPTION (.*)
 Value TYPE (.*)

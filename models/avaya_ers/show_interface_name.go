@@ -1,11 +1,11 @@
-package avaya_ers 
+package avaya_ers
 
 type ShowInterfaceName struct {
-	Port	string	`json:"PORT"`
-	Name	string	`json:"NAME"`
+	Port string `json:"PORT"`
+	Name string `json:"NAME"`
 }
 
-var ShowInterfaceName_Template = `Value PORT (\S+)
+var ShowInterfaceName_Template string = `Value PORT (\S+)
 Value NAME ([\S ]*)
 
 Start

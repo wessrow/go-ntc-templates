@@ -1,12 +1,12 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowFeature struct {
-	Name	string	`json:"NAME"`
-	Instance	string	`json:"INSTANCE"`
-	State	string	`json:"STATE"`
+	Name     string `json:"NAME"`
+	Instance string `json:"INSTANCE"`
+	State    string `json:"STATE"`
 }
 
-var ShowFeature_Template = `Value NAME (\S+)
+var ShowFeature_Template string = `Value NAME (\S+)
 Value INSTANCE (\d+)
 Value STATE (disabled|enabled\s\(not-running\)|enabled)
 

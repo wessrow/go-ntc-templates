@@ -1,30 +1,30 @@
-package aruba_os 
+package aruba_os
 
 type ShowApBssTableDetails struct {
-	Bss	string	`json:"BSS"`
-	Ess	string	`json:"ESS"`
-	Port	string	`json:"PORT"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Band	string	`json:"BAND"`
-	Channel	string	`json:"CHANNEL"`
-	Type	string	`json:"TYPE"`
-	Cur_cl	string	`json:"CUR_CL"`
-	Ap_name	string	`json:"AP_NAME"`
-	In_t	string	`json:"IN_T"`
-	Tot_t	string	`json:"TOT_T"`
-	Mtu	string	`json:"MTU"`
-	Phy	string	`json:"PHY"`
-	Acl_state	string	`json:"ACL_STATE"`
-	Acl	string	`json:"ACL"`
-	Fm	string	`json:"FM"`
-	Flags	string	`json:"FLAGS"`
-	Cluster	string	`json:"CLUSTER"`
-	Active_clients	string	`json:"ACTIVE_CLIENTS"`
-	Standby_clients	string	`json:"STANDBY_CLIENTS"`
-	Datazone	string	`json:"DATAZONE"`
+	Tot_t           string `json:"TOT_T"`
+	Acl             string `json:"ACL"`
+	Cluster         string `json:"CLUSTER"`
+	Standby_clients string `json:"STANDBY_CLIENTS"`
+	Bss             string `json:"BSS"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	Cur_cl          string `json:"CUR_CL"`
+	Flags           string `json:"FLAGS"`
+	Datazone        string `json:"DATAZONE"`
+	Ess             string `json:"ESS"`
+	Channel         string `json:"CHANNEL"`
+	In_t            string `json:"IN_T"`
+	Mtu             string `json:"MTU"`
+	Acl_state       string `json:"ACL_STATE"`
+	Active_clients  string `json:"ACTIVE_CLIENTS"`
+	Port            string `json:"PORT"`
+	Type            string `json:"TYPE"`
+	Ap_name         string `json:"AP_NAME"`
+	Phy             string `json:"PHY"`
+	Fm              string `json:"FM"`
+	Band            string `json:"BAND"`
 }
 
-var ShowApBssTableDetails_Template = `Value BSS ([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5})
+var ShowApBssTableDetails_Template string = `Value BSS ([a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5})
 Value ESS (\S+(\s\S+){0,})
 Value PORT (\S+)
 Value IP_ADDRESS ((([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))

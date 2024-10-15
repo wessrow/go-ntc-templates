@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpCommunityList struct {
-	Type	string	`json:"TYPE"`
-	Name	string	`json:"NAME"`
-	Seq	string	`json:"SEQ"`
-	Action	string	`json:"ACTION"`
-	As	[]string	`json:"AS"`
-	Tag	[]string	`json:"TAG"`
-	Community	string	`json:"COMMUNITY"`
+	Community string   `json:"COMMUNITY"`
+	Type      string   `json:"TYPE"`
+	Name      string   `json:"NAME"`
+	Seq       string   `json:"SEQ"`
+	Action    string   `json:"ACTION"`
+	As        []string `json:"AS"`
+	Tag       []string `json:"TAG"`
 }
 
-var ShowIpCommunityList_Template = `Value Required,Filldown TYPE (Standard|Expanded)
+var ShowIpCommunityList_Template string = `Value Required,Filldown TYPE (Standard|Expanded)
 Value Required,Filldown NAME (\S+)
 Value Required SEQ (\d+)
 Value Required ACTION (permit|deny)

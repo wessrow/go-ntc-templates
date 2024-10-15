@@ -1,17 +1,17 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayDevice struct {
-	Slot	string	`json:"SLOT"`
-	Card	string	`json:"CARD"`
-	Pid	string	`json:"PID"`
-	Online_status	string	`json:"ONLINE_STATUS"`
-	Power_status	string	`json:"POWER_STATUS"`
-	Register_status	string	`json:"REGISTER_STATUS"`
-	Alarm_status	string	`json:"ALARM_STATUS"`
-	Ha_status	string	`json:"HA_STATUS"`
+	Slot            string `json:"SLOT"`
+	Card            string `json:"CARD"`
+	Pid             string `json:"PID"`
+	Online_status   string `json:"ONLINE_STATUS"`
+	Power_status    string `json:"POWER_STATUS"`
+	Register_status string `json:"REGISTER_STATUS"`
+	Alarm_status    string `json:"ALARM_STATUS"`
+	Ha_status       string `json:"HA_STATUS"`
 }
 
-var DisplayDevice_Template = `Value Filldown SLOT (\w+)
+var DisplayDevice_Template string = `Value Filldown SLOT (\w+)
 Value CARD (\S+)
 Value Required PID (\S+(\s+\S+)?)
 Value ONLINE_STATUS (\w+)

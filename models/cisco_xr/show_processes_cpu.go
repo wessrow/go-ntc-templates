@@ -1,12 +1,12 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowProcessesCpu struct {
-	Cpu_1_min	string	`json:"CPU_1_min"`
-	Cpu_5_min	string	`json:"CPU_5_MIN"`
-	Cpu_15_min	string	`json:"CPU_15_MIN"`
+	Cpu_1_min  string `json:"CPU_1_min"`
+	Cpu_5_min  string `json:"CPU_5_MIN"`
+	Cpu_15_min string `json:"CPU_15_MIN"`
 }
 
-var ShowProcessesCpu_Template = `Value CPU_1_min (\d+)
+var ShowProcessesCpu_Template string = `Value CPU_1_min (\d+)
 Value CPU_5_MIN (\d+)
 Value CPU_15_MIN (\d+)
 

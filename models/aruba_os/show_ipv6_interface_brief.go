@@ -1,13 +1,13 @@
-package aruba_os 
+package aruba_os
 
 type ShowIpv6InterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ipv6_address	[]string	`json:"IPV6_ADDRESS"`
-	Admin	string	`json:"ADMIN"`
-	Protocol	string	`json:"PROTOCOL"`
+	Interface    string   `json:"INTERFACE"`
+	Ipv6_address []string `json:"IPV6_ADDRESS"`
+	Admin        string   `json:"ADMIN"`
+	Protocol     string   `json:"PROTOCOL"`
 }
 
-var ShowIpv6InterfaceBrief_Template = `Value INTERFACE (\S+\s\S+|\S+)
+var ShowIpv6InterfaceBrief_Template string = `Value INTERFACE (\S+\s\S+|\S+)
 Value List IPV6_ADDRESS (\S+)
 Value ADMIN (\S+)
 Value PROTOCOL (\S+)

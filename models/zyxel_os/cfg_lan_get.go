@@ -1,13 +1,13 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgLanGet struct {
-	Name	string	`json:"NAME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Ipv4_dhcp	string	`json:"IPV4_DHCP"`
-	Ipv6_enable	string	`json:"IPV6_ENABLE"`
+	Name        string `json:"NAME"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Ipv4_dhcp   string `json:"IPV4_DHCP"`
+	Ipv6_enable string `json:"IPV6_ENABLE"`
 }
 
-var CfgLanGet_Template = `Value NAME (.+?)
+var CfgLanGet_Template string = `Value NAME (.+?)
 Value IP_ADDRESS ((\d+\.){3}\d+)
 Value IPV4_DHCP (Enable|Disable)
 Value IPV6_ENABLE (true|false)

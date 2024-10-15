@@ -1,15 +1,15 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayBoard struct {
-	Slot_id	string	`json:"SLOT_ID"`
-	Boardname	string	`json:"BOARDNAME"`
-	Status	string	`json:"STATUS"`
-	Subtype_0	string	`json:"SUBTYPE_0"`
-	Subtype_1	string	`json:"SUBTYPE_1"`
-	Online_offline	string	`json:"ONLINE_OFFLINE"`
+	Slot_id        string `json:"SLOT_ID"`
+	Boardname      string `json:"BOARDNAME"`
+	Status         string `json:"STATUS"`
+	Subtype_0      string `json:"SUBTYPE_0"`
+	Subtype_1      string `json:"SUBTYPE_1"`
+	Online_offline string `json:"ONLINE_OFFLINE"`
 }
 
-var DisplayBoard_Template = `Value Key SLOT_ID (\d+)
+var DisplayBoard_Template string = `Value Key SLOT_ID (\d+)
 Value BOARDNAME (\w*)
 Value STATUS (\S*)
 Value SUBTYPE_0 ([A-Z]{0,8})

@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowMplsInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Mpls_ip	string	`json:"MPLS_IP"`
-	Protocol	string	`json:"PROTOCOL"`
-	Tunnel	string	`json:"TUNNEL"`
-	Bgp	string	`json:"BGP"`
-	Static	string	`json:"STATIC"`
-	Operational	string	`json:"OPERATIONAL"`
+	Protocol    string `json:"PROTOCOL"`
+	Tunnel      string `json:"TUNNEL"`
+	Bgp         string `json:"BGP"`
+	Static      string `json:"STATIC"`
+	Operational string `json:"OPERATIONAL"`
+	Interface   string `json:"INTERFACE"`
+	Mpls_ip     string `json:"MPLS_IP"`
 }
 
-var ShowMplsInterfaces_Template = `Value Required INTERFACE (\S+)
+var ShowMplsInterfaces_Template string = `Value Required INTERFACE (\S+)
 Value MPLS_IP (\w+)
 Value PROTOCOL (\w+)
 Value TUNNEL (\w+)

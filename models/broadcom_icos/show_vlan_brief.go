@@ -1,12 +1,12 @@
-package broadcom_icos 
+package broadcom_icos
 
 type ShowVlanBrief struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Type	string	`json:"TYPE"`
+	Vlan_id   string `json:"VLAN_ID"`
+	Vlan_name string `json:"VLAN_NAME"`
+	Type      string `json:"TYPE"`
 }
 
-var ShowVlanBrief_Template = `Value VLAN_ID (\d+)
+var ShowVlanBrief_Template string = `Value VLAN_ID (\d+)
 Value VLAN_NAME (\S+)
 Value TYPE (\S+)
 

@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpAccessLists struct {
-	Name	string	`json:"NAME"`
-	Sn	string	`json:"SN"`
-	Action	string	`json:"ACTION"`
-	Protocol	string	`json:"PROTOCOL"`
-	Source	string	`json:"SOURCE"`
-	Port_modifier	string	`json:"PORT_MODIFIER"`
-	Port_range	string	`json:"PORT_RANGE"`
-	Destination	string	`json:"DESTINATION"`
-	Modifier	string	`json:"MODIFIER"`
+	Destination   string `json:"DESTINATION"`
+	Name          string `json:"NAME"`
+	Source        string `json:"SOURCE"`
+	Port_range    string `json:"PORT_RANGE"`
+	Port_modifier string `json:"PORT_MODIFIER"`
+	Modifier      string `json:"MODIFIER"`
+	Sn            string `json:"SN"`
+	Action        string `json:"ACTION"`
+	Protocol      string `json:"PROTOCOL"`
 }
 
-var ShowIpAccessLists_Template = `Value Filldown NAME (\S+)
+var ShowIpAccessLists_Template string = `Value Filldown NAME (\S+)
 Value Required SN (\d+)
 Value ACTION (\w+)
 Value PROTOCOL ([^any][\w+\d+]+)

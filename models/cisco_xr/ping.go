@@ -1,20 +1,20 @@
-package cisco_xr 
+package cisco_xr
 
 type Ping struct {
-	Sent_qty	string	`json:"SENT_QTY"`
-	Sent_type	string	`json:"SENT_TYPE"`
-	Destination	string	`json:"DESTINATION"`
-	Timeout	string	`json:"TIMEOUT"`
-	Source	string	`json:"SOURCE"`
-	Response_stream	[]string	`json:"RESPONSE_STREAM"`
-	Success_pct	string	`json:"SUCCESS_PCT"`
-	Success_qty	string	`json:"SUCCESS_QTY"`
-	Rtt_min	string	`json:"RTT_MIN"`
-	Rtt_avg	string	`json:"RTT_AVG"`
-	Rtt_max	string	`json:"RTT_MAX"`
+	Source          string   `json:"SOURCE"`
+	Response_stream []string `json:"RESPONSE_STREAM"`
+	Success_qty     string   `json:"SUCCESS_QTY"`
+	Rtt_max         string   `json:"RTT_MAX"`
+	Sent_type       string   `json:"SENT_TYPE"`
+	Destination     string   `json:"DESTINATION"`
+	Timeout         string   `json:"TIMEOUT"`
+	Success_pct     string   `json:"SUCCESS_PCT"`
+	Rtt_min         string   `json:"RTT_MIN"`
+	Rtt_avg         string   `json:"RTT_AVG"`
+	Sent_qty        string   `json:"SENT_QTY"`
 }
 
-var Ping_Template = `Value Required SENT_QTY (\d+)
+var Ping_Template string = `Value Required SENT_QTY (\d+)
 Value Required SENT_TYPE (.*)
 Value Required DESTINATION (\S+)
 Value Required TIMEOUT (\d+)

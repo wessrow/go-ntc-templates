@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowPimIpv4Interface struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Mode	string	`json:"MODE"`
-	Neighbors	string	`json:"NEIGHBORS"`
-	Hello_interval	string	`json:"HELLO_INTERVAL"`
-	Dr_priority	string	`json:"DR_PRIORITY"`
-	Dr_address	string	`json:"DR_ADDRESS"`
-	Packets_queued	string	`json:"PACKETS_QUEUED"`
-	Packets_dropped	string	`json:"PACKETS_DROPPED"`
+	Mode            string `json:"MODE"`
+	Hello_interval  string `json:"HELLO_INTERVAL"`
+	Dr_address      string `json:"DR_ADDRESS"`
+	Interface       string `json:"INTERFACE"`
+	Neighbors       string `json:"NEIGHBORS"`
+	Dr_priority     string `json:"DR_PRIORITY"`
+	Packets_queued  string `json:"PACKETS_QUEUED"`
+	Packets_dropped string `json:"PACKETS_DROPPED"`
+	Ip_address      string `json:"IP_ADDRESS"`
 }
 
-var ShowPimIpv4Interface_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowPimIpv4Interface_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required INTERFACE ([\w\./-]+)
 Value MODE (\S+)
 Value NEIGHBORS (\d+)

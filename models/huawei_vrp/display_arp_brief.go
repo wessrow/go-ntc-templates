@@ -1,16 +1,16 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayArpBrief struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Expire	string	`json:"EXPIRE"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Pvc	string	`json:"PVC"`
+	Expire      string `json:"EXPIRE"`
+	Type        string `json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Vlan_id     string `json:"VLAN_ID"`
+	Pvc         string `json:"PVC"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var DisplayArpBrief_Template = `Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+var DisplayArpBrief_Template string = `Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value MAC_ADDRESS ((\w+-?)+)
 Value EXPIRE (\d+)
 Value TYPE (I\s-|[DS][F-][\d\s])

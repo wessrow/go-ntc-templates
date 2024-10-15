@@ -1,14 +1,14 @@
-package arista_eos 
+package arista_eos
 
 type ShowInventory struct {
-	Port	string	`json:"PORT"`
-	Pid	string	`json:"PID"`
-	Sn	string	`json:"SN"`
-	Descr	string	`json:"DESCR"`
-	Vid	string	`json:"VID"`
+	Port  string `json:"PORT"`
+	Pid   string `json:"PID"`
+	Sn    string `json:"SN"`
+	Descr string `json:"DESCR"`
+	Vid   string `json:"VID"`
 }
 
-var ShowInventory_Template = `Value PORT ([0-9\/]+)
+var ShowInventory_Template string = `Value PORT ([0-9\/]+)
 Value PID (\S+)
 Value SN (\S+)
 Value DESCR (.+)

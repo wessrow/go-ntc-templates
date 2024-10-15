@@ -1,28 +1,28 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpDhcpServerLeasePrintTerseWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flag	string	`json:"FLAG"`
-	Comment	string	`json:"COMMENT"`
-	Address	string	`json:"ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Client_id	string	`json:"CLIENT_ID"`
-	Address_lists	string	`json:"ADDRESS_LISTS"`
-	Server	string	`json:"SERVER"`
-	Always_broadcast	string	`json:"ALWAYS_BROADCAST"`
-	Dhcp_option	string	`json:"DHCP_OPTION"`
-	Status	string	`json:"STATUS"`
-	Expires_after	string	`json:"EXPIRES_AFTER"`
-	Last_seen	string	`json:"LAST_SEEN"`
-	Active_address	string	`json:"ACTIVE_ADDRESS"`
-	Active_mac_address	string	`json:"ACTIVE_MAC_ADDRESS"`
-	Active_client_id	string	`json:"ACTIVE_CLIENT_ID"`
-	Active_server	string	`json:"ACTIVE_SERVER"`
-	Host_name	string	`json:"HOST_NAME"`
-	Src_mac_address	string	`json:"SRC_MAC_ADDRESS"`
+	Address_lists      string `json:"ADDRESS_LISTS"`
+	Always_broadcast   string `json:"ALWAYS_BROADCAST"`
+	Active_mac_address string `json:"ACTIVE_MAC_ADDRESS"`
+	Host_name          string `json:"HOST_NAME"`
+	Status             string `json:"STATUS"`
+	Last_seen          string `json:"LAST_SEEN"`
+	Index              string `json:"INDEX"`
+	Flag               string `json:"FLAG"`
+	Comment            string `json:"COMMENT"`
+	Dhcp_option        string `json:"DHCP_OPTION"`
+	Address            string `json:"ADDRESS"`
+	Mac_address        string `json:"MAC_ADDRESS"`
+	Server             string `json:"SERVER"`
+	Active_address     string `json:"ACTIVE_ADDRESS"`
+	Src_mac_address    string `json:"SRC_MAC_ADDRESS"`
+	Client_id          string `json:"CLIENT_ID"`
+	Expires_after      string `json:"EXPIRES_AFTER"`
+	Active_client_id   string `json:"ACTIVE_CLIENT_ID"`
+	Active_server      string `json:"ACTIVE_SERVER"`
 }
 
-var IpDhcpServerLeasePrintTerseWithoutPaging_Template = `Value INDEX (\d+)
+var IpDhcpServerLeasePrintTerseWithoutPaging_Template string = `Value INDEX (\d+)
 Value FLAG ([XRDB]+)
 Value COMMENT (.*)
 Value ADDRESS (\S+)

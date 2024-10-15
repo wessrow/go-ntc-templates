@@ -1,17 +1,17 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowOspfInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Process	string	`json:"PROCESS"`
-	Area	string	`json:"AREA"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Cost	string	`json:"COST"`
-	State	string	`json:"STATE"`
-	Neighbors_fc	string	`json:"NEIGHBORS_FC"`
+	Ip_address   string `json:"IP_ADDRESS"`
+	Netmask      string `json:"NETMASK"`
+	Cost         string `json:"COST"`
+	State        string `json:"STATE"`
+	Neighbors_fc string `json:"NEIGHBORS_FC"`
+	Interface    string `json:"INTERFACE"`
+	Process      string `json:"PROCESS"`
+	Area         string `json:"AREA"`
 }
 
-var ShowOspfInterfaceBrief_Template = `Value INTERFACE (\S+)
+var ShowOspfInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value PROCESS (\d+)
 Value AREA (\S+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)

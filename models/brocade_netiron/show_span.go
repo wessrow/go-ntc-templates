@@ -1,26 +1,26 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowSpan struct {
-	Mastervlan	string	`json:"mastervlan"`
-	Instance	string	`json:"instance"`
-	Bridgeid	string	`json:"bridgeid"`
-	Bridgemaxage	string	`json:"bridgemaxage"`
-	Bridgehello	string	`json:"bridgehello"`
-	Bridgefwddly	string	`json:"bridgefwddly"`
-	Holdtime	string	`json:"holdtime"`
-	Lasttopochange	string	`json:"lasttopochange"`
-	Topochangecount	string	`json:"topochangecount"`
-	Rootbridgeid	string	`json:"rootbridgeid"`
-	Rootpathcost	string	`json:"rootpathcost"`
-	Designatedbridgeid	string	`json:"designatedbridgeid"`
-	Rootport	string	`json:"rootport"`
-	Rbmaxage	string	`json:"rbmaxage"`
-	Rbhello	string	`json:"rbhello"`
-	Rbfwddly	string	`json:"rbfwddly"`
-	Portstates	string	`json:"portstates"`
+	Lasttopochange     string `json:"lasttopochange"`
+	Rootport           string `json:"rootport"`
+	Rbfwddly           string `json:"rbfwddly"`
+	Bridgeid           string `json:"bridgeid"`
+	Bridgemaxage       string `json:"bridgemaxage"`
+	Bridgefwddly       string `json:"bridgefwddly"`
+	Topochangecount    string `json:"topochangecount"`
+	Designatedbridgeid string `json:"designatedbridgeid"`
+	Rbmaxage           string `json:"rbmaxage"`
+	Bridgehello        string `json:"bridgehello"`
+	Rootbridgeid       string `json:"rootbridgeid"`
+	Rootpathcost       string `json:"rootpathcost"`
+	Mastervlan         string `json:"mastervlan"`
+	Instance           string `json:"instance"`
+	Holdtime           string `json:"holdtime"`
+	Rbhello            string `json:"rbhello"`
+	Portstates         string `json:"portstates"`
 }
 
-var ShowSpan_Template = `Value mastervlan (\d+)
+var ShowSpan_Template string = `Value mastervlan (\d+)
 Value instance (\d+)
 Value bridgeid ([0-9a-f]+)
 Value bridgemaxage (\d+)

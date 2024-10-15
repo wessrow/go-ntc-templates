@@ -1,18 +1,18 @@
-package dell_powerconnect 
+package dell_powerconnect
 
 type ShowInterfacesStatus struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Neg	string	`json:"NEG"`
-	Flowctrl	string	`json:"FLOWCTRL"`
-	Linkstate	string	`json:"LINKSTATE"`
-	Backpressure	string	`json:"BACKPRESSURE"`
-	Mdixmode	string	`json:"MDIXMODE"`
+	Port         string `json:"PORT"`
+	Flowctrl     string `json:"FLOWCTRL"`
+	Speed        string `json:"SPEED"`
+	Neg          string `json:"NEG"`
+	Linkstate    string `json:"LINKSTATE"`
+	Backpressure string `json:"BACKPRESSURE"`
+	Mdixmode     string `json:"MDIXMODE"`
+	Type         string `json:"TYPE"`
+	Duplex       string `json:"DUPLEX"`
 }
 
-var ShowInterfacesStatus_Template = `Value PORT (\S+)
+var ShowInterfacesStatus_Template string = `Value PORT (\S+)
 Value TYPE (\S+)
 Value DUPLEX (Full|Half|--)
 Value SPEED (\d+|--)

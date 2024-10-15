@@ -1,16 +1,16 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type SnmpCommunityPrintWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Name	string	`json:"NAME"`
-	Addresses	string	`json:"ADDRESSES"`
-	Security	string	`json:"SECURITY"`
-	Read_access	string	`json:"READ_ACCESS"`
-	Write_access	string	`json:"WRITE_ACCESS"`
+	Flags        string `json:"FLAGS"`
+	Name         string `json:"NAME"`
+	Addresses    string `json:"ADDRESSES"`
+	Security     string `json:"SECURITY"`
+	Read_access  string `json:"READ_ACCESS"`
+	Write_access string `json:"WRITE_ACCESS"`
+	Index        string `json:"INDEX"`
 }
 
-var SnmpCommunityPrintWithoutPaging_Template = `Value Key INDEX (\d+)
+var SnmpCommunityPrintWithoutPaging_Template string = `Value Key INDEX (\d+)
 Value FLAGS ([X*]+)
 Value NAME (\S+?)
 Value ADDRESSES (\S+?)

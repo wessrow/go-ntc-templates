@@ -1,13 +1,13 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowLldpNeighbors struct {
-	Neighbor_name	[]string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_interface	[]string	`json:"NEIGHBOR_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
+	Neighbor_name      []string `json:"NEIGHBOR_NAME"`
+	Local_interface    string   `json:"LOCAL_INTERFACE"`
+	Neighbor_interface []string `json:"NEIGHBOR_INTERFACE"`
+	Chassis_id         string   `json:"CHASSIS_ID"`
 }
 
-var ShowLldpNeighbors_Template = `Value List NEIGHBOR_NAME (\S+)
+var ShowLldpNeighbors_Template string = `Value List NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value List NEIGHBOR_INTERFACE (\S+)
 Value CHASSIS_ID (([0-9a-f]{2}[:-]){5}([0-9a-f]{2}))

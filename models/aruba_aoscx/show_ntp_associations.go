@@ -1,17 +1,17 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowNtpAssociations struct {
-	Id	string	`json:"ID"`
-	Name	string	`json:"NAME"`
-	Remote	string	`json:"REMOTE"`
-	Ref_id	string	`json:"REF_ID"`
-	Stratum	string	`json:"STRATUM"`
-	Last	string	`json:"LAST"`
-	Poll	string	`json:"POLL"`
-	Reach	string	`json:"REACH"`
+	Remote  string `json:"REMOTE"`
+	Ref_id  string `json:"REF_ID"`
+	Stratum string `json:"STRATUM"`
+	Last    string `json:"LAST"`
+	Poll    string `json:"POLL"`
+	Reach   string `json:"REACH"`
+	Id      string `json:"ID"`
+	Name    string `json:"NAME"`
 }
 
-var ShowNtpAssociations_Template = `Value ID (\W?\s+\d+)
+var ShowNtpAssociations_Template string = `Value ID (\W?\s+\d+)
 Value NAME (\d+\.\d+\.\d+\.\d+)
 Value REMOTE (\d+\.\d+\.\d+\.\d+)
 Value REF_ID (\d+\.\d+\.\d+\.\d+)

@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"go/ast"
+	"go/format"
+	"go/token"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -34,35 +37,34 @@ func getPlatform(s string) string {
 	return regex.FindString(s)
 }
 
-func capitalizeFirstLetter(s string) string {
-	if len(s) == 0 {
-		return s // return the original string if it's empty
+func createPlatformDirectory(platform string) error {
+	pwd, err := os.Getwd()
+	if err != nil {
+		return err
 	}
-	return strings.ToUpper(string(s[0])) + s[1:]
+	dirPath := pwd + "/models/" + platform
+	return os.MkdirAll(dirPath, os.ModePerm)
 }
 
-func capitalizeFirstLetterLowerRest(s string) string {
+func capitalizeFirstLetter(s string) string {
 	if len(s) == 0 {
-		return s // return the original string if it's empty
+		return s
 	}
 	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
 }
 
 func toCamelCase(str string) string {
-	// Replace all - and . with spaces
+
 	str = strings.ReplaceAll(str, "-", " ")
 	str = strings.ReplaceAll(str, ".", " ")
 	str = strings.ReplaceAll(str, "_", " ")
 
-	// Split the string by spaces
 	parts := strings.Fields(str)
 
-	// Convert each part to TitleCase (CamelCase)
 	for i, part := range parts {
 		parts[i] = strings.Title(part)
 	}
 
-	// Join them back together to form CamelCase
 	return strings.Join(parts, "")
 }
 
@@ -74,41 +76,88 @@ func extractEntries(template string) ([][]string, error) {
 	return r.FindAllStringSubmatch(template, -1), nil
 }
 
-func createPlatformDirectory(platform string) error {
-	pwd, err := os.Getwd()
-	if err != nil {
-		return err
-	}
-	dirPath := pwd + "/models/" + platform
-	return os.MkdirAll(dirPath, os.ModePerm)
-}
-
-func writeStructToFile(f *os.File, platform, structName string, entries [][]string, template string) error {
-	if _, err := fmt.Fprintf(f, "package %v \n\n", platform); err != nil {
-		return err
-	}
-	if _, err := fmt.Fprintf(f, "type %v struct {\n", capitalizeFirstLetter(structName)); err != nil {
-		return err
-	}
+func makeEntriesMap(entries [][]string) map[string]string {
+	mapReturn := make(map[string]string)
 
 	for _, entry := range entries {
-		fieldName := capitalizeFirstLetterLowerRest(entry[3])
+		mapKey := entry[3]
 		fieldType := "string"
 		if entry[2] == "List" {
 			fieldType = "[]string"
 		}
-		if _, err := fmt.Fprintf(f, "\t%v\t%v\t`json:\"%v\"`\n", fieldName, fieldType, entry[3]); err != nil {
-			return err
-		}
+		mapReturn[mapKey] = fieldType
 	}
-	if _, err := f.WriteString("}\n\n"); err != nil {
+
+	return mapReturn
+}
+
+func generateStruct(structName string, template string, fields map[string]string) error {
+	fset := token.NewFileSet()
+
+	platform := getPlatform(structName)
+	structName = strings.TrimPrefix(structName, platform+"_")
+
+	file := &ast.File{
+		Name: ast.NewIdent(platform),
+	}
+
+	structType := &ast.StructType{
+		Fields: &ast.FieldList{},
+	}
+
+	for fieldName, fieldType := range fields {
+		structFieldName := capitalizeFirstLetter(fieldName)
+		jsonTag := "`json:\"" + fieldName + "\"`"
+		field := &ast.Field{
+			Names: []*ast.Ident{ast.NewIdent(structFieldName)},
+			Type:  ast.NewIdent(fieldType),
+			Tag:   &ast.BasicLit{Kind: token.STRING, Value: jsonTag},
+		}
+		structType.Fields.List = append(structType.Fields.List, field)
+	}
+
+	typeDecl := &ast.GenDecl{
+		Tok: token.TYPE,
+		Specs: []ast.Spec{
+			&ast.TypeSpec{
+				Name: ast.NewIdent(toCamelCase(structName)),
+				Type: structType,
+			},
+		},
+	}
+
+	file.Decls = append(file.Decls, typeDecl)
+
+	varDecl := &ast.GenDecl{
+		Tok: token.VAR,
+		Specs: []ast.Spec{
+			&ast.ValueSpec{
+				Names: []*ast.Ident{ast.NewIdent(toCamelCase(structName) + "_Template")},
+				Type:  ast.NewIdent("string"),
+				Values: []ast.Expr{
+					&ast.BasicLit{
+						Kind:  token.STRING,
+						Value: "`" + template + "`",
+					},
+				},
+			},
+		},
+	}
+
+	file.Decls = append(file.Decls, varDecl)
+
+	err := createPlatformDirectory(platform)
+	if err != nil {
 		return err
 	}
 
-	if _, err := fmt.Fprintf(f, "var %v = `", capitalizeFirstLetter(structName)+"_Template"); err != nil {
+	outFile, err := os.Create("models/" + platform + "/" + structName + ".go")
+	if err != nil {
 		return err
 	}
-	if _, err := f.WriteString(template + "`"); err != nil {
+	defer outFile.Close()
+
+	if err := format.Node(outFile, fset, file); err != nil {
 		return err
 	}
 
@@ -121,26 +170,11 @@ func parseFSM(name string, template string) error {
 		return fmt.Errorf("failed to extract entries: %w", err)
 	}
 
-	platform := getPlatform(name)
-	name = strings.TrimPrefix(name, platform+"_")
-	if platform == "" {
-		return fmt.Errorf("platform not found")
-	}
+	entriesMap := makeEntriesMap(entries)
 
-	if err := createPlatformDirectory(platform); err != nil {
-		return err
-	}
-
-	filePath := fmt.Sprintf("models/%s/%s.go", platform, name)
-	f, err := os.Create(filePath)
+	err = generateStruct(name, template, entriesMap)
 	if err != nil {
-		return fmt.Errorf("failed to create file: %w", err)
-	}
-	defer f.Close()
-
-	structName := toCamelCase(name)
-	if err := writeStructToFile(f, platform, structName, entries, template); err != nil {
-		return fmt.Errorf("failed to write struct to file: %w", err)
+		logrus.Error(err)
 	}
 
 	return nil
@@ -161,9 +195,9 @@ func GenerateFSMStructs(path string) {
 
 	f.WriteString(`package models
 
-import (
-	"reflect"
-)` + "\n\n")
+	import (
+		"reflect"
+	)` + "\n\n")
 
 	f.WriteString("var TemplateMap = map[reflect.Type]string{\n")
 
@@ -194,10 +228,6 @@ import (
 
 	}
 
-	// dirs, _ := os.ReadDir("models/")
-	// for _, dir := range dirs {
-	// 	logrus.Info(dir.Name())
-	// }
 	f.WriteString("}\n")
 }
 

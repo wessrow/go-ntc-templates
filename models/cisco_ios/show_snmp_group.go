@@ -1,18 +1,18 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSnmpGroup struct {
-	Groupname	string	`json:"GROUPNAME"`
-	Security_model	string	`json:"SECURITY_MODEL"`
-	Contextname	string	`json:"CONTEXTNAME"`
-	Storage_type	string	`json:"STORAGE_TYPE"`
-	Readview	string	`json:"READVIEW"`
-	Writeview	string	`json:"WRITEVIEW"`
-	Notifyview	string	`json:"NOTIFYVIEW"`
-	Row_status	string	`json:"ROW_STATUS"`
-	Access_list	string	`json:"ACCESS_LIST"`
+	Groupname      string `json:"GROUPNAME"`
+	Security_model string `json:"SECURITY_MODEL"`
+	Storage_type   string `json:"STORAGE_TYPE"`
+	Notifyview     string `json:"NOTIFYVIEW"`
+	Row_status     string `json:"ROW_STATUS"`
+	Contextname    string `json:"CONTEXTNAME"`
+	Readview       string `json:"READVIEW"`
+	Writeview      string `json:"WRITEVIEW"`
+	Access_list    string `json:"ACCESS_LIST"`
 }
 
-var ShowSnmpGroup_Template = `Value Required GROUPNAME (\S+)
+var ShowSnmpGroup_Template string = `Value Required GROUPNAME (\S+)
 Value SECURITY_MODEL ([\s\S]+?)
 Value CONTEXTNAME ([\s\S]+?)
 Value STORAGE_TYPE (\S+)

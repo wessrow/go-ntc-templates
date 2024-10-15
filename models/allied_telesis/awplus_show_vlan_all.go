@@ -1,13 +1,13 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowVlanAll struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Name	string	`json:"NAME"`
-	Status	string	`json:"STATUS"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Vlan_id    string   `json:"VLAN_ID"`
+	Name       string   `json:"NAME"`
+	Status     string   `json:"STATUS"`
+	Interfaces []string `json:"INTERFACES"`
 }
 
-var AwplusShowVlanAll_Template = `Value Required VLAN_ID (\d+)
+var AwplusShowVlanAll_Template string = `Value Required VLAN_ID (\d+)
 Value NAME (\S+)
 Value STATUS (\S+)
 Value List INTERFACES (\w+\.\d\.\d+\(\S\)|\S+\(\S\))

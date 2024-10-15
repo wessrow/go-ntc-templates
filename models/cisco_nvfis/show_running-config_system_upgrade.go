@@ -1,13 +1,13 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowRunningConfigSystemUpgrade struct {
-	Apply_image	string	`json:"APPLY_IMAGE"`
-	Schedule_time	string	`json:"SCHEDULE_TIME"`
-	Image_name	string	`json:"IMAGE_NAME"`
-	Image_location	string	`json:"IMAGE_LOCATION"`
+	Image_name     string `json:"IMAGE_NAME"`
+	Image_location string `json:"IMAGE_LOCATION"`
+	Apply_image    string `json:"APPLY_IMAGE"`
+	Schedule_time  string `json:"SCHEDULE_TIME"`
 }
 
-var ShowRunningConfigSystemUpgrade_Template = `Value APPLY_IMAGE (\S+iso)
+var ShowRunningConfigSystemUpgrade_Template string = `Value APPLY_IMAGE (\S+iso)
 Value SCHEDULE_TIME (\d+)
 Value IMAGE_NAME (\S+iso)
 Value IMAGE_LOCATION (\S+iso)

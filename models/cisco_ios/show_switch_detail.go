@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSwitchDetail struct {
-	Switch	string	`json:"SWITCH"`
-	Role	string	`json:"ROLE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Priority	string	`json:"PRIORITY"`
-	Version	string	`json:"VERSION"`
-	State	string	`json:"STATE"`
+	Switch      string `json:"SWITCH"`
+	Role        string `json:"ROLE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Priority    string `json:"PRIORITY"`
+	Version     string `json:"VERSION"`
+	State       string `json:"STATE"`
 }
 
-var ShowSwitchDetail_Template = `Value Key SWITCH (\d+)
+var ShowSwitchDetail_Template string = `Value Key SWITCH (\d+)
 Value ROLE (\w+)
 Value MAC_ADDRESS (\S+)
 Value PRIORITY (\d+)

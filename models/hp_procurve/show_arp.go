@@ -1,13 +1,13 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Port	string	`json:"PORT"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Port        string `json:"PORT"`
 }
 
-var ShowArp_Template = `Value IP_ADDRESS (\S+)
+var ShowArp_Template string = `Value IP_ADDRESS (\S+)
 Value MAC_ADDRESS ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
 Value TYPE (\S+)
 Value PORT (\S+)

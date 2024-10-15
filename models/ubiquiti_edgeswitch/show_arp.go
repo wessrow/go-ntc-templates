@@ -1,14 +1,14 @@
-package ubiquiti_edgeswitch 
+package ubiquiti_edgeswitch
 
 type ShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Type	string	`json:"TYPE"`
-	Age	string	`json:"AGE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Type        string `json:"TYPE"`
+	Age         string `json:"AGE"`
 }
 
-var ShowArp_Template = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowArp_Template string = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value TYPE (\S+)

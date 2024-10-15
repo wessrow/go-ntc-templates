@@ -1,18 +1,18 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntPortVlan01Byvlan0 struct {
-	C_vlan	string	`json:"C_VLAN"`
-	C_pri	string	`json:"C_PRI"`
-	Eth_type	string	`json:"ETH_TYPE"`
-	Vlan_type	string	`json:"VLAN_TYPE"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Port_id	string	`json:"PORT_ID"`
-	S_vlan	string	`json:"S_VLAN"`
-	S_pri	string	`json:"S_PRI"`
-	S_pri_policy	string	`json:"S_PRI_POLICY"`
+	Port_id      string `json:"PORT_ID"`
+	S_pri        string `json:"S_PRI"`
+	Port_type    string `json:"PORT_TYPE"`
+	C_pri        string `json:"C_PRI"`
+	Eth_type     string `json:"ETH_TYPE"`
+	Vlan_type    string `json:"VLAN_TYPE"`
+	S_vlan       string `json:"S_VLAN"`
+	S_pri_policy string `json:"S_PRI_POLICY"`
+	C_vlan       string `json:"C_VLAN"`
 }
 
-var DisplayOntPortVlan01Byvlan0_Template = `Value C_VLAN (\d+)
+var DisplayOntPortVlan01Byvlan0_Template string = `Value C_VLAN (\d+)
 Value C_PRI (\d+)
 Value ETH_TYPE (\S+)
 Value VLAN_TYPE (\S+)

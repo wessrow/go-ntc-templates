@@ -1,35 +1,35 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowRadiusSummary struct {
-	Vendor_id_backward_compat	string	`json:"VENDOR_ID_BACKWARD_COMPAT"`
-	Call_station_id_case	string	`json:"CALL_STATION_ID_CASE"`
-	Accounting_call_station_id_type	string	`json:"ACCOUNTING_CALL_STATION_ID_TYPE"`
-	Authentication_call_station_id_type	string	`json:"AUTHENTICATION_CALL_STATION_ID_TYPE"`
-	Extended_source_ports_support	string	`json:"EXTENDED_SOURCE_PORTS_SUPPORT"`
-	Aggressive_failover	string	`json:"AGGRESSIVE_FAILOVER"`
-	Keywrap	string	`json:"KEYWRAP"`
-	Fallback_test_mode	string	`json:"FALLBACK_TEST_MODE"`
-	Fallback_test_username	string	`json:"FALLBACK_TEST_USERNAME"`
-	Fallback_test_interval	string	`json:"FALLBACK_TEST_INTERVAL"`
-	Mac_delim_authentication_msg	string	`json:"MAC_DELIM_AUTHENTICATION_MSG"`
-	Mac_delim_accounting_msg	string	`json:"MAC_DELIM_ACCOUNTING_MSG"`
-	Authentication_framed_mtu	string	`json:"AUTHENTICATION_FRAMED_MTU"`
-	Ap_events_accounting	string	`json:"AP_EVENTS_ACCOUNTING"`
-	Index	string	`json:"INDEX"`
-	Authentication_addr	string	`json:"AUTHENTICATION_ADDR"`
-	Accounting_addr	string	`json:"ACCOUNTING_ADDR"`
-	Type	string	`json:"TYPE"`
-	Port	string	`json:"PORT"`
-	State	string	`json:"STATE"`
-	Timeout	string	`json:"TIMEOUT"`
-	Mgmt_timeout	string	`json:"MGMT_TIMEOUT"`
-	Rfc3576	string	`json:"RFC3576"`
-	Ipsec_state	string	`json:"IPSEC_STATE"`
-	Ipsec_profile	string	`json:"IPSEC_PROFILE"`
-	Ipsec_region	string	`json:"IPSEC_REGION"`
+	Ipsec_state                         string `json:"IPSEC_STATE"`
+	Ipsec_region                        string `json:"IPSEC_REGION"`
+	Authentication_call_station_id_type string `json:"AUTHENTICATION_CALL_STATION_ID_TYPE"`
+	Extended_source_ports_support       string `json:"EXTENDED_SOURCE_PORTS_SUPPORT"`
+	Mgmt_timeout                        string `json:"MGMT_TIMEOUT"`
+	Ap_events_accounting                string `json:"AP_EVENTS_ACCOUNTING"`
+	Port                                string `json:"PORT"`
+	Call_station_id_case                string `json:"CALL_STATION_ID_CASE"`
+	Aggressive_failover                 string `json:"AGGRESSIVE_FAILOVER"`
+	Authentication_framed_mtu           string `json:"AUTHENTICATION_FRAMED_MTU"`
+	Mac_delim_authentication_msg        string `json:"MAC_DELIM_AUTHENTICATION_MSG"`
+	Mac_delim_accounting_msg            string `json:"MAC_DELIM_ACCOUNTING_MSG"`
+	Index                               string `json:"INDEX"`
+	Authentication_addr                 string `json:"AUTHENTICATION_ADDR"`
+	Accounting_addr                     string `json:"ACCOUNTING_ADDR"`
+	Vendor_id_backward_compat           string `json:"VENDOR_ID_BACKWARD_COMPAT"`
+	Keywrap                             string `json:"KEYWRAP"`
+	Fallback_test_username              string `json:"FALLBACK_TEST_USERNAME"`
+	Timeout                             string `json:"TIMEOUT"`
+	Rfc3576                             string `json:"RFC3576"`
+	Ipsec_profile                       string `json:"IPSEC_PROFILE"`
+	Type                                string `json:"TYPE"`
+	State                               string `json:"STATE"`
+	Accounting_call_station_id_type     string `json:"ACCOUNTING_CALL_STATION_ID_TYPE"`
+	Fallback_test_mode                  string `json:"FALLBACK_TEST_MODE"`
+	Fallback_test_interval              string `json:"FALLBACK_TEST_INTERVAL"`
 }
 
-var SshShowRadiusSummary_Template = `Value Filldown VENDOR_ID_BACKWARD_COMPAT (\S+)
+var SshShowRadiusSummary_Template string = `Value Filldown VENDOR_ID_BACKWARD_COMPAT (\S+)
 Value Filldown CALL_STATION_ID_CASE (\S+)
 Value Filldown ACCOUNTING_CALL_STATION_ID_TYPE (.+)
 Value Filldown AUTHENTICATION_CALL_STATION_ID_TYPE (.+)

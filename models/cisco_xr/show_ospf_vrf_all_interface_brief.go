@@ -1,18 +1,18 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowOspfVrfAllInterfaceBrief struct {
-	Vrf	string	`json:"VRF"`
-	Interface	string	`json:"INTERFACE"`
-	Process	string	`json:"PROCESS"`
-	Area	string	`json:"AREA"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Cost	string	`json:"COST"`
-	State	string	`json:"STATE"`
-	Neighbors	string	`json:"NEIGHBORS"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Cost          string `json:"COST"`
+	Vrf           string `json:"VRF"`
+	Process       string `json:"PROCESS"`
+	Area          string `json:"AREA"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	State         string `json:"STATE"`
+	Neighbors     string `json:"NEIGHBORS"`
+	Interface     string `json:"INTERFACE"`
 }
 
-var ShowOspfVrfAllInterfaceBrief_Template = `Value Filldown VRF (\S+)
+var ShowOspfVrfAllInterfaceBrief_Template string = `Value Filldown VRF (\S+)
 Value Required INTERFACE ([\w\./-]+)
 Value PROCESS (\d+)
 Value AREA ([\d\.]+)

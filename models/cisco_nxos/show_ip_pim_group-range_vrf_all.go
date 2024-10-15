@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpPimGroupRangeVrfAll struct {
-	Vrf	string	`json:"VRF"`
-	Group_range	string	`json:"GROUP_RANGE"`
-	Action	string	`json:"ACTION"`
-	Mode	string	`json:"MODE"`
-	Rp_address	string	`json:"RP_ADDRESS"`
-	Shared_tree_range	string	`json:"SHARED_TREE_RANGE"`
-	Origin	string	`json:"ORIGIN"`
+	Vrf               string `json:"VRF"`
+	Group_range       string `json:"GROUP_RANGE"`
+	Action            string `json:"ACTION"`
+	Mode              string `json:"MODE"`
+	Rp_address        string `json:"RP_ADDRESS"`
+	Shared_tree_range string `json:"SHARED_TREE_RANGE"`
+	Origin            string `json:"ORIGIN"`
 }
 
-var ShowIpPimGroupRangeVrfAll_Template = `Value Filldown VRF (\S+)
+var ShowIpPimGroupRangeVrfAll_Template string = `Value Filldown VRF (\S+)
 Value Required GROUP_RANGE (\d+\.\d+\.\d+\.\d+/\d+)
 Value ACTION (\S+)
 Value MODE (\S+)

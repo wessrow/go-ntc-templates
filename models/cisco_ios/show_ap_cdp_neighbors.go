@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowApCdpNeighbors struct {
-	Ap_name	string	`json:"AP_NAME"`
-	Ap_ip	string	`json:"AP_IP"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_ip	string	`json:"NEIGHBOR_IP"`
-	Neighbor_port	string	`json:"NEIGHBOR_PORT"`
+	Neighbor_name string `json:"NEIGHBOR_NAME"`
+	Neighbor_ip   string `json:"NEIGHBOR_IP"`
+	Neighbor_port string `json:"NEIGHBOR_PORT"`
+	Ap_name       string `json:"AP_NAME"`
+	Ap_ip         string `json:"AP_IP"`
 }
 
-var ShowApCdpNeighbors_Template = `Value AP_NAME (\S+)
+var ShowApCdpNeighbors_Template string = `Value AP_NAME (\S+)
 Value AP_IP ([a-fA-F0-9:\.]+)
 Value NEIGHBOR_NAME (\S+)
 Value NEIGHBOR_IP ([a-fA-F0-9:\.]+)

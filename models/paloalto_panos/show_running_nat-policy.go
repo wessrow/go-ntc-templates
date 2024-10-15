@@ -1,19 +1,19 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowRunningNatPolicy struct {
-	Name	string	`json:"NAME"`
-	Nat_type	string	`json:"NAT_TYPE"`
-	From	string	`json:"FROM"`
-	Source	string	`json:"SOURCE"`
-	To	string	`json:"TO"`
-	To_interface	string	`json:"TO_INTERFACE"`
-	Destination	string	`json:"DESTINATION"`
-	Service	string	`json:"SERVICE"`
-	Translate_to	string	`json:"TRANSLATE_TO"`
-	Terminal	string	`json:"TERMINAL"`
+	To           string `json:"TO"`
+	To_interface string `json:"TO_INTERFACE"`
+	Destination  string `json:"DESTINATION"`
+	Terminal     string `json:"TERMINAL"`
+	Nat_type     string `json:"NAT_TYPE"`
+	From         string `json:"FROM"`
+	Service      string `json:"SERVICE"`
+	Translate_to string `json:"TRANSLATE_TO"`
+	Name         string `json:"NAME"`
+	Source       string `json:"SOURCE"`
 }
 
-var ShowRunningNatPolicy_Template = `Value Filldown NAME (.*?)
+var ShowRunningNatPolicy_Template string = `Value Filldown NAME (.*?)
 Value Required NAT_TYPE (\S+)
 Value FROM (\S+|\[(\s\S+)+\s\])
 # any  |  ip (optional mask)  |  [ multiIP ]

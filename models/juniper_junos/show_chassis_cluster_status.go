@@ -1,18 +1,18 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowChassisClusterStatus struct {
-	Cluster_id	string	`json:"CLUSTER_ID"`
-	Redundancy_group_id	string	`json:"REDUNDANCY_GROUP_ID"`
-	Failover_count	string	`json:"FAILOVER_COUNT"`
-	Node	[]string	`json:"NODE"`
-	Priority	[]string	`json:"PRIORITY"`
-	Status	[]string	`json:"STATUS"`
-	Preempt	[]string	`json:"PREEMPT"`
-	Manual	[]string	`json:"MANUAL"`
-	Monitor_failures	[]string	`json:"MONITOR_FAILURES"`
+	Redundancy_group_id string   `json:"REDUNDANCY_GROUP_ID"`
+	Failover_count      string   `json:"FAILOVER_COUNT"`
+	Priority            []string `json:"PRIORITY"`
+	Status              []string `json:"STATUS"`
+	Preempt             []string `json:"PREEMPT"`
+	Manual              []string `json:"MANUAL"`
+	Cluster_id          string   `json:"CLUSTER_ID"`
+	Node                []string `json:"NODE"`
+	Monitor_failures    []string `json:"MONITOR_FAILURES"`
 }
 
-var ShowChassisClusterStatus_Template = `Value Filldown CLUSTER_ID (\d+)
+var ShowChassisClusterStatus_Template string = `Value Filldown CLUSTER_ID (\d+)
 Value REDUNDANCY_GROUP_ID (\d+)
 Value FAILOVER_COUNT (\d+)
 Value List NODE (\S+)

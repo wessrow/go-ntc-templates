@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowInstallActive struct {
-	Node	string	`json:"NODE"`
-	Node_type	string	`json:"NODE_TYPE"`
-	Boot_partition	string	`json:"BOOT_PARTITION"`
-	Boot_device	string	`json:"BOOT_DEVICE"`
-	Boot_image	string	`json:"BOOT_IMAGE"`
-	Packages	[]string	`json:"PACKAGES"`
+	Boot_partition string   `json:"BOOT_PARTITION"`
+	Boot_device    string   `json:"BOOT_DEVICE"`
+	Boot_image     string   `json:"BOOT_IMAGE"`
+	Packages       []string `json:"PACKAGES"`
+	Node           string   `json:"NODE"`
+	Node_type      string   `json:"NODE_TYPE"`
 }
 
-var ShowInstallActive_Template = `Value Required NODE (\S+)
+var ShowInstallActive_Template string = `Value Required NODE (\S+)
 Value NODE_TYPE (\w+)
 Value BOOT_PARTITION (\S+)
 Value BOOT_DEVICE (\S+)

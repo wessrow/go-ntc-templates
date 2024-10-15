@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInventory struct {
-	Name	string	`json:"NAME"`
-	Descr	string	`json:"DESCR"`
-	Pid	string	`json:"PID"`
-	Vid	string	`json:"VID"`
-	Sn	string	`json:"SN"`
+	Pid   string `json:"PID"`
+	Vid   string `json:"VID"`
+	Sn    string `json:"SN"`
+	Name  string `json:"NAME"`
+	Descr string `json:"DESCR"`
 }
 
-var ShowInventory_Template = `Value NAME (.*)
+var ShowInventory_Template string = `Value NAME (.*)
 Value DESCR (.*)
 Value PID ([^,]\S+)
 Value VID ([\d+\w-]*)

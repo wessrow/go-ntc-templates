@@ -1,11 +1,11 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowHelpers struct {
-	Interface	string	`json:"INTERFACE"`
-	Helpers	[]string	`json:"HELPERS"`
+	Interface string   `json:"INTERFACE"`
+	Helpers   []string `json:"HELPERS"`
 }
 
-var ShowHelpers_Template = `Value Required INTERFACE (.*)
+var ShowHelpers_Template string = `Value Required INTERFACE (.*)
 Value List HELPERS (\d+\.\d+\.\d+\.\d+)
 
 Start

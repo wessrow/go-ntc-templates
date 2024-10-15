@@ -1,21 +1,21 @@
-package alcatel_sros 
+package alcatel_sros
 
 type Ping struct {
-	Destination	string	`json:"DESTINATION"`
-	Sent_qty	string	`json:"SENT_QTY"`
-	Success_qty	string	`json:"SUCCESS_QTY"`
-	Loss_pct	string	`json:"LOSS_PCT"`
-	Response_stream	string	`json:"RESPONSE_STREAM"`
-	Duplicate_qty	string	`json:"DUPLICATE_QTY"`
-	Bounce_qty	string	`json:"BOUNCE_QTY"`
-	Rtt_avg	string	`json:"RTT_AVG"`
-	Rtt_max	string	`json:"RTT_MAX"`
-	Rtt_min	string	`json:"RTT_MIN"`
-	Std_dev	string	`json:"STD_DEV"`
-	Pkt_size	string	`json:"PKT_SIZE"`
+	Loss_pct        string `json:"LOSS_PCT"`
+	Bounce_qty      string `json:"BOUNCE_QTY"`
+	Rtt_max         string `json:"RTT_MAX"`
+	Rtt_min         string `json:"RTT_MIN"`
+	Pkt_size        string `json:"PKT_SIZE"`
+	Rtt_avg         string `json:"RTT_AVG"`
+	Std_dev         string `json:"STD_DEV"`
+	Destination     string `json:"DESTINATION"`
+	Sent_qty        string `json:"SENT_QTY"`
+	Success_qty     string `json:"SUCCESS_QTY"`
+	Response_stream string `json:"RESPONSE_STREAM"`
+	Duplicate_qty   string `json:"DUPLICATE_QTY"`
 }
 
-var Ping_Template = `Value Required DESTINATION (\S+)
+var Ping_Template string = `Value Required DESTINATION (\S+)
 Value Required SENT_QTY (\d+)
 Value Required SUCCESS_QTY (\d+)
 Value LOSS_PCT (\S+)

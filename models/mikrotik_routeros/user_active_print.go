@@ -1,14 +1,14 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type UserActivePrint struct {
-	Id	string	`json:"ID"`
-	When	string	`json:"WHEN"`
-	Name	string	`json:"NAME"`
-	Address	string	`json:"ADDRESS"`
-	Via	string	`json:"VIA"`
+	When    string `json:"WHEN"`
+	Name    string `json:"NAME"`
+	Address string `json:"ADDRESS"`
+	Via     string `json:"VIA"`
+	Id      string `json:"ID"`
 }
 
-var UserActivePrint_Template = `Value ID (\d+)
+var UserActivePrint_Template string = `Value ID (\d+)
 Value WHEN ([a-z]{3}/\d{1,2}/\d{4}\s+\d{1,2}:\d{1,2}:\d{1,2})
 Value NAME ([a-zA-Z0-9*_.@]+)
 Value ADDRESS (\S+)

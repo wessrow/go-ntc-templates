@@ -1,35 +1,35 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowVoiceSipGateway struct {
-	Gateway_state	string	`json:"GATEWAY_STATE"`
-	Gateway_operational_status	string	`json:"GATEWAY_OPERATIONAL_STATUS"`
-	Sockets	[]string	`json:"SOCKETS"`
-	Registration_state	string	`json:"REGISTRATION_STATE"`
-	Rtp_monitoring	string	`json:"RTP_MONITORING"`
-	Registrar	string	`json:"REGISTRAR"`
-	Registrar_neighbor_registered	string	`json:"REGISTRAR_NEIGHBOR_REGISTERED"`
-	Registrar_neighbor_available	string	`json:"REGISTRAR_NEIGHBOR_AVAILABLE"`
-	Bw_used	string	`json:"BW_USED"`
-	Cac	string	`json:"CAC"`
-	Bw_unused	string	`json:"BW_UNUSED"`
-	Thold_bw_to_switch	string	`json:"THOLD_BW_TO_SWITCH"`
-	Max_bw_exceeded	string	`json:"MAX_BW_EXCEEDED"`
-	Neighbor_lower_switching	string	`json:"NEIGHBOR_LOWER_SWITCHING"`
-	Registration_errors	string	`json:"REGISTRATION_ERRORS"`
-	Sip_protocol_mode	string	`json:"SIP_PROTOCOL_MODE"`
-	Sip_protocol_configured	string	`json:"SIP_PROTOCOL_CONFIGURED"`
-	Current_call	string	`json:"CURRENT_CALL"`
-	Calls_released_rtp_monitoring	string	`json:"CALLS_RELEASED_RTP_MONITORING"`
-	Authentication_rejects	string	`json:"AUTHENTICATION_REJECTS"`
-	Dropped_packet	string	`json:"DROPPED_PACKET"`
-	Dropped_packet_rate_limit	string	`json:"DROPPED_PACKET_RATE_LIMIT"`
-	Dropped_packet_memory_limit	string	`json:"DROPPED_PACKET_MEMORY_LIMIT"`
-	Dropped_packet_cpu_limit	string	`json:"DROPPED_PACKET_CPU_LIMIT"`
-	Dropped_packet_acl	string	`json:"DROPPED_PACKET_ACL"`
-	Dropped_packet_unknown_proxy	string	`json:"DROPPED_PACKET_UNKNOWN_PROXY"`
+	Bw_used                       string   `json:"BW_USED"`
+	Bw_unused                     string   `json:"BW_UNUSED"`
+	Thold_bw_to_switch            string   `json:"THOLD_BW_TO_SWITCH"`
+	Neighbor_lower_switching      string   `json:"NEIGHBOR_LOWER_SWITCHING"`
+	Registration_errors           string   `json:"REGISTRATION_ERRORS"`
+	Current_call                  string   `json:"CURRENT_CALL"`
+	Registration_state            string   `json:"REGISTRATION_STATE"`
+	Registrar                     string   `json:"REGISTRAR"`
+	Calls_released_rtp_monitoring string   `json:"CALLS_RELEASED_RTP_MONITORING"`
+	Sip_protocol_mode             string   `json:"SIP_PROTOCOL_MODE"`
+	Dropped_packet_rate_limit     string   `json:"DROPPED_PACKET_RATE_LIMIT"`
+	Dropped_packet_cpu_limit      string   `json:"DROPPED_PACKET_CPU_LIMIT"`
+	Dropped_packet_acl            string   `json:"DROPPED_PACKET_ACL"`
+	Gateway_state                 string   `json:"GATEWAY_STATE"`
+	Registrar_neighbor_registered string   `json:"REGISTRAR_NEIGHBOR_REGISTERED"`
+	Cac                           string   `json:"CAC"`
+	Sip_protocol_configured       string   `json:"SIP_PROTOCOL_CONFIGURED"`
+	Dropped_packet_memory_limit   string   `json:"DROPPED_PACKET_MEMORY_LIMIT"`
+	Rtp_monitoring                string   `json:"RTP_MONITORING"`
+	Registrar_neighbor_available  string   `json:"REGISTRAR_NEIGHBOR_AVAILABLE"`
+	Max_bw_exceeded               string   `json:"MAX_BW_EXCEEDED"`
+	Authentication_rejects        string   `json:"AUTHENTICATION_REJECTS"`
+	Dropped_packet                string   `json:"DROPPED_PACKET"`
+	Dropped_packet_unknown_proxy  string   `json:"DROPPED_PACKET_UNKNOWN_PROXY"`
+	Gateway_operational_status    string   `json:"GATEWAY_OPERATIONAL_STATUS"`
+	Sockets                       []string `json:"SOCKETS"`
 }
 
-var ShowVoiceSipGateway_Template = `Value GATEWAY_STATE (\S+)
+var ShowVoiceSipGateway_Template string = `Value GATEWAY_STATE (\S+)
 Value GATEWAY_OPERATIONAL_STATUS (\S+)
 Value List SOCKETS (\S+:\d+)
 Value REGISTRATION_STATE (\S+)

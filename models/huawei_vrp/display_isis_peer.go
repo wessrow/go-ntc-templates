@@ -1,16 +1,16 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayIsisPeer struct {
-	System_id	[]string	`json:"SYSTEM_ID"`
-	Interface	string	`json:"INTERFACE"`
-	Circuit_id	string	`json:"CIRCUIT_ID"`
-	State	string	`json:"STATE"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Type	string	`json:"TYPE"`
-	Pri	string	`json:"PRI"`
+	Type       string   `json:"TYPE"`
+	Pri        string   `json:"PRI"`
+	System_id  []string `json:"SYSTEM_ID"`
+	Interface  string   `json:"INTERFACE"`
+	Circuit_id string   `json:"CIRCUIT_ID"`
+	State      string   `json:"STATE"`
+	Hold_time  string   `json:"HOLD_TIME"`
 }
 
-var DisplayIsisPeer_Template = `Value List SYSTEM_ID (\S+)
+var DisplayIsisPeer_Template string = `Value List SYSTEM_ID (\S+)
 Value INTERFACE (\S+)
 Value CIRCUIT_ID (\d+)
 Value STATE (\S+)

@@ -1,12 +1,12 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVpc struct {
-	Id	string	`json:"ID"`
-	Port	string	`json:"PORT"`
-	Status	string	`json:"STATUS"`
+	Id     string `json:"ID"`
+	Port   string `json:"PORT"`
+	Status string `json:"STATUS"`
 }
 
-var ShowVpc_Template = `Value ID (\d+)
+var ShowVpc_Template string = `Value ID (\d+)
 Value PORT (\S+)
 Value STATUS (\S+)
 

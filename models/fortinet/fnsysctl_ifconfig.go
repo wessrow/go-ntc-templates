@@ -1,34 +1,34 @@
-package fortinet 
+package fortinet
 
 type FnsysctlIfconfig struct {
-	Nic	string	`json:"NIC"`
-	Link_encap	string	`json:"LINK_ENCAP"`
-	Hardware_address	string	`json:"HARDWARE_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Bcast	string	`json:"BCAST"`
-	Mask	string	`json:"MASK"`
-	Link_local6	string	`json:"LINK_LOCAL6"`
-	Link_local6_prefixlen	string	`json:"LINK_LOCAL6_PREFIXLEN"`
-	Multicast	string	`json:"MULTICAST"`
-	Mtu	string	`json:"MTU"`
-	Metric	string	`json:"METRIC"`
-	Rx_packets	string	`json:"RX_PACKETS"`
-	Rx_errors	string	`json:"RX_ERRORS"`
-	Rx_dropped	string	`json:"RX_DROPPED"`
-	Rx_overruns	string	`json:"RX_OVERRUNS"`
-	Rx_frame	string	`json:"RX_FRAME"`
-	Tx_packets	string	`json:"TX_PACKETS"`
-	Tx_errors	string	`json:"TX_ERRORS"`
-	Tx_dropped	string	`json:"TX_DROPPED"`
-	Tx_overruns	string	`json:"TX_OVERRUNS"`
-	Tx_carrier	string	`json:"TX_CARRIER"`
-	Collisions	string	`json:"COLLISIONS"`
-	Tx_queue_len	string	`json:"TX_QUEUE_LEN"`
-	Rx_bytes	string	`json:"RX_BYTES"`
-	Tx_bytes	string	`json:"TX_BYTES"`
+	Nic                   string `json:"NIC"`
+	Link_local6_prefixlen string `json:"LINK_LOCAL6_PREFIXLEN"`
+	Rx_frame              string `json:"RX_FRAME"`
+	Tx_errors             string `json:"TX_ERRORS"`
+	Collisions            string `json:"COLLISIONS"`
+	Link_encap            string `json:"LINK_ENCAP"`
+	Link_local6           string `json:"LINK_LOCAL6"`
+	Rx_overruns           string `json:"RX_OVERRUNS"`
+	Tx_packets            string `json:"TX_PACKETS"`
+	Tx_carrier            string `json:"TX_CARRIER"`
+	Rx_bytes              string `json:"RX_BYTES"`
+	Bcast                 string `json:"BCAST"`
+	Mask                  string `json:"MASK"`
+	Multicast             string `json:"MULTICAST"`
+	Metric                string `json:"METRIC"`
+	Rx_packets            string `json:"RX_PACKETS"`
+	Tx_overruns           string `json:"TX_OVERRUNS"`
+	Hardware_address      string `json:"HARDWARE_ADDRESS"`
+	Ip_address            string `json:"IP_ADDRESS"`
+	Mtu                   string `json:"MTU"`
+	Rx_errors             string `json:"RX_ERRORS"`
+	Rx_dropped            string `json:"RX_DROPPED"`
+	Tx_dropped            string `json:"TX_DROPPED"`
+	Tx_queue_len          string `json:"TX_QUEUE_LEN"`
+	Tx_bytes              string `json:"TX_BYTES"`
 }
 
-var FnsysctlIfconfig_Template = `Value NIC (.*?)
+var FnsysctlIfconfig_Template string = `Value NIC (.*?)
 Value LINK_ENCAP (.*?)
 Value HARDWARE_ADDRESS ([a-zA-Z0-9]{2}(:[a-zA-Z0-9]{2}){5})
 Value IP_ADDRESS (\S+)

@@ -1,40 +1,40 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Bia	string	`json:"BIA"`
-	Description	string	`json:"DESCRIPTION"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mtu	string	`json:"MTU"`
-	Duplex	string	`json:"DUPLEX"`
-	Hardware_media	string	`json:"HARDWARE_MEDIA"`
-	Speed	string	`json:"SPEED"`
-	Bandwidth	string	`json:"BANDWIDTH"`
-	Encapsulation	string	`json:"ENCAPSULATION"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Last_input	string	`json:"LAST_INPUT"`
-	Last_output	string	`json:"LAST_OUTPUT"`
-	Input_rate	string	`json:"INPUT_RATE"`
-	Output_rate	string	`json:"OUTPUT_RATE"`
-	Input_pps	string	`json:"INPUT_PPS"`
-	Output_pps	string	`json:"OUTPUT_PPS"`
-	Input_packets	string	`json:"INPUT_PACKETS"`
-	Output_packets	string	`json:"OUTPUT_PACKETS"`
-	Runts	string	`json:"RUNTS"`
-	Giants	string	`json:"GIANTS"`
-	Input_errors	string	`json:"INPUT_ERRORS"`
-	Crc	string	`json:"CRC"`
-	Frame	string	`json:"FRAME"`
-	Overrun	string	`json:"OVERRUN"`
-	Abort	string	`json:"ABORT"`
-	Output_errors	string	`json:"OUTPUT_ERRORS"`
+	Last_output    string `json:"LAST_OUTPUT"`
+	Output_pps     string `json:"OUTPUT_PPS"`
+	Description    string `json:"DESCRIPTION"`
+	Mtu            string `json:"MTU"`
+	Bia            string `json:"BIA"`
+	Input_packets  string `json:"INPUT_PACKETS"`
+	Runts          string `json:"RUNTS"`
+	Admin_state    string `json:"ADMIN_STATE"`
+	Mac_address    string `json:"MAC_ADDRESS"`
+	Hardware_media string `json:"HARDWARE_MEDIA"`
+	Vlan_id        string `json:"VLAN_ID"`
+	Last_input     string `json:"LAST_INPUT"`
+	Crc            string `json:"CRC"`
+	Hardware_type  string `json:"HARDWARE_TYPE"`
+	Duplex         string `json:"DUPLEX"`
+	Giants         string `json:"GIANTS"`
+	Bandwidth      string `json:"BANDWIDTH"`
+	Input_pps      string `json:"INPUT_PPS"`
+	Output_rate    string `json:"OUTPUT_RATE"`
+	Output_packets string `json:"OUTPUT_PACKETS"`
+	Input_errors   string `json:"INPUT_ERRORS"`
+	Speed          string `json:"SPEED"`
+	Input_rate     string `json:"INPUT_RATE"`
+	Abort          string `json:"ABORT"`
+	Link_status    string `json:"LINK_STATUS"`
+	Ip_address     string `json:"IP_ADDRESS"`
+	Frame          string `json:"FRAME"`
+	Output_errors  string `json:"OUTPUT_ERRORS"`
+	Interface      string `json:"INTERFACE"`
+	Encapsulation  string `json:"ENCAPSULATION"`
+	Overrun        string `json:"OVERRUN"`
 }
 
-var ShowInterfaces_Template = `Value Required INTERFACE (\S+)
+var ShowInterfaces_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value ADMIN_STATE (.+?)
 Value HARDWARE_TYPE (\S+?(?:\s+Ethernet|))

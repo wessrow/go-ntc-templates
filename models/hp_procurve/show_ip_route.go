@@ -1,16 +1,16 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowIpRoute struct {
-	Destination	string	`json:"DESTINATION"`
-	Gateway	string	`json:"GATEWAY"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Type	string	`json:"TYPE"`
-	Subtype	string	`json:"SUBTYPE"`
-	Metric	string	`json:"METRIC"`
-	Distance	string	`json:"DISTANCE"`
+	Type        string `json:"TYPE"`
+	Subtype     string `json:"SUBTYPE"`
+	Metric      string `json:"METRIC"`
+	Distance    string `json:"DISTANCE"`
+	Destination string `json:"DESTINATION"`
+	Gateway     string `json:"GATEWAY"`
+	Vlan_name   string `json:"VLAN_NAME"`
 }
 
-var ShowIpRoute_Template = `Value DESTINATION ([0-9./]+)
+var ShowIpRoute_Template string = `Value DESTINATION ([0-9./]+)
 Value GATEWAY ([0-9.]*|\S*)
 Value VLAN_NAME (\d*)
 Value TYPE (\S+)

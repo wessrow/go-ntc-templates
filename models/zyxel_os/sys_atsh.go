@@ -1,15 +1,15 @@
-package zyxel_os 
+package zyxel_os
 
 type SysAtsh struct {
-	Version	string	`json:"VERSION"`
-	Boot_version	string	`json:"BOOT_VERSION"`
-	Vendor	string	`json:"VENDOR"`
-	Hardware_model	string	`json:"HARDWARE_MODEL"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Boot_version   string `json:"BOOT_VERSION"`
+	Vendor         string `json:"VENDOR"`
+	Hardware_model string `json:"HARDWARE_MODEL"`
+	Serial_number  string `json:"SERIAL_NUMBER"`
+	Mac_address    string `json:"MAC_ADDRESS"`
+	Version        string `json:"VERSION"`
 }
 
-var SysAtsh_Template = `Value VERSION (\S+)
+var SysAtsh_Template string = `Value VERSION (\S+)
 Value BOOT_VERSION (.+)
 Value VENDOR (.+)
 Value HARDWARE_MODEL (\S+)

@@ -1,16 +1,16 @@
-package ciena_saos 
+package ciena_saos
 
 type PortXcvrShow struct {
-	Port	string	`json:"PORT"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Operational_state	string	`json:"OPERATIONAL_STATE"`
-	Vendor	string	`json:"VENDOR"`
-	Ciena_rev	string	`json:"CIENA_REV"`
-	Connector_type	string	`json:"CONNECTOR_TYPE"`
-	Diagnostic	string	`json:"DIAGNOSTIC"`
+	Port              string `json:"PORT"`
+	Admin_state       string `json:"ADMIN_STATE"`
+	Operational_state string `json:"OPERATIONAL_STATE"`
+	Vendor            string `json:"VENDOR"`
+	Ciena_rev         string `json:"CIENA_REV"`
+	Connector_type    string `json:"CONNECTOR_TYPE"`
+	Diagnostic        string `json:"DIAGNOSTIC"`
 }
 
-var PortXcvrShow_Template = `Value PORT (\S+)
+var PortXcvrShow_Template string = `Value PORT (\S+)
 Value ADMIN_STATE (\S+)
 Value OPERATIONAL_STATE (\S+)
 Value VENDOR (\S.*\S)

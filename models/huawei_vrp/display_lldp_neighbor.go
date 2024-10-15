@@ -1,21 +1,21 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayLldpNeighbor struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Manufacturer	string	`json:"MANUFACTURER"`
-	Platform	string	`json:"PLATFORM"`
-	Neighbor_port_id	string	`json:"NEIGHBOR_PORT_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_description	[]string	`json:"NEIGHBOR_DESCRIPTION"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Serial	string	`json:"SERIAL"`
+	Platform             string   `json:"PLATFORM"`
+	Neighbor_port_id     string   `json:"NEIGHBOR_PORT_ID"`
+	Neighbor_interface   string   `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name        string   `json:"NEIGHBOR_NAME"`
+	Vlan_id              string   `json:"VLAN_ID"`
+	Serial               string   `json:"SERIAL"`
+	Local_interface      string   `json:"LOCAL_INTERFACE"`
+	Chassis_id           string   `json:"CHASSIS_ID"`
+	Manufacturer         string   `json:"MANUFACTURER"`
+	Neighbor_description []string `json:"NEIGHBOR_DESCRIPTION"`
+	Capabilities         string   `json:"CAPABILITIES"`
+	Mgmt_address         string   `json:"MGMT_ADDRESS"`
 }
 
-var DisplayLldpNeighbor_Template = `Value Required LOCAL_INTERFACE (\S+)
+var DisplayLldpNeighbor_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (.+?)
 Value MANUFACTURER (.*?)
 Value PLATFORM (.*?)

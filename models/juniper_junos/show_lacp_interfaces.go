@@ -1,14 +1,14 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowLacpInterfaces struct {
-	Bundle_name	string	`json:"BUNDLE_NAME"`
-	Member_interface	[]string	`json:"MEMBER_INTERFACE"`
-	Receive_state	[]string	`json:"RECEIVE_STATE"`
-	Transmit_state	[]string	`json:"TRANSMIT_STATE"`
-	Mux_state	[]string	`json:"MUX_STATE"`
+	Bundle_name      string   `json:"BUNDLE_NAME"`
+	Member_interface []string `json:"MEMBER_INTERFACE"`
+	Receive_state    []string `json:"RECEIVE_STATE"`
+	Transmit_state   []string `json:"TRANSMIT_STATE"`
+	Mux_state        []string `json:"MUX_STATE"`
 }
 
-var ShowLacpInterfaces_Template = `Value Required BUNDLE_NAME (\S+)
+var ShowLacpInterfaces_Template string = `Value Required BUNDLE_NAME (\S+)
 Value List MEMBER_INTERFACE (\S+)
 Value List RECEIVE_STATE (\S+\s?\w+)
 Value List TRANSMIT_STATE (\S+\s?periodic)

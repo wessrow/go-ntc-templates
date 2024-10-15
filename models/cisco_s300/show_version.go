@@ -1,12 +1,12 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowVersion struct {
-	Sw_version	string	`json:"SW_VERSION"`
-	Boot_version	string	`json:"BOOT_VERSION"`
-	Hw_version	string	`json:"HW_VERSION"`
+	Sw_version   string `json:"SW_VERSION"`
+	Boot_version string `json:"BOOT_VERSION"`
+	Hw_version   string `json:"HW_VERSION"`
 }
 
-var ShowVersion_Template = `Value SW_VERSION ([1-9]\.[0-9]\.[0-9].[0-9]*)
+var ShowVersion_Template string = `Value SW_VERSION ([1-9]\.[0-9]\.[0-9].[0-9]*)
 Value BOOT_VERSION ([1-9]\.[0-9]\.[0-9].[0-9]*)
 Value HW_VERSION (V0[1-9])
 

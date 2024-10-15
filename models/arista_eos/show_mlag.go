@@ -1,14 +1,14 @@
-package arista_eos 
+package arista_eos
 
 type ShowMlag struct {
-	Domain	string	`json:"DOMAIN"`
-	Interface	string	`json:"INTERFACE"`
-	Peer_addr	string	`json:"PEER_ADDR"`
-	Peer_link	string	`json:"PEER_LINK"`
-	State	string	`json:"STATE"`
+	Interface string `json:"INTERFACE"`
+	Peer_addr string `json:"PEER_ADDR"`
+	Peer_link string `json:"PEER_LINK"`
+	State     string `json:"STATE"`
+	Domain    string `json:"DOMAIN"`
 }
 
-var ShowMlag_Template = `Value DOMAIN (.*)
+var ShowMlag_Template string = `Value DOMAIN (.*)
 Value INTERFACE (\S+)
 Value PEER_ADDR (\S+)
 Value PEER_LINK (\S+)

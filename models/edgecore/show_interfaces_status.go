@@ -1,38 +1,38 @@
-package edgecore 
+package edgecore
 
 type ShowInterfacesStatus struct {
-	Port	string	`json:"PORT"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Address	string	`json:"ADDRESS"`
-	Name	string	`json:"NAME"`
-	Port_admin	string	`json:"PORT_ADMIN"`
-	Mdix_mode	string	`json:"MDIX_MODE"`
-	Negotiation	string	`json:"NEGOTIATION"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Broadcast_storm	string	`json:"BROADCAST_STORM"`
-	Broadcast_storm_limit	string	`json:"BROADCAST_STORM_LIMIT"`
-	Multicast_storm	string	`json:"MULTICAST_STORM"`
-	Multicast_storm_limit	string	`json:"MULTICAST_STORM_LIMIT"`
-	Unknownunicast_storm	string	`json:"UNKNOWNUNICAST_STORM"`
-	Unknownunicast_storm_limit	string	`json:"UNKNOWNUNICAST_STORM_LIMIT"`
-	Flow_control	string	`json:"FLOW_CONTROL"`
-	Vlan_trunking	string	`json:"VLAN_TRUNKING"`
-	Lacp	string	`json:"LACP"`
-	Port_security	string	`json:"PORT_SECURITY"`
-	Max_mac_count	string	`json:"MAX_MAC_COUNT"`
-	Port_security_action	string	`json:"PORT_SECURITY_ACTION"`
-	Media_type	string	`json:"MEDIA_TYPE"`
-	Giga_phy_mode	string	`json:"GIGA_PHY_MODE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Link_down_reason	string	`json:"LINK_DOWN_REASON"`
-	Operation_status	string	`json:"OPERATION_STATUS"`
-	Port_uptime	string	`json:"PORT_UPTIME"`
-	Flow_control_type	string	`json:"FLOW_CONTROL_TYPE"`
+	Mdix_mode                  string `json:"MDIX_MODE"`
+	Negotiation                string `json:"NEGOTIATION"`
+	Multicast_storm            string `json:"MULTICAST_STORM"`
+	Port_security_action       string `json:"PORT_SECURITY_ACTION"`
+	Port                       string `json:"PORT"`
+	Port_admin                 string `json:"PORT_ADMIN"`
+	Multicast_storm_limit      string `json:"MULTICAST_STORM_LIMIT"`
+	Flow_control               string `json:"FLOW_CONTROL"`
+	Max_mac_count              string `json:"MAX_MAC_COUNT"`
+	Media_type                 string `json:"MEDIA_TYPE"`
+	Flow_control_type          string `json:"FLOW_CONTROL_TYPE"`
+	Address                    string `json:"ADDRESS"`
+	Speed                      string `json:"SPEED"`
+	Broadcast_storm            string `json:"BROADCAST_STORM"`
+	Link_status                string `json:"LINK_STATUS"`
+	Vlan_trunking              string `json:"VLAN_TRUNKING"`
+	Giga_phy_mode              string `json:"GIGA_PHY_MODE"`
+	Name                       string `json:"NAME"`
+	Duplex                     string `json:"DUPLEX"`
+	Capabilities               string `json:"CAPABILITIES"`
+	Broadcast_storm_limit      string `json:"BROADCAST_STORM_LIMIT"`
+	Unknownunicast_storm       string `json:"UNKNOWNUNICAST_STORM"`
+	Lacp                       string `json:"LACP"`
+	Port_security              string `json:"PORT_SECURITY"`
+	Operation_status           string `json:"OPERATION_STATUS"`
+	Port_type                  string `json:"PORT_TYPE"`
+	Unknownunicast_storm_limit string `json:"UNKNOWNUNICAST_STORM_LIMIT"`
+	Link_down_reason           string `json:"LINK_DOWN_REASON"`
+	Port_uptime                string `json:"PORT_UPTIME"`
 }
 
-var ShowInterfacesStatus_Template = `Value Required PORT (.*)
+var ShowInterfacesStatus_Template string = `Value Required PORT (.*)
 Value PORT_TYPE (.*)
 Value ADDRESS (.*)
 Value NAME (.*)

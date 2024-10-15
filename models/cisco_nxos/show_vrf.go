@@ -1,13 +1,13 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVrf struct {
-	Name	string	`json:"NAME"`
-	Id	string	`json:"ID"`
-	State	string	`json:"STATE"`
-	Reason	string	`json:"REASON"`
+	Id     string `json:"ID"`
+	State  string `json:"STATE"`
+	Reason string `json:"REASON"`
+	Name   string `json:"NAME"`
 }
 
-var ShowVrf_Template = `Value Required NAME (\S+)
+var ShowVrf_Template string = `Value Required NAME (\S+)
 Value Required ID (\S+)
 Value Required STATE (\S+)
 Value Required REASON (\S+)

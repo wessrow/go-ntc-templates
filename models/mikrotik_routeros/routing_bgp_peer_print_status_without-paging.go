@@ -1,45 +1,45 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type RoutingBgpPeerPrintStatusWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flag	string	`json:"FLAG"`
-	Name	string	`json:"NAME"`
-	Instance	string	`json:"INSTANCE"`
-	Remote_address	string	`json:"REMOTE_ADDRESS"`
-	Remote_as	string	`json:"REMOTE_AS"`
-	Tcp_md5_key	string	`json:"TCP_MD5_KEY"`
-	Nexthop_choice	string	`json:"NEXTHOP_CHOICE"`
-	Multihop	string	`json:"MULTIHOP"`
-	Route_reflect	string	`json:"ROUTE_REFLECT"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Keepalive_time	string	`json:"KEEPALIVE_TIME"`
-	Ttl	string	`json:"TTL"`
-	In_filter	string	`json:"IN_FILTER"`
-	Out_filter	string	`json:"OUT_FILTER"`
-	Address_families	string	`json:"ADDRESS_FAMILIES"`
-	Update_source	string	`json:"UPDATE_SOURCE"`
-	Default_originate	string	`json:"DEFAULT_ORIGINATE"`
-	Remove_private_as	string	`json:"REMOVE_PRIVATE_AS"`
-	As_override	string	`json:"AS_OVERRIDE"`
-	Passive	string	`json:"PASSIVE"`
-	Use_bfd	string	`json:"USE_BFD"`
-	Remote_id	string	`json:"REMOTE_ID"`
-	Local_address	string	`json:"LOCAL_ADDRESS"`
-	Uptime	string	`json:"UPTIME"`
-	Prefix_count	string	`json:"PREFIX_COUNT"`
-	Updates_sent	string	`json:"UPDATES_SENT"`
-	Updates_received	string	`json:"UPDATES_RECEIVED"`
-	Withdrawn_sent	string	`json:"WITHDRAWN_SENT"`
-	Withdrawn_received	string	`json:"WITHDRAWN_RECEIVED"`
-	Remote_hold_time	string	`json:"REMOTE_HOLD_TIME"`
-	Used_hold_time	string	`json:"USED_HOLD_TIME"`
-	Used_keepalive_time	string	`json:"USED_KEEPALIVE_TIME"`
-	Refresh_capability	string	`json:"REFRESH_CAPABILITY"`
-	As4_capability	string	`json:"AS4_CAPABILITY"`
-	State	string	`json:"STATE"`
+	Name                string `json:"NAME"`
+	Out_filter          string `json:"OUT_FILTER"`
+	Address_families    string `json:"ADDRESS_FAMILIES"`
+	Remove_private_as   string `json:"REMOVE_PRIVATE_AS"`
+	Use_bfd             string `json:"USE_BFD"`
+	Remote_hold_time    string `json:"REMOTE_HOLD_TIME"`
+	Index               string `json:"INDEX"`
+	Passive             string `json:"PASSIVE"`
+	Remote_id           string `json:"REMOTE_ID"`
+	Withdrawn_received  string `json:"WITHDRAWN_RECEIVED"`
+	Flag                string `json:"FLAG"`
+	Prefix_count        string `json:"PREFIX_COUNT"`
+	Withdrawn_sent      string `json:"WITHDRAWN_SENT"`
+	Used_keepalive_time string `json:"USED_KEEPALIVE_TIME"`
+	Local_address       string `json:"LOCAL_ADDRESS"`
+	Remote_as           string `json:"REMOTE_AS"`
+	Remote_address      string `json:"REMOTE_ADDRESS"`
+	Route_reflect       string `json:"ROUTE_REFLECT"`
+	Hold_time           string `json:"HOLD_TIME"`
+	Update_source       string `json:"UPDATE_SOURCE"`
+	Multihop            string `json:"MULTIHOP"`
+	Updates_sent        string `json:"UPDATES_SENT"`
+	Refresh_capability  string `json:"REFRESH_CAPABILITY"`
+	Instance            string `json:"INSTANCE"`
+	Ttl                 string `json:"TTL"`
+	Default_originate   string `json:"DEFAULT_ORIGINATE"`
+	As_override         string `json:"AS_OVERRIDE"`
+	Used_hold_time      string `json:"USED_HOLD_TIME"`
+	Tcp_md5_key         string `json:"TCP_MD5_KEY"`
+	Keepalive_time      string `json:"KEEPALIVE_TIME"`
+	In_filter           string `json:"IN_FILTER"`
+	Uptime              string `json:"UPTIME"`
+	Updates_received    string `json:"UPDATES_RECEIVED"`
+	As4_capability      string `json:"AS4_CAPABILITY"`
+	State               string `json:"STATE"`
+	Nexthop_choice      string `json:"NEXTHOP_CHOICE"`
 }
 
-var RoutingBgpPeerPrintStatusWithoutPaging_Template = `Value INDEX (\d+)
+var RoutingBgpPeerPrintStatusWithoutPaging_Template string = `Value INDEX (\d+)
 Value FLAG (X|E)
 Value NAME (.*)
 Value INSTANCE (\S+)

@@ -1,14 +1,14 @@
-package dell_force10 
+package dell_force10
 
 type ShowVlanBrief struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Stg	string	`json:"STG"`
-	Mac_aging	string	`json:"MAC_AGING"`
-	Ip_address	string	`json:"IP_ADDRESS"`
+	Mac_aging  string `json:"MAC_AGING"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Vlan_id    string `json:"VLAN_ID"`
+	Vlan_name  string `json:"VLAN_NAME"`
+	Stg        string `json:"STG"`
 }
 
-var ShowVlanBrief_Template = `Value VLAN_ID (\d+)
+var ShowVlanBrief_Template string = `Value VLAN_ID (\d+)
 Value VLAN_NAME (\S+(\s\S+)*)
 Value STG (\d+)
 Value MAC_AGING (\d+)

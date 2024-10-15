@@ -1,12 +1,12 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntSnmpProfile0All struct {
-	Ont_id	string	`json:"ONT_ID"`
-	Snmp_profile_id	string	`json:"SNMP_PROFILE_ID"`
-	Snmp_profile_name	string	`json:"SNMP_PROFILE_NAME"`
+	Ont_id            string `json:"ONT_ID"`
+	Snmp_profile_id   string `json:"SNMP_PROFILE_ID"`
+	Snmp_profile_name string `json:"SNMP_PROFILE_NAME"`
 }
 
-var DisplayOntSnmpProfile0All_Template = `Value ONT_ID (\d+)
+var DisplayOntSnmpProfile0All_Template string = `Value ONT_ID (\d+)
 Value SNMP_PROFILE_ID (\d+)
 Value SNMP_PROFILE_NAME (\S+)
 

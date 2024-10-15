@@ -1,22 +1,22 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpv6BgpSummary struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Vrf	string	`json:"VRF"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Msg_rcvd	string	`json:"MSG_RCVD"`
-	Msg_sent	string	`json:"MSG_SENT"`
-	In_queue	string	`json:"IN_QUEUE"`
-	Out_queue	string	`json:"OUT_QUEUE"`
-	Up_down	string	`json:"UP_DOWN"`
-	State	string	`json:"STATE"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
-	State_pfxacc	string	`json:"STATE_PFXACC"`
+	Msg_rcvd     string `json:"MSG_RCVD"`
+	Msg_sent     string `json:"MSG_SENT"`
+	In_queue     string `json:"IN_QUEUE"`
+	Up_down      string `json:"UP_DOWN"`
+	State_pfxrcd string `json:"STATE_PFXRCD"`
+	Vrf          string `json:"VRF"`
+	Neigh_as     string `json:"NEIGH_AS"`
+	Bgp_neigh    string `json:"BGP_NEIGH"`
+	Out_queue    string `json:"OUT_QUEUE"`
+	State        string `json:"STATE"`
+	State_pfxacc string `json:"STATE_PFXACC"`
+	Router_id    string `json:"ROUTER_ID"`
+	Local_as     string `json:"LOCAL_AS"`
 }
 
-var ShowIpv6BgpSummary_Template = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+var ShowIpv6BgpSummary_Template string = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown LOCAL_AS (\d+)
 Value Filldown VRF (\S+)
 Value Required BGP_NEIGH (\S+)

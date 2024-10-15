@@ -1,21 +1,21 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowLldpInfoRemoteDeviceDetail struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_chassis_type	string	`json:"NEIGHBOR_CHASSIS_TYPE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Neighbor_interface_description	string	`json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Capabilities_supported	string	`json:"CAPABILITIES_SUPPORTED"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
+	Capabilities_supported         string `json:"CAPABILITIES_SUPPORTED"`
+	Capabilities                   string `json:"CAPABILITIES"`
+	Neighbor_description           string `json:"NEIGHBOR_DESCRIPTION"`
+	Neighbor_interface_description string `json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
+	Local_interface                string `json:"LOCAL_INTERFACE"`
+	Neighbor_chassis_type          string `json:"NEIGHBOR_CHASSIS_TYPE"`
+	Chassis_id                     string `json:"CHASSIS_ID"`
+	Port_type                      string `json:"PORT_TYPE"`
+	Neighbor_interface             string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name                  string `json:"NEIGHBOR_NAME"`
+	Vlan_id                        string `json:"VLAN_ID"`
+	Mgmt_address                   string `json:"MGMT_ADDRESS"`
 }
 
-var ShowLldpInfoRemoteDeviceDetail_Template = `Value Required LOCAL_INTERFACE (\S+)
+var ShowLldpInfoRemoteDeviceDetail_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_CHASSIS_TYPE (\S+)
 Value CHASSIS_ID ([a-f0-9]{6}-[a-f0-9]{6}|(?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value PORT_TYPE (\S+)

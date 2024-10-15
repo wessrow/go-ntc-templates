@@ -1,41 +1,41 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowVoiceVoipCallAnyAll struct {
-	Call_idx	string	`json:"CALL_IDX"`
-	Calling_from	string	`json:"CALLING_FROM"`
-	Calling_to	string	`json:"CALLING_TO"`
-	Call_id	string	`json:"CALL_ID"`
-	Calling_number	string	`json:"CALLING_NUMBER"`
-	Called_number	string	`json:"CALLED_NUMBER"`
-	Setup_time	string	`json:"SETUP_TIME"`
-	Connection_time	string	`json:"CONNECTION_TIME"`
-	B_channels	[]string	`json:"B_CHANNELS"`
-	Disconnected_by	string	`json:"DISCONNECTED_BY"`
-	Disconnect_cause_code	string	`json:"DISCONNECT_CAUSE_CODE"`
-	Disconnect_cause_text	string	`json:"DISCONNECT_CAUSE_TEXT"`
-	Call_duration	string	`json:"CALL_DURATION"`
-	Pdd_duration	string	`json:"PDD_DURATION"`
-	Advice_of_charge	string	`json:"ADVICE_OF_CHARGE"`
-	Call_priority	string	`json:"CALL_PRIORITY"`
-	Rtp_source_ip	string	`json:"RTP_SOURCE_IP"`
-	Rtp_source_port	string	`json:"RTP_SOURCE_PORT"`
-	Rtp_destination_ip	string	`json:"RTP_DESTINATION_IP"`
-	Rtp_destination_port	string	`json:"RTP_DESTINATION_PORT"`
-	Rtp_play_time	string	`json:"RTP_PLAY_TIME"`
-	Rtp_tx_coder	string	`json:"RTP_TX_CODER"`
-	Rtp_rx_coder	string	`json:"RTP_RX_CODER"`
-	Rtp_packets_rx	string	`json:"RTP_PACKETS_RX"`
-	Rtp_packets_tx	string	`json:"RTP_PACKETS_TX"`
-	Rtp_packets_lost_rx	string	`json:"RTP_PACKETS_LOST_RX"`
-	Rtp_packets_lost_tx	string	`json:"RTP_PACKETS_LOST_TX"`
-	Rtp_excessive_jitter	string	`json:"RTP_EXCESSIVE_JITTER"`
-	Rtp_mos_cq	string	`json:"RTP_MOS_CQ"`
-	Rtp_mos_lq	string	`json:"RTP_MOS_LQ"`
-	Rtp_erl_db	string	`json:"RTP_ERL_DB"`
-	Rtp_acom_db	string	`json:"RTP_ACOM_DB"`
+	Setup_time            string   `json:"SETUP_TIME"`
+	Call_duration         string   `json:"CALL_DURATION"`
+	Rtp_source_port       string   `json:"RTP_SOURCE_PORT"`
+	Rtp_destination_ip    string   `json:"RTP_DESTINATION_IP"`
+	Rtp_packets_tx        string   `json:"RTP_PACKETS_TX"`
+	Rtp_rx_coder          string   `json:"RTP_RX_CODER"`
+	Rtp_mos_lq            string   `json:"RTP_MOS_LQ"`
+	Rtp_source_ip         string   `json:"RTP_SOURCE_IP"`
+	Rtp_packets_rx        string   `json:"RTP_PACKETS_RX"`
+	Call_idx              string   `json:"CALL_IDX"`
+	Calling_to            string   `json:"CALLING_TO"`
+	Disconnected_by       string   `json:"DISCONNECTED_BY"`
+	Pdd_duration          string   `json:"PDD_DURATION"`
+	Call_priority         string   `json:"CALL_PRIORITY"`
+	Rtp_excessive_jitter  string   `json:"RTP_EXCESSIVE_JITTER"`
+	Call_id               string   `json:"CALL_ID"`
+	Calling_number        string   `json:"CALLING_NUMBER"`
+	Connection_time       string   `json:"CONNECTION_TIME"`
+	Disconnect_cause_text string   `json:"DISCONNECT_CAUSE_TEXT"`
+	Advice_of_charge      string   `json:"ADVICE_OF_CHARGE"`
+	Rtp_destination_port  string   `json:"RTP_DESTINATION_PORT"`
+	Rtp_play_time         string   `json:"RTP_PLAY_TIME"`
+	Rtp_mos_cq            string   `json:"RTP_MOS_CQ"`
+	Rtp_erl_db            string   `json:"RTP_ERL_DB"`
+	Calling_from          string   `json:"CALLING_FROM"`
+	Called_number         string   `json:"CALLED_NUMBER"`
+	Rtp_packets_lost_rx   string   `json:"RTP_PACKETS_LOST_RX"`
+	Disconnect_cause_code string   `json:"DISCONNECT_CAUSE_CODE"`
+	B_channels            []string `json:"B_CHANNELS"`
+	Rtp_tx_coder          string   `json:"RTP_TX_CODER"`
+	Rtp_packets_lost_tx   string   `json:"RTP_PACKETS_LOST_TX"`
+	Rtp_acom_db           string   `json:"RTP_ACOM_DB"`
 }
 
-var ShowVoiceVoipCallAnyAll_Template = `Value Required CALL_IDX (\d+)
+var ShowVoiceVoipCallAnyAll_Template string = `Value Required CALL_IDX (\d+)
 Value CALLING_FROM (.*)
 Value CALLING_TO (.*)
 Value CALL_ID (.*\S)

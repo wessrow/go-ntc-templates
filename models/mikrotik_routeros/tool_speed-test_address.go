@@ -1,31 +1,31 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type ToolSpeedTestAddress struct {
-	Address	string	`json:"ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Time_remaining	string	`json:"TIME_REMAINING"`
-	Ping_min	string	`json:"PING_MIN"`
-	Ping_avg	string	`json:"PING_AVG"`
-	Ping_max	string	`json:"PING_MAX"`
-	Jitter_min	string	`json:"JITTER_MIN"`
-	Jitter_avg	string	`json:"JITTER_AVG"`
-	Jitter_max	string	`json:"JITTER_MAX"`
-	Loss	string	`json:"LOSS"`
-	Tcp_download_bw	string	`json:"TCP_DOWNLOAD_BW"`
-	Tcp_download_local_cpu	string	`json:"TCP_DOWNLOAD_LOCAL_CPU"`
-	Tcp_download_remote_cpu	string	`json:"TCP_DOWNLOAD_REMOTE_CPU"`
-	Tcp_upload_bw	string	`json:"TCP_UPLOAD_BW"`
-	Tcp_upload_local_cpu	string	`json:"TCP_UPLOAD_LOCAL_CPU"`
-	Tcp_upload_remote_cpu	string	`json:"TCP_UPLOAD_REMOTE_CPU"`
-	Udp_download_bw	string	`json:"UDP_DOWNLOAD_BW"`
-	Udp_download_local_cpu	string	`json:"UDP_DOWNLOAD_LOCAL_CPU"`
-	Udp_download_remote_cpu	string	`json:"UDP_DOWNLOAD_REMOTE_CPU"`
-	Udp_upload_bw	string	`json:"UDP_UPLOAD_BW"`
-	Udp_upload_local_cpu	string	`json:"UDP_UPLOAD_LOCAL_CPU"`
-	Udp_upload_remote_cpu	string	`json:"UDP_UPLOAD_REMOTE_CPU"`
+	Tcp_download_remote_cpu string `json:"TCP_DOWNLOAD_REMOTE_CPU"`
+	Tcp_download_local_cpu  string `json:"TCP_DOWNLOAD_LOCAL_CPU"`
+	Jitter_avg              string `json:"JITTER_AVG"`
+	Jitter_max              string `json:"JITTER_MAX"`
+	Loss                    string `json:"LOSS"`
+	Tcp_download_bw         string `json:"TCP_DOWNLOAD_BW"`
+	Tcp_upload_bw           string `json:"TCP_UPLOAD_BW"`
+	Udp_download_local_cpu  string `json:"UDP_DOWNLOAD_LOCAL_CPU"`
+	Udp_upload_bw           string `json:"UDP_UPLOAD_BW"`
+	Address                 string `json:"ADDRESS"`
+	Ping_avg                string `json:"PING_AVG"`
+	Ping_max                string `json:"PING_MAX"`
+	Jitter_min              string `json:"JITTER_MIN"`
+	Udp_upload_local_cpu    string `json:"UDP_UPLOAD_LOCAL_CPU"`
+	Udp_upload_remote_cpu   string `json:"UDP_UPLOAD_REMOTE_CPU"`
+	Status                  string `json:"STATUS"`
+	Ping_min                string `json:"PING_MIN"`
+	Tcp_upload_local_cpu    string `json:"TCP_UPLOAD_LOCAL_CPU"`
+	Tcp_upload_remote_cpu   string `json:"TCP_UPLOAD_REMOTE_CPU"`
+	Udp_download_bw         string `json:"UDP_DOWNLOAD_BW"`
+	Udp_download_remote_cpu string `json:"UDP_DOWNLOAD_REMOTE_CPU"`
+	Time_remaining          string `json:"TIME_REMAINING"`
 }
 
-var ToolSpeedTestAddress_Template = `Value ADDRESS (\S+)
+var ToolSpeedTestAddress_Template string = `Value ADDRESS (\S+)
 Value STATUS (.*)
 Value TIME_REMAINING (\d+\w+)
 Value PING_MIN (\S+)

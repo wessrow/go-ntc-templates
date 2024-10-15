@@ -1,10 +1,10 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type Hostname struct {
-	Hostname	string	`json:"HOSTNAME"`
+	Hostname string `json:"HOSTNAME"`
 }
 
-var Hostname_Template = `Value HOSTNAME (.*)
+var Hostname_Template string = `Value HOSTNAME (.*)
 
 Start
   ^${HOSTNAME}$$ -> Record

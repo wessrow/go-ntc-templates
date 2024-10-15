@@ -1,17 +1,17 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowInterfaceSummary struct {
-	Int_count	string	`json:"INT_COUNT"`
-	Name	string	`json:"NAME"`
-	Port	string	`json:"PORT"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Ap_mgr	string	`json:"AP_MGR"`
-	Guest	string	`json:"GUEST"`
+	Ap_mgr     string `json:"AP_MGR"`
+	Guest      string `json:"GUEST"`
+	Int_count  string `json:"INT_COUNT"`
+	Name       string `json:"NAME"`
+	Port       string `json:"PORT"`
+	Vlan_id    string `json:"VLAN_ID"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Type       string `json:"TYPE"`
 }
 
-var SshShowInterfaceSummary_Template = `Value Filldown INT_COUNT (\d+)
+var SshShowInterfaceSummary_Template string = `Value Filldown INT_COUNT (\d+)
 Value Required NAME (\S+)
 Value PORT (\S+)
 Value VLAN_ID (\S+)

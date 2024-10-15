@@ -1,15 +1,15 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayMacAddressOnt0120 struct {
-	Fsp	string	`json:"FSP"`
-	Ont_id	string	`json:"ONT_ID"`
-	Ont_port_type	string	`json:"ONT_PORT_TYPE"`
-	Ont_port_id	string	`json:"ONT_PORT_ID"`
-	Mac	string	`json:"MAC"`
-	Vlan	string	`json:"VLAN"`
+	Ont_id        string `json:"ONT_ID"`
+	Ont_port_type string `json:"ONT_PORT_TYPE"`
+	Ont_port_id   string `json:"ONT_PORT_ID"`
+	Mac           string `json:"MAC"`
+	Vlan          string `json:"VLAN"`
+	Fsp           string `json:"FSP"`
 }
 
-var DisplayMacAddressOnt0120_Template = `Value FSP (\d+\/\s*\d+\/\d+)
+var DisplayMacAddressOnt0120_Template string = `Value FSP (\d+\/\s*\d+\/\d+)
 Value ONT_ID (\d+)
 Value ONT_PORT_TYPE (\S+)
 Value ONT_PORT_ID (\d+)

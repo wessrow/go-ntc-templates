@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowModule struct {
-	Module	string	`json:"MODULE"`
-	Ports	string	`json:"PORTS"`
-	Type	string	`json:"TYPE"`
-	Model	string	`json:"MODEL"`
-	Status	string	`json:"STATUS"`
+	Module string `json:"MODULE"`
+	Ports  string `json:"PORTS"`
+	Type   string `json:"TYPE"`
+	Model  string `json:"MODEL"`
+	Status string `json:"STATUS"`
 }
 
-var ShowModule_Template = `Value MODULE (\d+)
+var ShowModule_Template string = `Value MODULE (\d+)
 Value PORTS (\d+)
 Value TYPE (\S+(\s+\S+)+)
 Value MODEL (\S+)

@@ -1,19 +1,19 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpEigrpNeighbors struct {
-	As	string	`json:"AS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Vrf	string	`json:"VRF"`
-	Hold	string	`json:"HOLD"`
-	Uptime	string	`json:"UPTIME"`
-	Srtt	string	`json:"SRTT"`
-	Rto	string	`json:"RTO"`
-	Q_cnt	string	`json:"Q_CNT"`
-	Seq_num	string	`json:"SEQ_NUM"`
+	As         string `json:"AS"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Hold       string `json:"HOLD"`
+	Uptime     string `json:"UPTIME"`
+	Q_cnt      string `json:"Q_CNT"`
+	Interface  string `json:"INTERFACE"`
+	Vrf        string `json:"VRF"`
+	Srtt       string `json:"SRTT"`
+	Rto        string `json:"RTO"`
+	Seq_num    string `json:"SEQ_NUM"`
 }
 
-var ShowIpEigrpNeighbors_Template = `Value Filldown AS (\d+)
+var ShowIpEigrpNeighbors_Template string = `Value Filldown AS (\d+)
 Value IP_ADDRESS ([0-9A-Fa-f:\.]+)
 Value INTERFACE (\S+)
 Value Filldown VRF (\S+)

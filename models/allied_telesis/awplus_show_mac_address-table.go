@@ -1,13 +1,13 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowMacAddressTable struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Destination_port	string	`json:"DESTINATION_PORT"`
-	Destination_address	string	`json:"DESTINATION_ADDRESS"`
-	Fwd	string	`json:"FWD"`
+	Vlan_id             string `json:"VLAN_ID"`
+	Destination_port    string `json:"DESTINATION_PORT"`
+	Destination_address string `json:"DESTINATION_ADDRESS"`
+	Fwd                 string `json:"FWD"`
 }
 
-var AwplusShowMacAddressTable_Template = `Value Required VLAN_ID (\d+)
+var AwplusShowMacAddressTable_Template string = `Value Required VLAN_ID (\d+)
 Value DESTINATION_PORT (\S+)
 Value DESTINATION_ADDRESS (\S+)
 Value FWD (\S+)

@@ -1,32 +1,32 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpFirewallFilterPrintAllWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Comment	string	`json:"COMMENT"`
-	Chain	string	`json:"CHAIN"`
-	Action	string	`json:"ACTION"`
-	Hw_offload	string	`json:"HW_OFFLOAD"`
-	Connection_state	string	`json:"CONNECTION_STATE"`
-	Connection_nat_state	string	`json:"CONNECTION_NAT_STATE"`
-	Protocol	string	`json:"PROTOCOL"`
-	Src_address	string	`json:"SRC_ADDRESS"`
-	Src_address_list	string	`json:"SRC_ADDRESS_LIST"`
-	Src_port	string	`json:"SRC_PORT"`
-	In_interface_list	string	`json:"IN_INTERFACE_LIST"`
-	Out_interface_list	string	`json:"OUT_INTERFACE_LIST"`
-	In_interface	string	`json:"IN_INTERFACE"`
-	Out_interface	string	`json:"OUT_INTERFACE"`
-	Ipsec_policy	string	`json:"IPSEC_POLICY"`
-	Dst_address	string	`json:"DST_ADDRESS"`
-	Dst_address_list	string	`json:"DST_ADDRESS_LIST"`
-	Dst_port	string	`json:"DST_PORT"`
-	Src_mac_address	string	`json:"SRC_MAC_ADDRESS"`
-	Log	string	`json:"LOG"`
-	Log_prefix	string	`json:"LOG_PREFIX"`
+	In_interface         string `json:"IN_INTERFACE"`
+	Dst_port             string `json:"DST_PORT"`
+	Flags                string `json:"FLAGS"`
+	Connection_state     string `json:"CONNECTION_STATE"`
+	Src_address_list     string `json:"SRC_ADDRESS_LIST"`
+	In_interface_list    string `json:"IN_INTERFACE_LIST"`
+	Out_interface        string `json:"OUT_INTERFACE"`
+	Ipsec_policy         string `json:"IPSEC_POLICY"`
+	Dst_address_list     string `json:"DST_ADDRESS_LIST"`
+	Comment              string `json:"COMMENT"`
+	Hw_offload           string `json:"HW_OFFLOAD"`
+	Connection_nat_state string `json:"CONNECTION_NAT_STATE"`
+	Src_port             string `json:"SRC_PORT"`
+	Out_interface_list   string `json:"OUT_INTERFACE_LIST"`
+	Dst_address          string `json:"DST_ADDRESS"`
+	Log_prefix           string `json:"LOG_PREFIX"`
+	Index                string `json:"INDEX"`
+	Chain                string `json:"CHAIN"`
+	Action               string `json:"ACTION"`
+	Protocol             string `json:"PROTOCOL"`
+	Src_address          string `json:"SRC_ADDRESS"`
+	Src_mac_address      string `json:"SRC_MAC_ADDRESS"`
+	Log                  string `json:"LOG"`
 }
 
-var IpFirewallFilterPrintAllWithoutPaging_Template = `Value Key INDEX (\d+)
+var IpFirewallFilterPrintAllWithoutPaging_Template string = `Value Key INDEX (\d+)
 Value FLAGS ([XID]+)
 Value COMMENT (\S+[\S ]*\S)
 Value CHAIN (input|forward|output)

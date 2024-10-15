@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpOspfInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Process	string	`json:"PROCESS"`
-	Area	string	`json:"AREA"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Cost	string	`json:"COST"`
-	State	string	`json:"STATE"`
-	Neighbors_fc	string	`json:"NEIGHBORS_FC"`
+	Process       string `json:"PROCESS"`
+	Area          string `json:"AREA"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Cost          string `json:"COST"`
+	State         string `json:"STATE"`
+	Neighbors_fc  string `json:"NEIGHBORS_FC"`
+	Interface     string `json:"INTERFACE"`
 }
 
-var ShowIpOspfInterfaceBrief_Template = `Value INTERFACE (\S+)
+var ShowIpOspfInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value PROCESS (\d+)
 Value AREA (\d+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)

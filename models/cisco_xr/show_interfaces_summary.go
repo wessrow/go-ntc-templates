@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowInterfacesSummary struct {
-	Intf_type	string	`json:"INTF_TYPE"`
-	Total	string	`json:"TOTAL"`
-	Up	string	`json:"UP"`
-	Down	string	`json:"DOWN"`
-	Admin_down	string	`json:"ADMIN_DOWN"`
+	Admin_down string `json:"ADMIN_DOWN"`
+	Intf_type  string `json:"INTF_TYPE"`
+	Total      string `json:"TOTAL"`
+	Up         string `json:"UP"`
+	Down       string `json:"DOWN"`
 }
 
-var ShowInterfacesSummary_Template = `Value INTF_TYPE (ALL TYPES|IFT_ETHERBUNDLE|IFT_HUNDREDGE|IFT_LOOPBACK|IFT_ETHERNET|IFT_NULL|IFT_TENGETHERNET)
+var ShowInterfacesSummary_Template string = `Value INTF_TYPE (ALL TYPES|IFT_ETHERBUNDLE|IFT_HUNDREDGE|IFT_LOOPBACK|IFT_ETHERNET|IFT_NULL|IFT_TENGETHERNET)
 Value TOTAL (\d+)
 Value UP (\S+)
 Value DOWN (\S+)

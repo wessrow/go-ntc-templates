@@ -1,17 +1,17 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowServiceSapUsing struct {
-	Port_id	string	`json:"PORT_ID"`
-	Service_id	string	`json:"SERVICE_ID"`
-	Ingress_qos	string	`json:"INGRESS_QOS"`
-	Ingress_filter	string	`json:"INGRESS_FILTER"`
-	Egress_qos	string	`json:"EGRESS_QOS"`
-	Egress_filter	string	`json:"EGRESS_FILTER"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Oper_state	string	`json:"OPER_STATE"`
+	Ingress_filter string `json:"INGRESS_FILTER"`
+	Egress_qos     string `json:"EGRESS_QOS"`
+	Egress_filter  string `json:"EGRESS_FILTER"`
+	Admin_state    string `json:"ADMIN_STATE"`
+	Oper_state     string `json:"OPER_STATE"`
+	Port_id        string `json:"PORT_ID"`
+	Service_id     string `json:"SERVICE_ID"`
+	Ingress_qos    string `json:"INGRESS_QOS"`
 }
 
-var ShowServiceSapUsing_Template = `Value Required PORT_ID (\S+)
+var ShowServiceSapUsing_Template string = `Value Required PORT_ID (\S+)
 Value Required SERVICE_ID (\d+)
 Value Required INGRESS_QOS (\S+)
 Value Required INGRESS_FILTER (\S+)

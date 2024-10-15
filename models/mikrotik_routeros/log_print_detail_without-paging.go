@@ -1,19 +1,19 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type LogPrintDetailWithoutPaging struct {
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
-	Hour	string	`json:"HOUR"`
-	Minute	string	`json:"MINUTE"`
-	Second	string	`json:"SECOND"`
-	Topic	string	`json:"TOPIC"`
-	Message	string	`json:"MESSAGE"`
-	Datetime	string	`json:"DATETIME"`
-	Whole_message	string	`json:"WHOLE_MESSAGE"`
+	Day           string `json:"DAY"`
+	Hour          string `json:"HOUR"`
+	Second        string `json:"SECOND"`
+	Topic         string `json:"TOPIC"`
+	Datetime      string `json:"DATETIME"`
+	Month         string `json:"MONTH"`
+	Year          string `json:"YEAR"`
+	Minute        string `json:"MINUTE"`
+	Message       string `json:"MESSAGE"`
+	Whole_message string `json:"WHOLE_MESSAGE"`
 }
 
-var LogPrintDetailWithoutPaging_Template = `Value MONTH (\w{3})
+var LogPrintDetailWithoutPaging_Template string = `Value MONTH (\w{3})
 Value DAY (\d{2})
 Value YEAR (\d{4})
 Value HOUR (\d{2})

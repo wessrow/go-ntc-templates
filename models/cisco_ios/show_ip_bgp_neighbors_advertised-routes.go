@@ -1,19 +1,19 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpBgpNeighborsAdvertisedRoutes struct {
-	Status	string	`json:"STATUS"`
-	Path_selection	string	`json:"PATH_SELECTION"`
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Network	string	`json:"NETWORK"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Metric	string	`json:"METRIC"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	As_path	string	`json:"AS_PATH"`
-	Origin	string	`json:"ORIGIN"`
+	Local_pref     string `json:"LOCAL_PREF"`
+	Weight         string `json:"WEIGHT"`
+	Network        string `json:"NETWORK"`
+	Path_selection string `json:"PATH_SELECTION"`
+	Route_source   string `json:"ROUTE_SOURCE"`
+	Next_hop       string `json:"NEXT_HOP"`
+	Metric         string `json:"METRIC"`
+	As_path        string `json:"AS_PATH"`
+	Origin         string `json:"ORIGIN"`
+	Status         string `json:"STATUS"`
 }
 
-var ShowIpBgpNeighborsAdvertisedRoutes_Template = `Value Filldown STATUS ([bdhimrsSx*>])
+var ShowIpBgpNeighborsAdvertisedRoutes_Template string = `Value Filldown STATUS ([bdhimrsSx*>])
 Value Filldown PATH_SELECTION ([bdhimrsSx*> ])
 Value Filldown ROUTE_SOURCE ([bdhimrsSx*> ])
 Value Filldown NETWORK (\S{0,18})

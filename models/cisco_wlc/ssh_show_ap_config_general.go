@@ -1,36 +1,36 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowApConfigGeneral struct {
-	Identifier	string	`json:"IDENTIFIER"`
-	Name	string	`json:"NAME"`
-	Country_code	string	`json:"COUNTRY_CODE"`
-	Country	string	`json:"COUNTRY"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Gateway	string	`json:"GATEWAY"`
-	Ap_group	string	`json:"AP_GROUP"`
-	Primary_switch_name	string	`json:"PRIMARY_SWITCH_NAME"`
-	Primary_switch_ip	string	`json:"PRIMARY_SWITCH_IP"`
-	Secondary_switch_name	string	`json:"SECONDARY_SWITCH_NAME"`
-	Secondary_switch_ip	string	`json:"SECONDARY_SWITCH_IP"`
-	Tertiary_switch_name	string	`json:"TERTIARY_SWITCH_NAME"`
-	Tertiary_switch_ip	string	`json:"TERTIARY_SWITCH_IP"`
-	Administrative_state	string	`json:"ADMINISTRATIVE_STATE"`
-	Operation_state	string	`json:"OPERATION_STATE"`
-	Mode	string	`json:"MODE"`
-	Model	string	`json:"MODEL"`
-	Image	string	`json:"IMAGE"`
-	Version	string	`json:"VERSION"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Flexconnect_vlan_mode	string	`json:"FLEXCONNECT_VLAN_MODE"`
-	Uptime	string	`json:"UPTIME"`
-	Lwapp_uptime	string	`json:"LWAPP_UPTIME"`
-	Join_date_time	string	`json:"JOIN_DATE_TIME"`
-	Join_taken_time	string	`json:"JOIN_TAKEN_TIME"`
+	Gateway               string `json:"GATEWAY"`
+	Primary_switch_name   string `json:"PRIMARY_SWITCH_NAME"`
+	Version               string `json:"VERSION"`
+	Serial_number         string `json:"SERIAL_NUMBER"`
+	Mac_address           string `json:"MAC_ADDRESS"`
+	Secondary_switch_ip   string `json:"SECONDARY_SWITCH_IP"`
+	Flexconnect_vlan_mode string `json:"FLEXCONNECT_VLAN_MODE"`
+	Uptime                string `json:"UPTIME"`
+	Netmask               string `json:"NETMASK"`
+	Primary_switch_ip     string `json:"PRIMARY_SWITCH_IP"`
+	Secondary_switch_name string `json:"SECONDARY_SWITCH_NAME"`
+	Tertiary_switch_name  string `json:"TERTIARY_SWITCH_NAME"`
+	Mode                  string `json:"MODE"`
+	Model                 string `json:"MODEL"`
+	Join_date_time        string `json:"JOIN_DATE_TIME"`
+	Identifier            string `json:"IDENTIFIER"`
+	Ip_address            string `json:"IP_ADDRESS"`
+	Ap_group              string `json:"AP_GROUP"`
+	Image                 string `json:"IMAGE"`
+	Join_taken_time       string `json:"JOIN_TAKEN_TIME"`
+	Country_code          string `json:"COUNTRY_CODE"`
+	Administrative_state  string `json:"ADMINISTRATIVE_STATE"`
+	Country               string `json:"COUNTRY"`
+	Tertiary_switch_ip    string `json:"TERTIARY_SWITCH_IP"`
+	Operation_state       string `json:"OPERATION_STATE"`
+	Lwapp_uptime          string `json:"LWAPP_UPTIME"`
+	Name                  string `json:"NAME"`
 }
 
-var SshShowApConfigGeneral_Template = `Value IDENTIFIER (.+?)
+var SshShowApConfigGeneral_Template string = `Value IDENTIFIER (.+?)
 Value NAME (.+?)
 Value COUNTRY_CODE (\S+)
 Value COUNTRY (.+?)

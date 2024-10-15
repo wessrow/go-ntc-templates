@@ -1,15 +1,15 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterIsisInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Level	string	`json:"LEVEL"`
-	Circid	string	`json:"CIRCID"`
-	Oper_state	string	`json:"OPER_STATE"`
-	Metric_l1	string	`json:"METRIC_L1"`
-	Metric_l2	string	`json:"METRIC_L2"`
+	Level      string `json:"LEVEL"`
+	Circid     string `json:"CIRCID"`
+	Oper_state string `json:"OPER_STATE"`
+	Metric_l1  string `json:"METRIC_L1"`
+	Metric_l2  string `json:"METRIC_L2"`
+	Interface  string `json:"INTERFACE"`
 }
 
-var ShowRouterIsisInterface_Template = `Value INTERFACE (\S+)
+var ShowRouterIsisInterface_Template string = `Value INTERFACE (\S+)
 Value LEVEL (\S+)
 Value CIRCID (\d+)
 Value OPER_STATE (Up|Down)

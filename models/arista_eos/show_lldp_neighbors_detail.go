@@ -1,17 +1,17 @@
-package arista_eos 
+package arista_eos
 
 type ShowLldpNeighborsDetail struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_count	string	`json:"NEIGHBOR_COUNT"`
-	Age	string	`json:"AGE"`
+	Neighbor_count       string `json:"NEIGHBOR_COUNT"`
+	Age                  string `json:"AGE"`
+	Neighbor_name        string `json:"NEIGHBOR_NAME"`
+	Chassis_id           string `json:"CHASSIS_ID"`
+	Mgmt_address         string `json:"MGMT_ADDRESS"`
+	Neighbor_description string `json:"NEIGHBOR_DESCRIPTION"`
+	Neighbor_interface   string `json:"NEIGHBOR_INTERFACE"`
+	Local_interface      string `json:"LOCAL_INTERFACE"`
 }
 
-var ShowLldpNeighborsDetail_Template = `Value Required NEIGHBOR_NAME (\S+)
+var ShowLldpNeighborsDetail_Template string = `Value Required NEIGHBOR_NAME (\S+)
 Value CHASSIS_ID (.+?)
 Value MGMT_ADDRESS (.+?)
 Value NEIGHBOR_DESCRIPTION (.+?)

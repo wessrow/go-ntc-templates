@@ -1,16 +1,16 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowVsfDetail struct {
-	Member_id	string	`json:"MEMBER_ID"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Cpu	string	`json:"CPU"`
-	Memory	string	`json:"MEMORY"`
-	Vsf_link_1	string	`json:"VSF_LINK_1"`
-	Vsf_link_2	string	`json:"VSF_LINK_2"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Status      string `json:"STATUS"`
+	Cpu         string `json:"CPU"`
+	Memory      string `json:"MEMORY"`
+	Vsf_link_1  string `json:"VSF_LINK_1"`
+	Vsf_link_2  string `json:"VSF_LINK_2"`
+	Member_id   string `json:"MEMBER_ID"`
 }
 
-var ShowVsfDetail_Template = `Value MEMBER_ID (\S+)
+var ShowVsfDetail_Template string = `Value MEMBER_ID (\S+)
 Value MAC_ADDRESS (\S+)
 Value STATUS (.*)
 Value CPU (\d+%)

@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIpInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Proto	string	`json:"PROTO"`
-	Vrf	string	`json:"VRF"`
+	Vrf        string `json:"VRF"`
+	Interface  string `json:"INTERFACE"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Status     string `json:"STATUS"`
+	Proto      string `json:"PROTO"`
 }
 
-var ShowIpInterfaceBrief_Template = `Value INTERFACE (.+?)
+var ShowIpInterfaceBrief_Template string = `Value INTERFACE (.+?)
 Value IP_ADDRESS (\S+)
 Value STATUS (Up|Down|Shutdown)
 Value PROTO (Up|Down)

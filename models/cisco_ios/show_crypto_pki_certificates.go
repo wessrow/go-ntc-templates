@@ -1,36 +1,36 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowCryptoPkiCertificates struct {
-	Certificate_type	string	`json:"CERTIFICATE_TYPE"`
-	Status	string	`json:"STATUS"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Certificate_usage	string	`json:"CERTIFICATE_USAGE"`
-	Issuer_e	string	`json:"ISSUER_E"`
-	Issuer_cn	string	`json:"ISSUER_CN"`
-	Issuer_ou	string	`json:"ISSUER_OU"`
-	Issuer_o	string	`json:"ISSUER_O"`
-	Issuer_l	string	`json:"ISSUER_L"`
-	Issuer_st	string	`json:"ISSUER_ST"`
-	Issuer_c	string	`json:"ISSUER_C"`
-	Subject_e	string	`json:"SUBJECT_E"`
-	Subject_cn	string	`json:"SUBJECT_CN"`
-	Subject_ou	string	`json:"SUBJECT_OU"`
-	Subject_o	string	`json:"SUBJECT_O"`
-	Subject_l	string	`json:"SUBJECT_L"`
-	Subject_st	string	`json:"SUBJECT_ST"`
-	Subject_c	string	`json:"SUBJECT_C"`
-	Subject_name	string	`json:"SUBJECT_NAME"`
-	Subject_serial_number	string	`json:"SUBJECT_SERIAL_NUMBER"`
-	Subject_hostname	string	`json:"SUBJECT_HOSTNAME"`
-	Crl_distribution_point	string	`json:"CRL_DISTRIBUTION_POINT"`
-	Start_date	string	`json:"START_DATE"`
-	End_date	string	`json:"END_DATE"`
-	Renew_date	string	`json:"RENEW_DATE"`
-	Associated_trustpoints	string	`json:"ASSOCIATED_TRUSTPOINTS"`
-	Storage	string	`json:"STORAGE"`
+	Subject_e              string `json:"SUBJECT_E"`
+	Subject_name           string `json:"SUBJECT_NAME"`
+	Crl_distribution_point string `json:"CRL_DISTRIBUTION_POINT"`
+	Issuer_o               string `json:"ISSUER_O"`
+	Issuer_l               string `json:"ISSUER_L"`
+	Certificate_type       string `json:"CERTIFICATE_TYPE"`
+	Issuer_e               string `json:"ISSUER_E"`
+	Subject_hostname       string `json:"SUBJECT_HOSTNAME"`
+	Subject_l              string `json:"SUBJECT_L"`
+	Subject_st             string `json:"SUBJECT_ST"`
+	Subject_c              string `json:"SUBJECT_C"`
+	Associated_trustpoints string `json:"ASSOCIATED_TRUSTPOINTS"`
+	Issuer_cn              string `json:"ISSUER_CN"`
+	Issuer_st              string `json:"ISSUER_ST"`
+	Subject_serial_number  string `json:"SUBJECT_SERIAL_NUMBER"`
+	Serial_number          string `json:"SERIAL_NUMBER"`
+	Certificate_usage      string `json:"CERTIFICATE_USAGE"`
+	Subject_o              string `json:"SUBJECT_O"`
+	Renew_date             string `json:"RENEW_DATE"`
+	Issuer_ou              string `json:"ISSUER_OU"`
+	Issuer_c               string `json:"ISSUER_C"`
+	Subject_ou             string `json:"SUBJECT_OU"`
+	End_date               string `json:"END_DATE"`
+	Storage                string `json:"STORAGE"`
+	Status                 string `json:"STATUS"`
+	Subject_cn             string `json:"SUBJECT_CN"`
+	Start_date             string `json:"START_DATE"`
 }
 
-var ShowCryptoPkiCertificates_Template = `Value Required CERTIFICATE_TYPE ([CA]*\s*Certificate)
+var ShowCryptoPkiCertificates_Template string = `Value Required CERTIFICATE_TYPE ([CA]*\s*Certificate)
 Value STATUS ([\s\S]+?)
 Value SERIAL_NUMBER (\S+)
 Value CERTIFICATE_USAGE ([\s\S]+?)

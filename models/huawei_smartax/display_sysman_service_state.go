@@ -1,12 +1,12 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplaySysmanServiceState struct {
-	Network_service	string	`json:"NETWORK_SERVICE"`
-	Port	string	`json:"PORT"`
-	State	string	`json:"STATE"`
+	State           string `json:"STATE"`
+	Network_service string `json:"NETWORK_SERVICE"`
+	Port            string `json:"PORT"`
 }
 
-var DisplaySysmanServiceState_Template = `Value Key NETWORK_SERVICE (\S+)
+var DisplaySysmanServiceState_Template string = `Value Key NETWORK_SERVICE (\S+)
 Value PORT (\d+)
 Value STATE (enable|disable)
 

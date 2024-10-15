@@ -1,14 +1,14 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Mtu	string	`json:"MTU"`
+	Mtu        string `json:"MTU"`
+	Interface  string `json:"INTERFACE"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Status     string `json:"STATUS"`
+	Protocol   string `json:"PROTOCOL"`
 }
 
-var ShowIpInterfaceBrief_Template = `Value INTERFACE (\S+)
+var ShowIpInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value IP_ADDRESS (\S+)
 Value STATUS (\S+)
 Value PROTOCOL (\S+)

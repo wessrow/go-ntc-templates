@@ -1,15 +1,15 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterMplsLsp struct {
-	Lsp_name	string	`json:"LSP_NAME"`
-	To	string	`json:"TO"`
-	Tunnel_id	string	`json:"TUNNEL_ID"`
-	Fastfail_config	string	`json:"FASTFAIL_CONFIG"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Oper_state	string	`json:"OPER_STATE"`
+	Admin_state     string `json:"ADMIN_STATE"`
+	Oper_state      string `json:"OPER_STATE"`
+	Lsp_name        string `json:"LSP_NAME"`
+	To              string `json:"TO"`
+	Tunnel_id       string `json:"TUNNEL_ID"`
+	Fastfail_config string `json:"FASTFAIL_CONFIG"`
 }
 
-var ShowRouterMplsLsp_Template = `Value Required LSP_NAME (\S+)
+var ShowRouterMplsLsp_Template string = `Value Required LSP_NAME (\S+)
 Value Required TO (\d+.\d+.\d+.\d+)
 Value Required TUNNEL_ID (\d+)
 Value Required FASTFAIL_CONFIG (\S+)

@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowNveVni struct {
-	Interface	string	`json:"INTERFACE"`
-	Vni	string	`json:"VNI"`
-	Mcast_group	string	`json:"MCAST_GROUP"`
-	State	string	`json:"STATE"`
-	Mode	string	`json:"MODE"`
-	Bd	string	`json:"BD"`
-	Vrf	string	`json:"VRF"`
+	State       string `json:"STATE"`
+	Mode        string `json:"MODE"`
+	Bd          string `json:"BD"`
+	Vrf         string `json:"VRF"`
+	Interface   string `json:"INTERFACE"`
+	Vni         string `json:"VNI"`
+	Mcast_group string `json:"MCAST_GROUP"`
 }
 
-var ShowNveVni_Template = `Value INTERFACE (\S+)
+var ShowNveVni_Template string = `Value INTERFACE (\S+)
 Value VNI (\d+)
 Value MCAST_GROUP (\S+)
 Value STATE (Up|Down)

@@ -1,14 +1,14 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowMobilitySum struct {
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Group_name	string	`json:"GROUP_NAME"`
-	Multicast_ip	string	`json:"MULTICAST_IP"`
-	Status	string	`json:"STATUS"`
+	Mac_address  string `json:"MAC_ADDRESS"`
+	Ip_address   string `json:"IP_ADDRESS"`
+	Group_name   string `json:"GROUP_NAME"`
+	Multicast_ip string `json:"MULTICAST_IP"`
+	Status       string `json:"STATUS"`
 }
 
-var SshShowMobilitySum_Template = `Value MAC_ADDRESS (([\d1-9a-f]{2}\:?){6})
+var SshShowMobilitySum_Template string = `Value MAC_ADDRESS (([\d1-9a-f]{2}\:?){6})
 Value IP_ADDRESS (([\d1-9]+\.?){4})
 Value GROUP_NAME (\S+)
 Value MULTICAST_IP (([\d1-9]+\.?){4})

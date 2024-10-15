@@ -1,23 +1,23 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllersHundredGigabitEthernet struct {
-	Interface	string	`json:"INTERFACE"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Ops_state	string	`json:"OPS_STATE"`
-	Led_state	string	`json:"LED_STATE"`
-	Media_type	string	`json:"MEDIA_TYPE"`
-	Temperature_value	string	`json:"TEMPERATURE_VALUE"`
-	Voltage_value	string	`json:"VOLTAGE_VALUE"`
-	Lane	[]string	`json:"LANE"`
-	Wavelength	[]string	`json:"WAVELENGTH"`
-	Rx_value_dbm	[]string	`json:"RX_VALUE_DBM"`
-	Rx_value_mw	[]string	`json:"RX_VALUE_MW"`
-	Tx_value_dbm	[]string	`json:"TX_VALUE_DBM"`
-	Tx_value_mw	[]string	`json:"TX_VALUE_MW"`
-	Laser_bias	[]string	`json:"LASER_BIAS"`
+	Ops_state         string   `json:"OPS_STATE"`
+	Rx_value_mw       []string `json:"RX_VALUE_MW"`
+	Laser_bias        []string `json:"LASER_BIAS"`
+	Media_type        string   `json:"MEDIA_TYPE"`
+	Lane              []string `json:"LANE"`
+	Wavelength        []string `json:"WAVELENGTH"`
+	Interface         string   `json:"INTERFACE"`
+	Admin_state       string   `json:"ADMIN_STATE"`
+	Led_state         string   `json:"LED_STATE"`
+	Temperature_value string   `json:"TEMPERATURE_VALUE"`
+	Voltage_value     string   `json:"VOLTAGE_VALUE"`
+	Rx_value_dbm      []string `json:"RX_VALUE_DBM"`
+	Tx_value_dbm      []string `json:"TX_VALUE_DBM"`
+	Tx_value_mw       []string `json:"TX_VALUE_MW"`
 }
 
-var ShowControllersHundredGigabitEthernet_Template = `Value Required INTERFACE (\S+)
+var ShowControllersHundredGigabitEthernet_Template string = `Value Required INTERFACE (\S+)
 Value ADMIN_STATE (\S+)
 Value OPS_STATE (\S+)
 Value LED_STATE (\S+)

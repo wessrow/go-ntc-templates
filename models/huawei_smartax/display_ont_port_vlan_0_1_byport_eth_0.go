@@ -1,22 +1,22 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntPortVlan01ByportEth0 struct {
-	Port_id	string	`json:"PORT_ID"`
-	Port_type	string	`json:"PORT_TYPE"`
-	C_vlan	string	`json:"C_VLAN"`
-	C_pri	string	`json:"C_PRI"`
-	Eth_type	string	`json:"ETH_TYPE"`
-	Vlan_type	string	`json:"VLAN_TYPE"`
-	S_vlan	string	`json:"S_VLAN"`
-	S_pri	string	`json:"S_PRI"`
-	S_pri_policy	string	`json:"S_PRI_POLICY"`
-	Native_vlan	string	`json:"NATIVE_VLAN"`
-	Default_priority	string	`json:"DEFAULT_PRIORITY"`
-	Downstream_mode	string	`json:"DOWNSTREAM_MODE"`
-	Mismatch_policy	string	`json:"MISMATCH_POLICY"`
+	Port_type        string `json:"PORT_TYPE"`
+	C_vlan           string `json:"C_VLAN"`
+	Vlan_type        string `json:"VLAN_TYPE"`
+	S_pri            string `json:"S_PRI"`
+	S_pri_policy     string `json:"S_PRI_POLICY"`
+	Default_priority string `json:"DEFAULT_PRIORITY"`
+	Mismatch_policy  string `json:"MISMATCH_POLICY"`
+	Port_id          string `json:"PORT_ID"`
+	C_pri            string `json:"C_PRI"`
+	Eth_type         string `json:"ETH_TYPE"`
+	S_vlan           string `json:"S_VLAN"`
+	Native_vlan      string `json:"NATIVE_VLAN"`
+	Downstream_mode  string `json:"DOWNSTREAM_MODE"`
 }
 
-var DisplayOntPortVlan01ByportEth0_Template = `Value PORT_ID (\d+)
+var DisplayOntPortVlan01ByportEth0_Template string = `Value PORT_ID (\d+)
 Value PORT_TYPE (\S+)
 Value C_VLAN (\d+)
 Value C_PRI (\d+)

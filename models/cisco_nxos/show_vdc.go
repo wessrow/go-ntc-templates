@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVdc struct {
-	Vdc_id	string	`json:"VDC_ID"`
-	Vdc_name	string	`json:"VDC_NAME"`
-	State	string	`json:"STATE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Lc	string	`json:"LC"`
+	Vdc_name    string `json:"VDC_NAME"`
+	State       string `json:"STATE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Lc          string `json:"LC"`
+	Vdc_id      string `json:"VDC_ID"`
 }
 
-var ShowVdc_Template = `Value VDC_ID (\d+)
+var ShowVdc_Template string = `Value VDC_ID (\d+)
 Value VDC_NAME (\S+)
 Value STATE (\S+)
 Value MAC_ADDRESS (\S+)

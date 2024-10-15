@@ -1,14 +1,14 @@
-package ipinfusion_ocnos 
+package ipinfusion_ocnos
 
 type ShowLldpTable struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Neighbor_interface_description	string	`json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
+	Local_interface                string `json:"LOCAL_INTERFACE"`
+	Neighbor_name                  string `json:"NEIGHBOR_NAME"`
+	Neighbor_interface             string `json:"NEIGHBOR_INTERFACE"`
+	Capabilities                   string `json:"CAPABILITIES"`
+	Neighbor_interface_description string `json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
 }
 
-var ShowLldpTable_Template = `Value LOCAL_INTERFACE (\S+)
+var ShowLldpTable_Template string = `Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_NAME (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 Value CAPABILITIES (R|B|O|RO|RB|BR|BO|OR|OB|RBO|ROB|BRO|BOR|ORB|OBR)

@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpPimInterfaceBriefVrfAll struct {
-	Vrf	string	`json:"VRF"`
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Pim_dr_address	string	`json:"PIM_DR_ADDRESS"`
-	Neighbor_count	string	`json:"NEIGHBOR_COUNT"`
-	Border_interface	string	`json:"BORDER_INTERFACE"`
+	Vrf              string `json:"VRF"`
+	Interface        string `json:"INTERFACE"`
+	Ip_address       string `json:"IP_ADDRESS"`
+	Pim_dr_address   string `json:"PIM_DR_ADDRESS"`
+	Neighbor_count   string `json:"NEIGHBOR_COUNT"`
+	Border_interface string `json:"BORDER_INTERFACE"`
 }
 
-var ShowIpPimInterfaceBriefVrfAll_Template = `Value Filldown VRF (\S+)
+var ShowIpPimInterfaceBriefVrfAll_Template string = `Value Filldown VRF (\S+)
 Value Required INTERFACE ([\w\./-]+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value PIM_DR_ADDRESS (\d+\.\d+\.\d+\.\d+)

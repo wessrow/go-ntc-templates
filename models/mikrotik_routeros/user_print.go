@@ -1,15 +1,15 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type UserPrint struct {
-	Id	string	`json:"ID"`
-	Comment	string	`json:"COMMENT"`
-	Name	string	`json:"NAME"`
-	Group	string	`json:"GROUP"`
-	Address	string	`json:"ADDRESS"`
-	Last_logged_in	string	`json:"LAST_LOGGED_IN"`
+	Group          string `json:"GROUP"`
+	Address        string `json:"ADDRESS"`
+	Last_logged_in string `json:"LAST_LOGGED_IN"`
+	Id             string `json:"ID"`
+	Comment        string `json:"COMMENT"`
+	Name           string `json:"NAME"`
 }
 
-var UserPrint_Template = `Value ID (\d+)
+var UserPrint_Template string = `Value ID (\d+)
 Value COMMENT (.*)
 Value NAME ([a-zA-Z0-9*_.@]+)
 Value GROUP (\S+)

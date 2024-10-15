@@ -1,38 +1,38 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllersFabricFiaDropsEgressLocation struct {
-	Fia	string	`json:"FIA"`
-	Category	string	`json:"CATEGORY"`
-	From_xbar_uc_crc_0	string	`json:"FROM_XBAR_UC_CRC_0"`
-	From_xbar_uc_crc_1	string	`json:"FROM_XBAR_UC_CRC_1"`
-	From_xbar_uc_crc_2	string	`json:"FROM_XBAR_UC_CRC_2"`
-	From_xbar_uc_crc_3	string	`json:"FROM_XBAR_UC_CRC_3"`
-	From_xbar_uc_drp_0	string	`json:"FROM_XBAR_UC_DRP_0"`
-	From_xbar_uc_drp_1	string	`json:"FROM_XBAR_UC_DRP_1"`
-	From_xbar_uc_drp_2	string	`json:"FROM_XBAR_UC_DRP_2"`
-	From_xbar_uc_drp_3	string	`json:"FROM_XBAR_UC_DRP_3"`
-	From_xbar_mc_crc_0	string	`json:"FROM_XBAR_MC_CRC_0"`
-	From_xbar_mc_crc_1	string	`json:"FROM_XBAR_MC_CRC_1"`
-	From_xbar_mc_crc_2	string	`json:"FROM_XBAR_MC_CRC_2"`
-	From_xbar_mc_crc_3	string	`json:"FROM_XBAR_MC_CRC_3"`
-	From_xbar_mc_drp_0	string	`json:"FROM_XBAR_MC_DRP_0"`
-	From_xbar_mc_drp_1	string	`json:"FROM_XBAR_MC_DRP_1"`
-	From_xbar_mc_drp_2	string	`json:"FROM_XBAR_MC_DRP_2"`
-	From_xbar_mc_drp_3	string	`json:"FROM_XBAR_MC_DRP_3"`
-	Uc_dq_pkt_len_crc_ro_seq_len_error_drp	string	`json:"UC_DQ_PKT_LEN_CRC_RO_SEQ_LEN_ERROR_DRP"`
-	Uc_eq_pkt_len_crc_lookup_drp	string	`json:"UC_EQ_PKT_LEN_CRC_LOOKUP_DRP"`
-	Mc_rf_crc_drp	string	`json:"MC_RF_CRC_DRP"`
-	Mc_vl0_src0_buffer_full_drp	string	`json:"MC_VL0_SRC0_BUFFER_FULL_DRP"`
-	Mc_vl1_src0_buffer_full_drp	string	`json:"MC_VL1_SRC0_BUFFER_FULL_DRP"`
-	Mc_vl2_src0_buffer_full_drp	string	`json:"MC_VL2_SRC0_BUFFER_FULL_DRP"`
-	Mc_vl3_src0_buffer_full_drp	string	`json:"MC_VL3_SRC0_BUFFER_FULL_DRP"`
-	Mc_vl0_src1_buffer_full_drp	string	`json:"MC_VL0_SRC1_BUFFER_FULL_DRP"`
-	Mc_vl1_src1_buffer_full_drp	string	`json:"MC_VL1_SRC1_BUFFER_FULL_DRP"`
-	Mc_vl2_src1_buffer_full_drp	string	`json:"MC_VL2_SRC1_BUFFER_FULL_DRP"`
-	Mc_vl3_src1_buffer_full_drp	string	`json:"MC_VL3_SRC1_BUFFER_FULL_DRP"`
+	From_xbar_mc_crc_0                     string `json:"FROM_XBAR_MC_CRC_0"`
+	From_xbar_mc_drp_2                     string `json:"FROM_XBAR_MC_DRP_2"`
+	Mc_vl3_src0_buffer_full_drp            string `json:"MC_VL3_SRC0_BUFFER_FULL_DRP"`
+	Mc_vl0_src1_buffer_full_drp            string `json:"MC_VL0_SRC1_BUFFER_FULL_DRP"`
+	From_xbar_uc_crc_0                     string `json:"FROM_XBAR_UC_CRC_0"`
+	From_xbar_uc_crc_1                     string `json:"FROM_XBAR_UC_CRC_1"`
+	From_xbar_uc_crc_2                     string `json:"FROM_XBAR_UC_CRC_2"`
+	From_xbar_uc_crc_3                     string `json:"FROM_XBAR_UC_CRC_3"`
+	From_xbar_uc_drp_1                     string `json:"FROM_XBAR_UC_DRP_1"`
+	From_xbar_mc_crc_1                     string `json:"FROM_XBAR_MC_CRC_1"`
+	From_xbar_mc_crc_2                     string `json:"FROM_XBAR_MC_CRC_2"`
+	Mc_vl2_src0_buffer_full_drp            string `json:"MC_VL2_SRC0_BUFFER_FULL_DRP"`
+	Mc_vl1_src1_buffer_full_drp            string `json:"MC_VL1_SRC1_BUFFER_FULL_DRP"`
+	Uc_eq_pkt_len_crc_lookup_drp           string `json:"UC_EQ_PKT_LEN_CRC_LOOKUP_DRP"`
+	Mc_vl2_src1_buffer_full_drp            string `json:"MC_VL2_SRC1_BUFFER_FULL_DRP"`
+	From_xbar_mc_drp_1                     string `json:"FROM_XBAR_MC_DRP_1"`
+	Mc_vl0_src0_buffer_full_drp            string `json:"MC_VL0_SRC0_BUFFER_FULL_DRP"`
+	From_xbar_mc_drp_0                     string `json:"FROM_XBAR_MC_DRP_0"`
+	Fia                                    string `json:"FIA"`
+	From_xbar_uc_drp_0                     string `json:"FROM_XBAR_UC_DRP_0"`
+	From_xbar_uc_drp_2                     string `json:"FROM_XBAR_UC_DRP_2"`
+	From_xbar_mc_drp_3                     string `json:"FROM_XBAR_MC_DRP_3"`
+	Uc_dq_pkt_len_crc_ro_seq_len_error_drp string `json:"UC_DQ_PKT_LEN_CRC_RO_SEQ_LEN_ERROR_DRP"`
+	Category                               string `json:"CATEGORY"`
+	From_xbar_mc_crc_3                     string `json:"FROM_XBAR_MC_CRC_3"`
+	Mc_rf_crc_drp                          string `json:"MC_RF_CRC_DRP"`
+	Mc_vl1_src0_buffer_full_drp            string `json:"MC_VL1_SRC0_BUFFER_FULL_DRP"`
+	Mc_vl3_src1_buffer_full_drp            string `json:"MC_VL3_SRC1_BUFFER_FULL_DRP"`
+	From_xbar_uc_drp_3                     string `json:"FROM_XBAR_UC_DRP_3"`
 }
 
-var ShowControllersFabricFiaDropsEgressLocation_Template = `Value FIA (\S+)
+var ShowControllersFabricFiaDropsEgressLocation_Template string = `Value FIA (\S+)
 Value CATEGORY (\S+)
 Value FROM_XBAR_UC_CRC_0 (\d+)
 Value FROM_XBAR_UC_CRC_1 (\d+)

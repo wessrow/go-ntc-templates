@@ -1,36 +1,36 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Bia	string	`json:"BIA"`
-	Description	string	`json:"DESCRIPTION"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Mtu	string	`json:"MTU"`
-	Mode	string	`json:"MODE"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Input_packets	string	`json:"INPUT_PACKETS"`
-	Output_packets	string	`json:"OUTPUT_PACKETS"`
-	Input_errors	string	`json:"INPUT_ERRORS"`
-	Output_errors	string	`json:"OUTPUT_ERRORS"`
-	Bandwidth	string	`json:"BANDWIDTH"`
-	Delay	string	`json:"DELAY"`
-	Encapsulation	string	`json:"ENCAPSULATION"`
-	Last_link_flapped	string	`json:"LAST_LINK_FLAPPED"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Packet_input_rate	string	`json:"PACKET_INPUT_RATE"`
-	Packet_output_rate	string	`json:"PACKET_OUTPUT_RATE"`
-	Bandwidth_input_rate	string	`json:"BANDWIDTH_INPUT_RATE"`
-	Bandwidth_output_rate	string	`json:"BANDWIDTH_OUTPUT_RATE"`
-	Media_type	string	`json:"MEDIA_TYPE"`
+	Encapsulation         string `json:"ENCAPSULATION"`
+	Speed                 string `json:"SPEED"`
+	Delay                 string `json:"DELAY"`
+	Media_type            string `json:"MEDIA_TYPE"`
+	Output_errors         string `json:"OUTPUT_ERRORS"`
+	Mac_address           string `json:"MAC_ADDRESS"`
+	Last_link_flapped     string `json:"LAST_LINK_FLAPPED"`
+	Packet_input_rate     string `json:"PACKET_INPUT_RATE"`
+	Bandwidth_output_rate string `json:"BANDWIDTH_OUTPUT_RATE"`
+	Bia                   string `json:"BIA"`
+	Vlan_id               string `json:"VLAN_ID"`
+	Output_packets        string `json:"OUTPUT_PACKETS"`
+	Admin_state           string `json:"ADMIN_STATE"`
+	Ip_address            string `json:"IP_ADDRESS"`
+	Prefix_length         string `json:"PREFIX_LENGTH"`
+	Input_packets         string `json:"INPUT_PACKETS"`
+	Mode                  string `json:"MODE"`
+	Bandwidth             string `json:"BANDWIDTH"`
+	Bandwidth_input_rate  string `json:"BANDWIDTH_INPUT_RATE"`
+	Interface             string `json:"INTERFACE"`
+	Link_status           string `json:"LINK_STATUS"`
+	Hardware_type         string `json:"HARDWARE_TYPE"`
+	Mtu                   string `json:"MTU"`
+	Description           string `json:"DESCRIPTION"`
+	Duplex                string `json:"DUPLEX"`
+	Input_errors          string `json:"INPUT_ERRORS"`
+	Packet_output_rate    string `json:"PACKET_OUTPUT_RATE"`
 }
 
-var ShowInterface_Template = `Value Required INTERFACE (\S+)
+var ShowInterface_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value ADMIN_STATE (.+?)
 Value HARDWARE_TYPE (.*)

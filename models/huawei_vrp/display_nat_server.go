@@ -1,17 +1,17 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayNatServer struct {
-	Interface	string	`json:"INTERFACE"`
-	Global_ip_port	string	`json:"GLOBAL_IP_PORT"`
-	Inside_ip_port	string	`json:"INSIDE_IP_PORT"`
-	Protocol	string	`json:"PROTOCOL"`
-	Vpn	string	`json:"VPN"`
-	Acl	string	`json:"ACL"`
-	Vrrp_id	string	`json:"VRRP_ID"`
-	Description	string	`json:"DESCRIPTION"`
+	Protocol       string `json:"PROTOCOL"`
+	Vpn            string `json:"VPN"`
+	Acl            string `json:"ACL"`
+	Vrrp_id        string `json:"VRRP_ID"`
+	Description    string `json:"DESCRIPTION"`
+	Interface      string `json:"INTERFACE"`
+	Global_ip_port string `json:"GLOBAL_IP_PORT"`
+	Inside_ip_port string `json:"INSIDE_IP_PORT"`
 }
 
-var DisplayNatServer_Template = `Value Filldown INTERFACE (\S+)
+var DisplayNatServer_Template string = `Value Filldown INTERFACE (\S+)
 Value Required GLOBAL_IP_PORT (.+)
 Value INSIDE_IP_PORT ((\d{1,3}.){3}\d{1,3}\/\d+(\(\w+\))?)
 Value PROTOCOL (\d+(\(\w+\))?|\w+)

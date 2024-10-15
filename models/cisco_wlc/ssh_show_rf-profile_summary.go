@@ -1,14 +1,14 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowRfProfileSummary struct {
-	Profile	string	`json:"PROFILE"`
-	Band	string	`json:"BAND"`
-	Description	string	`json:"DESCRIPTION"`
-	N_only	string	`json:"N_ONLY"`
-	Applied	string	`json:"APPLIED"`
+	Band        string `json:"BAND"`
+	Description string `json:"DESCRIPTION"`
+	N_only      string `json:"N_ONLY"`
+	Applied     string `json:"APPLIED"`
+	Profile     string `json:"PROFILE"`
 }
 
-var SshShowRfProfileSummary_Template = `Value PROFILE (\S+)
+var SshShowRfProfileSummary_Template string = `Value PROFILE (\S+)
 #Value PROFILE (\S+)
 Value BAND (\d\.?4? GHz)
 Value DESCRIPTION ((\S+(.?\S+)+))

@@ -1,16 +1,16 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowJobsAll struct {
-	Enqueued	string	`json:"ENQUEUED"`
-	Dequeued	string	`json:"DEQUEUED"`
-	Id	string	`json:"ID"`
-	Type	string	`json:"TYPE"`
-	Status	string	`json:"STATUS"`
-	Result	string	`json:"RESULT"`
-	Completed	string	`json:"COMPLETED"`
+	Dequeued  string `json:"DEQUEUED"`
+	Id        string `json:"ID"`
+	Type      string `json:"TYPE"`
+	Status    string `json:"STATUS"`
+	Result    string `json:"RESULT"`
+	Completed string `json:"COMPLETED"`
+	Enqueued  string `json:"ENQUEUED"`
 }
 
-var ShowJobsAll_Template = `Value ENQUEUED (\S+\s+\S+?)
+var ShowJobsAll_Template string = `Value ENQUEUED (\S+\s+\S+?)
 Value DEQUEUED (\S+)
 Value ID (\d+)
 Value TYPE (\w+)

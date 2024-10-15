@@ -1,23 +1,23 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpRoutePrintTerse struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Comment	string	`json:"COMMENT"`
-	Dst_address	string	`json:"DST_ADDRESS"`
-	Routing_table	string	`json:"ROUTING_TABLE"`
-	Pref_src	string	`json:"PREF_SRC"`
-	Gateway	string	`json:"GATEWAY"`
-	Gateway_status	string	`json:"GATEWAY_STATUS"`
-	Immediate_gw	string	`json:"IMMEDIATE_GW"`
-	Distance	string	`json:"DISTANCE"`
-	Scope	string	`json:"SCOPE"`
-	Target_scope	string	`json:"TARGET_SCOPE"`
-	Suppress_hw_offload	string	`json:"SUPPRESS_HW_OFFLOAD"`
-	Local_address	string	`json:"LOCAL_ADDRESS"`
+	Suppress_hw_offload string `json:"SUPPRESS_HW_OFFLOAD"`
+	Index               string `json:"INDEX"`
+	Flags               string `json:"FLAGS"`
+	Dst_address         string `json:"DST_ADDRESS"`
+	Pref_src            string `json:"PREF_SRC"`
+	Immediate_gw        string `json:"IMMEDIATE_GW"`
+	Distance            string `json:"DISTANCE"`
+	Comment             string `json:"COMMENT"`
+	Gateway_status      string `json:"GATEWAY_STATUS"`
+	Local_address       string `json:"LOCAL_ADDRESS"`
+	Target_scope        string `json:"TARGET_SCOPE"`
+	Routing_table       string `json:"ROUTING_TABLE"`
+	Gateway             string `json:"GATEWAY"`
+	Scope               string `json:"SCOPE"`
 }
 
-var IpRoutePrintTerse_Template = `Value INDEX (\d+)
+var IpRoutePrintTerse_Template string = `Value INDEX (\d+)
 Value FLAGS ([XADCSrbvomcBUP\s]+(?<!\s))
 Value COMMENT (.*)
 Value DST_ADDRESS ([\w.:/\d]+)

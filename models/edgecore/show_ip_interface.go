@@ -1,13 +1,13 @@
-package edgecore 
+package edgecore
 
 type ShowIpInterface struct {
-	Ip	string	`json:"IP"`
-	Netmask	string	`json:"NETMASK"`
-	Interface	string	`json:"INTERFACE"`
-	Addr_mode	string	`json:"ADDR_MODE"`
+	Interface string `json:"INTERFACE"`
+	Addr_mode string `json:"ADDR_MODE"`
+	Ip        string `json:"IP"`
+	Netmask   string `json:"NETMASK"`
 }
 
-var ShowIpInterface_Template = `Value IP (\S+)
+var ShowIpInterface_Template string = `Value IP (\S+)
 Value NETMASK (\S+)
 Value INTERFACE (.*)
 Value ADDR_MODE (.*)

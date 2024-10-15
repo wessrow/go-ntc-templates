@@ -1,17 +1,17 @@
-package fortinet 
+package fortinet
 
 type ExecuteDhcpLeaseList struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip	string	`json:"IP"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Hostname	string	`json:"HOSTNAME"`
-	Vci	string	`json:"VCI"`
-	Ssid	string	`json:"SSID"`
-	Ap	string	`json:"AP"`
-	Expiry	string	`json:"EXPIRY"`
+	Ip          string `json:"IP"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Hostname    string `json:"HOSTNAME"`
+	Vci         string `json:"VCI"`
+	Ssid        string `json:"SSID"`
+	Ap          string `json:"AP"`
+	Expiry      string `json:"EXPIRY"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var ExecuteDhcpLeaseList_Template = `Value Filldown INTERFACE (\S+)
+var ExecuteDhcpLeaseList_Template string = `Value Filldown INTERFACE (\S+)
 Value Required IP (\S+)
 Value MAC_ADDRESS (([a-f0-9]{2}:){5}[a-f0-9]{2})
 Value HOSTNAME ([^ ].+?(?=\s{2}))

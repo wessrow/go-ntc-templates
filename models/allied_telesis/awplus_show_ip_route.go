@@ -1,20 +1,20 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowIpRoute struct {
-	Vrf	string	`json:"VRF"`
-	Protocol	string	`json:"PROTOCOL"`
-	Type	string	`json:"TYPE"`
-	Network	string	`json:"NETWORK"`
-	Mask	string	`json:"MASK"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_vrf	string	`json:"NEXTHOP_VRF"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
-	Uptime	string	`json:"UPTIME"`
+	Type        string `json:"TYPE"`
+	Distance    string `json:"DISTANCE"`
+	Metric      string `json:"METRIC"`
+	Nexthop_vrf string `json:"NEXTHOP_VRF"`
+	Uptime      string `json:"UPTIME"`
+	Protocol    string `json:"PROTOCOL"`
+	Network     string `json:"NETWORK"`
+	Mask        string `json:"MASK"`
+	Nexthop_ip  string `json:"NEXTHOP_IP"`
+	Nexthop_if  string `json:"NEXTHOP_IF"`
+	Vrf         string `json:"VRF"`
 }
 
-var AwplusShowIpRoute_Template = `Value Filldown VRF (\S+)
+var AwplusShowIpRoute_Template string = `Value Filldown VRF (\S+)
 Value PROTOCOL (\w)
 Value TYPE (\w{0,2})
 Value Required NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})

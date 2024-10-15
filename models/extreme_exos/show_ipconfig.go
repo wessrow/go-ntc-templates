@@ -1,31 +1,31 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowIpconfig struct {
-	Use_redirects	string	`json:"USE_REDIRECTS"`
-	Ip_option_lsrr	string	`json:"IP_OPTION_LSRR"`
-	Ip_option_ssrr	string	`json:"IP_OPTION_SSRR"`
-	Ip_option_rr	string	`json:"IP_OPTION_RR"`
-	Ip_option_ts	string	`json:"IP_OPTION_TS"`
-	Ip_option_ra	string	`json:"IP_OPTION_RA"`
-	Route_sharing	string	`json:"ROUTE_SHARING"`
-	Route_compression	string	`json:"ROUTE_COMPRESSION"`
-	Originated_packets	string	`json:"ORIGINATED_PACKETS"`
-	Max_shared_gateways_current	string	`json:"MAX_SHARED_GATEWAYS_CURRENT"`
-	Max_shared_gateways_configured	string	`json:"MAX_SHARED_GATEWAYS_CONFIGURED"`
-	Route_sharing_hash	string	`json:"ROUTE_SHARING_HASH"`
-	Irdp_advertisement_address	string	`json:"IRDP_ADVERTISEMENT_ADDRESS"`
-	Irdp_max_interval	string	`json:"IRDP_MAX_INTERVAL"`
-	Irdp_min_interval	string	`json:"IRDP_MIN_INTERVAL"`
-	Irdp_lifetime	string	`json:"IRDP_LIFETIME"`
-	Irdp_preference	string	`json:"IRDP_PREFERENCE"`
-	Interface	[]string	`json:"INTERFACE"`
-	Ip	[]string	`json:"IP"`
-	Subnet	[]string	`json:"SUBNET"`
-	Flags	[]string	`json:"FLAGS"`
-	Nsia	[]string	`json:"NSIA"`
+	Ip_option_rr                   string   `json:"IP_OPTION_RR"`
+	Route_sharing                  string   `json:"ROUTE_SHARING"`
+	Route_compression              string   `json:"ROUTE_COMPRESSION"`
+	Irdp_advertisement_address     string   `json:"IRDP_ADVERTISEMENT_ADDRESS"`
+	Nsia                           []string `json:"NSIA"`
+	Ip_option_lsrr                 string   `json:"IP_OPTION_LSRR"`
+	Ip_option_ssrr                 string   `json:"IP_OPTION_SSRR"`
+	Ip                             []string `json:"IP"`
+	Flags                          []string `json:"FLAGS"`
+	Max_shared_gateways_current    string   `json:"MAX_SHARED_GATEWAYS_CURRENT"`
+	Irdp_preference                string   `json:"IRDP_PREFERENCE"`
+	Irdp_max_interval              string   `json:"IRDP_MAX_INTERVAL"`
+	Irdp_lifetime                  string   `json:"IRDP_LIFETIME"`
+	Max_shared_gateways_configured string   `json:"MAX_SHARED_GATEWAYS_CONFIGURED"`
+	Route_sharing_hash             string   `json:"ROUTE_SHARING_HASH"`
+	Ip_option_ra                   string   `json:"IP_OPTION_RA"`
+	Originated_packets             string   `json:"ORIGINATED_PACKETS"`
+	Irdp_min_interval              string   `json:"IRDP_MIN_INTERVAL"`
+	Interface                      []string `json:"INTERFACE"`
+	Subnet                         []string `json:"SUBNET"`
+	Use_redirects                  string   `json:"USE_REDIRECTS"`
+	Ip_option_ts                   string   `json:"IP_OPTION_TS"`
 }
 
-var ShowIpconfig_Template = `Value USE_REDIRECTS (.*)
+var ShowIpconfig_Template string = `Value USE_REDIRECTS (.*)
 Value IP_OPTION_LSRR (.*)
 Value IP_OPTION_SSRR (.*)
 Value IP_OPTION_RR (.*)

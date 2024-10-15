@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowFileSystems struct {
-	Size	string	`json:"SIZE"`
-	Free	string	`json:"FREE"`
-	Type	string	`json:"TYPE"`
-	Flags	string	`json:"FLAGS"`
-	Prefixes	string	`json:"PREFIXES"`
+	Free     string `json:"FREE"`
+	Type     string `json:"TYPE"`
+	Flags    string `json:"FLAGS"`
+	Prefixes string `json:"PREFIXES"`
+	Size     string `json:"SIZE"`
 }
 
-var ShowFileSystems_Template = `Value SIZE (\S+)
+var ShowFileSystems_Template string = `Value SIZE (\S+)
 Value FREE (\S+)
 Value TYPE (\S+)
 Value FLAGS (\S+)

@@ -1,13 +1,13 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowRunningConfigIpsec struct {
-	Ike_version	string	`json:"IKE_VERSION"`
-	Name	string	`json:"NAME"`
-	Encryption	[]string	`json:"ENCRYPTION"`
-	Auth	[]string	`json:"AUTH"`
+	Ike_version string   `json:"IKE_VERSION"`
+	Name        string   `json:"NAME"`
+	Encryption  []string `json:"ENCRYPTION"`
+	Auth        []string `json:"AUTH"`
 }
 
-var ShowRunningConfigIpsec_Template = `Value Required IKE_VERSION ([1-2])
+var ShowRunningConfigIpsec_Template string = `Value Required IKE_VERSION ([1-2])
 Value NAME (\S+)
 Value List ENCRYPTION (\S+)
 Value List AUTH (\S+)

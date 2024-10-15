@@ -1,17 +1,17 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Description	string	`json:"DESCRIPTION"`
-	Destination	string	`json:"DESTINATION"`
-	Local	string	`json:"LOCAL"`
-	Mtu	string	`json:"MTU"`
+	Link_status   string `json:"LINK_STATUS"`
+	Admin_state   string `json:"ADMIN_STATE"`
+	Hardware_type string `json:"HARDWARE_TYPE"`
+	Description   string `json:"DESCRIPTION"`
+	Destination   string `json:"DESTINATION"`
+	Local         string `json:"LOCAL"`
+	Mtu           string `json:"MTU"`
+	Interface     string `json:"INTERFACE"`
 }
 
-var ShowInterfaces_Template = `Value Required INTERFACE (\S+)
+var ShowInterfaces_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (\w+)
 Value ADMIN_STATE (\S+)
 Value HARDWARE_TYPE (\S+)

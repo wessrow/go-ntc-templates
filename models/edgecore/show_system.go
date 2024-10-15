@@ -1,26 +1,26 @@
-package edgecore 
+package edgecore
 
 type ShowSystem struct {
-	Description	string	`json:"DESCRIPTION"`
-	Oid	string	`json:"OID"`
-	Uptime	string	`json:"UPTIME"`
-	Hostname	string	`json:"HOSTNAME"`
-	Location	string	`json:"LOCATION"`
-	Contact	string	`json:"CONTACT"`
-	Address	string	`json:"ADDRESS"`
-	Server_status	string	`json:"SERVER_STATUS"`
-	Server_port	string	`json:"SERVER_PORT"`
-	Secure_server_status	string	`json:"SECURE_SERVER_STATUS"`
-	Secure_server_port	string	`json:"SECURE_SERVER_PORT"`
-	Telnet_server_status	string	`json:"TELNET_SERVER_STATUS"`
-	Telnet_server_port	string	`json:"TELNET_SERVER_PORT"`
-	Auth_login	string	`json:"AUTH_LOGIN"`
-	Auth_enabled	string	`json:"AUTH_ENABLED"`
-	Jumbo_frame_status	string	`json:"JUMBO_FRAME_STATUS"`
-	Post_results	[]string	`json:"POST_RESULTS"`
+	Oid                  string   `json:"OID"`
+	Location             string   `json:"LOCATION"`
+	Secure_server_port   string   `json:"SECURE_SERVER_PORT"`
+	Telnet_server_port   string   `json:"TELNET_SERVER_PORT"`
+	Auth_login           string   `json:"AUTH_LOGIN"`
+	Description          string   `json:"DESCRIPTION"`
+	Hostname             string   `json:"HOSTNAME"`
+	Server_port          string   `json:"SERVER_PORT"`
+	Secure_server_status string   `json:"SECURE_SERVER_STATUS"`
+	Contact              string   `json:"CONTACT"`
+	Jumbo_frame_status   string   `json:"JUMBO_FRAME_STATUS"`
+	Post_results         []string `json:"POST_RESULTS"`
+	Auth_enabled         string   `json:"AUTH_ENABLED"`
+	Uptime               string   `json:"UPTIME"`
+	Address              string   `json:"ADDRESS"`
+	Server_status        string   `json:"SERVER_STATUS"`
+	Telnet_server_status string   `json:"TELNET_SERVER_STATUS"`
 }
 
-var ShowSystem_Template = `Value DESCRIPTION (.*)
+var ShowSystem_Template string = `Value DESCRIPTION (.*)
 Value OID (\d+(\.\d+)*)
 Value UPTIME (.*)
 Value HOSTNAME (\S+)

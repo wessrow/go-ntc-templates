@@ -1,17 +1,17 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgStaticRouteGet struct {
-	Index	string	`json:"INDEX"`
-	Name	string	`json:"NAME"`
-	Enabled	string	`json:"ENABLED"`
-	Ip_version	string	`json:"IP_VERSION"`
-	Destination	string	`json:"DESTINATION"`
-	Netmask	string	`json:"NETMASK"`
-	Interface	string	`json:"INTERFACE"`
-	Gateway	string	`json:"GATEWAY"`
+	Netmask     string `json:"NETMASK"`
+	Interface   string `json:"INTERFACE"`
+	Gateway     string `json:"GATEWAY"`
+	Index       string `json:"INDEX"`
+	Name        string `json:"NAME"`
+	Enabled     string `json:"ENABLED"`
+	Ip_version  string `json:"IP_VERSION"`
+	Destination string `json:"DESTINATION"`
 }
 
-var CfgStaticRouteGet_Template = `Value INDEX (\d+)
+var CfgStaticRouteGet_Template string = `Value INDEX (\d+)
 Value NAME (.+?)
 Value ENABLED (0|1)
 Value IP_VERSION (IPv4|IPv6)

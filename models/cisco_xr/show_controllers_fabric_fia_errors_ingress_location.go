@@ -1,27 +1,27 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllersFabricFiaErrorsIngressLocation struct {
-	Fia	string	`json:"FIA"`
-	Category	string	`json:"CATEGORY"`
-	To_xbar_uc_crc_0	string	`json:"TO_XBAR_UC_CRC_0"`
-	To_xbar_uc_crc_1	string	`json:"TO_XBAR_UC_CRC_1"`
-	To_xbar_uc_crc_2	string	`json:"TO_XBAR_UC_CRC_2"`
-	To_xbar_uc_crc_3	string	`json:"TO_XBAR_UC_CRC_3"`
-	To_xbar_mc_crc_0	string	`json:"TO_XBAR_MC_CRC_0"`
-	To_xbar_mc_crc_1	string	`json:"TO_XBAR_MC_CRC_1"`
-	To_xbar_mc_crc_2	string	`json:"TO_XBAR_MC_CRC_2"`
-	To_xbar_mc_crc_3	string	`json:"TO_XBAR_MC_CRC_3"`
-	Nb_pa_read_data_err	string	`json:"NB_PA_READ_DATA_ERR"`
-	Pa_header_err	string	`json:"PA_HEADER_ERR"`
-	Pa_crc16_err	string	`json:"PA_CRC16_ERR"`
-	Pa_crc32_err	string	`json:"PA_CRC32_ERR"`
-	Pa_to_tf_err	string	`json:"PA_TO_TF_ERR"`
-	Ab_overflow_req_lost	string	`json:"AB_OVERFLOW_REQ_LOST"`
-	Ni_bad_crc32	string	`json:"NI_BAD_CRC32"`
-	Ni_crc32_corrupt	string	`json:"NI_CRC32_CORRUPT"`
+	To_xbar_uc_crc_3     string `json:"TO_XBAR_UC_CRC_3"`
+	To_xbar_mc_crc_2     string `json:"TO_XBAR_MC_CRC_2"`
+	Nb_pa_read_data_err  string `json:"NB_PA_READ_DATA_ERR"`
+	Ab_overflow_req_lost string `json:"AB_OVERFLOW_REQ_LOST"`
+	Fia                  string `json:"FIA"`
+	Category             string `json:"CATEGORY"`
+	To_xbar_uc_crc_0     string `json:"TO_XBAR_UC_CRC_0"`
+	Pa_to_tf_err         string `json:"PA_TO_TF_ERR"`
+	To_xbar_uc_crc_2     string `json:"TO_XBAR_UC_CRC_2"`
+	To_xbar_mc_crc_0     string `json:"TO_XBAR_MC_CRC_0"`
+	To_xbar_mc_crc_1     string `json:"TO_XBAR_MC_CRC_1"`
+	To_xbar_mc_crc_3     string `json:"TO_XBAR_MC_CRC_3"`
+	Pa_header_err        string `json:"PA_HEADER_ERR"`
+	To_xbar_uc_crc_1     string `json:"TO_XBAR_UC_CRC_1"`
+	Pa_crc16_err         string `json:"PA_CRC16_ERR"`
+	Pa_crc32_err         string `json:"PA_CRC32_ERR"`
+	Ni_bad_crc32         string `json:"NI_BAD_CRC32"`
+	Ni_crc32_corrupt     string `json:"NI_CRC32_CORRUPT"`
 }
 
-var ShowControllersFabricFiaErrorsIngressLocation_Template = `Value FIA (\S+)
+var ShowControllersFabricFiaErrorsIngressLocation_Template string = `Value FIA (\S+)
 Value CATEGORY (\S+)
 Value TO_XBAR_UC_CRC_0 (\d+)
 Value TO_XBAR_UC_CRC_1 (\d+)

@@ -1,13 +1,13 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowXlate struct {
-	Source_intf	string	`json:"SOURCE_INTF"`
-	Source	[]string	`json:"SOURCE"`
-	Destination_intf	string	`json:"DESTINATION_INTF"`
-	Destination	[]string	`json:"DESTINATION"`
+	Destination_intf string   `json:"DESTINATION_INTF"`
+	Destination      []string `json:"DESTINATION"`
+	Source_intf      string   `json:"SOURCE_INTF"`
+	Source           []string `json:"SOURCE"`
 }
 
-var ShowXlate_Template = `Value SOURCE_INTF (\S+)
+var ShowXlate_Template string = `Value SOURCE_INTF (\S+)
 Value List SOURCE ([0-9a-fA-F:\./]{7,})
 Value DESTINATION_INTF (\S+)
 Value List DESTINATION ([0-9a-fA-F:\./]{7,})

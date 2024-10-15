@@ -1,35 +1,35 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowStandby struct {
-	Interface	string	`json:"INTERFACE"`
-	Group	string	`json:"GROUP"`
-	Version	string	`json:"VERSION"`
-	State	string	`json:"STATE"`
-	State_changes	string	`json:"STATE_CHANGES"`
-	State_last_change	string	`json:"STATE_LAST_CHANGE"`
-	Virtual_ip	string	`json:"VIRTUAL_IP"`
-	Secondary_ips	[]string	`json:"SECONDARY_IPS"`
-	Active_virtual_mac	string	`json:"ACTIVE_VIRTUAL_MAC"`
-	Local_virtual_mac	string	`json:"LOCAL_VIRTUAL_MAC"`
-	Hello_time	string	`json:"HELLO_TIME"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Authentication	string	`json:"AUTHENTICATION"`
-	Preemption	string	`json:"PREEMPTION"`
-	Active_router	string	`json:"ACTIVE_ROUTER"`
-	Active_router_priority	string	`json:"ACTIVE_ROUTER_PRIORITY"`
-	Active_router_mac	string	`json:"ACTIVE_ROUTER_MAC"`
-	Standby_router	string	`json:"STANDBY_ROUTER"`
-	Standby_router_priority	string	`json:"STANDBY_ROUTER_PRIORITY"`
-	Priority	string	`json:"PRIORITY"`
-	Group_name	string	`json:"GROUP_NAME"`
-	Flags	string	`json:"FLAGS"`
-	Track_item	string	`json:"TRACK_ITEM"`
-	Track_type	string	`json:"TRACK_TYPE"`
-	Track_state	string	`json:"TRACK_STATE"`
-	Track_decrement_time	string	`json:"TRACK_DECREMENT_TIME"`
+	State                   string   `json:"STATE"`
+	Secondary_ips           []string `json:"SECONDARY_IPS"`
+	Hold_time               string   `json:"HOLD_TIME"`
+	Priority                string   `json:"PRIORITY"`
+	Track_state             string   `json:"TRACK_STATE"`
+	Interface               string   `json:"INTERFACE"`
+	Version                 string   `json:"VERSION"`
+	State_changes           string   `json:"STATE_CHANGES"`
+	Virtual_ip              string   `json:"VIRTUAL_IP"`
+	Active_virtual_mac      string   `json:"ACTIVE_VIRTUAL_MAC"`
+	Preemption              string   `json:"PREEMPTION"`
+	Flags                   string   `json:"FLAGS"`
+	Track_type              string   `json:"TRACK_TYPE"`
+	Group                   string   `json:"GROUP"`
+	Local_virtual_mac       string   `json:"LOCAL_VIRTUAL_MAC"`
+	Active_router           string   `json:"ACTIVE_ROUTER"`
+	Active_router_priority  string   `json:"ACTIVE_ROUTER_PRIORITY"`
+	State_last_change       string   `json:"STATE_LAST_CHANGE"`
+	Hello_time              string   `json:"HELLO_TIME"`
+	Authentication          string   `json:"AUTHENTICATION"`
+	Active_router_mac       string   `json:"ACTIVE_ROUTER_MAC"`
+	Standby_router          string   `json:"STANDBY_ROUTER"`
+	Standby_router_priority string   `json:"STANDBY_ROUTER_PRIORITY"`
+	Group_name              string   `json:"GROUP_NAME"`
+	Track_item              string   `json:"TRACK_ITEM"`
+	Track_decrement_time    string   `json:"TRACK_DECREMENT_TIME"`
 }
 
-var ShowStandby_Template = `Value INTERFACE (\S+)
+var ShowStandby_Template string = `Value INTERFACE (\S+)
 Value GROUP (\d+)
 Value VERSION (\d+)
 Value STATE (\w+)

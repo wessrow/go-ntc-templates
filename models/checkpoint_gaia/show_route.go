@@ -1,15 +1,15 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowRoute struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Network	string	`json:"NETWORK"`
-	Mask	string	`json:"MASK"`
-	Nexthopip	string	`json:"NEXTHOPIP"`
-	Interface	string	`json:"INTERFACE"`
-	Comment	string	`json:"COMMENT"`
+	Network   string `json:"NETWORK"`
+	Mask      string `json:"MASK"`
+	Nexthopip string `json:"NEXTHOPIP"`
+	Interface string `json:"INTERFACE"`
+	Comment   string `json:"COMMENT"`
+	Protocol  string `json:"PROTOCOL"`
 }
 
-var ShowRoute_Template = `Value PROTOCOL (C|S|R|B|O|A|K|H|P|U|i)
+var ShowRoute_Template string = `Value PROTOCOL (C|S|R|B|O|A|K|H|P|U|i)
 Value NETWORK ([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})
 Value MASK (\d{1,2})
 Value NEXTHOPIP ([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})

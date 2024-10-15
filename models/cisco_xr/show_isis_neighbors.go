@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIsisNeighbors struct {
-	System_id	string	`json:"SYSTEM_ID"`
-	Interface	string	`json:"INTERFACE"`
-	Snpa	string	`json:"SNPA"`
-	State	string	`json:"STATE"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Type	string	`json:"TYPE"`
-	Ietf_nsf	string	`json:"IETF_NSF"`
+	Type      string `json:"TYPE"`
+	Ietf_nsf  string `json:"IETF_NSF"`
+	System_id string `json:"SYSTEM_ID"`
+	Interface string `json:"INTERFACE"`
+	Snpa      string `json:"SNPA"`
+	State     string `json:"STATE"`
+	Hold_time string `json:"HOLD_TIME"`
 }
 
-var ShowIsisNeighbors_Template = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+var ShowIsisNeighbors_Template string = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value INTERFACE (\S+)
 Value SNPA ((\d+.\d+.\d+)|\S+)
 Value STATE (\S+)

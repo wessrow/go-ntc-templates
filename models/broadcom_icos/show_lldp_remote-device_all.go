@@ -1,14 +1,14 @@
-package broadcom_icos 
+package broadcom_icos
 
 type ShowLldpRemoteDeviceAll struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Remote_id	string	`json:"REMOTE_ID"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Remote_id          string `json:"REMOTE_ID"`
+	Chassis_id         string `json:"CHASSIS_ID"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
 }
 
-var ShowLldpRemoteDeviceAll_Template = `Value LOCAL_INTERFACE (\S+)
+var ShowLldpRemoteDeviceAll_Template string = `Value LOCAL_INTERFACE (\S+)
 Value REMOTE_ID (\S+)
 Value CHASSIS_ID (\S+)
 Value NEIGHBOR_INTERFACE (\S+)

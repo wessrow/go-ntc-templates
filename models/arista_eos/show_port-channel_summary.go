@@ -1,15 +1,15 @@
-package arista_eos 
+package arista_eos
 
 type ShowPortChannelSummary struct {
-	Bundle_name	string	`json:"BUNDLE_NAME"`
-	Bundle_status	string	`json:"BUNDLE_STATUS"`
-	Bundle_protocol	string	`json:"BUNDLE_PROTOCOL"`
-	Bundle_protocol_state	string	`json:"BUNDLE_PROTOCOL_STATE"`
-	Member_interface	[]string	`json:"MEMBER_INTERFACE"`
-	Member_interface_status	[]string	`json:"MEMBER_INTERFACE_STATUS"`
+	Bundle_name             string   `json:"BUNDLE_NAME"`
+	Bundle_status           string   `json:"BUNDLE_STATUS"`
+	Bundle_protocol         string   `json:"BUNDLE_PROTOCOL"`
+	Bundle_protocol_state   string   `json:"BUNDLE_PROTOCOL_STATE"`
+	Member_interface        []string `json:"MEMBER_INTERFACE"`
+	Member_interface_status []string `json:"MEMBER_INTERFACE_STATUS"`
 }
 
-var ShowPortChannelSummary_Template = `Value BUNDLE_NAME (Po\d+)
+var ShowPortChannelSummary_Template string = `Value BUNDLE_NAME (Po\d+)
 Value BUNDLE_STATUS (\S+)
 Value BUNDLE_PROTOCOL (\w+)
 Value BUNDLE_PROTOCOL_STATE (\S+)

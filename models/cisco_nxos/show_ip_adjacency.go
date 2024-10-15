@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpAdjacency struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Pref	string	`json:"PREF"`
-	Source	string	`json:"SOURCE"`
-	Interface	string	`json:"INTERFACE"`
-	Flags	string	`json:"FLAGS"`
+	Source      string `json:"SOURCE"`
+	Interface   string `json:"INTERFACE"`
+	Flags       string `json:"FLAGS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Pref        string `json:"PREF"`
 }
 
-var ShowIpAdjacency_Template = `Value Required IP_ADDRESS (\S+)
+var ShowIpAdjacency_Template string = `Value Required IP_ADDRESS (\S+)
 Value Required MAC_ADDRESS (\S+)
 Value Required PREF (\d+)
 Value Required SOURCE (\S+)

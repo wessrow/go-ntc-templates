@@ -1,16 +1,16 @@
-package linux 
+package linux
 
 type IpRouteShow struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Metric	string	`json:"METRIC"`
-	Network	string	`json:"NETWORK"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
-	Scope	string	`json:"SCOPE"`
-	Src	string	`json:"SRC"`
+	Metric     string `json:"METRIC"`
+	Network    string `json:"NETWORK"`
+	Nexthop_ip string `json:"NEXTHOP_IP"`
+	Nexthop_if string `json:"NEXTHOP_IF"`
+	Scope      string `json:"SCOPE"`
+	Src        string `json:"SRC"`
+	Protocol   string `json:"PROTOCOL"`
 }
 
-var IpRouteShow_Template = `Value PROTOCOL (\S+)
+var IpRouteShow_Template string = `Value PROTOCOL (\S+)
 Value METRIC (\d+)
 Value NETWORK (\S+)
 Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})

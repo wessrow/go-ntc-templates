@@ -1,25 +1,25 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowBgp struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Nsr	string	`json:"NSR"`
-	Bgp_state	string	`json:"BGP_STATE"`
-	Dampening	string	`json:"DAMPENING"`
-	Status	string	`json:"STATUS"`
-	Path_selection	string	`json:"PATH_SELECTION"`
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Metric	string	`json:"METRIC"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	As_path	string	`json:"AS_PATH"`
-	Origin	string	`json:"ORIGIN"`
+	Origin         string `json:"ORIGIN"`
+	Network        string `json:"NETWORK"`
+	Next_hop       string `json:"NEXT_HOP"`
+	Metric         string `json:"METRIC"`
+	Local_pref     string `json:"LOCAL_PREF"`
+	Route_source   string `json:"ROUTE_SOURCE"`
+	Netmask        string `json:"NETMASK"`
+	Weight         string `json:"WEIGHT"`
+	Path_selection string `json:"PATH_SELECTION"`
+	Router_id      string `json:"ROUTER_ID"`
+	Local_as       string `json:"LOCAL_AS"`
+	Nsr            string `json:"NSR"`
+	Dampening      string `json:"DAMPENING"`
+	Bgp_state      string `json:"BGP_STATE"`
+	Status         string `json:"STATUS"`
+	As_path        string `json:"AS_PATH"`
 }
 
-var ShowBgp_Template = `Value Filldown ROUTER_ID (\S+)
+var ShowBgp_Template string = `Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\d+)
 Value Filldown NSR (.+?)
 Value Filldown BGP_STATE (.+?)

@@ -1,14 +1,14 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowVlans struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Status	string	`json:"STATUS"`
-	Voice	string	`json:"VOICE"`
-	Jumbo	string	`json:"JUMBO"`
+	Vlan_id   string `json:"VLAN_ID"`
+	Vlan_name string `json:"VLAN_NAME"`
+	Status    string `json:"STATUS"`
+	Voice     string `json:"VOICE"`
+	Jumbo     string `json:"JUMBO"`
 }
 
-var ShowVlans_Template = `Value VLAN_ID (\d+)
+var ShowVlans_Template string = `Value VLAN_ID (\d+)
 Value VLAN_NAME (.*?)
 Value STATUS (\S+)
 Value VOICE (Yes|No)

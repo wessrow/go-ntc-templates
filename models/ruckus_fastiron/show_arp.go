@@ -1,17 +1,17 @@
-package ruckus_fastiron 
+package ruckus_fastiron
 
 type ShowArp struct {
-	Number	string	`json:"NUMBER"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Age	string	`json:"AGE"`
-	Port	string	`json:"PORT"`
-	Status	string	`json:"STATUS"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Number      string `json:"NUMBER"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Age         string `json:"AGE"`
+	Port        string `json:"PORT"`
+	Status      string `json:"STATUS"`
+	Vlan_id     string `json:"VLAN_ID"`
 }
 
-var ShowArp_Template = `Value NUMBER (\S+)
+var ShowArp_Template string = `Value NUMBER (\S+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
 Value Required MAC_ADDRESS (([A-Fa-f0-9\.]{14}|None))
 Value TYPE (\S+)

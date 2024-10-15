@@ -1,15 +1,15 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowArp struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Port	string	`json:"PORT"`
+	Protocol    string `json:"PROTOCOL"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Age         string `json:"AGE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Port        string `json:"PORT"`
 }
 
-var ShowArp_Template = `Value PROTOCOL (\S+)
+var ShowArp_Template string = `Value PROTOCOL (\S+)
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
 Value AGE (\S+)
 Value Required MAC_ADDRESS ([A-Fa-f0-9\.]{14})

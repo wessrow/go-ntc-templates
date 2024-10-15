@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowArp struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Address	string	`json:"ADDRESS"`
-	Age_min	string	`json:"AGE_MIN"`
-	Hardware_address	string	`json:"HARDWARE_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
+	Address          string `json:"ADDRESS"`
+	Age_min          string `json:"AGE_MIN"`
+	Hardware_address string `json:"HARDWARE_ADDRESS"`
+	Type             string `json:"TYPE"`
+	Interface        string `json:"INTERFACE"`
+	Protocol         string `json:"PROTOCOL"`
 }
 
-var ShowArp_Template = `Value PROTOCOL (\S+)
+var ShowArp_Template string = `Value PROTOCOL (\S+)
 Value ADDRESS (\S+)
 Value AGE_MIN (\S+)
 Value HARDWARE_ADDRESS ((?:([a-f0-9]{4}\.){2}[a-f0-9]{4})|Incomplete)

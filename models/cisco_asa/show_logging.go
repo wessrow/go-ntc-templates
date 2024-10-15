@@ -1,20 +1,20 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowLogging struct {
-	Number	string	`json:"NUMBER"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
-	Time	string	`json:"TIME"`
-	Hostname	string	`json:"HOSTNAME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Facility	string	`json:"FACILITY"`
-	Severity	string	`json:"SEVERITY"`
-	Mnemonic	string	`json:"MNEMONIC"`
-	Message	[]string	`json:"MESSAGE"`
+	Month    string   `json:"MONTH"`
+	Day      string   `json:"DAY"`
+	Severity string   `json:"SEVERITY"`
+	Message  []string `json:"MESSAGE"`
+	Timezone string   `json:"TIMEZONE"`
+	Facility string   `json:"FACILITY"`
+	Mnemonic string   `json:"MNEMONIC"`
+	Number   string   `json:"NUMBER"`
+	Year     string   `json:"YEAR"`
+	Time     string   `json:"TIME"`
+	Hostname string   `json:"HOSTNAME"`
 }
 
-var ShowLogging_Template = `Value NUMBER (\d+)
+var ShowLogging_Template string = `Value NUMBER (\d+)
 Value MONTH (\S+)
 Value DAY (\d{1,2})
 Value YEAR (\d{4})

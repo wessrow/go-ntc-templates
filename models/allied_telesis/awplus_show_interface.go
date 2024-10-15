@@ -1,21 +1,21 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Vrf	string	`json:"VRF"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Description	string	`json:"DESCRIPTION"`
-	Mtu	string	`json:"MTU"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
+	Interface       string `json:"INTERFACE"`
+	Hardware_type   string `json:"HARDWARE_TYPE"`
+	Mac_address     string `json:"MAC_ADDRESS"`
+	Duplex          string `json:"DUPLEX"`
+	Prefix_length   string `json:"PREFIX_LENGTH"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	Link_status     string `json:"LINK_STATUS"`
+	Protocol_status string `json:"PROTOCOL_STATUS"`
+	Vrf             string `json:"VRF"`
+	Description     string `json:"DESCRIPTION"`
+	Mtu             string `json:"MTU"`
+	Speed           string `json:"SPEED"`
 }
 
-var AwplusShowInterface_Template = `Value Required INTERFACE (\S+)
+var AwplusShowInterface_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (\w+)
 Value PROTOCOL_STATUS (\w+)
 Value HARDWARE_TYPE (\w+)

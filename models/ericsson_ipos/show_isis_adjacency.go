@@ -1,17 +1,17 @@
-package ericsson_ipos 
+package ericsson_ipos
 
 type ShowIsisAdjacency struct {
-	System_id	string	`json:"SYSTEM_ID"`
-	Interface	string	`json:"INTERFACE"`
-	L	string	`json:"L"`
-	Mt	string	`json:"MT"`
-	Stat	string	`json:"STAT"`
-	Hold	string	`json:"HOLD"`
-	Snpa	string	`json:"SNPA"`
-	Uptime	string	`json:"UPTIME"`
+	Uptime    string `json:"UPTIME"`
+	System_id string `json:"SYSTEM_ID"`
+	Interface string `json:"INTERFACE"`
+	L         string `json:"L"`
+	Mt        string `json:"MT"`
+	Stat      string `json:"STAT"`
+	Hold      string `json:"HOLD"`
+	Snpa      string `json:"SNPA"`
 }
 
-var ShowIsisAdjacency_Template = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+var ShowIsisAdjacency_Template string = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value INTERFACE (\S+)
 Value L (\S+)
 Value MT (\S+)

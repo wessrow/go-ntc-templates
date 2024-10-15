@@ -1,24 +1,24 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Vrf	string	`json:"VRF"`
-	Status	string	`json:"STATUS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Peer_ip_address	string	`json:"PEER_IP_ADDRESS"`
-	Speed	string	`json:"SPEED"`
-	Mtu	string	`json:"MTU"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Type	string	`json:"TYPE"`
-	Mode	string	`json:"MODE"`
-	Reason	string	`json:"REASON"`
-	Portch	string	`json:"PORTCH"`
-	Description	string	`json:"DESCRIPTION"`
-	Protocol	string	`json:"PROTOCOL"`
-	Vcid	string	`json:"VCID"`
+	Vrf             string `json:"VRF"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	Type            string `json:"TYPE"`
+	Mtu             string `json:"MTU"`
+	Vlan_id         string `json:"VLAN_ID"`
+	Portch          string `json:"PORTCH"`
+	Description     string `json:"DESCRIPTION"`
+	Interface       string `json:"INTERFACE"`
+	Speed           string `json:"SPEED"`
+	Mode            string `json:"MODE"`
+	Protocol        string `json:"PROTOCOL"`
+	Status          string `json:"STATUS"`
+	Peer_ip_address string `json:"PEER_IP_ADDRESS"`
+	Reason          string `json:"REASON"`
+	Vcid            string `json:"VCID"`
 }
 
-var ShowInterfaceBrief_Template = `Value INTERFACE ([\w+/\.]+)
+var ShowInterfaceBrief_Template string = `Value INTERFACE ([\w+/\.]+)
 Value VRF (\S+)
 Value STATUS (up|down)
 Value IP_ADDRESS (\S+)

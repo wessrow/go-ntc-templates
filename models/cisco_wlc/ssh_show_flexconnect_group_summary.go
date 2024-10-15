@@ -1,12 +1,12 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowFlexconnectGroupSummary struct {
-	Flexconnect_group_count	string	`json:"FLEXCONNECT_GROUP_COUNT"`
-	Flexconnect_group_name	string	`json:"FLEXCONNECT_GROUP_NAME"`
-	Ap_count	string	`json:"AP_COUNT"`
+	Flexconnect_group_count string `json:"FLEXCONNECT_GROUP_COUNT"`
+	Flexconnect_group_name  string `json:"FLEXCONNECT_GROUP_NAME"`
+	Ap_count                string `json:"AP_COUNT"`
 }
 
-var SshShowFlexconnectGroupSummary_Template = `Value Filldown FLEXCONNECT_GROUP_COUNT (\d+)
+var SshShowFlexconnectGroupSummary_Template string = `Value Filldown FLEXCONNECT_GROUP_COUNT (\d+)
 Value Required FLEXCONNECT_GROUP_NAME (.*\S)
 Value AP_COUNT (\d+)
 

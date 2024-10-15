@@ -1,12 +1,12 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayIpVpnInstance struct {
-	Name	string	`json:"NAME"`
-	Rd	string	`json:"RD"`
-	Address_family	string	`json:"ADDRESS_FAMILY"`
+	Rd             string `json:"RD"`
+	Address_family string `json:"ADDRESS_FAMILY"`
+	Name           string `json:"NAME"`
 }
 
-var DisplayIpVpnInstance_Template = `Value Required NAME (\S+)
+var DisplayIpVpnInstance_Template string = `Value Required NAME (\S+)
 Value RD (\d+:\d+)
 Value ADDRESS_FAMILY (\S+)
 

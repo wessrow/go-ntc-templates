@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowInterfaceLink struct {
-	Port	string	`json:"PORT"`
-	Name	string	`json:"NAME"`
-	Downtime	string	`json:"DOWNTIME"`
-	Since	string	`json:"SINCE"`
-	Uptime	string	`json:"UPTIME"`
+	Since    string `json:"SINCE"`
+	Uptime   string `json:"UPTIME"`
+	Port     string `json:"PORT"`
+	Name     string `json:"NAME"`
+	Downtime string `json:"DOWNTIME"`
 }
 
-var ShowInterfaceLink_Template = `Value PORT (\S+)
+var ShowInterfaceLink_Template string = `Value PORT (\S+)
 Value NAME (.*?)
 Value DOWNTIME ((00:00:00)|(([0-9]{1,2} year[s]? , )?([0-9]{1,2} week[s]?, )?([0-9]{1,2} day[s]?, )?([0-9]{1,2} hour[s]?, )?([0-9]{1,2} minute[s]? )?([0-9]{1,2} secs))|((([0-9]{1,2}y)?([0-9]{1,2}w)?([0-9]{1,2}d)([0-9]{1,2}h)?|[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2})))
 Value SINCE (.+?)

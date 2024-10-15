@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowInterfacesStatus struct {
-	Port	string	`json:"PORT"`
-	Name	string	`json:"NAME"`
-	Status	string	`json:"STATUS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Type	string	`json:"TYPE"`
+	Type    string `json:"TYPE"`
+	Port    string `json:"PORT"`
+	Name    string `json:"NAME"`
+	Status  string `json:"STATUS"`
+	Vlan_id string `json:"VLAN_ID"`
+	Duplex  string `json:"DUPLEX"`
+	Speed   string `json:"SPEED"`
 }
 
-var ShowInterfacesStatus_Template = `Value PORT (\S+)
+var ShowInterfacesStatus_Template string = `Value PORT (\S+)
 Value NAME (\S.*(?<!\s))
 Value STATUS (connected|notconnect|inactive|errdisabled|disabled)
 Value VLAN_ID (\S+)

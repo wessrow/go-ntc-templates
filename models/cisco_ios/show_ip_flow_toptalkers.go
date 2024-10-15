@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpFlowToptalkers struct {
-	Src_intf	string	`json:"SRC_INTF"`
-	Src_ipaddr	string	`json:"SRC_IPADDR"`
-	Src_port	string	`json:"SRC_PORT"`
-	Dst_intf	string	`json:"DST_INTF"`
-	Dst_ipaddr	string	`json:"DST_IPADDR"`
-	Proto	string	`json:"PROTO"`
-	Dst_port	string	`json:"DST_PORT"`
-	Pkt	string	`json:"PKT"`
+	Pkt        string `json:"PKT"`
+	Src_intf   string `json:"SRC_INTF"`
+	Src_ipaddr string `json:"SRC_IPADDR"`
+	Src_port   string `json:"SRC_PORT"`
+	Dst_intf   string `json:"DST_INTF"`
+	Dst_ipaddr string `json:"DST_IPADDR"`
+	Proto      string `json:"PROTO"`
+	Dst_port   string `json:"DST_PORT"`
 }
 
-var ShowIpFlowToptalkers_Template = `Value SRC_INTF (\S+)
+var ShowIpFlowToptalkers_Template string = `Value SRC_INTF (\S+)
 Value SRC_IPADDR ([0-9A-Fa-f:\.]+)
 Value SRC_PORT ([A-Z0-9]+)
 Value DST_INTF (\S+)

@@ -1,12 +1,12 @@
-package ciena_saos 
+package ciena_saos
 
 type SoftwareShow struct {
-	Version_installed	string	`json:"VERSION_INSTALLED"`
-	Version_running	string	`json:"VERSION_RUNNING"`
-	Kernel	string	`json:"KERNEL"`
+	Kernel            string `json:"KERNEL"`
+	Version_installed string `json:"VERSION_INSTALLED"`
+	Version_running   string `json:"VERSION_RUNNING"`
 }
 
-var SoftwareShow_Template = `Value VERSION_INSTALLED (\S+)
+var SoftwareShow_Template string = `Value VERSION_INSTALLED (\S+)
 Value VERSION_RUNNING (\S+)
 Value KERNEL (\S+)
 

@@ -1,13 +1,13 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayTemperature struct {
-	Slotid	string	`json:"SLOTID"`
-	Pcb	string	`json:"PCB"`
-	Status	string	`json:"STATUS"`
-	Temperature	string	`json:"TEMPERATURE"`
+	Slotid      string `json:"SLOTID"`
+	Pcb         string `json:"PCB"`
+	Status      string `json:"STATUS"`
+	Temperature string `json:"TEMPERATURE"`
 }
 
-var DisplayTemperature_Template = `Value Filldown SLOTID (\S+)
+var DisplayTemperature_Template string = `Value Filldown SLOTID (\S+)
 Value Required PCB (\w+)
 Value Required STATUS (\w+)
 Value TEMPERATURE (\d+)

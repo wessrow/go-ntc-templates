@@ -1,18 +1,18 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowCellularRadioEquipment struct {
-	Manufacturer	string	`json:"MANUFACTURER"`
-	Equipment	string	`json:"EQUIPMENT"`
-	Boot_revision	string	`json:"BOOT_REVISION"`
-	Imei	string	`json:"IMEI"`
-	Sim1_status	string	`json:"SIM1_STATUS"`
-	Sim2_status	string	`json:"SIM2_STATUS"`
-	Imsi	string	`json:"IMSI"`
-	Card_id	string	`json:"CARD_ID"`
-	Pin_status	string	`json:"PIN_STATUS"`
+	Manufacturer  string `json:"MANUFACTURER"`
+	Equipment     string `json:"EQUIPMENT"`
+	Imei          string `json:"IMEI"`
+	Card_id       string `json:"CARD_ID"`
+	Boot_revision string `json:"BOOT_REVISION"`
+	Sim1_status   string `json:"SIM1_STATUS"`
+	Sim2_status   string `json:"SIM2_STATUS"`
+	Imsi          string `json:"IMSI"`
+	Pin_status    string `json:"PIN_STATUS"`
 }
 
-var ShowCellularRadioEquipment_Template = `Value Required MANUFACTURER (.*)
+var ShowCellularRadioEquipment_Template string = `Value Required MANUFACTURER (.*)
 Value EQUIPMENT (.*)
 Value BOOT_REVISION (.*)
 Value IMEI (\d+)

@@ -1,17 +1,17 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowRunningConfigCryptoMap struct {
-	Matched_address	string	`json:"MATCHED_ADDRESS"`
-	Map	string	`json:"MAP"`
-	Seq	string	`json:"SEQ"`
-	Pfs	string	`json:"PFS"`
-	Peer	string	`json:"PEER"`
-	Ike	string	`json:"IKE"`
-	Transform	string	`json:"TRANSFORM"`
-	Sa	string	`json:"SA"`
+	Matched_address string `json:"MATCHED_ADDRESS"`
+	Map             string `json:"MAP"`
+	Seq             string `json:"SEQ"`
+	Pfs             string `json:"PFS"`
+	Peer            string `json:"PEER"`
+	Ike             string `json:"IKE"`
+	Transform       string `json:"TRANSFORM"`
+	Sa              string `json:"SA"`
 }
 
-var ShowRunningConfigCryptoMap_Template = `Value MATCHED_ADDRESS (\S+)
+var ShowRunningConfigCryptoMap_Template string = `Value MATCHED_ADDRESS (\S+)
 Value Key MAP (\S+)
 Value Key SEQ (\d+)
 Value PFS (group\d|\s*)

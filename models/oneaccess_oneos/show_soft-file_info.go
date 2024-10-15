@@ -1,18 +1,18 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSoftFileInfo struct {
-	Status	string	`json:"STATUS"`
-	Filename	string	`json:"FILENAME"`
-	Filetype	string	`json:"FILETYPE"`
-	Software_version	string	`json:"SOFTWARE_VERSION"`
-	Software_date	string	`json:"SOFTWARE_DATE"`
-	Filesize	string	`json:"FILESIZE"`
-	Header_checksum	string	`json:"HEADER_CHECKSUM"`
-	Computed_checksum	string	`json:"COMPUTED_CHECKSUM"`
-	Target_device	string	`json:"TARGET_DEVICE"`
+	Status            string `json:"STATUS"`
+	Software_version  string `json:"SOFTWARE_VERSION"`
+	Header_checksum   string `json:"HEADER_CHECKSUM"`
+	Computed_checksum string `json:"COMPUTED_CHECKSUM"`
+	Filename          string `json:"FILENAME"`
+	Filetype          string `json:"FILETYPE"`
+	Software_date     string `json:"SOFTWARE_DATE"`
+	Filesize          string `json:"FILESIZE"`
+	Target_device     string `json:"TARGET_DEVICE"`
 }
 
-var ShowSoftFileInfo_Template = `Value STATUS (.*)
+var ShowSoftFileInfo_Template string = `Value STATUS (.*)
 Value FILENAME (\S+)
 Value FILETYPE (.+)
 Value SOFTWARE_VERSION (\S+)

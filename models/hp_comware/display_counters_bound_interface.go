@@ -1,14 +1,14 @@
-package hp_comware 
+package hp_comware
 
 type DisplayCountersBoundInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Packets_total	string	`json:"PACKETS_TOTAL"`
-	Packets_broadcast	string	`json:"PACKETS_BROADCAST"`
-	Packets_multicast	string	`json:"PACKETS_MULTICAST"`
-	Packets_error	string	`json:"PACKETS_ERROR"`
+	Interface         string `json:"INTERFACE"`
+	Packets_total     string `json:"PACKETS_TOTAL"`
+	Packets_broadcast string `json:"PACKETS_BROADCAST"`
+	Packets_multicast string `json:"PACKETS_MULTICAST"`
+	Packets_error     string `json:"PACKETS_ERROR"`
 }
 
-var DisplayCountersBoundInterface_Template = `Value INTERFACE (\S+)
+var DisplayCountersBoundInterface_Template string = `Value INTERFACE (\S+)
 Value PACKETS_TOTAL (\d+)
 Value PACKETS_BROADCAST (\d+)
 Value PACKETS_MULTICAST (\d+)

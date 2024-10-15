@@ -1,17 +1,17 @@
-package vmware_nsxv 
+package vmware_nsxv
 
 type ShowIpBgpNeighbors struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Remote_as	string	`json:"REMOTE_AS"`
-	State	string	`json:"STATE"`
-	Hold_interval	string	`json:"HOLD_INTERVAL"`
-	Keepalive_interval	string	`json:"KEEPALIVE_INTERVAL"`
-	Pfx_recv	string	`json:"PFX_RECV"`
-	Pfx_sent	string	`json:"PFX_SENT"`
-	Pfx_adv	string	`json:"PFX_ADV"`
+	Neighbor_id        string `json:"NEIGHBOR_ID"`
+	Remote_as          string `json:"REMOTE_AS"`
+	State              string `json:"STATE"`
+	Hold_interval      string `json:"HOLD_INTERVAL"`
+	Keepalive_interval string `json:"KEEPALIVE_INTERVAL"`
+	Pfx_recv           string `json:"PFX_RECV"`
+	Pfx_sent           string `json:"PFX_SENT"`
+	Pfx_adv            string `json:"PFX_ADV"`
 }
 
-var ShowIpBgpNeighbors_Template = `Value NEIGHBOR_ID (\d+(\.\d+){3})
+var ShowIpBgpNeighbors_Template string = `Value NEIGHBOR_ID (\d+(\.\d+){3})
 Value REMOTE_AS (\d+)
 Value STATE (\D.*)
 Value HOLD_INTERVAL (\d+)

@@ -1,13 +1,13 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgStaticDhcpGet struct {
-	Index	string	`json:"INDEX"`
-	Status	string	`json:"STATUS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
+	Status      string `json:"STATUS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Index       string `json:"INDEX"`
 }
 
-var CfgStaticDhcpGet_Template = `Value INDEX (\d+)
+var CfgStaticDhcpGet_Template string = `Value INDEX (\d+)
 Value STATUS (0|1)
 Value MAC_ADDRESS (([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})
 Value IP_ADDRESS ((\d+\.){3}\d+)

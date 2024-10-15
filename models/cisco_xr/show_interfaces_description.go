@@ -1,13 +1,13 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowInterfacesDescription struct {
-	Interface	string	`json:"INTERFACE"`
-	Status	string	`json:"STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Status      string `json:"STATUS"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var ShowInterfacesDescription_Template = `Value INTERFACE (\S+)
+var ShowInterfacesDescription_Template string = `Value INTERFACE (\S+)
 Value STATUS (up|down|deleted|admin\-down|reset)
 Value PROTOCOL (up|down|deleted|admin\-down)
 Value DESCRIPTION (.+?)

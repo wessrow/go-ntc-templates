@@ -1,23 +1,23 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpBgpSummaryVrf struct {
-	Vrf	string	`json:"VRF"`
-	Address_family	string	`json:"ADDRESS_FAMILY"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Bgp_ver	string	`json:"BGP_VER"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Msg_rcvd	string	`json:"MSG_RCVD"`
-	Msg_sent	string	`json:"MSG_SENT"`
-	Tblver	string	`json:"TBLVER"`
-	In_queue	string	`json:"IN_QUEUE"`
-	Out_queue	string	`json:"OUT_QUEUE"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	Address_family string `json:"ADDRESS_FAMILY"`
+	Router_id      string `json:"ROUTER_ID"`
+	Up_down        string `json:"UP_DOWN"`
+	Msg_sent       string `json:"MSG_SENT"`
+	In_queue       string `json:"IN_QUEUE"`
+	Vrf            string `json:"VRF"`
+	Bgp_neigh      string `json:"BGP_NEIGH"`
+	Neigh_as       string `json:"NEIGH_AS"`
+	Tblver         string `json:"TBLVER"`
+	Local_as       string `json:"LOCAL_AS"`
+	Bgp_ver        string `json:"BGP_VER"`
+	Msg_rcvd       string `json:"MSG_RCVD"`
+	Out_queue      string `json:"OUT_QUEUE"`
+	State_pfxrcd   string `json:"STATE_PFXRCD"`
 }
 
-var ShowIpBgpSummaryVrf_Template = `Value Filldown VRF (\S+)
+var ShowIpBgpSummaryVrf_Template string = `Value Filldown VRF (\S+)
 Value Filldown ADDRESS_FAMILY (\S+\s\S+)
 Value Filldown ROUTER_ID (\d+?\.\d+?\.\d+?\.\d+?)
 Value Filldown LOCAL_AS (\d+)

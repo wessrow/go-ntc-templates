@@ -1,14 +1,14 @@
-package aruba_os 
+package aruba_os
 
 type ShowArp struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Age	string	`json:"AGE"`
+	Protocol    string `json:"PROTOCOL"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Age         string `json:"AGE"`
 }
 
-var ShowArp_Template = `Value PROTOCOL (\w+)
+var ShowArp_Template string = `Value PROTOCOL (\w+)
 Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)

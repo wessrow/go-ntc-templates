@@ -1,23 +1,23 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowApSummary struct {
-	Ap_name	string	`json:"AP_NAME"`
-	Slot	string	`json:"SLOT"`
-	Ap_model	string	`json:"AP_MODEL"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Radio_mac	string	`json:"RADIO_MAC"`
-	Location	string	`json:"LOCATION"`
-	Port	string	`json:"PORT"`
-	Country	string	`json:"COUNTRY"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Clients	string	`json:"CLIENTS"`
-	Dse_location	string	`json:"DSE_LOCATION"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Number_of_aps	string	`json:"NUMBER_OF_APS"`
+	Radio_mac     string `json:"RADIO_MAC"`
+	Dse_location  string `json:"DSE_LOCATION"`
+	Number_of_aps string `json:"NUMBER_OF_APS"`
+	Port          string `json:"PORT"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Slot          string `json:"SLOT"`
+	Country       string `json:"COUNTRY"`
+	Clients       string `json:"CLIENTS"`
+	Ap_name       string `json:"AP_NAME"`
+	Ap_model      string `json:"AP_MODEL"`
+	Mac_address   string `json:"MAC_ADDRESS"`
+	Location      string `json:"LOCATION"`
+	Priority      string `json:"PRIORITY"`
+	State         string `json:"STATE"`
 }
 
-var SshShowApSummary_Template = `Value AP_NAME (\S+)
+var SshShowApSummary_Template string = `Value AP_NAME (\S+)
 Value SLOT (\d+)
 Value AP_MODEL (\S+)
 Value MAC_ADDRESS ([a-fA-F0-9:\.]+)

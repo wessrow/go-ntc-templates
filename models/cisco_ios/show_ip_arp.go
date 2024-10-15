@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpArp struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
+	Type        string `json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Protocol    string `json:"PROTOCOL"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Age         string `json:"AGE"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowIpArp_Template = `Value Required PROTOCOL (\S+)
+var ShowIpArp_Template string = `Value Required PROTOCOL (\S+)
 Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
 Value Required MAC_ADDRESS (\S+)

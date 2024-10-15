@@ -1,25 +1,25 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowAspTableVpnContextDetail struct {
-	Vpn_ctx	string	`json:"VPN_CTX"`
-	Peer_ip	string	`json:"PEER_IP"`
-	Pointer	string	`json:"POINTER"`
-	State	string	`json:"STATE"`
-	Flags	string	`json:"FLAGS"`
-	Sa	string	`json:"SA"`
-	Spi	string	`json:"SPI"`
-	Group	string	`json:"GROUP"`
-	Pkts	string	`json:"PKTS"`
-	Bad_pkts	string	`json:"BAD_PKTS"`
-	Bad_spi	string	`json:"BAD_SPI"`
-	Spoof	string	`json:"SPOOF"`
-	Bad_crypto	string	`json:"BAD_CRYPTO"`
-	Rekey_pkt	string	`json:"REKEY_PKT"`
-	Rekey_call	string	`json:"REKEY_CALL"`
-	Vpn_filter	string	`json:"VPN_FILTER"`
+	Vpn_ctx    string `json:"VPN_CTX"`
+	State      string `json:"STATE"`
+	Bad_pkts   string `json:"BAD_PKTS"`
+	Pointer    string `json:"POINTER"`
+	Sa         string `json:"SA"`
+	Group      string `json:"GROUP"`
+	Rekey_call string `json:"REKEY_CALL"`
+	Vpn_filter string `json:"VPN_FILTER"`
+	Spoof      string `json:"SPOOF"`
+	Bad_crypto string `json:"BAD_CRYPTO"`
+	Peer_ip    string `json:"PEER_IP"`
+	Flags      string `json:"FLAGS"`
+	Spi        string `json:"SPI"`
+	Pkts       string `json:"PKTS"`
+	Bad_spi    string `json:"BAD_SPI"`
+	Rekey_pkt  string `json:"REKEY_PKT"`
 }
 
-var ShowAspTableVpnContextDetail_Template = `Value Required VPN_CTX (\S+)
+var ShowAspTableVpnContextDetail_Template string = `Value Required VPN_CTX (\S+)
 Value PEER_IP (\S+)
 Value POINTER (\S+)
 Value STATE (\S+)

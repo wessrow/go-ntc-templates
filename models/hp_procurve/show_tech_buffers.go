@@ -1,15 +1,15 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowTechBuffers struct {
-	Product	string	`json:"PRODUCT"`
-	Name	string	`json:"NAME"`
-	Date	string	`json:"DATE"`
-	Build	string	`json:"BUILD"`
-	Version	string	`json:"VERSION"`
-	Cpu	string	`json:"CPU"`
+	Build   string `json:"BUILD"`
+	Version string `json:"VERSION"`
+	Cpu     string `json:"CPU"`
+	Product string `json:"PRODUCT"`
+	Name    string `json:"NAME"`
+	Date    string `json:"DATE"`
 }
 
-var ShowTechBuffers_Template = `Value PRODUCT (.+)
+var ShowTechBuffers_Template string = `Value PRODUCT (.+)
 Value NAME (.+)
 Value DATE (.+)
 Value BUILD (.+)

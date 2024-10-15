@@ -1,17 +1,17 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowPimIpv4Interface struct {
-	Vrf	string	`json:"VRF"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	State	string	`json:"STATE"`
-	Neighbors	string	`json:"NEIGHBORS"`
-	Hello_interval	string	`json:"HELLO_INTERVAL"`
-	Dr_priority	string	`json:"DR_PRIORITY"`
-	Dr	string	`json:"DR"`
+	Neighbors      string `json:"NEIGHBORS"`
+	Hello_interval string `json:"HELLO_INTERVAL"`
+	Dr_priority    string `json:"DR_PRIORITY"`
+	Dr             string `json:"DR"`
+	Vrf            string `json:"VRF"`
+	Ip_address     string `json:"IP_ADDRESS"`
+	Interface      string `json:"INTERFACE"`
+	State          string `json:"STATE"`
 }
 
-var ShowPimIpv4Interface_Template = `Value Filldown VRF (\S+)
+var ShowPimIpv4Interface_Template string = `Value Filldown VRF (\S+)
 Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value INTERFACE ([\w\./-]+)
 Value STATE (\w+)

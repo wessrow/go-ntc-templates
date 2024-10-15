@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSwitchDetailStackPorts struct {
-	Switch	string	`json:"SWITCH"`
-	Status1	string	`json:"STATUS1"`
-	Status2	string	`json:"STATUS2"`
-	Neighbor1	string	`json:"NEIGHBOR1"`
-	Neighbor2	string	`json:"NEIGHBOR2"`
+	Switch    string `json:"SWITCH"`
+	Status1   string `json:"STATUS1"`
+	Status2   string `json:"STATUS2"`
+	Neighbor1 string `json:"NEIGHBOR1"`
+	Neighbor2 string `json:"NEIGHBOR2"`
 }
 
-var ShowSwitchDetailStackPorts_Template = `Value Key SWITCH (\d+)
+var ShowSwitchDetailStackPorts_Template string = `Value Key SWITCH (\d+)
 Value STATUS1 (\w+)
 Value STATUS2 (\w+)
 Value NEIGHBOR1 (\w+)

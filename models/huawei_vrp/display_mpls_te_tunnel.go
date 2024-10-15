@@ -1,16 +1,16 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayMplsTeTunnel struct {
-	Source	string	`json:"SOURCE"`
-	Destination	string	`json:"DESTINATION"`
-	Id	string	`json:"ID"`
-	In_label	string	`json:"IN_LABEL"`
-	Out_label	string	`json:"OUT_LABEL"`
-	Role	string	`json:"ROLE"`
-	Name	string	`json:"NAME"`
+	In_label    string `json:"IN_LABEL"`
+	Out_label   string `json:"OUT_LABEL"`
+	Role        string `json:"ROLE"`
+	Name        string `json:"NAME"`
+	Source      string `json:"SOURCE"`
+	Destination string `json:"DESTINATION"`
+	Id          string `json:"ID"`
 }
 
-var DisplayMplsTeTunnel_Template = `Value SOURCE (\d+\.\d+\.\d+\.\d+)
+var DisplayMplsTeTunnel_Template string = `Value SOURCE (\d+\.\d+\.\d+\.\d+)
 Value DESTINATION (\d+\.\d+\.\d+\.\d+)
 Value ID (\d+)
 Value IN_LABEL (\S+)

@@ -1,20 +1,20 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRebootCounters struct {
-	Device	string	`json:"DEVICE"`
-	Serial	string	`json:"SERIAL"`
-	Reboot_cause	string	`json:"REBOOT_CAUSE"`
-	Hardware_reset	string	`json:"HARDWARE_RESET"`
-	Power_fail_detection	string	`json:"POWER_FAIL_DETECTION"`
-	Total_software_reboots	string	`json:"TOTAL_SOFTWARE_REBOOTS"`
-	System_defense	string	`json:"SYSTEM_DEFENSE"`
-	Generic_software_reboot	string	`json:"GENERIC_SOFTWARE_REBOOT"`
-	Admin_requested_reboot	string	`json:"ADMIN_REQUESTED_REBOOT"`
-	Admin_delayed_reboot	string	`json:"ADMIN_DELAYED_REBOOT"`
-	Spurious_power_fails	string	`json:"SPURIOUS_POWER_FAILS"`
+	Device                  string `json:"DEVICE"`
+	Power_fail_detection    string `json:"POWER_FAIL_DETECTION"`
+	System_defense          string `json:"SYSTEM_DEFENSE"`
+	Spurious_power_fails    string `json:"SPURIOUS_POWER_FAILS"`
+	Serial                  string `json:"SERIAL"`
+	Reboot_cause            string `json:"REBOOT_CAUSE"`
+	Hardware_reset          string `json:"HARDWARE_RESET"`
+	Total_software_reboots  string `json:"TOTAL_SOFTWARE_REBOOTS"`
+	Generic_software_reboot string `json:"GENERIC_SOFTWARE_REBOOT"`
+	Admin_requested_reboot  string `json:"ADMIN_REQUESTED_REBOOT"`
+	Admin_delayed_reboot    string `json:"ADMIN_DELAYED_REBOOT"`
 }
 
-var ShowRebootCounters_Template = `Value Required DEVICE (\S+)
+var ShowRebootCounters_Template string = `Value Required DEVICE (\S+)
 Value SERIAL (\S+)
 Value REBOOT_CAUSE (.*)
 Value HARDWARE_RESET (\d+)

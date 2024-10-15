@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowModuleStatus struct {
-	Module	string	`json:"MODULE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Mod_hw	string	`json:"MOD_HW"`
-	Mod_fw	string	`json:"MOD_FW"`
-	Mod_sw	string	`json:"MOD_SW"`
-	Status	string	`json:"STATUS"`
+	Module      string `json:"MODULE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Mod_hw      string `json:"MOD_HW"`
+	Mod_fw      string `json:"MOD_FW"`
+	Mod_sw      string `json:"MOD_SW"`
+	Status      string `json:"STATUS"`
 }
 
-var ShowModuleStatus_Template = `Value Key MODULE (\d+)
+var ShowModuleStatus_Template string = `Value Key MODULE (\d+)
 Value MAC_ADDRESS (\S{4}\.\S{4}\.\S{4}(\sto\s\S{4}\.\S{4}\.\S{4})?)
 Value MOD_HW (\S+)
 Value MOD_FW (\S+(\s+\[\w+\])?)

@@ -1,31 +1,31 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayIpRoutingTableVerbose struct {
-	Destination	string	`json:"DESTINATION"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Protocol	string	`json:"PROTOCOL"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Label	string	`json:"LABEL"`
-	Qos_info	string	`json:"QOS_INFO"`
-	Neighbour	string	`json:"NEIGHBOUR"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Preference	string	`json:"PREFERENCE"`
-	State	string	`json:"STATE"`
-	Cost	string	`json:"COST"`
-	Age	string	`json:"AGE"`
-	Tag	string	`json:"TAG"`
-	Priority	string	`json:"PRIORITY"`
-	Indirect_id	string	`json:"INDIRECT_ID"`
-	Relay_next_hop	string	`json:"RELAY_NEXT_HOP"`
-	Interface	string	`json:"INTERFACE"`
-	Tunnel_id	string	`json:"TUNNEL_ID"`
-	Flags	string	`json:"FLAGS"`
-	Entry_id	string	`json:"ENTRY_ID"`
-	Entry_flags	string	`json:"ENTRY_FLAGS"`
-	Reference_cnt	string	`json:"REFERENCE_CNT"`
+	Qos_info       string `json:"QOS_INFO"`
+	Neighbour      string `json:"NEIGHBOUR"`
+	Age            string `json:"AGE"`
+	Protocol       string `json:"PROTOCOL"`
+	Tag            string `json:"TAG"`
+	Tunnel_id      string `json:"TUNNEL_ID"`
+	Entry_id       string `json:"ENTRY_ID"`
+	Entry_flags    string `json:"ENTRY_FLAGS"`
+	Reference_cnt  string `json:"REFERENCE_CNT"`
+	Process_id     string `json:"PROCESS_ID"`
+	Prefix_length  string `json:"PREFIX_LENGTH"`
+	Label          string `json:"LABEL"`
+	Preference     string `json:"PREFERENCE"`
+	Cost           string `json:"COST"`
+	Indirect_id    string `json:"INDIRECT_ID"`
+	Flags          string `json:"FLAGS"`
+	Destination    string `json:"DESTINATION"`
+	State          string `json:"STATE"`
+	Priority       string `json:"PRIORITY"`
+	Relay_next_hop string `json:"RELAY_NEXT_HOP"`
+	Interface      string `json:"INTERFACE"`
+	Next_hop       string `json:"NEXT_HOP"`
 }
 
-var DisplayIpRoutingTableVerbose_Template = `Value DESTINATION (\S+)
+var DisplayIpRoutingTableVerbose_Template string = `Value DESTINATION (\S+)
 Value PREFIX_LENGTH (\d+)
 Value PROTOCOL (Direct|Static|EBGP|IBGP||ISIS|OSPF|RIP|UNR|O_ASE)
 Value PROCESS_ID (\d+)

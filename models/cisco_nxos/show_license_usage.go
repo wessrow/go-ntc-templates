@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowLicenseUsage struct {
-	Feature	string	`json:"FEATURE"`
-	Installed	string	`json:"INSTALLED"`
-	License_count	string	`json:"LICENSE_COUNT"`
-	Status	string	`json:"STATUS"`
-	Expiry_date	string	`json:"EXPIRY_DATE"`
-	Comments	string	`json:"COMMENTS"`
+	Expiry_date   string `json:"EXPIRY_DATE"`
+	Comments      string `json:"COMMENTS"`
+	Feature       string `json:"FEATURE"`
+	Installed     string `json:"INSTALLED"`
+	License_count string `json:"LICENSE_COUNT"`
+	Status        string `json:"STATUS"`
 }
 
-var ShowLicenseUsage_Template = `Value FEATURE (\S+)
+var ShowLicenseUsage_Template string = `Value FEATURE (\S+)
 Value INSTALLED (Yes|No)
 Value LICENSE_COUNT (\d+|-)
 Value STATUS (Unused|In\s+use)

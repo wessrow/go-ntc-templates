@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type Dir struct {
-	Size	string	`json:"SIZE"`
-	Date_time	string	`json:"DATE_TIME"`
-	Item_name	string	`json:"ITEM_NAME"`
-	Total_size	string	`json:"TOTAL_SIZE"`
-	Total_free	string	`json:"TOTAL_FREE"`
-	Total_used	string	`json:"TOTAL_USED"`
-	File_system	string	`json:"FILE_SYSTEM"`
+	Total_size  string `json:"TOTAL_SIZE"`
+	Total_free  string `json:"TOTAL_FREE"`
+	Total_used  string `json:"TOTAL_USED"`
+	File_system string `json:"FILE_SYSTEM"`
+	Size        string `json:"SIZE"`
+	Date_time   string `json:"DATE_TIME"`
+	Item_name   string `json:"ITEM_NAME"`
 }
 
-var Dir_Template = `Value SIZE (\d+)
+var Dir_Template string = `Value SIZE (\d+)
 Value DATE_TIME (\w+\s+\d+\s+\d+\:\d+\:\d+\s+\d+)
 Value ITEM_NAME (\S+)
 Value Fillup TOTAL_SIZE (\d+)

@@ -1,16 +1,16 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowAccessListBrief struct {
-	Acl_name	string	`json:"ACL_NAME"`
-	Acl_total_elements	string	`json:"ACL_TOTAL_ELEMENTS"`
-	Acl_name_hash	string	`json:"ACL_NAME_HASH"`
-	Line_hash	string	`json:"LINE_HASH"`
-	Group_hash	string	`json:"GROUP_HASH"`
-	Counter	string	`json:"COUNTER"`
-	Last_hit	string	`json:"LAST_HIT"`
+	Acl_name_hash      string `json:"ACL_NAME_HASH"`
+	Line_hash          string `json:"LINE_HASH"`
+	Group_hash         string `json:"GROUP_HASH"`
+	Counter            string `json:"COUNTER"`
+	Last_hit           string `json:"LAST_HIT"`
+	Acl_name           string `json:"ACL_NAME"`
+	Acl_total_elements string `json:"ACL_TOTAL_ELEMENTS"`
 }
 
-var ShowAccessListBrief_Template = `Value Filldown ACL_NAME (\S+)
+var ShowAccessListBrief_Template string = `Value Filldown ACL_NAME (\S+)
 Value Filldown ACL_TOTAL_ELEMENTS (\d+)
 Value Filldown ACL_NAME_HASH (0x\w+)
 Value Required LINE_HASH (\w{8})

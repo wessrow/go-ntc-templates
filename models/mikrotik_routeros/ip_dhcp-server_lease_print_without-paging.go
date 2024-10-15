@@ -1,18 +1,18 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpDhcpServerLeasePrintWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Hostname	string	`json:"HOSTNAME"`
-	Server	string	`json:"SERVER"`
-	Rate_limit	string	`json:"RATE_LIMIT"`
-	Status	string	`json:"STATUS"`
-	Last_seen	string	`json:"LAST_SEEN"`
+	Index       string `json:"INDEX"`
+	Flags       string `json:"FLAGS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Hostname    string `json:"HOSTNAME"`
+	Rate_limit  string `json:"RATE_LIMIT"`
+	Server      string `json:"SERVER"`
+	Status      string `json:"STATUS"`
+	Last_seen   string `json:"LAST_SEEN"`
 }
 
-var IpDhcpServerLeasePrintWithoutPaging_Template = `Value Key INDEX (\d+)
+var IpDhcpServerLeasePrintWithoutPaging_Template string = `Value Key INDEX (\d+)
 Value FLAGS ([XRDB]+)
 Value IP_ADDRESS ([\w.:]+)
 Value MAC_ADDRESS (([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2}))

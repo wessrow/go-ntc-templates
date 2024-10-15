@@ -1,18 +1,18 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowLldpNeighborsInfoDetail struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Capabilities_supported	string	`json:"CAPABILITIES_SUPPORTED"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Neighbor_port_id	string	`json:"NEIGHBOR_PORT_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Local_interface        string `json:"LOCAL_INTERFACE"`
+	Chassis_id             string `json:"CHASSIS_ID"`
+	Neighbor_port_id       string `json:"NEIGHBOR_PORT_ID"`
+	Neighbor_interface     string `json:"NEIGHBOR_INTERFACE"`
+	Mgmt_address           string `json:"MGMT_ADDRESS"`
+	Neighbor_name          string `json:"NEIGHBOR_NAME"`
+	Neighbor_description   string `json:"NEIGHBOR_DESCRIPTION"`
+	Capabilities_supported string `json:"CAPABILITIES_SUPPORTED"`
+	Capabilities           string `json:"CAPABILITIES"`
 }
 
-var ShowLldpNeighborsInfoDetail_Template = `Value Required LOCAL_INTERFACE (\S+)
+var ShowLldpNeighborsInfoDetail_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value NEIGHBOR_NAME (\S+)
 Value NEIGHBOR_DESCRIPTION (.+)

@@ -1,25 +1,25 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowBgpVrfAllIpv4UnicastDetail struct {
-	Active	string	`json:"ACTIVE"`
-	As_path	string	`json:"AS_PATH"`
-	Community	string	`json:"COMMUNITY"`
-	Filtered	string	`json:"FILTERED"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Metric	string	`json:"METRIC"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Origin	string	`json:"ORIGIN"`
-	Path_type	string	`json:"PATH_TYPE"`
-	Prefix	string	`json:"PREFIX"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Valid	string	`json:"VALID"`
-	Vrf	string	`json:"VRF"`
-	Weight	string	`json:"WEIGHT"`
+	Neighbor      string `json:"NEIGHBOR"`
+	Vrf           string `json:"VRF"`
+	As_path       string `json:"AS_PATH"`
+	Local_pref    string `json:"LOCAL_PREF"`
+	Origin        string `json:"ORIGIN"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Valid         string `json:"VALID"`
+	Weight        string `json:"WEIGHT"`
+	Community     string `json:"COMMUNITY"`
+	Neighbor_id   string `json:"NEIGHBOR_ID"`
+	Prefix        string `json:"PREFIX"`
+	Filtered      string `json:"FILTERED"`
+	Path_type     string `json:"PATH_TYPE"`
+	Next_hop      string `json:"NEXT_HOP"`
+	Active        string `json:"ACTIVE"`
+	Metric        string `json:"METRIC"`
 }
 
-var ShowBgpVrfAllIpv4UnicastDetail_Template = `Value ACTIVE (best)
+var ShowBgpVrfAllIpv4UnicastDetail_Template string = `Value ACTIVE (best)
 Value Required AS_PATH ((?:\d+(\s.*?)*(\s.?)*|(?:\d+\.\d+(\s.*?)*))|(?:Local.*)|(?:NONE))
 Value COMMUNITY ((?:(?:(?:no-export|no-advertise|local-as|internet)|\d+\s?:\s?\d+)\s?)*)
 Value FILTERED (received\s+only)

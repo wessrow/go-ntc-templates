@@ -1,12 +1,12 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowPortsDescription struct {
-	Interface	string	`json:"INTERFACE"`
-	Display_string	string	`json:"DISPLAY_STRING"`
-	Description	string	`json:"DESCRIPTION"`
+	Interface      string `json:"INTERFACE"`
+	Display_string string `json:"DISPLAY_STRING"`
+	Description    string `json:"DESCRIPTION"`
 }
 
-var ShowPortsDescription_Template = `Value INTERFACE (\d+)
+var ShowPortsDescription_Template string = `Value INTERFACE (\d+)
 Value DISPLAY_STRING (\S+)
 Value DESCRIPTION (.*)
 

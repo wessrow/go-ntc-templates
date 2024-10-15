@@ -1,27 +1,27 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpBgpDetail struct {
-	Vrf	string	`json:"VRF"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	Origin	string	`json:"ORIGIN"`
-	Prefix	string	`json:"PREFIX"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	As_path	string	`json:"AS_PATH"`
-	Valid	string	`json:"VALID"`
-	Path_type	string	`json:"PATH_TYPE"`
-	Active	string	`json:"ACTIVE"`
-	Community	string	`json:"COMMUNITY"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Metric	string	`json:"METRIC"`
-	Backup	string	`json:"BACKUP"`
+	Local_pref    string `json:"LOCAL_PREF"`
+	Path_type     string `json:"PATH_TYPE"`
+	Next_hop      string `json:"NEXT_HOP"`
+	Prefix        string `json:"PREFIX"`
+	Local_as      string `json:"LOCAL_AS"`
+	Backup        string `json:"BACKUP"`
+	Weight        string `json:"WEIGHT"`
+	As_path       string `json:"AS_PATH"`
+	Valid         string `json:"VALID"`
+	Active        string `json:"ACTIVE"`
+	Community     string `json:"COMMUNITY"`
+	Neighbor      string `json:"NEIGHBOR"`
+	Neighbor_id   string `json:"NEIGHBOR_ID"`
+	Vrf           string `json:"VRF"`
+	Origin        string `json:"ORIGIN"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Router_id     string `json:"ROUTER_ID"`
+	Metric        string `json:"METRIC"`
 }
 
-var ShowIpBgpDetail_Template = `Value Filldown VRF (\S+)
+var ShowIpBgpDetail_Template string = `Value Filldown VRF (\S+)
 Value LOCAL_PREF (\d+)
 Value WEIGHT (\S+)
 Value ORIGIN (.+)

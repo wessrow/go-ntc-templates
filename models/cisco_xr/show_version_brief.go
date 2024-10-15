@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowVersionBrief struct {
-	Version	string	`json:"VERSION"`
-	Hostname	string	`json:"HOSTNAME"`
-	Uptime	string	`json:"UPTIME"`
-	Boot_image	string	`json:"BOOT_IMAGE"`
-	Family	string	`json:"FAMILY"`
-	Model	string	`json:"MODEL"`
+	Boot_image string `json:"BOOT_IMAGE"`
+	Family     string `json:"FAMILY"`
+	Model      string `json:"MODEL"`
+	Version    string `json:"VERSION"`
+	Hostname   string `json:"HOSTNAME"`
+	Uptime     string `json:"UPTIME"`
 }
 
-var ShowVersionBrief_Template = `Value VERSION (\S[^\[]+)
+var ShowVersionBrief_Template string = `Value VERSION (\S[^\[]+)
 Value HOSTNAME (\S+)
 Value UPTIME (.+?)
 Value BOOT_IMAGE (\S+)

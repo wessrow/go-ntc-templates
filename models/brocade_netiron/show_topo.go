@@ -1,18 +1,18 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowTopo struct {
-	Topogroup	string	`json:"topogroup"`
-	Topohwindex	string	`json:"topohwindex"`
-	Mastervlan	string	`json:"mastervlan"`
-	L2proto	string	`json:"l2proto"`
-	Vplsvlanpresent	string	`json:"vplsvlanpresent"`
-	Membervlans	string	`json:"membervlans"`
-	Membergroup	string	`json:"membergroup"`
-	Controlports	string	`json:"controlports"`
-	Freeports	string	`json:"freeports"`
+	Topogroup       string `json:"topogroup"`
+	Topohwindex     string `json:"topohwindex"`
+	Mastervlan      string `json:"mastervlan"`
+	L2proto         string `json:"l2proto"`
+	Vplsvlanpresent string `json:"vplsvlanpresent"`
+	Membergroup     string `json:"membergroup"`
+	Freeports       string `json:"freeports"`
+	Membervlans     string `json:"membervlans"`
+	Controlports    string `json:"controlports"`
 }
 
-var ShowTopo_Template = `Value topogroup (\d+)
+var ShowTopo_Template string = `Value topogroup (\d+)
 Value topohwindex (\d+)
 Value mastervlan (\d+)
 Value l2proto (MRP|STP|RSTP|VSRP|ERP)

@@ -1,13 +1,13 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInterfaceDescription struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Speed	string	`json:"SPEED"`
-	Description	string	`json:"DESCRIPTION"`
+	Port        string `json:"PORT"`
+	Type        string `json:"TYPE"`
+	Speed       string `json:"SPEED"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var ShowInterfaceDescription_Template = `Value PORT (\S+)
+var ShowInterfaceDescription_Template string = `Value PORT (\S+)
 Value TYPE (\S+)
 Value SPEED (\d+G?)
 Value DESCRIPTION (\S.*?)

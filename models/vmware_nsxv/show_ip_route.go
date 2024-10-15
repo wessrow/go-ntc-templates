@@ -1,16 +1,16 @@
-package vmware_nsxv 
+package vmware_nsxv
 
 type ShowIpRoute struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Type	string	`json:"TYPE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop	string	`json:"NEXTHOP"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Distance      string `json:"DISTANCE"`
+	Metric        string `json:"METRIC"`
+	Nexthop       string `json:"NEXTHOP"`
+	Protocol      string `json:"PROTOCOL"`
+	Type          string `json:"TYPE"`
 }
 
-var ShowIpRoute_Template = `Value PROTOCOL ([OiBCS])
+var ShowIpRoute_Template string = `Value PROTOCOL ([OiBCS])
 Value TYPE (\w{0,2})
 Value IP_ADDRESS (\d+(\.\d+){3})
 Value PREFIX_LENGTH (\d{1,2})

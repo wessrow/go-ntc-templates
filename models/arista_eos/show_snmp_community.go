@@ -1,13 +1,13 @@
-package arista_eos 
+package arista_eos
 
 type ShowSnmpCommunity struct {
-	Name	string	`json:"NAME"`
-	Access	string	`json:"ACCESS"`
-	View	string	`json:"VIEW"`
-	Acl	string	`json:"ACL"`
+	Acl    string `json:"ACL"`
+	Name   string `json:"NAME"`
+	Access string `json:"ACCESS"`
+	View   string `json:"VIEW"`
 }
 
-var ShowSnmpCommunity_Template = `Value NAME (\S+)
+var ShowSnmpCommunity_Template string = `Value NAME (\S+)
 Value ACCESS (\S+)
 Value VIEW (\S+)
 Value ACL (\S+)

@@ -1,16 +1,16 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowCounterGlobal struct {
-	Name	string	`json:"NAME"`
-	Value	string	`json:"VALUE"`
-	Rate	string	`json:"RATE"`
-	Severity	string	`json:"SEVERITY"`
-	Category	string	`json:"CATEGORY"`
-	Aspect	string	`json:"ASPECT"`
-	Description	string	`json:"DESCRIPTION"`
+	Name        string `json:"NAME"`
+	Value       string `json:"VALUE"`
+	Rate        string `json:"RATE"`
+	Severity    string `json:"SEVERITY"`
+	Category    string `json:"CATEGORY"`
+	Aspect      string `json:"ASPECT"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var ShowCounterGlobal_Template = `Value NAME (\S+)
+var ShowCounterGlobal_Template string = `Value NAME (\S+)
 Value VALUE (\d+)
 Value RATE (\d+)
 Value SEVERITY (\S+)

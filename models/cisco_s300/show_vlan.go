@@ -1,15 +1,15 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Interfaces	string	`json:"INTERFACES"`
-	Type	string	`json:"TYPE"`
-	Authorization	string	`json:"AUTHORIZATION"`
-	Created_by	string	`json:"CREATED_BY"`
+	Interfaces    string `json:"INTERFACES"`
+	Type          string `json:"TYPE"`
+	Authorization string `json:"AUTHORIZATION"`
+	Created_by    string `json:"CREATED_BY"`
+	Vlan_id       string `json:"VLAN_ID"`
+	Vlan_name     string `json:"VLAN_NAME"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 Value VLAN_NAME (.*?)
 Value INTERFACES ((?:fa|gi|te|Po)\d+(?:-\d+)?(?:,(?:fa|gi|te|Po)\d+(?:-\d+)?)*,?)
 Value TYPE (\S+)

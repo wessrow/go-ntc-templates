@@ -1,18 +1,18 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowServiceSdp struct {
-	Sdp_id	string	`json:"SDP_ID"`
-	Adm_mtu	string	`json:"ADM_MTU"`
-	Opr_mtu	string	`json:"OPR_MTU"`
-	Far_end	string	`json:"FAR_END"`
-	Adm	string	`json:"ADM"`
-	Opr	string	`json:"OPR"`
-	Del	string	`json:"DEL"`
-	Lsp	string	`json:"LSP"`
-	Sig	string	`json:"SIG"`
+	Adm_mtu string `json:"ADM_MTU"`
+	Opr_mtu string `json:"OPR_MTU"`
+	Far_end string `json:"FAR_END"`
+	Del     string `json:"DEL"`
+	Sdp_id  string `json:"SDP_ID"`
+	Adm     string `json:"ADM"`
+	Opr     string `json:"OPR"`
+	Lsp     string `json:"LSP"`
+	Sig     string `json:"SIG"`
 }
 
-var ShowServiceSdp_Template = `Value Required SDP_ID (\d+)
+var ShowServiceSdp_Template string = `Value Required SDP_ID (\d+)
 Value Required ADM_MTU (\d+)
 Value Required OPR_MTU (\d+)
 Value FAR_END (\d+.\d+.\d+.\d+)

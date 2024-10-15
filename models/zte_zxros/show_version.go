@@ -1,12 +1,12 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowVersion struct {
-	Hardware	string	`json:"HARDWARE"`
-	Version	string	`json:"VERSION"`
-	Uptime	string	`json:"UPTIME"`
+	Hardware string `json:"HARDWARE"`
+	Version  string `json:"VERSION"`
+	Uptime   string `json:"UPTIME"`
 }
 
-var ShowVersion_Template = `Value HARDWARE (.+)
+var ShowVersion_Template string = `Value HARDWARE (.+)
 Value VERSION (.+)
 Value UPTIME (.+?)
 

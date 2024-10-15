@@ -1,22 +1,22 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayAclAll struct {
-	Acl_name	string	`json:"ACL_NAME"`
-	Acl_number	string	`json:"ACL_NUMBER"`
-	Sn	string	`json:"SN"`
-	Action	string	`json:"ACTION"`
-	Protocol	string	`json:"PROTOCOL"`
-	Source	string	`json:"SOURCE"`
-	Source_port_modifier	string	`json:"SOURCE_PORT_MODIFIER"`
-	Source_port_range	string	`json:"SOURCE_PORT_RANGE"`
-	Destination	string	`json:"DESTINATION"`
-	Destination_port_modifier	string	`json:"DESTINATION_PORT_MODIFIER"`
-	Destination_port_range	string	`json:"DESTINATION_PORT_RANGE"`
-	Matches	string	`json:"MATCHES"`
-	Description	string	`json:"DESCRIPTION"`
+	Protocol                  string `json:"PROTOCOL"`
+	Source                    string `json:"SOURCE"`
+	Source_port_modifier      string `json:"SOURCE_PORT_MODIFIER"`
+	Source_port_range         string `json:"SOURCE_PORT_RANGE"`
+	Acl_name                  string `json:"ACL_NAME"`
+	Acl_number                string `json:"ACL_NUMBER"`
+	Sn                        string `json:"SN"`
+	Action                    string `json:"ACTION"`
+	Matches                   string `json:"MATCHES"`
+	Description               string `json:"DESCRIPTION"`
+	Destination               string `json:"DESTINATION"`
+	Destination_port_modifier string `json:"DESTINATION_PORT_MODIFIER"`
+	Destination_port_range    string `json:"DESTINATION_PORT_RANGE"`
 }
 
-var DisplayAclAll_Template = `Value Filldown ACL_NAME (.*?)
+var DisplayAclAll_Template string = `Value Filldown ACL_NAME (.*?)
 Value Filldown,Required ACL_NUMBER (\d+)
 Value SN (\d+)
 Value ACTION (deny|permit)

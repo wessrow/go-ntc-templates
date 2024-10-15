@@ -1,19 +1,19 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowMplsLdpNeighborBrief struct {
-	Peer	string	`json:"PEER"`
-	Gr	string	`json:"GR"`
-	Nsr	string	`json:"NSR"`
-	Uptime	string	`json:"UPTIME"`
-	Discovery_ipv4	string	`json:"DISCOVERY_IPV4"`
-	Discovery_ipv6	string	`json:"DISCOVERY_IPV6"`
-	Addresses_ipv4	string	`json:"ADDRESSES_IPV4"`
-	Addresses_ipv6	string	`json:"ADDRESSES_IPV6"`
-	Labels_ipv4	string	`json:"LABELS_IPV4"`
-	Labels_ipv6	string	`json:"LABELS_IPV6"`
+	Gr             string `json:"GR"`
+	Labels_ipv4    string `json:"LABELS_IPV4"`
+	Addresses_ipv6 string `json:"ADDRESSES_IPV6"`
+	Labels_ipv6    string `json:"LABELS_IPV6"`
+	Peer           string `json:"PEER"`
+	Nsr            string `json:"NSR"`
+	Uptime         string `json:"UPTIME"`
+	Discovery_ipv4 string `json:"DISCOVERY_IPV4"`
+	Discovery_ipv6 string `json:"DISCOVERY_IPV6"`
+	Addresses_ipv4 string `json:"ADDRESSES_IPV4"`
 }
 
-var ShowMplsLdpNeighborBrief_Template = `Value PEER (\S+)
+var ShowMplsLdpNeighborBrief_Template string = `Value PEER (\S+)
 Value GR (\w)
 Value NSR (\S+)
 Value UPTIME (\S+)

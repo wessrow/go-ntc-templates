@@ -1,23 +1,23 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowStatsPortSummary struct {
-	Port	string	`json:"PORT"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Packets_in	string	`json:"PACKETS_IN"`
-	Packets_out	string	`json:"PACKETS_OUT"`
-	Broadcast_in	string	`json:"BROADCAST_IN"`
-	Errors_in	string	`json:"ERRORS_IN"`
-	Errors_out	string	`json:"ERRORS_OUT"`
-	Collisions	string	`json:"COLLISIONS"`
-	Total_packets_in	string	`json:"TOTAL_PACKETS_IN"`
-	Total_packets_out	string	`json:"TOTAL_PACKETS_OUT"`
-	Total_broadcast_in	string	`json:"TOTAL_BROADCAST_IN"`
-	Total_errors_in	string	`json:"TOTAL_ERRORS_IN"`
-	Total_errors_out	string	`json:"TOTAL_ERRORS_OUT"`
-	Total_collisions	string	`json:"TOTAL_COLLISIONS"`
+	Port               string `json:"PORT"`
+	Total_packets_out  string `json:"TOTAL_PACKETS_OUT"`
+	Total_errors_out   string `json:"TOTAL_ERRORS_OUT"`
+	Packets_in         string `json:"PACKETS_IN"`
+	Total_broadcast_in string `json:"TOTAL_BROADCAST_IN"`
+	Total_errors_in    string `json:"TOTAL_ERRORS_IN"`
+	Errors_in          string `json:"ERRORS_IN"`
+	Collisions         string `json:"COLLISIONS"`
+	Errors_out         string `json:"ERRORS_OUT"`
+	Total_packets_in   string `json:"TOTAL_PACKETS_IN"`
+	Total_collisions   string `json:"TOTAL_COLLISIONS"`
+	Link_status        string `json:"LINK_STATUS"`
+	Packets_out        string `json:"PACKETS_OUT"`
+	Broadcast_in       string `json:"BROADCAST_IN"`
 }
 
-var SshShowStatsPortSummary_Template = `Value Required PORT (\d)
+var SshShowStatsPortSummary_Template string = `Value Required PORT (\d)
 Value LINK_STATUS (\S+)
 Value PACKETS_IN (\d+)
 Value PACKETS_OUT (\d+)

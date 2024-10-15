@@ -1,15 +1,15 @@
-package yamaha 
+package yamaha
 
 type ShowIpRoute struct {
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
-	Protocol	string	`json:"PROTOCOL"`
-	Additional_info	string	`json:"ADDITIONAL_INFO"`
+	Nexthop_if      string `json:"NEXTHOP_IF"`
+	Protocol        string `json:"PROTOCOL"`
+	Additional_info string `json:"ADDITIONAL_INFO"`
+	Network         string `json:"NETWORK"`
+	Prefix_length   string `json:"PREFIX_LENGTH"`
+	Nexthop_ip      string `json:"NEXTHOP_IP"`
 }
 
-var ShowIpRoute_Template = `# You need to set "console character ascci".
+var ShowIpRoute_Template string = `# You need to set "console character ascci".
 Value NETWORK (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|default)
 Value PREFIX_LENGTH (\d{1,2})
 Value NEXTHOP_IP (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|-)

@@ -1,12 +1,12 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntInfoDescription struct {
-	Fsp	string	`json:"FSP"`
-	Ont_id	string	`json:"ONT_ID"`
-	Description	string	`json:"DESCRIPTION"`
+	Ont_id      string `json:"ONT_ID"`
+	Description string `json:"DESCRIPTION"`
+	Fsp         string `json:"FSP"`
 }
 
-var DisplayOntInfoDescription_Template = `Value Required FSP (\w+\/\s\w+\/\w+)
+var DisplayOntInfoDescription_Template string = `Value Required FSP (\w+\/\s\w+\/\w+)
 Value Key ONT_ID (\d+)
 Value DESCRIPTION (.+?)
 

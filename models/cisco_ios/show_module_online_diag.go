@@ -1,11 +1,11 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowModuleOnlineDiag struct {
-	Module	string	`json:"MODULE"`
-	Online_diag	string	`json:"ONLINE_DIAG"`
+	Module      string `json:"MODULE"`
+	Online_diag string `json:"ONLINE_DIAG"`
 }
 
-var ShowModuleOnlineDiag_Template = `Value Key MODULE (\d+)
+var ShowModuleOnlineDiag_Template string = `Value Key MODULE (\d+)
 Value ONLINE_DIAG (\w+)
 
 Start

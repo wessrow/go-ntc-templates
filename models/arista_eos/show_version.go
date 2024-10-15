@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowVersion struct {
-	Model	string	`json:"MODEL"`
-	Hw_version	string	`json:"HW_VERSION"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Sys_mac	string	`json:"SYS_MAC"`
-	Image	string	`json:"IMAGE"`
-	Total_memory	string	`json:"TOTAL_MEMORY"`
-	Free_memory	string	`json:"FREE_MEMORY"`
+	Image         string `json:"IMAGE"`
+	Total_memory  string `json:"TOTAL_MEMORY"`
+	Free_memory   string `json:"FREE_MEMORY"`
+	Model         string `json:"MODEL"`
+	Hw_version    string `json:"HW_VERSION"`
+	Serial_number string `json:"SERIAL_NUMBER"`
+	Sys_mac       string `json:"SYS_MAC"`
 }
 
-var ShowVersion_Template = `Value MODEL (\S+)
+var ShowVersion_Template string = `Value MODEL (\S+)
 Value HW_VERSION (\S+)
 Value SERIAL_NUMBER (\S+)
 Value SYS_MAC (\S+)

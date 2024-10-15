@@ -1,19 +1,19 @@
-package arista_eos 
+package arista_eos
 
 type ShowEnvironmentPower struct {
-	Power_supply_location	string	`json:"POWER_SUPPLY_LOCATION"`
-	Power_supply_pid	string	`json:"POWER_SUPPLY_PID"`
-	Power_supply_watts	string	`json:"POWER_SUPPLY_WATTS"`
-	Power_supply_input	string	`json:"POWER_SUPPLY_INPUT"`
-	Power_supply_output	string	`json:"POWER_SUPPLY_OUTPUT"`
-	Power_supply_watts_using	string	`json:"POWER_SUPPLY_WATTS_USING"`
-	Power_supply_status	string	`json:"POWER_SUPPLY_STATUS"`
-	Power_supply_uptime	string	`json:"POWER_SUPPLY_UPTIME"`
-	System_total_power_watts	string	`json:"SYSTEM_TOTAL_POWER_WATTS"`
-	System_total_power_used_watts	string	`json:"SYSTEM_TOTAL_POWER_USED_WATTS"`
+	Power_supply_location         string `json:"POWER_SUPPLY_LOCATION"`
+	Power_supply_watts            string `json:"POWER_SUPPLY_WATTS"`
+	Power_supply_input            string `json:"POWER_SUPPLY_INPUT"`
+	Power_supply_output           string `json:"POWER_SUPPLY_OUTPUT"`
+	Power_supply_uptime           string `json:"POWER_SUPPLY_UPTIME"`
+	System_total_power_watts      string `json:"SYSTEM_TOTAL_POWER_WATTS"`
+	System_total_power_used_watts string `json:"SYSTEM_TOTAL_POWER_USED_WATTS"`
+	Power_supply_pid              string `json:"POWER_SUPPLY_PID"`
+	Power_supply_watts_using      string `json:"POWER_SUPPLY_WATTS_USING"`
+	Power_supply_status           string `json:"POWER_SUPPLY_STATUS"`
 }
 
-var ShowEnvironmentPower_Template = `# Tested against EOS version 4.14.15M and newer
+var ShowEnvironmentPower_Template string = `# Tested against EOS version 4.14.15M and newer
 # When run against vEOS returns a single list item with status
 # power_supply_status: "no power supplies"
 Value POWER_SUPPLY_LOCATION (\d+)

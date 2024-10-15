@@ -1,17 +1,17 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Attribute	string	`json:"ATTRIBUTE"`
-	Mode	string	`json:"MODE"`
-	Bw	string	`json:"BW"`
-	Admin	string	`json:"ADMIN"`
-	Physical	string	`json:"PHYSICAL"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Bw          string `json:"BW"`
+	Admin       string `json:"ADMIN"`
+	Physical    string `json:"PHYSICAL"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
+	Interface   string `json:"INTERFACE"`
+	Attribute   string `json:"ATTRIBUTE"`
+	Mode        string `json:"MODE"`
 }
 
-var ShowInterfaceBrief_Template = `Value INTERFACE (\S+)
+var ShowInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value ATTRIBUTE (\S+)
 Value MODE (\S+)
 Value BW (\S+)

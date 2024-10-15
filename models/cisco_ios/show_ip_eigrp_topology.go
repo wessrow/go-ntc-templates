@@ -1,22 +1,22 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpEigrpTopology struct {
-	Process_id	string	`json:"PROCESS_ID"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Code	string	`json:"CODE"`
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Successors	string	`json:"SUCCESSORS"`
-	Fd	string	`json:"FD"`
-	Tag	string	`json:"TAG"`
-	Adv_router	[]string	`json:"ADV_ROUTER"`
-	Adv_fd	[]string	`json:"ADV_FD"`
-	Adv_rd	[]string	`json:"ADV_RD"`
-	Out_interface	[]string	`json:"OUT_INTERFACE"`
-	Source	string	`json:"SOURCE"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Successors    string   `json:"SUCCESSORS"`
+	Adv_fd        []string `json:"ADV_FD"`
+	Adv_rd        []string `json:"ADV_RD"`
+	Process_id    string   `json:"PROCESS_ID"`
+	Network       string   `json:"NETWORK"`
+	Fd            string   `json:"FD"`
+	Tag           string   `json:"TAG"`
+	Adv_router    []string `json:"ADV_ROUTER"`
+	Out_interface []string `json:"OUT_INTERFACE"`
+	Source        string   `json:"SOURCE"`
+	Router_id     string   `json:"ROUTER_ID"`
+	Code          string   `json:"CODE"`
 }
 
-var ShowIpEigrpTopology_Template = `Value Filldown PROCESS_ID (\d+)
+var ShowIpEigrpTopology_Template string = `Value Filldown PROCESS_ID (\d+)
 Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Required CODE (\S+)
 Value NETWORK (\d+\.\d+\.\d+\.\d+)

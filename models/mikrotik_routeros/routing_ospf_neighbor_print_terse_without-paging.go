@@ -1,23 +1,23 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type RoutingOspfNeighborPrintTerseWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Instance	string	`json:"INSTANCE"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Address	string	`json:"ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Priority	string	`json:"PRIORITY"`
-	Dr_address	string	`json:"DR_ADDRESS"`
-	Backup_dr_address	string	`json:"BACKUP_DR_ADDRESS"`
-	State	string	`json:"STATE"`
-	State_changes	string	`json:"STATE_CHANGES"`
-	Ls_retransmits	string	`json:"LS_RETRANSMITS"`
-	Ls_requests	string	`json:"LS_REQUESTS"`
-	Db_summaries	string	`json:"DB_SUMMARIES"`
-	Adjacency	string	`json:"ADJACENCY"`
+	Router_id         string `json:"ROUTER_ID"`
+	Dr_address        string `json:"DR_ADDRESS"`
+	State             string `json:"STATE"`
+	State_changes     string `json:"STATE_CHANGES"`
+	Ls_retransmits    string `json:"LS_RETRANSMITS"`
+	Adjacency         string `json:"ADJACENCY"`
+	Index             string `json:"INDEX"`
+	Address           string `json:"ADDRESS"`
+	Interface         string `json:"INTERFACE"`
+	Backup_dr_address string `json:"BACKUP_DR_ADDRESS"`
+	Db_summaries      string `json:"DB_SUMMARIES"`
+	Instance          string `json:"INSTANCE"`
+	Priority          string `json:"PRIORITY"`
+	Ls_requests       string `json:"LS_REQUESTS"`
 }
 
-var RoutingOspfNeighborPrintTerseWithoutPaging_Template = `Value INDEX (\d+)
+var RoutingOspfNeighborPrintTerseWithoutPaging_Template string = `Value INDEX (\d+)
 Value INSTANCE (\S+)
 Value ROUTER_ID (\S+)
 Value ADDRESS (\S+)

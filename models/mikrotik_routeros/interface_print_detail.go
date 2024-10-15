@@ -1,25 +1,25 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfacePrintDetail struct {
-	Id	string	`json:"ID"`
-	Dynamic	string	`json:"DYNAMIC"`
-	Status	string	`json:"STATUS"`
-	Slave	string	`json:"SLAVE"`
-	Name	string	`json:"NAME"`
-	Description	[]string	`json:"DESCRIPTION"`
-	Default_name	string	`json:"DEFAULT_NAME"`
-	Type	string	`json:"TYPE"`
-	Mtu	string	`json:"MTU"`
-	Actual_mtu	string	`json:"ACTUAL_MTU"`
-	L2mtu	string	`json:"L2MTU"`
-	Max_l2mtu	string	`json:"MAX_L2MTU"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Last_link_down_time	string	`json:"LAST_LINK_DOWN_TIME"`
-	Last_link_up_time	string	`json:"LAST_LINK_UP_TIME"`
-	Link_downs	string	`json:"LINK_DOWNS"`
+	Status              string   `json:"STATUS"`
+	Name                string   `json:"NAME"`
+	Description         []string `json:"DESCRIPTION"`
+	Max_l2mtu           string   `json:"MAX_L2MTU"`
+	Mac_address         string   `json:"MAC_ADDRESS"`
+	Slave               string   `json:"SLAVE"`
+	Mtu                 string   `json:"MTU"`
+	Actual_mtu          string   `json:"ACTUAL_MTU"`
+	L2mtu               string   `json:"L2MTU"`
+	Last_link_down_time string   `json:"LAST_LINK_DOWN_TIME"`
+	Last_link_up_time   string   `json:"LAST_LINK_UP_TIME"`
+	Link_downs          string   `json:"LINK_DOWNS"`
+	Id                  string   `json:"ID"`
+	Dynamic             string   `json:"DYNAMIC"`
+	Default_name        string   `json:"DEFAULT_NAME"`
+	Type                string   `json:"TYPE"`
 }
 
-var InterfacePrintDetail_Template = `Value Required ID (\d+)
+var InterfacePrintDetail_Template string = `Value Required ID (\d+)
 Value DYNAMIC (D)
 Value STATUS (X|R)
 Value SLAVE (S)

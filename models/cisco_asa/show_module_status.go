@@ -1,11 +1,11 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowModuleStatus struct {
-	Module	string	`json:"MODULE"`
-	Status	string	`json:"STATUS"`
+	Status string `json:"STATUS"`
+	Module string `json:"MODULE"`
 }
 
-var ShowModuleStatus_Template = `Value Key MODULE (\d+|sfr|ips|cxsc)
+var ShowModuleStatus_Template string = `Value Key MODULE (\d+|sfr|ips|cxsc)
 Value STATUS (\S.+?)
 
 Start

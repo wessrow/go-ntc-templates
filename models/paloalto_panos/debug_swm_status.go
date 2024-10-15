@@ -1,12 +1,12 @@
-package paloalto_panos 
+package paloalto_panos
 
 type DebugSwmStatus struct {
-	Part	string	`json:"PART"`
-	State	string	`json:"STATE"`
-	Version	string	`json:"VERSION"`
+	Part    string `json:"PART"`
+	State   string `json:"STATE"`
+	Version string `json:"VERSION"`
 }
 
-var DebugSwmStatus_Template = `Value PART (\S+)
+var DebugSwmStatus_Template string = `Value PART (\S+)
 Value STATE (\S+)
 Value VERSION (\S+)
 

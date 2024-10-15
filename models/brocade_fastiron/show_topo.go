@@ -1,15 +1,15 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowTopo struct {
-	Topogroup	string	`json:"topogroup"`
-	Mastervlan	string	`json:"mastervlan"`
-	L2proto	string	`json:"l2proto"`
-	Membervlans	string	`json:"membervlans"`
-	Controlports	string	`json:"controlports"`
-	Freeports	string	`json:"freeports"`
+	Topogroup    string `json:"topogroup"`
+	Mastervlan   string `json:"mastervlan"`
+	L2proto      string `json:"l2proto"`
+	Membervlans  string `json:"membervlans"`
+	Controlports string `json:"controlports"`
+	Freeports    string `json:"freeports"`
 }
 
-var ShowTopo_Template = `Value topogroup (\d+)
+var ShowTopo_Template string = `Value topogroup (\d+)
 Value mastervlan (\d+)
 Value l2proto (MRP|STP|RSTP|VSRP|ERP)
 Value membervlans ([0-9\ to]+)

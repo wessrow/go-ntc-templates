@@ -1,13 +1,13 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowBgpVrfAllIpv4UnicastSummary struct {
-	Vrf	string	`json:"VRF"`
-	Rd	string	`json:"RD"`
-	State	string	`json:"STATE"`
-	Local_as_number	string	`json:"LOCAL_AS_NUMBER"`
+	State           string `json:"STATE"`
+	Local_as_number string `json:"LOCAL_AS_NUMBER"`
+	Vrf             string `json:"VRF"`
+	Rd              string `json:"RD"`
 }
 
-var ShowBgpVrfAllIpv4UnicastSummary_Template = `Value Required VRF (\S+)
+var ShowBgpVrfAllIpv4UnicastSummary_Template string = `Value Required VRF (\S+)
 Value RD (\S+)
 Value STATE (\w+)
 Value LOCAL_AS_NUMBER (\S+)

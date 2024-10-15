@@ -1,14 +1,14 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Port	string	`json:"PORT"`
+	Type        string `json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Port        string `json:"PORT"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var AwplusShowArp_Template = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var AwplusShowArp_Template string = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required MAC_ADDRESS (\S+)
 Value TYPE (\S+)
 Value INTERFACE (\S+)

@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowInterfaceTransceiver struct {
-	Interface	string	`json:"INTERFACE"`
-	Temperature	string	`json:"TEMPERATURE"`
-	Voltage	string	`json:"VOLTAGE"`
-	Tx_pwr	string	`json:"TX_PWR"`
-	Rx_pwr	string	`json:"RX_PWR"`
+	Rx_pwr      string `json:"RX_PWR"`
+	Interface   string `json:"INTERFACE"`
+	Temperature string `json:"TEMPERATURE"`
+	Voltage     string `json:"VOLTAGE"`
+	Tx_pwr      string `json:"TX_PWR"`
 }
 
-var ShowInterfaceTransceiver_Template = `Value INTERFACE (\w+\d+\/\S+)
+var ShowInterfaceTransceiver_Template string = `Value INTERFACE (\w+\d+\/\S+)
 Value TEMPERATURE (\d+.\d+)
 Value VOLTAGE (\d+.\d+)
 Value TX_PWR (\S+)

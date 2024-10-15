@@ -1,20 +1,20 @@
-package ciena_saos 
+package ciena_saos
 
 type TrafficProfilingStandardProfileShow struct {
-	Port	string	`json:"PORT"`
-	Id	string	`json:"ID"`
-	Profile_name	string	`json:"PROFILE_NAME"`
-	Role	string	`json:"ROLE"`
-	Parent_child	string	`json:"PARENT_CHILD"`
-	Cir	string	`json:"CIR"`
-	Eir	string	`json:"EIR"`
-	Cbs	string	`json:"CBS"`
-	Ebs	string	`json:"EBS"`
-	Classifier_a	string	`json:"CLASSIFIER_A"`
-	Classifier_b	string	`json:"CLASSIFIER_B"`
+	Cir          string `json:"CIR"`
+	Eir          string `json:"EIR"`
+	Cbs          string `json:"CBS"`
+	Port         string `json:"PORT"`
+	Id           string `json:"ID"`
+	Profile_name string `json:"PROFILE_NAME"`
+	Role         string `json:"ROLE"`
+	Parent_child string `json:"PARENT_CHILD"`
+	Ebs          string `json:"EBS"`
+	Classifier_a string `json:"CLASSIFIER_A"`
+	Classifier_b string `json:"CLASSIFIER_B"`
 }
 
-var TrafficProfilingStandardProfileShow_Template = `Value PORT ([0-9A-Za-z\.]+)
+var TrafficProfilingStandardProfileShow_Template string = `Value PORT ([0-9A-Za-z\.]+)
 Value ID (\d+)
 Value PROFILE_NAME (\S+)
 Value ROLE (\S+)

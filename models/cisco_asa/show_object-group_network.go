@@ -1,17 +1,17 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowObjectGroupNetwork struct {
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Type	string	`json:"TYPE"`
-	Host	string	`json:"HOST"`
-	Net_object	string	`json:"NET_OBJECT"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Grp_object	string	`json:"GRP_OBJECT"`
+	Network     string `json:"NETWORK"`
+	Netmask     string `json:"NETMASK"`
+	Grp_object  string `json:"GRP_OBJECT"`
+	Name        string `json:"NAME"`
+	Description string `json:"DESCRIPTION"`
+	Type        string `json:"TYPE"`
+	Host        string `json:"HOST"`
+	Net_object  string `json:"NET_OBJECT"`
 }
 
-var ShowObjectGroupNetwork_Template = `Value Filldown NAME (\S+)
+var ShowObjectGroupNetwork_Template string = `Value Filldown NAME (\S+)
 Value Filldown DESCRIPTION (.+)
 Value TYPE ([newrkguphsobjct]+)
 Value HOST (\d+.\d+.\d+.\d+)

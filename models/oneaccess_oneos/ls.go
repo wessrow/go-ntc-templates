@@ -1,11 +1,11 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type Ls struct {
-	File	string	`json:"FILE"`
-	Bytes	string	`json:"BYTES"`
+	File  string `json:"FILE"`
+	Bytes string `json:"BYTES"`
 }
 
-var Ls_Template = `Value Required FILE (\S+)
+var Ls_Template string = `Value Required FILE (\S+)
 Value BYTES (\d+)
 	   
 Start

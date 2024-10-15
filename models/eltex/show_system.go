@@ -1,30 +1,30 @@
-package eltex 
+package eltex
 
 type ShowSystem struct {
-	Description	string	`json:"DESCRIPTION"`
-	Uptime	string	`json:"UPTIME"`
-	Contact	string	`json:"CONTACT"`
-	Hostname	string	`json:"HOSTNAME"`
-	Location	[]string	`json:"LOCATION"`
-	Address	string	`json:"ADDRESS"`
-	Oid	string	`json:"OID"`
-	Main_power_supply_status	string	`json:"MAIN_POWER_SUPPLY_STATUS"`
-	Redundant_power_supply_status	string	`json:"REDUNDANT_POWER_SUPPLY_STATUS"`
-	Reset_btn_status	string	`json:"RESET_BTN_STATUS"`
-	Fan_id	[]string	`json:"FAN_ID"`
-	Fans_status	[]string	`json:"FANS_STATUS"`
-	Sensor_id	[]string	`json:"SENSOR_ID"`
-	Sensor_temp	[]string	`json:"SENSOR_TEMP"`
-	Sensor_status	[]string	`json:"SENSOR_STATUS"`
-	Unit_descriptions	[]string	`json:"UNIT_DESCRIPTIONS"`
-	Unit_main_power_supply	[]string	`json:"UNIT_MAIN_POWER_SUPPLY"`
-	Unit_redundant_power_supply	[]string	`json:"UNIT_REDUNDANT_POWER_SUPPLY"`
-	Unit_fans_status	[]string	`json:"UNIT_FANS_STATUS"`
-	Unit_temp	[]string	`json:"UNIT_TEMP"`
-	Unit_temp_status	[]string	`json:"UNIT_TEMP_STATUS"`
+	Sensor_temp                   []string `json:"SENSOR_TEMP"`
+	Unit_redundant_power_supply   []string `json:"UNIT_REDUNDANT_POWER_SUPPLY"`
+	Contact                       string   `json:"CONTACT"`
+	Fan_id                        []string `json:"FAN_ID"`
+	Unit_temp_status              []string `json:"UNIT_TEMP_STATUS"`
+	Reset_btn_status              string   `json:"RESET_BTN_STATUS"`
+	Fans_status                   []string `json:"FANS_STATUS"`
+	Location                      []string `json:"LOCATION"`
+	Address                       string   `json:"ADDRESS"`
+	Oid                           string   `json:"OID"`
+	Main_power_supply_status      string   `json:"MAIN_POWER_SUPPLY_STATUS"`
+	Redundant_power_supply_status string   `json:"REDUNDANT_POWER_SUPPLY_STATUS"`
+	Sensor_status                 []string `json:"SENSOR_STATUS"`
+	Description                   string   `json:"DESCRIPTION"`
+	Hostname                      string   `json:"HOSTNAME"`
+	Unit_main_power_supply        []string `json:"UNIT_MAIN_POWER_SUPPLY"`
+	Unit_fans_status              []string `json:"UNIT_FANS_STATUS"`
+	Unit_descriptions             []string `json:"UNIT_DESCRIPTIONS"`
+	Unit_temp                     []string `json:"UNIT_TEMP"`
+	Uptime                        string   `json:"UPTIME"`
+	Sensor_id                     []string `json:"SENSOR_ID"`
 }
 
-var ShowSystem_Template = `Value DESCRIPTION (.*)
+var ShowSystem_Template string = `Value DESCRIPTION (.*)
 Value UPTIME (.*)
 Value CONTACT (.*)
 Value HOSTNAME (.*)

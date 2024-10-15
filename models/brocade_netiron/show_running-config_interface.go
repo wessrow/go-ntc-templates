@@ -1,32 +1,32 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowRunningConfigInterface struct {
-	Interface_type	string	`json:"INTERFACE_TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Portname	string	`json:"PORTNAME"`
-	Qostostrust	string	`json:"QOSTOSTRUST"`
-	Qostosmark	string	`json:"QOSTOSMARK"`
-	Ospfarea	string	`json:"OSPFAREA"`
-	Ospfpassive	string	`json:"OSPFPASSIVE"`
-	Ospfcost	string	`json:"OSPFCOST"`
-	Vrf	string	`json:"VRF"`
-	Ippimsparse	string	`json:"IPPIMSPARSE"`
-	Iprouterisis	string	`json:"IPROUTERISIS"`
-	Isismetric	string	`json:"ISISMETRIC"`
-	Ip_helper	[]string	`json:"IP_HELPER"`
-	Ipredirect	string	`json:"IPREDIRECT"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	Ip_addr_cidr	[]string	`json:"IP_ADDR_CIDR"`
-	Ipv6_addr	[]string	`json:"IPV6_ADDR"`
-	Ipv6_addr_cidr	[]string	`json:"IPV6_ADDR_CIDR"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Acl_in	string	`json:"ACL_IN"`
-	Acl_out	string	`json:"ACL_OUT"`
-	Vrid	[]string	`json:"VRID"`
-	Ip_addr_vrrpe	[]string	`json:"IP_ADDR_VRRPE"`
+	Ip_helper      []string `json:"IP_HELPER"`
+	Vrid           []string `json:"VRID"`
+	Qostosmark     string   `json:"QOSTOSMARK"`
+	Ip_addr_vrrpe  []string `json:"IP_ADDR_VRRPE"`
+	Interface_type string   `json:"INTERFACE_TYPE"`
+	Ospfpassive    string   `json:"OSPFPASSIVE"`
+	Ospfcost       string   `json:"OSPFCOST"`
+	Ippimsparse    string   `json:"IPPIMSPARSE"`
+	Isismetric     string   `json:"ISISMETRIC"`
+	Ip_address     []string `json:"IP_ADDRESS"`
+	Ipv6_addr      []string `json:"IPV6_ADDR"`
+	Ipv6_addr_cidr []string `json:"IPV6_ADDR_CIDR"`
+	Portname       string   `json:"PORTNAME"`
+	Admin_state    string   `json:"ADMIN_STATE"`
+	Qostostrust    string   `json:"QOSTOSTRUST"`
+	Ospfarea       string   `json:"OSPFAREA"`
+	Vrf            string   `json:"VRF"`
+	Iprouterisis   string   `json:"IPROUTERISIS"`
+	Ipredirect     string   `json:"IPREDIRECT"`
+	Ip_addr_cidr   []string `json:"IP_ADDR_CIDR"`
+	Acl_in         string   `json:"ACL_IN"`
+	Interface      string   `json:"INTERFACE"`
+	Acl_out        string   `json:"ACL_OUT"`
 }
 
-var ShowRunningConfigInterface_Template = `Value INTERFACE_TYPE (.+?)
+var ShowRunningConfigInterface_Template string = `Value INTERFACE_TYPE (.+?)
 Value Required INTERFACE (.+?)
 Value PORTNAME (.+?)
 Value QOSTOSTRUST ([a-z\-]+)

@@ -1,11 +1,11 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowCapabilityFeatureRouting struct {
-	Feature	string	`json:"FEATURE"`
-	State	string	`json:"STATE"`
+	Feature string `json:"FEATURE"`
+	State   string `json:"STATE"`
 }
 
-var ShowCapabilityFeatureRouting_Template = `Value FEATURE ((\S+(\s)*)+)
+var ShowCapabilityFeatureRouting_Template string = `Value FEATURE ((\S+(\s)*)+)
 Value STATE (\w+)
 
 Start

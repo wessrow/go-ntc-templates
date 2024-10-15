@@ -1,17 +1,17 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpOspfNeighbor struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Instance	string	`json:"INSTANCE"`
-	Vrf	string	`json:"VRF"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Dead_time	string	`json:"DEAD_TIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Vrf         string `json:"VRF"`
+	Priority    string `json:"PRIORITY"`
+	State       string `json:"STATE"`
+	Dead_time   string `json:"DEAD_TIME"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Neighbor_id string `json:"NEIGHBOR_ID"`
+	Instance    string `json:"INSTANCE"`
 }
 
-var ShowIpOspfNeighbor_Template = `Value Required NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+var ShowIpOspfNeighbor_Template string = `Value Required NEIGHBOR_ID (\d+.\d+.\d+.\d+)
 Value INSTANCE (\d+)
 Value VRF (\S+)
 Value PRIORITY (\d+)

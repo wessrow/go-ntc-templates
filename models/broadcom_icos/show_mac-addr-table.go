@@ -1,14 +1,14 @@
-package broadcom_icos 
+package broadcom_icos
 
 type ShowMacAddrTable struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Index	string	`json:"INDEX"`
-	Status	string	`json:"STATUS"`
+	Vlan_id     string `json:"VLAN_ID"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Index       string `json:"INDEX"`
+	Status      string `json:"STATUS"`
 }
 
-var ShowMacAddrTable_Template = `Value VLAN_ID (\S+)
+var ShowMacAddrTable_Template string = `Value VLAN_ID (\S+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)
 Value INDEX (\S+)

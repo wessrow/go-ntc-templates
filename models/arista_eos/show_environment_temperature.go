@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowEnvironmentTemperature struct {
-	Sensor	string	`json:"SENSOR"`
-	Description	string	`json:"DESCRIPTION"`
-	Current_value	string	`json:"CURRENT_VALUE"`
-	Setpoint	string	`json:"SETPOINT"`
-	Alert_limit	string	`json:"ALERT_LIMIT"`
-	Critical_limit	string	`json:"CRITICAL_LIMIT"`
-	Module	string	`json:"MODULE"`
+	Critical_limit string `json:"CRITICAL_LIMIT"`
+	Module         string `json:"MODULE"`
+	Sensor         string `json:"SENSOR"`
+	Description    string `json:"DESCRIPTION"`
+	Current_value  string `json:"CURRENT_VALUE"`
+	Setpoint       string `json:"SETPOINT"`
+	Alert_limit    string `json:"ALERT_LIMIT"`
 }
 
-var ShowEnvironmentTemperature_Template = `Value Required SENSOR (\S+)
+var ShowEnvironmentTemperature_Template string = `Value Required SENSOR (\S+)
 Value DESCRIPTION ((\s|\S)+?)
 Value CURRENT_VALUE (\S+)
 Value SETPOINT (\S+)

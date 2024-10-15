@@ -1,14 +1,14 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowLldpInfoRemoteDevice struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
+	Chassis_id           string `json:"CHASSIS_ID"`
+	Neighbor_interface   string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_description string `json:"NEIGHBOR_DESCRIPTION"`
+	Neighbor_name        string `json:"NEIGHBOR_NAME"`
+	Local_interface      string `json:"LOCAL_INTERFACE"`
 }
 
-var ShowLldpInfoRemoteDevice_Template = `Value Required LOCAL_INTERFACE (\S+)
+var ShowLldpInfoRemoteDevice_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value NEIGHBOR_INTERFACE ((?:[a-z0-9]{2}\s){5}[a-z0-9]{2}|\S+)
 Value NEIGHBOR_DESCRIPTION (\S+|.*?)

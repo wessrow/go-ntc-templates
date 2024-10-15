@@ -1,15 +1,15 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterIsisAdjacency struct {
-	System_id	string	`json:"SYSTEM_ID"`
-	Usage	string	`json:"USAGE"`
-	State	string	`json:"STATE"`
-	Hold	string	`json:"HOLD"`
-	Interface	string	`json:"INTERFACE"`
-	Mt_id	string	`json:"MT_ID"`
+	Usage     string `json:"USAGE"`
+	State     string `json:"STATE"`
+	Hold      string `json:"HOLD"`
+	Interface string `json:"INTERFACE"`
+	Mt_id     string `json:"MT_ID"`
+	System_id string `json:"SYSTEM_ID"`
 }
 
-var ShowRouterIsisAdjacency_Template = `Value SYSTEM_ID (\S+)
+var ShowRouterIsisAdjacency_Template string = `Value SYSTEM_ID (\S+)
 Value USAGE (\S+)
 Value STATE (Up|Down)
 Value HOLD (\d+)

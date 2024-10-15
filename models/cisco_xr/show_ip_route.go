@@ -1,19 +1,19 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIpRoute struct {
-	Vrf	string	`json:"VRF"`
-	Protocol	string	`json:"PROTOCOL"`
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Type	string	`json:"TYPE"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Interface	string	`json:"INTERFACE"`
-	Uptime	string	`json:"UPTIME"`
+	Uptime        string `json:"UPTIME"`
+	Network       string `json:"NETWORK"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Distance      string `json:"DISTANCE"`
+	Next_hop      string `json:"NEXT_HOP"`
+	Interface     string `json:"INTERFACE"`
+	Vrf           string `json:"VRF"`
+	Protocol      string `json:"PROTOCOL"`
+	Metric        string `json:"METRIC"`
+	Type          string `json:"TYPE"`
 }
 
-var ShowIpRoute_Template = `Value Filldown VRF (\S+)
+var ShowIpRoute_Template string = `Value Filldown VRF (\S+)
 Value Filldown PROTOCOL (\S+|\S+\s\S+)
 Value Filldown NETWORK (\d+\.\d+\.\d+\.\d+)
 Value Filldown PREFIX_LENGTH (\d+)

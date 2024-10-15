@@ -1,20 +1,20 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowTrackAll struct {
-	Id	string	`json:"ID"`
-	Category	string	`json:"CATEGORY"`
-	Interface	string	`json:"INTERFACE"`
-	Vrrp_id	string	`json:"VRRP_ID"`
-	Vrf	string	`json:"VRF"`
-	State	string	`json:"STATE"`
-	State_changes	string	`json:"STATE_CHANGES"`
-	Last_change	string	`json:"LAST_CHANGE"`
-	Up_delay	string	`json:"UP_DELAY"`
-	Down_delay	string	`json:"DOWN_DELAY"`
-	Poll_interval	string	`json:"POLL_INTERVAL"`
+	Vrrp_id       string `json:"VRRP_ID"`
+	State         string `json:"STATE"`
+	Last_change   string `json:"LAST_CHANGE"`
+	Up_delay      string `json:"UP_DELAY"`
+	Down_delay    string `json:"DOWN_DELAY"`
+	Id            string `json:"ID"`
+	Interface     string `json:"INTERFACE"`
+	Vrf           string `json:"VRF"`
+	State_changes string `json:"STATE_CHANGES"`
+	Poll_interval string `json:"POLL_INTERVAL"`
+	Category      string `json:"CATEGORY"`
 }
 
-var ShowTrackAll_Template = `Value Required ID (\d+)
+var ShowTrackAll_Template string = `Value Required ID (\d+)
 Value CATEGORY (\S+)
 Value INTERFACE (\S+(?:\s\S+)?)
 Value VRRP_ID (\d+)

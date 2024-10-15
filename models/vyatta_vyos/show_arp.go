@@ -1,14 +1,14 @@
-package vyatta_vyos 
+package vyatta_vyos
 
 type ShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Flags	string	`json:"FLAGS"`
-	Interface	string	`json:"INTERFACE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Flags       string `json:"FLAGS"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var ShowArp_Template = `Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
+var ShowArp_Template string = `Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
 Value TYPE (\S+)
 Value MAC_ADDRESS (\S+)
 Value FLAGS (\S+)

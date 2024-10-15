@@ -1,15 +1,15 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowBgpAllAllVrfsSummary struct {
-	Vrf	string	`json:"VRF"`
-	Af	string	`json:"AF"`
-	Neighbour	string	`json:"NEIGHBOUR"`
-	Remote_as	string	`json:"REMOTE_AS"`
-	State	string	`json:"STATE"`
-	Admin_status	string	`json:"ADMIN_STATUS"`
+	State        string `json:"STATE"`
+	Admin_status string `json:"ADMIN_STATUS"`
+	Vrf          string `json:"VRF"`
+	Af           string `json:"AF"`
+	Neighbour    string `json:"NEIGHBOUR"`
+	Remote_as    string `json:"REMOTE_AS"`
 }
 
-var ShowBgpAllAllVrfsSummary_Template = `Value Filldown VRF (\S+)
+var ShowBgpAllAllVrfsSummary_Template string = `Value Filldown VRF (\S+)
 Value Filldown AF (\S+)
 Value NEIGHBOUR (\d+\.\d+\.\d+\.\d+)
 Value REMOTE_AS (\d+)

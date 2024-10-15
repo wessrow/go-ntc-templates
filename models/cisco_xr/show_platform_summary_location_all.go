@@ -1,23 +1,23 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowPlatformSummaryLocationAll struct {
-	Platform_node	string	`json:"PLATFORM_NODE"`
-	Part_id	string	`json:"PART_ID"`
-	Card_type	string	`json:"CARD_TYPE"`
-	Hw_version	string	`json:"HW_VERSION"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Oper_state	string	`json:"OPER_STATE"`
-	Last_reset	string	`json:"LAST_RESET"`
-	Last_reset_process	string	`json:"LAST_RESET_PROCESS"`
-	Last_reset_time	string	`json:"LAST_RESET_TIME"`
-	Configuration	[]string	`json:"CONFIGURATION"`
-	Rommon_version	string	`json:"ROMMON_VERSION"`
-	Ios_version	string	`json:"IOS_VERSION"`
-	Main_power	string	`json:"MAIN_POWER"`
-	Faults	string	`json:"FAULTS"`
+	Platform_node      string   `json:"PLATFORM_NODE"`
+	Last_reset_process string   `json:"LAST_RESET_PROCESS"`
+	Last_reset_time    string   `json:"LAST_RESET_TIME"`
+	Rommon_version     string   `json:"ROMMON_VERSION"`
+	Faults             string   `json:"FAULTS"`
+	Oper_state         string   `json:"OPER_STATE"`
+	Ios_version        string   `json:"IOS_VERSION"`
+	Main_power         string   `json:"MAIN_POWER"`
+	Card_type          string   `json:"CARD_TYPE"`
+	Part_id            string   `json:"PART_ID"`
+	Hw_version         string   `json:"HW_VERSION"`
+	Serial_number      string   `json:"SERIAL_NUMBER"`
+	Last_reset         string   `json:"LAST_RESET"`
+	Configuration      []string `json:"CONFIGURATION"`
 }
 
-var ShowPlatformSummaryLocationAll_Template = `Value Required PLATFORM_NODE (\S+(\s\S+)*)
+var ShowPlatformSummaryLocationAll_Template string = `Value Required PLATFORM_NODE (\S+(\s\S+)*)
 Value PART_ID (\S+)
 Value CARD_TYPE (\S+(\s\S+)*)
 Value HW_VERSION (\w+)

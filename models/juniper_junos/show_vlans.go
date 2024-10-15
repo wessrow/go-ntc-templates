@@ -1,13 +1,13 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowVlans struct {
-	Routing_instance	string	`json:"ROUTING_INSTANCE"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Tag	string	`json:"TAG"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Interfaces       []string `json:"INTERFACES"`
+	Routing_instance string   `json:"ROUTING_INSTANCE"`
+	Vlan_name        string   `json:"VLAN_NAME"`
+	Tag              string   `json:"TAG"`
 }
 
-var ShowVlans_Template = `Value ROUTING_INSTANCE (\S+)
+var ShowVlans_Template string = `Value ROUTING_INSTANCE (\S+)
 Value VLAN_NAME (\S+)
 Value TAG (\d+)
 Value List INTERFACES (\S+)

@@ -1,17 +1,17 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowSystem struct {
-	Description	string	`json:"DESCRIPTION"`
-	Up_time	string	`json:"UP_TIME"`
-	Contact	string	`json:"CONTACT"`
-	Hostname	string	`json:"HOSTNAME"`
-	Location	[]string	`json:"LOCATION"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Oid	string	`json:"OID"`
-	Fans_status	string	`json:"FANS_STATUS"`
+	Mac_address string   `json:"MAC_ADDRESS"`
+	Oid         string   `json:"OID"`
+	Fans_status string   `json:"FANS_STATUS"`
+	Description string   `json:"DESCRIPTION"`
+	Up_time     string   `json:"UP_TIME"`
+	Contact     string   `json:"CONTACT"`
+	Hostname    string   `json:"HOSTNAME"`
+	Location    []string `json:"LOCATION"`
 }
 
-var ShowSystem_Template = `Value DESCRIPTION (.*)
+var ShowSystem_Template string = `Value DESCRIPTION (.*)
 Value UP_TIME (.*)
 Value CONTACT (.*)
 Value HOSTNAME (.*)

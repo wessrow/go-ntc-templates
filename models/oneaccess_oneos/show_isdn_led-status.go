@@ -1,35 +1,35 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIsdnLedStatus struct {
-	Dialpeer_pots_up	string	`json:"DIALPEER_POTS_UP"`
-	Dialpeer_voip_up	string	`json:"DIALPEER_VOIP_UP"`
-	Sip_gateway_status	string	`json:"SIP_GATEWAY_STATUS"`
-	Sip_gateway_registered	string	`json:"SIP_GATEWAY_REGISTERED"`
-	Sip_gateway_nbr_registered	string	`json:"SIP_GATEWAY_NBR_REGISTERED"`
-	Sip_gateway_nbr_available	string	`json:"SIP_GATEWAY_NBR_AVAILABLE"`
-	Sip_gateway_registrar	string	`json:"SIP_GATEWAY_REGISTRAR"`
-	Sip_gateway_intf	string	`json:"SIP_GATEWAY_INTF"`
-	Sip_gateway_intf_ip	string	`json:"SIP_GATEWAY_INTF_IP"`
-	Sip_gateway_intf_status	string	`json:"SIP_GATEWAY_INTF_STATUS"`
-	Sip_server_status	string	`json:"SIP_SERVER_STATUS"`
-	Voice_com_status	string	`json:"VOICE_COM_STATUS"`
-	Track_cond_voice_gw	string	`json:"TRACK_COND_VOICE_GW"`
-	Track_cond_voice_port	string	`json:"TRACK_COND_VOICE_PORT"`
-	Sysled_voip_color	string	`json:"SYSLED_VOIP_COLOR"`
-	Sysled_voip_state	string	`json:"SYSLED_VOIP_STATE"`
-	Sysled_com_color	string	`json:"SYSLED_COM_COLOR"`
-	Sysled_com_state	string	`json:"SYSLED_COM_STATE"`
-	Sysled_maintenance_color	string	`json:"SYSLED_MAINTENANCE_COLOR"`
-	Sysled_maintenance_state	string	`json:"SYSLED_MAINTENANCE_STATE"`
-	Sysled_pri_color	string	`json:"SYSLED_PRI_COLOR"`
-	Sysled_pri_state	string	`json:"SYSLED_PRI_STATE"`
-	Sysled_bri1_color	string	`json:"SYSLED_BRI1_COLOR"`
-	Sysled_bri1_state	string	`json:"SYSLED_BRI1_STATE"`
-	Sysled_bri2_color	string	`json:"SYSLED_BRI2_COLOR"`
-	Sysled_bri2_state	string	`json:"SYSLED_BRI2_STATE"`
+	Sip_server_status          string `json:"SIP_SERVER_STATUS"`
+	Voice_com_status           string `json:"VOICE_COM_STATUS"`
+	Sysled_maintenance_state   string `json:"SYSLED_MAINTENANCE_STATE"`
+	Sysled_bri1_state          string `json:"SYSLED_BRI1_STATE"`
+	Dialpeer_voip_up           string `json:"DIALPEER_VOIP_UP"`
+	Sip_gateway_nbr_registered string `json:"SIP_GATEWAY_NBR_REGISTERED"`
+	Sip_gateway_nbr_available  string `json:"SIP_GATEWAY_NBR_AVAILABLE"`
+	Sip_gateway_registrar      string `json:"SIP_GATEWAY_REGISTRAR"`
+	Sip_gateway_intf           string `json:"SIP_GATEWAY_INTF"`
+	Sip_gateway_intf_ip        string `json:"SIP_GATEWAY_INTF_IP"`
+	Track_cond_voice_gw        string `json:"TRACK_COND_VOICE_GW"`
+	Sysled_com_state           string `json:"SYSLED_COM_STATE"`
+	Dialpeer_pots_up           string `json:"DIALPEER_POTS_UP"`
+	Sip_gateway_status         string `json:"SIP_GATEWAY_STATUS"`
+	Sysled_bri1_color          string `json:"SYSLED_BRI1_COLOR"`
+	Sysled_bri2_state          string `json:"SYSLED_BRI2_STATE"`
+	Sysled_maintenance_color   string `json:"SYSLED_MAINTENANCE_COLOR"`
+	Sysled_pri_color           string `json:"SYSLED_PRI_COLOR"`
+	Sysled_pri_state           string `json:"SYSLED_PRI_STATE"`
+	Track_cond_voice_port      string `json:"TRACK_COND_VOICE_PORT"`
+	Sysled_voip_color          string `json:"SYSLED_VOIP_COLOR"`
+	Sysled_voip_state          string `json:"SYSLED_VOIP_STATE"`
+	Sysled_com_color           string `json:"SYSLED_COM_COLOR"`
+	Sysled_bri2_color          string `json:"SYSLED_BRI2_COLOR"`
+	Sip_gateway_registered     string `json:"SIP_GATEWAY_REGISTERED"`
+	Sip_gateway_intf_status    string `json:"SIP_GATEWAY_INTF_STATUS"`
 }
 
-var ShowIsdnLedStatus_Template = `Value DIALPEER_POTS_UP (\d+)
+var ShowIsdnLedStatus_Template string = `Value DIALPEER_POTS_UP (\d+)
 Value DIALPEER_VOIP_UP (\d+)
 Value SIP_GATEWAY_STATUS (no shutdown|shutdown|[nN]o Sip-gateway)
 Value SIP_GATEWAY_REGISTERED (.*registered.*)

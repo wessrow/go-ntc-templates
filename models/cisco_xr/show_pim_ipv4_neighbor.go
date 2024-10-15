@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowPimIpv4Neighbor struct {
-	Vrf	string	`json:"VRF"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	Interface	string	`json:"INTERFACE"`
-	Uptime	string	`json:"UPTIME"`
-	Expires	string	`json:"EXPIRES"`
-	Dr_priority	string	`json:"DR_PRIORITY"`
-	Flags	string	`json:"FLAGS"`
+	Vrf         string `json:"VRF"`
+	Neighbor    string `json:"NEIGHBOR"`
+	Interface   string `json:"INTERFACE"`
+	Uptime      string `json:"UPTIME"`
+	Expires     string `json:"EXPIRES"`
+	Dr_priority string `json:"DR_PRIORITY"`
+	Flags       string `json:"FLAGS"`
 }
 
-var ShowPimIpv4Neighbor_Template = `Value Filldown VRF (\S+)
+var ShowPimIpv4Neighbor_Template string = `Value Filldown VRF (\S+)
 Value Required NEIGHBOR (\d+\.\d+\.\d+\.\d+)
 Value INTERFACE ([\w\./-]+)
 Value UPTIME ((\S+(\s\S+)*))

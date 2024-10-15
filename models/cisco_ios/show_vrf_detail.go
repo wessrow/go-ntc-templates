@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVrfDetail struct {
-	Vrf	string	`json:"VRF"`
-	Rd	string	`json:"RD"`
-	Rt_import	[]string	`json:"RT_IMPORT"`
-	Rt_export	[]string	`json:"RT_EXPORT"`
-	Vpn_id	string	`json:"VPN_ID"`
-	Description	string	`json:"DESCRIPTION"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Vrf         string   `json:"VRF"`
+	Rd          string   `json:"RD"`
+	Rt_import   []string `json:"RT_IMPORT"`
+	Rt_export   []string `json:"RT_EXPORT"`
+	Vpn_id      string   `json:"VPN_ID"`
+	Description string   `json:"DESCRIPTION"`
+	Interfaces  []string `json:"INTERFACES"`
 }
 
-var ShowVrfDetail_Template = `Value VRF (\S+)
+var ShowVrfDetail_Template string = `Value VRF (\S+)
 Value RD (\S+|<not set>)
 Value List RT_IMPORT (\S+)
 Value List RT_EXPORT (\S+)

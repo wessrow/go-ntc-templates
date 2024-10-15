@@ -1,16 +1,16 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowCdpNeighborsDetail struct {
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Platform	string	`json:"PLATFORM"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Capabilities	string	`json:"CAPABILITIES"`
+	Platform             string `json:"PLATFORM"`
+	Neighbor_interface   string `json:"NEIGHBOR_INTERFACE"`
+	Local_interface      string `json:"LOCAL_INTERFACE"`
+	Neighbor_description string `json:"NEIGHBOR_DESCRIPTION"`
+	Capabilities         string `json:"CAPABILITIES"`
+	Chassis_id           string `json:"CHASSIS_ID"`
+	Mgmt_address         string `json:"MGMT_ADDRESS"`
 }
 
-var SshShowCdpNeighborsDetail_Template = `Value Required CHASSIS_ID (\S+)
+var SshShowCdpNeighborsDetail_Template string = `Value Required CHASSIS_ID (\S+)
 Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)

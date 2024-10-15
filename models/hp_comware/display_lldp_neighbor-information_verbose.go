@@ -1,16 +1,16 @@
-package hp_comware 
+package hp_comware
 
 type DisplayLldpNeighborInformationVerbose struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_interface_description	string	`json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Local_interface                string `json:"LOCAL_INTERFACE"`
+	Chassis_id                     string `json:"CHASSIS_ID"`
+	Neighbor_interface             string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_interface_description string `json:"NEIGHBOR_INTERFACE_DESCRIPTION"`
+	Neighbor_name                  string `json:"NEIGHBOR_NAME"`
+	Mgmt_address                   string `json:"MGMT_ADDRESS"`
+	Vlan_id                        string `json:"VLAN_ID"`
 }
 
-var DisplayLldpNeighborInformationVerbose_Template = `Value Required LOCAL_INTERFACE (\S+)
+var DisplayLldpNeighborInformationVerbose_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID (\S+)
 Value NEIGHBOR_INTERFACE (.*)
 Value NEIGHBOR_INTERFACE_DESCRIPTION (.*)

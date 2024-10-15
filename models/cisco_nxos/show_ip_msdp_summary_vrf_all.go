@@ -1,18 +1,18 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpMsdpSummaryVrfAll struct {
-	Vrf	string	`json:"VRF"`
-	Local_asn	string	`json:"LOCAL_ASN"`
-	Originator_id	string	`json:"ORIGINATOR_ID"`
-	Peer_address	string	`json:"PEER_ADDRESS"`
-	Peer_asn	string	`json:"PEER_ASN"`
-	Connection_state	string	`json:"CONNECTION_STATE"`
-	Uptime_downtime	string	`json:"UPTIME_DOWNTIME"`
-	Last_msg_received	string	`json:"LAST_MSG_RECEIVED"`
-	S_g_received	string	`json:"S_G_RECEIVED"`
+	Peer_address      string `json:"PEER_ADDRESS"`
+	Uptime_downtime   string `json:"UPTIME_DOWNTIME"`
+	Last_msg_received string `json:"LAST_MSG_RECEIVED"`
+	Vrf               string `json:"VRF"`
+	Local_asn         string `json:"LOCAL_ASN"`
+	Originator_id     string `json:"ORIGINATOR_ID"`
+	Peer_asn          string `json:"PEER_ASN"`
+	Connection_state  string `json:"CONNECTION_STATE"`
+	S_g_received      string `json:"S_G_RECEIVED"`
 }
 
-var ShowIpMsdpSummaryVrfAll_Template = `Value Filldown VRF (\S+)
+var ShowIpMsdpSummaryVrfAll_Template string = `Value Filldown VRF (\S+)
 Value Filldown LOCAL_ASN (\d+)
 Value Filldown ORIGINATOR_ID (\d+\.\d+\.\d+\.\d+)
 Value Required PEER_ADDRESS (\d+\.\d+\.\d+\.\d+)

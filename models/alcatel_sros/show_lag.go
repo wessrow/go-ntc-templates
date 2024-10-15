@@ -1,16 +1,16 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowLag struct {
-	Lag_id	string	`json:"LAG_ID"`
-	Adm	string	`json:"ADM"`
-	Opr	string	`json:"OPR"`
-	Weighted	string	`json:"WEIGHTED"`
-	Threshold	string	`json:"THRESHOLD"`
-	Up_count	string	`json:"UP_COUNT"`
-	Mc_act_stdby	string	`json:"MC_ACT_STDBY"`
+	Opr          string `json:"OPR"`
+	Weighted     string `json:"WEIGHTED"`
+	Threshold    string `json:"THRESHOLD"`
+	Up_count     string `json:"UP_COUNT"`
+	Mc_act_stdby string `json:"MC_ACT_STDBY"`
+	Lag_id       string `json:"LAG_ID"`
+	Adm          string `json:"ADM"`
 }
 
-var ShowLag_Template = `Value LAG_ID (\d+)
+var ShowLag_Template string = `Value LAG_ID (\d+)
 Value ADM (up|down)
 Value OPR (up|down)
 Value WEIGHTED (Yes|No)

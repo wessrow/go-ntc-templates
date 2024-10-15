@@ -1,17 +1,17 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntInfo012 struct {
-	Fsp	string	`json:"FSP"`
-	Ont_id	string	`json:"ONT_ID"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Control_flag	string	`json:"CONTROL_FLAG"`
-	Run_state	string	`json:"RUN_STATE"`
-	Config_state	string	`json:"CONFIG_STATE"`
-	Match_state	string	`json:"MATCH_STATE"`
-	Protect_side	string	`json:"PROTECT_SIDE"`
+	Config_state  string `json:"CONFIG_STATE"`
+	Match_state   string `json:"MATCH_STATE"`
+	Protect_side  string `json:"PROTECT_SIDE"`
+	Fsp           string `json:"FSP"`
+	Ont_id        string `json:"ONT_ID"`
+	Serial_number string `json:"SERIAL_NUMBER"`
+	Control_flag  string `json:"CONTROL_FLAG"`
+	Run_state     string `json:"RUN_STATE"`
 }
 
-var DisplayOntInfo012_Template = `Value Required FSP (\w+\/\s\w+\/\w+)
+var DisplayOntInfo012_Template string = `Value Required FSP (\w+\/\s\w+\/\w+)
 Value Key ONT_ID (\d+)
 Value SERIAL_NUMBER (\w+)
 Value CONTROL_FLAG (\w+)

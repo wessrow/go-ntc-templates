@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllerFabricPlaneAll struct {
-	Plane_id	string	`json:"PLANE_ID"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Plane_state	string	`json:"PLANE_STATE"`
-	Up_dn_counter	string	`json:"UP_DN_COUNTER"`
-	Up_mcast_counter	string	`json:"UP_MCAST_COUNTER"`
+	Plane_id         string `json:"PLANE_ID"`
+	Admin_state      string `json:"ADMIN_STATE"`
+	Plane_state      string `json:"PLANE_STATE"`
+	Up_dn_counter    string `json:"UP_DN_COUNTER"`
+	Up_mcast_counter string `json:"UP_MCAST_COUNTER"`
 }
 
-var ShowControllerFabricPlaneAll_Template = `Value PLANE_ID (\d+)
+var ShowControllerFabricPlaneAll_Template string = `Value PLANE_ID (\d+)
 Value ADMIN_STATE (\S+)
 Value PLANE_STATE (\S+)
 Value UP_DN_COUNTER (\d+)

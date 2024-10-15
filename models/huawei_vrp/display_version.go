@@ -1,14 +1,14 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayVersion struct {
-	Vrp_version	string	`json:"VRP_VERSION"`
-	Product_version	string	`json:"PRODUCT_VERSION"`
-	Model	string	`json:"MODEL"`
-	Uptime	string	`json:"UPTIME"`
-	Patch_version	string	`json:"PATCH_VERSION"`
+	Patch_version   string `json:"PATCH_VERSION"`
+	Vrp_version     string `json:"VRP_VERSION"`
+	Product_version string `json:"PRODUCT_VERSION"`
+	Model           string `json:"MODEL"`
+	Uptime          string `json:"UPTIME"`
 }
 
-var DisplayVersion_Template = `Value VRP_VERSION (\S+)
+var DisplayVersion_Template string = `Value VRP_VERSION (\S+)
 Value PRODUCT_VERSION (.+)
 Value MODEL (((?!\sRouter).)+)
 Value UPTIME (.+)

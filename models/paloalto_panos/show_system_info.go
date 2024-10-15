@@ -1,25 +1,25 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowSystemInfo struct {
-	Hostname	string	`json:"HOSTNAME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Gateway	string	`json:"GATEWAY"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Uptime	string	`json:"UPTIME"`
-	Family	string	`json:"FAMILY"`
-	Model	string	`json:"MODEL"`
-	Serial	string	`json:"SERIAL"`
-	Vm_license	string	`json:"VM_LICENSE"`
-	Vm_mode	string	`json:"VM_MODE"`
-	Os	string	`json:"OS"`
-	Platform_family	string	`json:"PLATFORM_FAMILY"`
-	Vpn_disable_mode	string	`json:"VPN_DISABLE_MODE"`
-	Multi_vsys	string	`json:"MULTI_VSYS"`
-	Operational_mode	string	`json:"OPERATIONAL_MODE"`
+	Serial           string `json:"SERIAL"`
+	Vm_license       string `json:"VM_LICENSE"`
+	Vm_mode          string `json:"VM_MODE"`
+	Operational_mode string `json:"OPERATIONAL_MODE"`
+	Hostname         string `json:"HOSTNAME"`
+	Ip_address       string `json:"IP_ADDRESS"`
+	Family           string `json:"FAMILY"`
+	Platform_family  string `json:"PLATFORM_FAMILY"`
+	Vpn_disable_mode string `json:"VPN_DISABLE_MODE"`
+	Mac_address      string `json:"MAC_ADDRESS"`
+	Uptime           string `json:"UPTIME"`
+	Netmask          string `json:"NETMASK"`
+	Model            string `json:"MODEL"`
+	Multi_vsys       string `json:"MULTI_VSYS"`
+	Gateway          string `json:"GATEWAY"`
+	Os               string `json:"OS"`
 }
 
-var ShowSystemInfo_Template = `Value HOSTNAME (\S+)
+var ShowSystemInfo_Template string = `Value HOSTNAME (\S+)
 Value IP_ADDRESS (\S+)
 Value NETMASK (\S+)
 Value GATEWAY (\S+)

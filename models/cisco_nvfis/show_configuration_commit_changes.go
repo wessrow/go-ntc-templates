@@ -1,12 +1,12 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowConfigurationCommitChanges struct {
-	Created_by	string	`json:"CREATED_BY"`
-	Date_time	string	`json:"DATE_TIME"`
-	Client	string	`json:"CLIENT"`
+	Date_time  string `json:"DATE_TIME"`
+	Client     string `json:"CLIENT"`
+	Created_by string `json:"CREATED_BY"`
 }
 
-var ShowConfigurationCommitChanges_Template = `Value CREATED_BY (\w+)
+var ShowConfigurationCommitChanges_Template string = `Value CREATED_BY (\w+)
 Value DATE_TIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
 Value CLIENT (\w+)
 

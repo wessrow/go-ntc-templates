@@ -1,30 +1,30 @@
-package fortinet 
+package fortinet
 
 type GetSystemInterface struct {
-	Name	string	`json:"NAME"`
-	Mode	string	`json:"MODE"`
-	Management_ip	string	`json:"MANAGEMENT_IP"`
-	Management_netmask	string	`json:"MANAGEMENT_NETMASK"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Status	string	`json:"STATUS"`
-	Netbios_forward	string	`json:"NETBIOS_FORWARD"`
-	Type	string	`json:"TYPE"`
-	Netflow_sampler	string	`json:"NETFLOW_SAMPLER"`
-	Sflow_sampler	string	`json:"SFLOW_SAMPLER"`
-	Scan_botnet_connections	string	`json:"SCAN_BOTNET_CONNECTIONS"`
-	Src_check	string	`json:"SRC_CHECK"`
-	Explicit_web_proxy	string	`json:"EXPLICIT_WEB_PROXY"`
-	Explicit_ftp_proxy	string	`json:"EXPLICIT_FTP_PROXY"`
-	Proxy_captive_portal	string	`json:"PROXY_CAPTIVE_PORTAL"`
-	Switch_controller_feature	string	`json:"SWITCH_CONTROLLER_FEATURE"`
-	Mtu_override	string	`json:"MTU_OVERRIDE"`
-	Wccp	string	`json:"WCCP"`
-	Drop_overlapped_fragment	string	`json:"DROP_OVERLAPPED_FRAGMENT"`
-	Drop_fragment	string	`json:"DROP_FRAGMENT"`
+	Management_ip             string `json:"MANAGEMENT_IP"`
+	Netmask                   string `json:"NETMASK"`
+	Status                    string `json:"STATUS"`
+	Netflow_sampler           string `json:"NETFLOW_SAMPLER"`
+	Scan_botnet_connections   string `json:"SCAN_BOTNET_CONNECTIONS"`
+	Mode                      string `json:"MODE"`
+	Src_check                 string `json:"SRC_CHECK"`
+	Explicit_web_proxy        string `json:"EXPLICIT_WEB_PROXY"`
+	Proxy_captive_portal      string `json:"PROXY_CAPTIVE_PORTAL"`
+	Mtu_override              string `json:"MTU_OVERRIDE"`
+	Management_netmask        string `json:"MANAGEMENT_NETMASK"`
+	Switch_controller_feature string `json:"SWITCH_CONTROLLER_FEATURE"`
+	Wccp                      string `json:"WCCP"`
+	Drop_overlapped_fragment  string `json:"DROP_OVERLAPPED_FRAGMENT"`
+	Drop_fragment             string `json:"DROP_FRAGMENT"`
+	Sflow_sampler             string `json:"SFLOW_SAMPLER"`
+	Ip_address                string `json:"IP_ADDRESS"`
+	Netbios_forward           string `json:"NETBIOS_FORWARD"`
+	Type                      string `json:"TYPE"`
+	Explicit_ftp_proxy        string `json:"EXPLICIT_FTP_PROXY"`
+	Name                      string `json:"NAME"`
 }
 
-var GetSystemInterface_Template = `#
+var GetSystemInterface_Template string = `#
 # Patrick Marc Preuss, Refried Jello, Pavlo Skliarenko
 # 2020-01-13 - Initial Version
 # 2021-01-08 - Update for 6.2

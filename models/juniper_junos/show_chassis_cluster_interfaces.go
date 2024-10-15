@@ -1,19 +1,19 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowChassisClusterInterfaces struct {
-	Control_link_status	string	`json:"CONTROL_LINK_STATUS"`
-	Fabric_link_status	string	`json:"FABRIC_LINK_STATUS"`
-	Link_type	string	`json:"LINK_TYPE"`
-	Index	string	`json:"INDEX"`
-	Interface	string	`json:"INTERFACE"`
-	Status	string	`json:"STATUS"`
-	Security	string	`json:"SECURITY"`
-	Child_interface	string	`json:"CHILD_INTERFACE"`
-	Redundancy_group	string	`json:"REDUNDANCY_GROUP"`
-	Weight	string	`json:"WEIGHT"`
+	Status              string `json:"STATUS"`
+	Redundancy_group    string `json:"REDUNDANCY_GROUP"`
+	Child_interface     string `json:"CHILD_INTERFACE"`
+	Weight              string `json:"WEIGHT"`
+	Control_link_status string `json:"CONTROL_LINK_STATUS"`
+	Fabric_link_status  string `json:"FABRIC_LINK_STATUS"`
+	Link_type           string `json:"LINK_TYPE"`
+	Index               string `json:"INDEX"`
+	Interface           string `json:"INTERFACE"`
+	Security            string `json:"SECURITY"`
 }
 
-var ShowChassisClusterInterfaces_Template = `Value Filldown CONTROL_LINK_STATUS (\S+)
+var ShowChassisClusterInterfaces_Template string = `Value Filldown CONTROL_LINK_STATUS (\S+)
 Value Filldown FABRIC_LINK_STATUS (\S+)
 Value Filldown LINK_TYPE (\S+)
 Value INDEX (\d+)

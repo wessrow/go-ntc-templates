@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpDhcpBinding struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Hardware_address	string	`json:"HARDWARE_ADDRESS"`
-	Expiration	string	`json:"EXPIRATION"`
-	Type	string	`json:"TYPE"`
+	Hardware_address string `json:"HARDWARE_ADDRESS"`
+	Expiration       string `json:"EXPIRATION"`
+	Type             string `json:"TYPE"`
+	Ip_address       string `json:"IP_ADDRESS"`
 }
 
-var ShowIpDhcpBinding_Template = `Value IP_ADDRESS (\S+)
+var ShowIpDhcpBinding_Template string = `Value IP_ADDRESS (\S+)
 Value HARDWARE_ADDRESS (\S+)
 Value EXPIRATION (\S+)
 Value TYPE (\S+)

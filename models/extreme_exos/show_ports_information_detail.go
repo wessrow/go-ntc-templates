@@ -1,21 +1,21 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowPortsInformationDetail struct {
-	Interface	string	`json:"INTERFACE"`
-	Description	string	`json:"DESCRIPTION"`
-	Virtual_router	string	`json:"VIRTUAL_ROUTER"`
-	Type	string	`json:"TYPE"`
-	Random_early_drop	string	`json:"RANDOM_EARLY_DROP"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Link_state	string	`json:"LINK_STATE"`
-	Link_ups_num	string	`json:"LINK_UPS_NUM"`
-	Link_ups_last	string	`json:"LINK_UPS_LAST"`
-	Link_downs_num	string	`json:"LINK_DOWNS_NUM"`
-	Link_downs_last	string	`json:"LINK_DOWNS_LAST"`
-	Vlan_id	[]string	`json:"VLAN_ID"`
+	Random_early_drop string   `json:"RANDOM_EARLY_DROP"`
+	Link_state        string   `json:"LINK_STATE"`
+	Link_downs_last   string   `json:"LINK_DOWNS_LAST"`
+	Vlan_id           []string `json:"VLAN_ID"`
+	Interface         string   `json:"INTERFACE"`
+	Type              string   `json:"TYPE"`
+	Admin_state       string   `json:"ADMIN_STATE"`
+	Link_ups_num      string   `json:"LINK_UPS_NUM"`
+	Link_ups_last     string   `json:"LINK_UPS_LAST"`
+	Link_downs_num    string   `json:"LINK_DOWNS_NUM"`
+	Description       string   `json:"DESCRIPTION"`
+	Virtual_router    string   `json:"VIRTUAL_ROUTER"`
 }
 
-var ShowPortsInformationDetail_Template = `Value INTERFACE (\d+)
+var ShowPortsInformationDetail_Template string = `Value INTERFACE (\d+)
 Value DESCRIPTION (.*)
 Value VIRTUAL_ROUTER (.*)
 Value TYPE (.*)

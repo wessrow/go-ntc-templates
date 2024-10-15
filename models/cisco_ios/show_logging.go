@@ -1,18 +1,18 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowLogging struct {
-	Number	string	`json:"NUMBER"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Facility	string	`json:"FACILITY"`
-	Severity	string	`json:"SEVERITY"`
-	Mnemonic	string	`json:"MNEMONIC"`
-	Message	[]string	`json:"MESSAGE"`
+	Severity string   `json:"SEVERITY"`
+	Mnemonic string   `json:"MNEMONIC"`
+	Time     string   `json:"TIME"`
+	Facility string   `json:"FACILITY"`
+	Day      string   `json:"DAY"`
+	Timezone string   `json:"TIMEZONE"`
+	Message  []string `json:"MESSAGE"`
+	Number   string   `json:"NUMBER"`
+	Month    string   `json:"MONTH"`
 }
 
-var ShowLogging_Template = `Value NUMBER (\d+)
+var ShowLogging_Template string = `Value NUMBER (\d+)
 Value MONTH (\S+)
 Value DAY (\d{1,2})
 Value TIME ((\d+:\d+:\d+\.\d+)|(\d+:\d+:\d+)|(\d{1,2}:\d{1,2}))

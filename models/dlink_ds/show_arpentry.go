@@ -1,13 +1,13 @@
-package dlink_ds 
+package dlink_ds
 
 type ShowArpentry struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
 }
 
-var ShowArpentry_Template = `Value INTERFACE (\S+)
+var ShowArpentry_Template string = `Value INTERFACE (\S+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value MAC_ADDRESS (\S+)
 Value TYPE (\S+)

@@ -1,14 +1,14 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowIpInterface struct {
-	Ip	string	`json:"IP"`
-	Interface	string	`json:"INTERFACE"`
-	Interface_status_admin_oper	string	`json:"INTERFACE_STATUS_ADMIN_OPER"`
-	Type	string	`json:"TYPE"`
-	Status	string	`json:"STATUS"`
+	Ip                          string `json:"IP"`
+	Interface                   string `json:"INTERFACE"`
+	Interface_status_admin_oper string `json:"INTERFACE_STATUS_ADMIN_OPER"`
+	Type                        string `json:"TYPE"`
+	Status                      string `json:"STATUS"`
 }
 
-var ShowIpInterface_Template = `Value IP (\S+)
+var ShowIpInterface_Template string = `Value IP (\S+)
 Value INTERFACE (\S+(?:\s\d+)?)
 Value INTERFACE_STATUS_ADMIN_OPER (\S+/\S+)
 Value TYPE (Static|DHCP)

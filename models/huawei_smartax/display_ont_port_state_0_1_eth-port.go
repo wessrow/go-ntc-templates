@@ -1,16 +1,16 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntPortState01EthPort struct {
-	Ont_id	string	`json:"ONT_ID"`
-	Ont_port_id	string	`json:"ONT_PORT_ID"`
-	Ont_port_type	string	`json:"ONT_PORT_TYPE"`
-	Speed_mbps	string	`json:"SPEED_MBPS"`
-	Duplex	string	`json:"DUPLEX"`
-	Link_state	string	`json:"LINK_STATE"`
-	Ring_status	string	`json:"RING_STATUS"`
+	Ont_id        string `json:"ONT_ID"`
+	Ont_port_id   string `json:"ONT_PORT_ID"`
+	Ont_port_type string `json:"ONT_PORT_TYPE"`
+	Speed_mbps    string `json:"SPEED_MBPS"`
+	Duplex        string `json:"DUPLEX"`
+	Link_state    string `json:"LINK_STATE"`
+	Ring_status   string `json:"RING_STATUS"`
 }
 
-var DisplayOntPortState01EthPort_Template = `Value Key ONT_ID (\d+)
+var DisplayOntPortState01EthPort_Template string = `Value Key ONT_ID (\d+)
 Value ONT_PORT_ID (\d+)
 Value ONT_PORT_TYPE (\S+)
 Value SPEED_MBPS (\S+)

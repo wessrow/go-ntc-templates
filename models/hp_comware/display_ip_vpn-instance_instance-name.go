@@ -1,24 +1,24 @@
-package hp_comware 
+package hp_comware
 
 type DisplayIpVpnInstanceInstanceName struct {
-	Name	string	`json:"NAME"`
-	Id	string	`json:"ID"`
-	Rd	string	`json:"RD"`
-	Ipv4_export_rts	[]string	`json:"IPV4_EXPORT_RTS"`
-	Ipv4_import_rts	[]string	`json:"IPV4_IMPORT_RTS"`
-	Ipv6_export_rts	[]string	`json:"IPV6_EXPORT_RTS"`
-	Ipv6_import_rts	[]string	`json:"IPV6_IMPORT_RTS"`
-	Description	string	`json:"DESCRIPTION"`
-	Ipv4_export_policy	string	`json:"IPV4_EXPORT_POLICY"`
-	Ipv4_import_policy	string	`json:"IPV4_IMPORT_POLICY"`
-	Ipv4_tunnel_policy	string	`json:"IPV4_TUNNEL_POLICY"`
-	Ipv6_export_policy	string	`json:"IPV6_EXPORT_POLICY"`
-	Ipv6_import_policy	string	`json:"IPV6_IMPORT_POLICY"`
-	Ipv6_tunnel_policy	string	`json:"IPV6_TUNNEL_POLICY"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Ipv4_import_rts    []string `json:"IPV4_IMPORT_RTS"`
+	Ipv6_export_rts    []string `json:"IPV6_EXPORT_RTS"`
+	Ipv4_import_policy string   `json:"IPV4_IMPORT_POLICY"`
+	Name               string   `json:"NAME"`
+	Id                 string   `json:"ID"`
+	Ipv4_tunnel_policy string   `json:"IPV4_TUNNEL_POLICY"`
+	Ipv6_tunnel_policy string   `json:"IPV6_TUNNEL_POLICY"`
+	Interfaces         []string `json:"INTERFACES"`
+	Ipv4_export_rts    []string `json:"IPV4_EXPORT_RTS"`
+	Description        string   `json:"DESCRIPTION"`
+	Ipv6_export_policy string   `json:"IPV6_EXPORT_POLICY"`
+	Rd                 string   `json:"RD"`
+	Ipv4_export_policy string   `json:"IPV4_EXPORT_POLICY"`
+	Ipv6_import_rts    []string `json:"IPV6_IMPORT_RTS"`
+	Ipv6_import_policy string   `json:"IPV6_IMPORT_POLICY"`
 }
 
-var DisplayIpVpnInstanceInstanceName_Template = `Value Required NAME ([^,]+)
+var DisplayIpVpnInstanceInstanceName_Template string = `Value Required NAME ([^,]+)
 Value Required ID (\d+)
 Value RD (\d+:\d+)
 Value List IPV4_EXPORT_RTS (\d+:\d+)

@@ -1,19 +1,19 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowCryptoIkev1SaDetail struct {
-	Sequence	string	`json:"SEQUENCE"`
-	Peer	string	`json:"PEER"`
-	Type	string	`json:"TYPE"`
-	Dir	string	`json:"DIR"`
-	Rekey	string	`json:"REKEY"`
-	State	string	`json:"STATE"`
-	Encryption	string	`json:"ENCRYPTION"`
-	Hash	string	`json:"HASH"`
-	Authentication	string	`json:"AUTHENTICATION"`
-	Lifetime	string	`json:"LIFETIME"`
+	Peer           string `json:"PEER"`
+	Dir            string `json:"DIR"`
+	Rekey          string `json:"REKEY"`
+	Encryption     string `json:"ENCRYPTION"`
+	Authentication string `json:"AUTHENTICATION"`
+	Lifetime       string `json:"LIFETIME"`
+	Sequence       string `json:"SEQUENCE"`
+	Type           string `json:"TYPE"`
+	State          string `json:"STATE"`
+	Hash           string `json:"HASH"`
 }
 
-var ShowCryptoIkev1SaDetail_Template = `Value SEQUENCE (\d+)
+var ShowCryptoIkev1SaDetail_Template string = `Value SEQUENCE (\d+)
 Value PEER (\d+\.\d+\.\d+\.\d+)
 Value TYPE (\w+)
 Value DIR (\w+)

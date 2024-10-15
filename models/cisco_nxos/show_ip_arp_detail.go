@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpArpDetail struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Physical_interface	string	`json:"PHYSICAL_INTERFACE"`
+	Ip_address         string `json:"IP_ADDRESS"`
+	Age                string `json:"AGE"`
+	Mac_address        string `json:"MAC_ADDRESS"`
+	Interface          string `json:"INTERFACE"`
+	Physical_interface string `json:"PHYSICAL_INTERFACE"`
 }
 
-var ShowIpArpDetail_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowIpArpDetail_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE (\S+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)

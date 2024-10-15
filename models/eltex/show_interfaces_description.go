@@ -1,14 +1,14 @@
-package eltex 
+package eltex
 
 type ShowInterfacesDescription struct {
-	Interface	string	`json:"INTERFACE"`
-	Interface_mode	string	`json:"INTERFACE_MODE"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Link_state	string	`json:"LINK_STATE"`
-	Description	[]string	`json:"DESCRIPTION"`
+	Interface      string   `json:"INTERFACE"`
+	Interface_mode string   `json:"INTERFACE_MODE"`
+	Admin_state    string   `json:"ADMIN_STATE"`
+	Link_state     string   `json:"LINK_STATE"`
+	Description    []string `json:"DESCRIPTION"`
 }
 
-var ShowInterfacesDescription_Template = `Value INTERFACE ((?!Port|Ch|-)\S+)
+var ShowInterfacesDescription_Template string = `Value INTERFACE ((?!Port|Ch|-)\S+)
 Value INTERFACE_MODE (Trunk|Access(?:\s*\(\d+\))?|Customer(?:\s*\(\d+\))?)
 Value ADMIN_STATE (Up|Down)
 Value LINK_STATE (Up|Down|Not Present)

@@ -1,17 +1,17 @@
-package paloalto_panos 
+package paloalto_panos
 
 type RequestLicenseInfo struct {
-	Feature	string	`json:"FEATURE"`
-	Description	string	`json:"DESCRIPTION"`
-	Serial	string	`json:"SERIAL"`
-	Auth_code	string	`json:"AUTH_CODE"`
-	Issued	string	`json:"ISSUED"`
-	Expires	string	`json:"EXPIRES"`
-	Expired	string	`json:"EXPIRED"`
-	Base_license	string	`json:"BASE_LICENSE"`
+	Feature      string `json:"FEATURE"`
+	Description  string `json:"DESCRIPTION"`
+	Serial       string `json:"SERIAL"`
+	Auth_code    string `json:"AUTH_CODE"`
+	Issued       string `json:"ISSUED"`
+	Expires      string `json:"EXPIRES"`
+	Expired      string `json:"EXPIRED"`
+	Base_license string `json:"BASE_LICENSE"`
 }
 
-var RequestLicenseInfo_Template = `Value FEATURE (.+)
+var RequestLicenseInfo_Template string = `Value FEATURE (.+)
 Value DESCRIPTION (.+)
 Value SERIAL (.+)
 Value AUTH_CODE (.+)

@@ -1,20 +1,20 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpBgpSummary struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Vrf	string	`json:"VRF"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Msg_rcvd	string	`json:"MSG_RCVD"`
-	Msg_sent	string	`json:"MSG_SENT"`
-	In_queue	string	`json:"IN_QUEUE"`
-	Out_queue	string	`json:"OUT_QUEUE"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	Bgp_neigh    string `json:"BGP_NEIGH"`
+	Msg_sent     string `json:"MSG_SENT"`
+	State_pfxrcd string `json:"STATE_PFXRCD"`
+	Up_down      string `json:"UP_DOWN"`
+	Router_id    string `json:"ROUTER_ID"`
+	Local_as     string `json:"LOCAL_AS"`
+	Vrf          string `json:"VRF"`
+	Neigh_as     string `json:"NEIGH_AS"`
+	Msg_rcvd     string `json:"MSG_RCVD"`
+	In_queue     string `json:"IN_QUEUE"`
+	Out_queue    string `json:"OUT_QUEUE"`
 }
 
-var ShowIpBgpSummary_Template = `Value Filldown ROUTER_ID (\S+)
+var ShowIpBgpSummary_Template string = `Value Filldown ROUTER_ID (\S+)
 Value Filldown LOCAL_AS (\d+)
 Value Filldown VRF ([A-Za-z0-9\-_]+)
 Value Required BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)

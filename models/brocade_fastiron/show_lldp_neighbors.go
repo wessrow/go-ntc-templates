@@ -1,14 +1,14 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowLldpNeighbors struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Holdtime	string	`json:"HOLDTIME"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Holdtime           string `json:"HOLDTIME"`
+	Capabilities       string `json:"CAPABILITIES"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
 }
 
-var ShowLldpNeighbors_Template = `Value Required NEIGHBOR_NAME (\S+)
+var ShowLldpNeighbors_Template string = `Value Required NEIGHBOR_NAME (\S+)
 Value Required LOCAL_INTERFACE (\S+)
 Value Required HOLDTIME (\d+)
 Value Required CAPABILITIES (\S+)

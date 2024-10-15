@@ -1,13 +1,13 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowArpNoResolve struct {
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Flags	string	`json:"FLAGS"`
+	Interface   string `json:"INTERFACE"`
+	Flags       string `json:"FLAGS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Ip_address  string `json:"IP_ADDRESS"`
 }
 
-var ShowArpNoResolve_Template = `Value Required MAC_ADDRESS ([A-Fa-f0-9\:]{17})
+var ShowArpNoResolve_Template string = `Value Required MAC_ADDRESS ([A-Fa-f0-9\:]{17})
 Value Required IP_ADDRESS ([A-Fa-f0-9:\.]+)
 Value Required INTERFACE (\S+)
 Value FLAGS (\S+)

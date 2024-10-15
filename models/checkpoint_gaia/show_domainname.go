@@ -1,10 +1,10 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowDomainname struct {
-	Domainname	string	`json:"DOMAINNAME"`
+	Domainname string `json:"DOMAINNAME"`
 }
 
-var ShowDomainname_Template = `Value DOMAINNAME (\S+)
+var ShowDomainname_Template string = `Value DOMAINNAME (\S+)
 
 Start
   ^Domain name\s+${DOMAINNAME} -> Record

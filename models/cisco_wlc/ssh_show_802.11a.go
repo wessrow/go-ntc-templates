@@ -1,31 +1,31 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShow80211a struct {
-	Status	string	`json:"STATUS"`
-	Specs	[]string	`json:"SPECS"`
-	Specs_value	[]string	`json:"SPECS_VALUE"`
-	Data_rate	[]string	`json:"DATA_RATE"`
-	Data_rate_value	[]string	`json:"DATA_RATE_VALUE"`
-	Mcs_rate	[]string	`json:"MCS_RATE"`
-	Mcs_rate_value	[]string	`json:"MCS_RATE_VALUE"`
-	Ss_mcs_rate	[]string	`json:"SS_MCS_RATE"`
-	Ss_mcs_rate_value	[]string	`json:"SS_MCS_RATE_VALUE"`
-	Beacon_interval	string	`json:"BEACON_INTERVAL"`
-	Rssi_low_check	string	`json:"RSSI_LOW_CHECK"`
-	Rssi_thres	string	`json:"RSSI_THRES"`
-	Edca	string	`json:"EDCA"`
-	Voice_amc	string	`json:"VOICE_AMC"`
-	Voice_cac_method	string	`json:"VOICE_CAC_METHOD"`
-	Voice_max_bandwidth	string	`json:"VOICE_MAX_BANDWIDTH"`
-	Voice_roaming_bandwidth	string	`json:"VOICE_ROAMING_BANDWIDTH"`
-	Video_amc	string	`json:"VIDEO_AMC"`
-	Video_cac_method	string	`json:"VIDEO_CAC_METHOD"`
-	Video_max_bandwidth	string	`json:"VIDEO_MAX_BANDWIDTH"`
-	Video_roaming_bandwidth	string	`json:"VIDEO_ROAMING_BANDWIDTH"`
-	Max_client	string	`json:"MAX_CLIENT"`
+	Data_rate_value         []string `json:"DATA_RATE_VALUE"`
+	Mcs_rate                []string `json:"MCS_RATE"`
+	Voice_cac_method        string   `json:"VOICE_CAC_METHOD"`
+	Video_amc               string   `json:"VIDEO_AMC"`
+	Video_roaming_bandwidth string   `json:"VIDEO_ROAMING_BANDWIDTH"`
+	Status                  string   `json:"STATUS"`
+	Mcs_rate_value          []string `json:"MCS_RATE_VALUE"`
+	Ss_mcs_rate             []string `json:"SS_MCS_RATE"`
+	Voice_amc               string   `json:"VOICE_AMC"`
+	Specs_value             []string `json:"SPECS_VALUE"`
+	Video_cac_method        string   `json:"VIDEO_CAC_METHOD"`
+	Video_max_bandwidth     string   `json:"VIDEO_MAX_BANDWIDTH"`
+	Max_client              string   `json:"MAX_CLIENT"`
+	Rssi_thres              string   `json:"RSSI_THRES"`
+	Edca                    string   `json:"EDCA"`
+	Voice_max_bandwidth     string   `json:"VOICE_MAX_BANDWIDTH"`
+	Specs                   []string `json:"SPECS"`
+	Data_rate               []string `json:"DATA_RATE"`
+	Ss_mcs_rate_value       []string `json:"SS_MCS_RATE_VALUE"`
+	Beacon_interval         string   `json:"BEACON_INTERVAL"`
+	Rssi_low_check          string   `json:"RSSI_LOW_CHECK"`
+	Voice_roaming_bandwidth string   `json:"VOICE_ROAMING_BANDWIDTH"`
 }
 
-var SshShow80211a_Template = `Value STATUS (\w+)
+var SshShow80211a_Template string = `Value STATUS (\w+)
 Value List SPECS (\w+)
 Value List SPECS_VALUE (\w+)
 Value List DATA_RATE (\d+\.?\d?\w)

@@ -1,32 +1,32 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Interface_description	string	`json:"INTERFACE_DESCRIPTION"`
-	Link_type	string	`json:"LINK_TYPE"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Pvid	string	`json:"PVID"`
-	Tpid	string	`json:"TPID"`
-	Mtu	string	`json:"MTU"`
-	Hold_timer	string	`json:"HOLD_TIMER"`
-	Internet_address	string	`json:"INTERNET_ADDRESS"`
-	Internet_protocol	string	`json:"INTERNET_PROTOCOL"`
-	Hardware_address	string	`json:"HARDWARE_ADDRESS"`
-	Last_physical_up_time	string	`json:"LAST_PHYSICAL_UP_TIME"`
-	Last_physical_down_time	string	`json:"LAST_PHYSICAL_DOWN_TIME"`
-	Last_line_protocol_uptime	string	`json:"LAST_LINE_PROTOCOL_UPTIME"`
-	Current_system_time	string	`json:"CURRENT_SYSTEM_TIME"`
-	Port_mode	string	`json:"PORT_MODE"`
-	Speed	string	`json:"SPEED"`
-	Loopback	string	`json:"LOOPBACK"`
-	Duplex	string	`json:"DUPLEX"`
-	Negotiation	string	`json:"NEGOTIATION"`
-	Aggregated_interfaces	[]string	`json:"AGGREGATED_INTERFACES"`
+	Interface                 string   `json:"INTERFACE"`
+	Pvid                      string   `json:"PVID"`
+	Mtu                       string   `json:"MTU"`
+	Internet_address          string   `json:"INTERNET_ADDRESS"`
+	Port_mode                 string   `json:"PORT_MODE"`
+	Speed                     string   `json:"SPEED"`
+	Port_type                 string   `json:"PORT_TYPE"`
+	Last_physical_down_time   string   `json:"LAST_PHYSICAL_DOWN_TIME"`
+	Last_line_protocol_uptime string   `json:"LAST_LINE_PROTOCOL_UPTIME"`
+	Negotiation               string   `json:"NEGOTIATION"`
+	Aggregated_interfaces     []string `json:"AGGREGATED_INTERFACES"`
+	Interface_description     string   `json:"INTERFACE_DESCRIPTION"`
+	Tpid                      string   `json:"TPID"`
+	Hold_timer                string   `json:"HOLD_TIMER"`
+	Internet_protocol         string   `json:"INTERNET_PROTOCOL"`
+	Current_system_time       string   `json:"CURRENT_SYSTEM_TIME"`
+	Loopback                  string   `json:"LOOPBACK"`
+	Link_status               string   `json:"LINK_STATUS"`
+	Protocol_status           string   `json:"PROTOCOL_STATUS"`
+	Link_type                 string   `json:"LINK_TYPE"`
+	Hardware_address          string   `json:"HARDWARE_ADDRESS"`
+	Last_physical_up_time     string   `json:"LAST_PHYSICAL_UP_TIME"`
+	Duplex                    string   `json:"DUPLEX"`
 }
 
-var DisplayInterface_Template = `Value Required INTERFACE (\S*)
+var DisplayInterface_Template string = `Value Required INTERFACE (\S*)
 Value LINK_STATUS (.*)
 Value PROTOCOL_STATUS (\S*|\S*\s+\(\w+\))
 Value INTERFACE_DESCRIPTION (.*)
