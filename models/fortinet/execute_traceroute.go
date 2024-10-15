@@ -1,16 +1,16 @@
-package fortinet 
+package fortinet
 
 type ExecuteTraceroute struct {
-	Destination_address	string	`json:"DESTINATION_ADDRESS"`
-	Hops_max	string	`json:"HOPS_MAX"`
-	Packets_per_hop	string	`json:"PACKETS_PER_HOP"`
-	Packet_size	string	`json:"PACKET_SIZE"`
-	Hop_num	string	`json:"HOP_NUM"`
-	Address	string	`json:"ADDRESS"`
-	Details	string	`json:"DETAILS"`
+	Hop_num             string `json:"HOP_NUM"`
+	Address             string `json:"ADDRESS"`
+	Details             string `json:"DETAILS"`
+	Destination_address string `json:"DESTINATION_ADDRESS"`
+	Hops_max            string `json:"HOPS_MAX"`
+	Packets_per_hop     string `json:"PACKETS_PER_HOP"`
+	Packet_size         string `json:"PACKET_SIZE"`
 }
 
-var ExecuteTraceroute_Template = `Value DESTINATION_ADDRESS (\S+)
+var ExecuteTraceroute_Template string = `Value DESTINATION_ADDRESS (\S+)
 Value HOPS_MAX (\d+)
 Value PACKETS_PER_HOP (\d+)
 Value PACKET_SIZE (\d+)

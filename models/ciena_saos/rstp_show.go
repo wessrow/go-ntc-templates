@@ -1,25 +1,25 @@
-package ciena_saos 
+package ciena_saos
 
 type RstpShow struct {
-	Name	string	`json:"NAME"`
-	Port_op	string	`json:"PORT_OP"`
-	Port_stp	string	`json:"PORT_STP"`
-	Port_role	string	`json:"PORT_ROLE"`
-	Rstp_st	string	`json:"RSTP_ST"`
-	Stp_st	string	`json:"STP_ST"`
-	Pr	string	`json:"PR"`
-	Path_cost_oper	string	`json:"PATH_COST_OPER"`
-	Path_cost_d	string	`json:"PATH_COST_D"`
-	Edgep_ad	string	`json:"EDGEP_AD"`
-	Edgep_op	string	`json:"EDGEP_OP"`
-	P2p_mac_adm	string	`json:"P2P_MAC_ADM"`
-	P2p_mac_op	string	`json:"P2P_MAC_OP"`
-	Domain_adm	string	`json:"DOMAIN_ADM"`
-	Domain_ef	string	`json:"DOMAIN_EF"`
-	Port_uptime	string	`json:"PORT_UPTIME"`
+	Port_stp       string `json:"PORT_STP"`
+	Rstp_st        string `json:"RSTP_ST"`
+	Port_uptime    string `json:"PORT_UPTIME"`
+	Port_op        string `json:"PORT_OP"`
+	Stp_st         string `json:"STP_ST"`
+	Path_cost_oper string `json:"PATH_COST_OPER"`
+	Path_cost_d    string `json:"PATH_COST_D"`
+	Edgep_op       string `json:"EDGEP_OP"`
+	P2p_mac_adm    string `json:"P2P_MAC_ADM"`
+	P2p_mac_op     string `json:"P2P_MAC_OP"`
+	Name           string `json:"NAME"`
+	Domain_adm     string `json:"DOMAIN_ADM"`
+	Domain_ef      string `json:"DOMAIN_EF"`
+	Port_role      string `json:"PORT_ROLE"`
+	Pr             string `json:"PR"`
+	Edgep_ad       string `json:"EDGEP_AD"`
 }
 
-var RstpShow_Template = `Value NAME ([0-9A-Za-z\.]+)
+var RstpShow_Template string = `Value NAME ([0-9A-Za-z\.]+)
 Value PORT_OP (.{2}|\w+)
 Value PORT_STP (\w+)
 Value PORT_ROLE (\w+)

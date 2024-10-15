@@ -1,20 +1,20 @@
-package dell_force10 
+package dell_force10
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Status	string	`json:"STATUS"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Ports_u_gi	string	`json:"PORTS_U_GI"`
-	Ports_t_gi	string	`json:"PORTS_T_GI"`
-	Ports_u_te	string	`json:"PORTS_U_TE"`
-	Ports_t_te	string	`json:"PORTS_T_TE"`
-	Ports_u_fo	string	`json:"PORTS_U_FO"`
-	Ports_t_fo	string	`json:"PORTS_T_FO"`
-	Ports_u_ma	string	`json:"PORTS_U_MA"`
-	Ports_t_ma	string	`json:"PORTS_T_MA"`
+	Ports_t_fo string `json:"PORTS_T_FO"`
+	Ports_t_ma string `json:"PORTS_T_MA"`
+	Vlan_id    string `json:"VLAN_ID"`
+	Vlan_name  string `json:"VLAN_NAME"`
+	Ports_t_gi string `json:"PORTS_T_GI"`
+	Ports_u_te string `json:"PORTS_U_TE"`
+	Ports_u_fo string `json:"PORTS_U_FO"`
+	Status     string `json:"STATUS"`
+	Ports_u_gi string `json:"PORTS_U_GI"`
+	Ports_t_te string `json:"PORTS_T_TE"`
+	Ports_u_ma string `json:"PORTS_U_MA"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 # Name is really the description and it currently only supports a single word (no spaces)
 Value Required STATUS (\w+)
 Value VLAN_NAME ([^TU][^\s]\S+(\s\S+)*)

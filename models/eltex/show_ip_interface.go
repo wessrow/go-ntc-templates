@@ -1,21 +1,21 @@
-package eltex 
+package eltex
 
 type ShowIpInterface struct {
-	Gateway_ip	string	`json:"GATEWAY_IP"`
-	Gateway_status	string	`json:"GATEWAY_STATUS"`
-	Gateway_type	string	`json:"GATEWAY_TYPE"`
-	Ip	string	`json:"IP"`
-	Interface	string	`json:"INTERFACE"`
-	Interface_status_admin	string	`json:"INTERFACE_STATUS_ADMIN"`
-	Interface_status_oper	string	`json:"INTERFACE_STATUS_OPER"`
-	Type	string	`json:"TYPE"`
-	Directed_broadcast	string	`json:"DIRECTED_BROADCAST"`
-	Precedence	string	`json:"PRECEDENCE"`
-	Redirect	string	`json:"REDIRECT"`
-	Status	string	`json:"STATUS"`
+	Ip                     string `json:"IP"`
+	Interface_status_oper  string `json:"INTERFACE_STATUS_OPER"`
+	Type                   string `json:"TYPE"`
+	Directed_broadcast     string `json:"DIRECTED_BROADCAST"`
+	Precedence             string `json:"PRECEDENCE"`
+	Redirect               string `json:"REDIRECT"`
+	Status                 string `json:"STATUS"`
+	Gateway_type           string `json:"GATEWAY_TYPE"`
+	Gateway_status         string `json:"GATEWAY_STATUS"`
+	Interface              string `json:"INTERFACE"`
+	Interface_status_admin string `json:"INTERFACE_STATUS_ADMIN"`
+	Gateway_ip             string `json:"GATEWAY_IP"`
 }
 
-var ShowIpInterface_Template = `Value GATEWAY_IP (\S+)
+var ShowIpInterface_Template string = `Value GATEWAY_IP (\S+)
 Value GATEWAY_STATUS (\S+)
 Value GATEWAY_TYPE (\S+)
 Value IP (\S+)

@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpCefDetail struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Nexthop	[]string	`json:"NEXTHOP"`
-	Interface	[]string	`json:"INTERFACE"`
+	Ip_address    string   `json:"IP_ADDRESS"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Nexthop       []string `json:"NEXTHOP"`
+	Interface     []string `json:"INTERFACE"`
 }
 
-var ShowIpCefDetail_Template = `# Even though this template understands the output from
+var ShowIpCefDetail_Template string = `# Even though this template understands the output from
 #   - show ip cef [vrf NAME] [PREFIX | INTERFACE] [detail]
 # INDEX file forces you to use 'detail' keyword, or there
 # will be no match. This is done to simplify INDEX file

@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowCdpNeighborsDetail struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Platform	string	`json:"PLATFORM"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Capabilities	string	`json:"CAPABILITIES"`
+	Capabilities         string `json:"CAPABILITIES"`
+	Neighbor_name        string `json:"NEIGHBOR_NAME"`
+	Mgmt_address         string `json:"MGMT_ADDRESS"`
+	Platform             string `json:"PLATFORM"`
+	Neighbor_interface   string `json:"NEIGHBOR_INTERFACE"`
+	Local_interface      string `json:"LOCAL_INTERFACE"`
+	Neighbor_description string `json:"NEIGHBOR_DESCRIPTION"`
 }
 
-var ShowCdpNeighborsDetail_Template = `Value Required NEIGHBOR_NAME (\S+)
+var ShowCdpNeighborsDetail_Template string = `Value Required NEIGHBOR_NAME (\S+)
 Value MGMT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value PLATFORM (.*)
 Value NEIGHBOR_INTERFACE (.*)

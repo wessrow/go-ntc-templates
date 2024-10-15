@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpArpDetailVrfAll struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Physical_interface	string	`json:"PHYSICAL_INTERFACE"`
-	Flags	string	`json:"FLAGS"`
-	Vrf	string	`json:"VRF"`
+	Interface          string `json:"INTERFACE"`
+	Physical_interface string `json:"PHYSICAL_INTERFACE"`
+	Flags              string `json:"FLAGS"`
+	Vrf                string `json:"VRF"`
+	Ip_address         string `json:"IP_ADDRESS"`
+	Age                string `json:"AGE"`
+	Mac_address        string `json:"MAC_ADDRESS"`
 }
 
-var ShowIpArpDetailVrfAll_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowIpArpDetailVrfAll_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE (\S+)
 Value MAC_ADDRESS (\S+)
 Value INTERFACE (\S+)

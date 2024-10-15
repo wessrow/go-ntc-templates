@@ -1,14 +1,14 @@
-package ubiquiti_edgerouter 
+package ubiquiti_edgerouter
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	State	string	`json:"STATE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Description	string	`json:"DESCRIPTION"`
+	Link_status string   `json:"LINK_STATUS"`
+	Description string   `json:"DESCRIPTION"`
+	Interface   string   `json:"INTERFACE"`
+	Ip_address  []string `json:"IP_ADDRESS"`
+	State       string   `json:"STATE"`
 }
 
-var ShowInterfaces_Template = `Value Required INTERFACE (\w+(\.\d+)?)
+var ShowInterfaces_Template string = `Value Required INTERFACE (\w+(\.\d+)?)
 Value List IP_ADDRESS (\S+)
 Value STATE (\w)
 Value LINK_STATUS (\w)

@@ -1,16 +1,16 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Phy	string	`json:"PHY"`
-	Protocol	string	`json:"PROTOCOL"`
-	Inuti	string	`json:"INUTI"`
-	Oututi	string	`json:"OUTUTI"`
-	Inerrors	string	`json:"INERRORS"`
-	Outerrors	string	`json:"OUTERRORS"`
+	Inuti     string `json:"INUTI"`
+	Oututi    string `json:"OUTUTI"`
+	Inerrors  string `json:"INERRORS"`
+	Outerrors string `json:"OUTERRORS"`
+	Interface string `json:"INTERFACE"`
+	Phy       string `json:"PHY"`
+	Protocol  string `json:"PROTOCOL"`
 }
 
-var DisplayInterfaceBrief_Template = `Value INTERFACE (\S+)
+var DisplayInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value PHY (down|[\*\^]down|up|up\(\w+\))
 Value PROTOCOL (down|[\*\^]down|up|up\(\w+\))
 Value INUTI (\d*\.?\d*%|\-\-)

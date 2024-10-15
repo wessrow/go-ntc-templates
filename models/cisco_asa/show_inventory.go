@@ -1,14 +1,14 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowInventory struct {
-	Name	string	`json:"NAME"`
-	Descr	string	`json:"DESCR"`
-	Pid	string	`json:"PID"`
-	Vid	string	`json:"VID"`
-	Sn	string	`json:"SN"`
+	Name  string `json:"NAME"`
+	Descr string `json:"DESCR"`
+	Pid   string `json:"PID"`
+	Vid   string `json:"VID"`
+	Sn    string `json:"SN"`
 }
 
-var ShowInventory_Template = `Value NAME (.*)
+var ShowInventory_Template string = `Value NAME (.*)
 Value DESCR (.*)
 Value PID ([\w\d\s/-]+[\S]+)
 Value VID (\S+)

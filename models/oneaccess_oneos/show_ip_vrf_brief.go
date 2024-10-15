@@ -1,12 +1,12 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIpVrfBrief struct {
-	Vrf	string	`json:"VRF"`
-	Vrf_id	string	`json:"VRF_ID"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Vrf        string   `json:"VRF"`
+	Vrf_id     string   `json:"VRF_ID"`
+	Interfaces []string `json:"INTERFACES"`
 }
 
-var ShowIpVrfBrief_Template = `Value VRF (\w+)
+var ShowIpVrfBrief_Template string = `Value VRF (\w+)
 Value VRF_ID (\d+)
 Value List INTERFACES ([\w\-]+\s?[\w\/\.]+)
 

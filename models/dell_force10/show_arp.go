@@ -1,14 +1,14 @@
-package dell_force10 
+package dell_force10
 
 type ShowArp struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Port	string	`json:"PORT"`
-	Age	string	`json:"AGE"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Age         string `json:"AGE"`
+	Vlan_id     string `json:"VLAN_ID"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Port        string `json:"PORT"`
 }
 
-var ShowArp_Template = `Value IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+var ShowArp_Template string = `Value IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
 Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2})
 Value PORT (\w{2} \d{1,2}\/\d{1,2}|\-)
 Value AGE (\d+|\-)

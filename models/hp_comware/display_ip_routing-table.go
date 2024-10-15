@@ -1,16 +1,16 @@
-package hp_comware 
+package hp_comware
 
 type DisplayIpRoutingTable struct {
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Protocal	string	`json:"PROTOCAL"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
+	Protocal      string `json:"PROTOCAL"`
+	Distance      string `json:"DISTANCE"`
+	Metric        string `json:"METRIC"`
+	Nexthop_ip    string `json:"NEXTHOP_IP"`
+	Nexthop_if    string `json:"NEXTHOP_IF"`
+	Network       string `json:"NETWORK"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
 }
 
-var DisplayIpRoutingTable_Template = `Value Filldown NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+var DisplayIpRoutingTable_Template string = `Value Filldown NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
 Value Filldown PREFIX_LENGTH (\d{1,2})
 Value Filldown PROTOCAL (\w+)
 Value Filldown DISTANCE (\d{1,3})

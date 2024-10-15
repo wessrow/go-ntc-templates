@@ -1,16 +1,16 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntGemport0Ontid0 struct {
-	Gem_port	string	`json:"GEM_PORT"`
-	T_cont_id	string	`json:"T_CONT_ID"`
-	Service_type	string	`json:"SERVICE_TYPE"`
-	Encrypt	string	`json:"ENCRYPT"`
-	Upstream_pq	string	`json:"UPSTREAM_PQ"`
-	Downstream_pq	string	`json:"DOWNSTREAM_PQ"`
-	Traffic_table_index	string	`json:"TRAFFIC_TABLE_INDEX"`
+	Upstream_pq         string `json:"UPSTREAM_PQ"`
+	Downstream_pq       string `json:"DOWNSTREAM_PQ"`
+	Traffic_table_index string `json:"TRAFFIC_TABLE_INDEX"`
+	Gem_port            string `json:"GEM_PORT"`
+	T_cont_id           string `json:"T_CONT_ID"`
+	Service_type        string `json:"SERVICE_TYPE"`
+	Encrypt             string `json:"ENCRYPT"`
 }
 
-var DisplayOntGemport0Ontid0_Template = `Value Key GEM_PORT (\d+)
+var DisplayOntGemport0Ontid0_Template string = `Value Key GEM_PORT (\d+)
 Value T_CONT_ID (\d+)
 Value SERVICE_TYPE (\S+)
 Value ENCRYPT (\S+)

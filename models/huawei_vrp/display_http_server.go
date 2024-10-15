@@ -1,21 +1,21 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayHttpServer struct {
-	Http_server_status	string	`json:"HTTP_SERVER_STATUS"`
-	Http_server_port	string	`json:"HTTP_SERVER_PORT"`
-	Http_timeout_interval	string	`json:"HTTP_TIMEOUT_INTERVAL"`
-	Current_online_users	string	`json:"CURRENT_ONLINE_USERS"`
-	Maximum_users_allowed	string	`json:"MAXIMUM_USERS_ALLOWED"`
-	Https_server_status	string	`json:"HTTPS_SERVER_STATUS"`
-	Https_server_port	string	`json:"HTTPS_SERVER_PORT"`
-	Http_ssl_policy	string	`json:"HTTP_SSL_POLICY"`
-	Http_ipv6_server_status	string	`json:"HTTP_IPV6_SERVER_STATUS"`
-	Http_ipv6_server_port	string	`json:"HTTP_IPV6_SERVER_PORT"`
-	Https_ipv6_status	string	`json:"HTTPS_IPV6_STATUS"`
-	Http_server_source_address	string	`json:"HTTP_SERVER_SOURCE_ADDRESS"`
+	Maximum_users_allowed      string `json:"MAXIMUM_USERS_ALLOWED"`
+	Http_ipv6_server_port      string `json:"HTTP_IPV6_SERVER_PORT"`
+	Http_server_source_address string `json:"HTTP_SERVER_SOURCE_ADDRESS"`
+	Http_ipv6_server_status    string `json:"HTTP_IPV6_SERVER_STATUS"`
+	Http_server_status         string `json:"HTTP_SERVER_STATUS"`
+	Http_server_port           string `json:"HTTP_SERVER_PORT"`
+	Http_timeout_interval      string `json:"HTTP_TIMEOUT_INTERVAL"`
+	Current_online_users       string `json:"CURRENT_ONLINE_USERS"`
+	Https_server_status        string `json:"HTTPS_SERVER_STATUS"`
+	Https_server_port          string `json:"HTTPS_SERVER_PORT"`
+	Http_ssl_policy            string `json:"HTTP_SSL_POLICY"`
+	Https_ipv6_status          string `json:"HTTPS_IPV6_STATUS"`
 }
 
-var DisplayHttpServer_Template = `Value HTTP_SERVER_STATUS (\S+)
+var DisplayHttpServer_Template string = `Value HTTP_SERVER_STATUS (\S+)
 Value HTTP_SERVER_PORT (disabled|\d+\(\d+\))
 Value HTTP_TIMEOUT_INTERVAL (\d+)
 Value CURRENT_ONLINE_USERS (\d+)

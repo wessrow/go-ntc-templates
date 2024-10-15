@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpMroutesVrfAll struct {
-	Group	string	`json:"GROUP"`
-	Source	string	`json:"SOURCE"`
-	Vrf	string	`json:"VRF"`
-	Oif_list	[]string	`json:"OIF_LIST"`
-	Incoming_interface	string	`json:"INCOMING_INTERFACE"`
-	Rpf_neighbor	string	`json:"RPF_NEIGHBOR"`
-	Last_uptime	string	`json:"LAST_UPTIME"`
+	Incoming_interface string   `json:"INCOMING_INTERFACE"`
+	Rpf_neighbor       string   `json:"RPF_NEIGHBOR"`
+	Last_uptime        string   `json:"LAST_UPTIME"`
+	Group              string   `json:"GROUP"`
+	Source             string   `json:"SOURCE"`
+	Vrf                string   `json:"VRF"`
+	Oif_list           []string `json:"OIF_LIST"`
 }
 
-var ShowIpMroutesVrfAll_Template = `Value Required GROUP (\S+)
+var ShowIpMroutesVrfAll_Template string = `Value Required GROUP (\S+)
 Value SOURCE (\*|\S+)
 Value Filldown VRF (\S+)
 Value List OIF_LIST (\S+)

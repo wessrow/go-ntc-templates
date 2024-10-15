@@ -1,28 +1,28 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpRoutePrintTerseWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Comment	string	`json:"COMMENT"`
-	Destination_address	string	`json:"DESTINATION_ADDRESS"`
-	Destination_address_subnet	string	`json:"DESTINATION_ADDRESS_SUBNET"`
-	Type	string	`json:"TYPE"`
-	Routing_table	string	`json:"ROUTING_TABLE"`
-	Pref_src	string	`json:"PREF_SRC"`
-	Gateway	string	`json:"GATEWAY"`
-	Gateway_status	string	`json:"GATEWAY_STATUS"`
-	Immediate_gw	string	`json:"IMMEDIATE_GW"`
-	Check_gateway	string	`json:"CHECK_GATEWAY"`
-	Distance	string	`json:"DISTANCE"`
-	Scope	string	`json:"SCOPE"`
-	Target_scope	string	`json:"TARGET_SCOPE"`
-	Vrf_interface	string	`json:"VRF_INTERFACE"`
-	Suppress_hw_offload	string	`json:"SUPPRESS_HW_OFFLOAD"`
-	Local_address	string	`json:"LOCAL_ADDRESS"`
-	Routing_mark	string	`json:"ROUTING_MARK"`
+	Vrf_interface              string `json:"VRF_INTERFACE"`
+	Suppress_hw_offload        string `json:"SUPPRESS_HW_OFFLOAD"`
+	Flags                      string `json:"FLAGS"`
+	Pref_src                   string `json:"PREF_SRC"`
+	Gateway_status             string `json:"GATEWAY_STATUS"`
+	Local_address              string `json:"LOCAL_ADDRESS"`
+	Index                      string `json:"INDEX"`
+	Type                       string `json:"TYPE"`
+	Gateway                    string `json:"GATEWAY"`
+	Check_gateway              string `json:"CHECK_GATEWAY"`
+	Distance                   string `json:"DISTANCE"`
+	Scope                      string `json:"SCOPE"`
+	Target_scope               string `json:"TARGET_SCOPE"`
+	Routing_mark               string `json:"ROUTING_MARK"`
+	Comment                    string `json:"COMMENT"`
+	Destination_address        string `json:"DESTINATION_ADDRESS"`
+	Destination_address_subnet string `json:"DESTINATION_ADDRESS_SUBNET"`
+	Routing_table              string `json:"ROUTING_TABLE"`
+	Immediate_gw               string `json:"IMMEDIATE_GW"`
 }
 
-var IpRoutePrintTerseWithoutPaging_Template = `Value INDEX (\d+)
+var IpRoutePrintTerseWithoutPaging_Template string = `Value INDEX (\d+)
 Value FLAGS ([XADCSrbomBUP ]{4})
 Value COMMENT (.*?(?=(?:[^=]\S+=)|\s*$))
 Value DESTINATION_ADDRESS (\S+)

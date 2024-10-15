@@ -1,11 +1,11 @@
-package ciena_saos 
+package ciena_saos
 
 type VlanShow struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
+	Vlan_name string `json:"VLAN_NAME"`
+	Vlan_id   string `json:"VLAN_ID"`
 }
 
-var VlanShow_Template = `Value VLAN_ID (\d+)
+var VlanShow_Template string = `Value VLAN_ID (\d+)
 Value VLAN_NAME ([0-9a-zA-Z_#]+)
 
 Start

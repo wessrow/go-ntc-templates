@@ -1,21 +1,21 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowPortsInformation struct {
-	Interface	string	`json:"INTERFACE"`
-	Flags	string	`json:"FLAGS"`
-	Link_state	string	`json:"LINK_STATE"`
-	Elsm	string	`json:"ELSM"`
-	Oam	string	`json:"OAM"`
-	Link_ups	string	`json:"LINK_UPS"`
-	Num_stp	string	`json:"NUM_STP"`
-	Num_vlan	string	`json:"NUM_VLAN"`
-	Num_proto	string	`json:"NUM_PROTO"`
-	Jumbo_size	string	`json:"JUMBO_SIZE"`
-	Qos_profile	string	`json:"QOS_PROFILE"`
-	Load_master	string	`json:"LOAD_MASTER"`
+	Flags       string `json:"FLAGS"`
+	Link_state  string `json:"LINK_STATE"`
+	Elsm        string `json:"ELSM"`
+	Oam         string `json:"OAM"`
+	Num_stp     string `json:"NUM_STP"`
+	Num_vlan    string `json:"NUM_VLAN"`
+	Interface   string `json:"INTERFACE"`
+	Link_ups    string `json:"LINK_UPS"`
+	Num_proto   string `json:"NUM_PROTO"`
+	Jumbo_size  string `json:"JUMBO_SIZE"`
+	Qos_profile string `json:"QOS_PROFILE"`
+	Load_master string `json:"LOAD_MASTER"`
 }
 
-var ShowPortsInformation_Template = `Value INTERFACE (\d+)
+var ShowPortsInformation_Template string = `Value INTERFACE (\d+)
 Value FLAGS (\S+)
 Value LINK_STATE (\S+)
 Value ELSM (\S+)

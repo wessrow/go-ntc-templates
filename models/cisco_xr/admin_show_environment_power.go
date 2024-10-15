@@ -1,13 +1,13 @@
-package cisco_xr 
+package cisco_xr
 
 type AdminShowEnvironmentPower struct {
-	Power_group	string	`json:"POWER_GROUP"`
-	Power_module	string	`json:"POWER_MODULE"`
-	Supply_type	string	`json:"SUPPLY_TYPE"`
-	Status	string	`json:"STATUS"`
+	Status       string `json:"STATUS"`
+	Power_group  string `json:"POWER_GROUP"`
+	Power_module string `json:"POWER_MODULE"`
+	Supply_type  string `json:"SUPPLY_TYPE"`
 }
 
-var AdminShowEnvironmentPower_Template = `Value Filldown POWER_GROUP (\d+)
+var AdminShowEnvironmentPower_Template string = `Value Filldown POWER_GROUP (\d+)
 Value Required POWER_MODULE (\d+\/PM\d+)
 Value Required SUPPLY_TYPE (\S+)
 Value Required STATUS (OK|Failed)

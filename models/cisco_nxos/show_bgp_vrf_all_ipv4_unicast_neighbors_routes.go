@@ -1,20 +1,20 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowBgpVrfAllIpv4UnicastNeighborsRoutes struct {
-	Status	string	`json:"STATUS"`
-	Path_selection	string	`json:"PATH_SELECTION"`
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Prefix	string	`json:"PREFIX"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Metric	string	`json:"METRIC"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	As_path	string	`json:"AS_PATH"`
-	Origin	string	`json:"ORIGIN"`
+	Status         string `json:"STATUS"`
+	Route_source   string `json:"ROUTE_SOURCE"`
+	Weight         string `json:"WEIGHT"`
+	Next_hop       string `json:"NEXT_HOP"`
+	Metric         string `json:"METRIC"`
+	Local_pref     string `json:"LOCAL_PREF"`
+	As_path        string `json:"AS_PATH"`
+	Origin         string `json:"ORIGIN"`
+	Path_selection string `json:"PATH_SELECTION"`
+	Prefix         string `json:"PREFIX"`
+	Prefix_length  string `json:"PREFIX_LENGTH"`
 }
 
-var ShowBgpVrfAllIpv4UnicastNeighborsRoutes_Template = `Value STATUS ([sxSdh*])
+var ShowBgpVrfAllIpv4UnicastNeighborsRoutes_Template string = `Value STATUS ([sxSdh*])
 Value PATH_SELECTION ([> |&|])
 Value ROUTE_SOURCE ([ieclarI])
 Value Filldown PREFIX ([A-Fa-f0-9:\.]+)

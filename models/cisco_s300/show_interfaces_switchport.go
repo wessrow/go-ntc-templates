@@ -1,23 +1,23 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowInterfacesSwitchport struct {
-	Interface	string	`json:"INTERFACE"`
-	Interface_mode	string	`json:"INTERFACE_MODE"`
-	Gvrp_status	string	`json:"GVRP_STATUS"`
-	Ingress_filtering_status	string	`json:"INGRESS_FILTERING_STATUS"`
-	Acceptable_frame_type	string	`json:"ACCEPTABLE_FRAME_TYPE"`
-	Native_vlan	string	`json:"NATIVE_VLAN"`
-	Vlan	[]string	`json:"VLAN"`
-	Name	[]string	`json:"NAME"`
-	Egress_rule	[]string	`json:"EGRESS_RULE"`
-	Interface_membership_type	[]string	`json:"INTERFACE_MEMBERSHIP_TYPE"`
-	Forbidden_vlan	[]string	`json:"FORBIDDEN_VLAN"`
-	Forbidden_vlan_name	[]string	`json:"FORBIDDEN_VLAN_NAME"`
-	Mac_based_vlan_group_id	[]string	`json:"MAC_BASED_VLAN_GROUP_ID"`
-	Mac_based_vlan_id	[]string	`json:"MAC_BASED_VLAN_ID"`
+	Gvrp_status               string   `json:"GVRP_STATUS"`
+	Native_vlan               string   `json:"NATIVE_VLAN"`
+	Interface_membership_type []string `json:"INTERFACE_MEMBERSHIP_TYPE"`
+	Vlan                      []string `json:"VLAN"`
+	Egress_rule               []string `json:"EGRESS_RULE"`
+	Mac_based_vlan_group_id   []string `json:"MAC_BASED_VLAN_GROUP_ID"`
+	Mac_based_vlan_id         []string `json:"MAC_BASED_VLAN_ID"`
+	Ingress_filtering_status  string   `json:"INGRESS_FILTERING_STATUS"`
+	Acceptable_frame_type     string   `json:"ACCEPTABLE_FRAME_TYPE"`
+	Name                      []string `json:"NAME"`
+	Forbidden_vlan            []string `json:"FORBIDDEN_VLAN"`
+	Forbidden_vlan_name       []string `json:"FORBIDDEN_VLAN_NAME"`
+	Interface                 string   `json:"INTERFACE"`
+	Interface_mode            string   `json:"INTERFACE_MODE"`
 }
 
-var ShowInterfacesSwitchport_Template = `Value INTERFACE (\S+)
+var ShowInterfacesSwitchport_Template string = `Value INTERFACE (\S+)
 Value INTERFACE_MODE (\S+)
 Value GVRP_STATUS (\S+)
 Value INGRESS_FILTERING_STATUS (\S+)

@@ -1,25 +1,25 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowCefDropsLocation struct {
-	Location	string	`json:"LOCATION"`
-	Unresolved_drops	string	`json:"UNRESOLVED_DROPS"`
-	Unsupported_drops	string	`json:"UNSUPPORTED_DROPS"`
-	Null0_drops	string	`json:"NULL0_DROPS"`
-	No_route_drops	string	`json:"NO_ROUTE_DROPS"`
-	No_adjacency_drops	string	`json:"NO_ADJACENCY_DROPS"`
-	Checksum_error_drops	string	`json:"CHECKSUM_ERROR_DROPS"`
-	Rpf_drops	string	`json:"RPF_DROPS"`
-	Rpf_suppressed_drops	string	`json:"RPF_SUPPRESSED_DROPS"`
-	Rp_destined_drops	string	`json:"RP_DESTINED_DROPS"`
-	Discard_drops	string	`json:"DISCARD_DROPS"`
-	Gre_lookup_drops	string	`json:"GRE_LOOKUP_DROPS"`
-	Gre_processing_drops	string	`json:"GRE_PROCESSING_DROPS"`
-	Lisp_punt_drops	string	`json:"LISP_PUNT_DROPS"`
-	Lisp_encap_err_drops	string	`json:"LISP_ENCAP_ERR_DROPS"`
-	Lisp_decap_err_drops	string	`json:"LISP_DECAP_ERR_DROPS"`
+	Gre_lookup_drops     string `json:"GRE_LOOKUP_DROPS"`
+	Unsupported_drops    string `json:"UNSUPPORTED_DROPS"`
+	Rp_destined_drops    string `json:"RP_DESTINED_DROPS"`
+	No_adjacency_drops   string `json:"NO_ADJACENCY_DROPS"`
+	Checksum_error_drops string `json:"CHECKSUM_ERROR_DROPS"`
+	Rpf_drops            string `json:"RPF_DROPS"`
+	Gre_processing_drops string `json:"GRE_PROCESSING_DROPS"`
+	Location             string `json:"LOCATION"`
+	Null0_drops          string `json:"NULL0_DROPS"`
+	Lisp_punt_drops      string `json:"LISP_PUNT_DROPS"`
+	Lisp_decap_err_drops string `json:"LISP_DECAP_ERR_DROPS"`
+	No_route_drops       string `json:"NO_ROUTE_DROPS"`
+	Rpf_suppressed_drops string `json:"RPF_SUPPRESSED_DROPS"`
+	Lisp_encap_err_drops string `json:"LISP_ENCAP_ERR_DROPS"`
+	Unresolved_drops     string `json:"UNRESOLVED_DROPS"`
+	Discard_drops        string `json:"DISCARD_DROPS"`
 }
 
-var ShowCefDropsLocation_Template = `Value LOCATION (\S+)
+var ShowCefDropsLocation_Template string = `Value LOCATION (\S+)
 Value UNRESOLVED_DROPS (\d+)
 Value UNSUPPORTED_DROPS (\d+)
 Value NULL0_DROPS (\d+)

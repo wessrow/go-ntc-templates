@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpPrefixList struct {
-	Name	string	`json:"NAME"`
-	Seq	string	`json:"SEQ"`
-	Action	string	`json:"ACTION"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Le	string	`json:"LE"`
-	Ge	string	`json:"GE"`
+	Le      string `json:"LE"`
+	Ge      string `json:"GE"`
+	Name    string `json:"NAME"`
+	Seq     string `json:"SEQ"`
+	Action  string `json:"ACTION"`
+	Network string `json:"NETWORK"`
+	Netmask string `json:"NETMASK"`
 }
 
-var ShowIpPrefixList_Template = `Value Required,Filldown NAME (\S+)
+var ShowIpPrefixList_Template string = `Value Required,Filldown NAME (\S+)
 Value Required SEQ (\d+)
 Value ACTION (\S+)
 Value NETWORK ([0-9a-f:\.]+)

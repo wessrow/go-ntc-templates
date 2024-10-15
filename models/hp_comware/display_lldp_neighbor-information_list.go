@@ -1,13 +1,13 @@
-package hp_comware 
+package hp_comware
 
 type DisplayLldpNeighborInformationList struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Chassis_id         string `json:"CHASSIS_ID"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
 }
 
-var DisplayLldpNeighborInformationList_Template = `Value Required LOCAL_INTERFACE (\S+)
+var DisplayLldpNeighborInformationList_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value Required NEIGHBOR_INTERFACE ((\S+)|(Port\s\d+))
 Value Required NEIGHBOR_NAME (\S+)

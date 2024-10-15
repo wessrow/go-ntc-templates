@@ -1,15 +1,15 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_type	string	`json:"VLAN_TYPE"`
-	Mode	string	`json:"MODE"`
-	Interface	string	`json:"INTERFACE"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Vlan_status	string	`json:"VLAN_STATUS"`
+	Vlan_type   string `json:"VLAN_TYPE"`
+	Mode        string `json:"MODE"`
+	Interface   string `json:"INTERFACE"`
+	Vlan_name   string `json:"VLAN_NAME"`
+	Vlan_status string `json:"VLAN_STATUS"`
+	Vlan_id     string `json:"VLAN_ID"`
 }
 
-var DisplayVlan_Template = `Value Filldown VLAN_ID (\d+)
+var DisplayVlan_Template string = `Value Filldown VLAN_ID (\d+)
 Value Filldown VLAN_TYPE (\w+)
 Value Filldown MODE ((TG|UT))
 Value INTERFACE ([A-Z0-9/th\-runk]+)

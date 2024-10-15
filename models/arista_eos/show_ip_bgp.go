@@ -1,22 +1,22 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpBgp struct {
-	Status	string	`json:"STATUS"`
-	Path_selection	string	`json:"PATH_SELECTION"`
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Network	string	`json:"NETWORK"`
-	Next_hop	string	`json:"NEXT_HOP"`
-	Metric	string	`json:"METRIC"`
-	Local_pref	string	`json:"LOCAL_PREF"`
-	Weight	string	`json:"WEIGHT"`
-	As_path	string	`json:"AS_PATH"`
-	Origin	string	`json:"ORIGIN"`
-	Vrf	string	`json:"VRF"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Router_id	string	`json:"ROUTER_ID"`
+	Local_pref     string `json:"LOCAL_PREF"`
+	As_path        string `json:"AS_PATH"`
+	Origin         string `json:"ORIGIN"`
+	Vrf            string `json:"VRF"`
+	Network        string `json:"NETWORK"`
+	Next_hop       string `json:"NEXT_HOP"`
+	Metric         string `json:"METRIC"`
+	Weight         string `json:"WEIGHT"`
+	Local_as       string `json:"LOCAL_AS"`
+	Router_id      string `json:"ROUTER_ID"`
+	Status         string `json:"STATUS"`
+	Path_selection string `json:"PATH_SELECTION"`
+	Route_source   string `json:"ROUTE_SOURCE"`
 }
 
-var ShowIpBgp_Template = `Value STATUS ([bceEisS*>#?])
+var ShowIpBgp_Template string = `Value STATUS ([bceEisS*>#?])
 Value PATH_SELECTION ([bceEisS*>#? ])
 Value ROUTE_SOURCE ([bceEisS*>#? ])
 Value NETWORK (\S+)

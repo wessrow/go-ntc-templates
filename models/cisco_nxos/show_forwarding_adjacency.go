@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowForwardingAdjacency struct {
-	Slot	string	`json:"SLOT"`
-	Nexthop	string	`json:"NEXTHOP"`
-	Rewrite	string	`json:"REWRITE"`
-	Interface	string	`json:"INTERFACE"`
-	Origin_as	string	`json:"ORIGIN_AS"`
-	Peer_as	string	`json:"PEER_AS"`
-	Neighbor	string	`json:"NEIGHBOR"`
+	Interface string `json:"INTERFACE"`
+	Origin_as string `json:"ORIGIN_AS"`
+	Peer_as   string `json:"PEER_AS"`
+	Neighbor  string `json:"NEIGHBOR"`
+	Slot      string `json:"SLOT"`
+	Nexthop   string `json:"NEXTHOP"`
+	Rewrite   string `json:"REWRITE"`
 }
 
-var ShowForwardingAdjacency_Template = `# Nexus 7k have multiple slots
+var ShowForwardingAdjacency_Template string = `# Nexus 7k have multiple slots
 Value Filldown SLOT (\d+)
 Value Required NEXTHOP ((?:\d{1,3}\.){3}\d{1,3})
 Value Required REWRITE (\S+)

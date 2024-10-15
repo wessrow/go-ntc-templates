@@ -1,38 +1,38 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowBfdNeighborsDetails struct {
-	Our_addr	string	`json:"OUR_ADDR"`
-	Neighbor_addr	string	`json:"NEIGHBOR_ADDR"`
-	Local_discrim	string	`json:"LOCAL_DISCRIM"`
-	Remote_discrim	string	`json:"REMOTE_DISCRIM"`
-	Remote_heard	string	`json:"REMOTE_HEARD"`
-	Holddown	string	`json:"HOLDDOWN"`
-	Multiplier	string	`json:"MULTIPLIER"`
-	State	string	`json:"STATE"`
-	Interface	string	`json:"INTERFACE"`
-	Echo_function	string	`json:"ECHO_FUNCTION"`
-	Echo_interval	string	`json:"ECHO_INTERVAL"`
-	Diagnostic_bit	string	`json:"DIAGNOSTIC_BIT"`
-	Demand_bit	string	`json:"DEMAND_BIT"`
-	Poll_bit	string	`json:"POLL_BIT"`
-	Min_tx_interval	string	`json:"MIN_TX_INTERVAL"`
-	Min_rx_interval	string	`json:"MIN_RX_INTERVAL"`
-	Received_min_rx_interval	string	`json:"RECEIVED_MIN_RX_INTERVAL"`
-	Received_multiplier	string	`json:"RECEIVED_MULTIPLIER"`
-	Holddown_hits	string	`json:"HOLDDOWN_HITS"`
-	Hello_interval	string	`json:"HELLO_INTERVAL"`
-	Hello_hits	string	`json:"HELLO_HITS"`
-	Rx_count	string	`json:"RX_COUNT"`
-	Rx_last	string	`json:"RX_LAST"`
-	Tx_count	string	`json:"TX_COUNT"`
-	Tx_last	string	`json:"TX_LAST"`
-	Registered_protocols	string	`json:"REGISTERED_PROTOCOLS"`
-	Template	string	`json:"TEMPLATE"`
-	Uptime	string	`json:"UPTIME"`
-	Version	string	`json:"VERSION"`
+	Multiplier               string `json:"MULTIPLIER"`
+	State                    string `json:"STATE"`
+	Tx_last                  string `json:"TX_LAST"`
+	Holddown                 string `json:"HOLDDOWN"`
+	Rx_last                  string `json:"RX_LAST"`
+	Tx_count                 string `json:"TX_COUNT"`
+	Uptime                   string `json:"UPTIME"`
+	Local_discrim            string `json:"LOCAL_DISCRIM"`
+	Interface                string `json:"INTERFACE"`
+	Diagnostic_bit           string `json:"DIAGNOSTIC_BIT"`
+	Hello_hits               string `json:"HELLO_HITS"`
+	Min_tx_interval          string `json:"MIN_TX_INTERVAL"`
+	Remote_heard             string `json:"REMOTE_HEARD"`
+	Hello_interval           string `json:"HELLO_INTERVAL"`
+	Version                  string `json:"VERSION"`
+	Echo_function            string `json:"ECHO_FUNCTION"`
+	Received_multiplier      string `json:"RECEIVED_MULTIPLIER"`
+	Holddown_hits            string `json:"HOLDDOWN_HITS"`
+	Poll_bit                 string `json:"POLL_BIT"`
+	Min_rx_interval          string `json:"MIN_RX_INTERVAL"`
+	Our_addr                 string `json:"OUR_ADDR"`
+	Neighbor_addr            string `json:"NEIGHBOR_ADDR"`
+	Echo_interval            string `json:"ECHO_INTERVAL"`
+	Demand_bit               string `json:"DEMAND_BIT"`
+	Template                 string `json:"TEMPLATE"`
+	Remote_discrim           string `json:"REMOTE_DISCRIM"`
+	Received_min_rx_interval string `json:"RECEIVED_MIN_RX_INTERVAL"`
+	Rx_count                 string `json:"RX_COUNT"`
+	Registered_protocols     string `json:"REGISTERED_PROTOCOLS"`
 }
 
-var ShowBfdNeighborsDetails_Template = `Value OUR_ADDR (\S+)
+var ShowBfdNeighborsDetails_Template string = `Value OUR_ADDR (\S+)
 Value NEIGHBOR_ADDR (\S+)
 Value LOCAL_DISCRIM (\d+)
 Value REMOTE_DISCRIM (\d+)
@@ -87,6 +87,8 @@ BFD
   # some legacy output spells holddown with one d
   ^\s*Holdd?own\s+\(hits\):\s+${HOLDDOWN}\(${HOLDDOWN_HITS}\),\s+Hello\s+\(hits\):\s+${HELLO_INTERVAL}\(${HELLO_HITS}\)\s*$$
   #
+  ^\s*Rx\s+Count:\s+${RX_COUNT},(?:\s+\S+){5}\s*$$
+  ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){5}\s*$$
   ^\s*Rx\s+Count:\s+${RX_COUNT},(?:\s+\S+){6}\s+${RX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Tx\s+Count:\s+${TX_COUNT},(?:\s+\S+){6}\s+${TX_LAST}(?:\s+\S+){2}\s*$$
   ^\s*Registered\s+protocols:\s+${REGISTERED_PROTOCOLS}\s*$$

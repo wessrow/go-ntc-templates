@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowAlertCounters struct {
-	Interface	string	`json:"interface"`
-	Errorcode	string	`json:"errorcode"`
-	Timestamp	string	`json:"timestamp"`
-	Description	string	`json:"description"`
-	Recommendation	string	`json:"recommendation"`
+	Description    string `json:"description"`
+	Recommendation string `json:"recommendation"`
+	Interface      string `json:"interface"`
+	Errorcode      string `json:"errorcode"`
+	Timestamp      string `json:"timestamp"`
 }
 
-var ShowAlertCounters_Template = `Value Filldown interface (.+) 
+var ShowAlertCounters_Template string = `Value Filldown interface (.+) 
 Value errorcode (.+)
 Value timestamp (.+)
 Value description (.+)

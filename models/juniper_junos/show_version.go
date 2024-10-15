@@ -1,49 +1,49 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowVersion struct {
-	Hostname	string	`json:"HOSTNAME"`
-	Model	string	`json:"MODEL"`
-	Junos_version	string	`json:"JUNOS_VERSION"`
-	Base_os_boot	string	`json:"BASE_OS_BOOT"`
-	Base_os_software_suite	string	`json:"BASE_OS_SOFTWARE_SUITE"`
-	Kernel_software_suite	string	`json:"KERNEL_SOFTWARE_SUITE"`
-	Crypto_software_suite	string	`json:"CRYPTO_SOFTWARE_SUITE"`
-	Packet_forwarding_engine_support_m_t_ex_common	string	`json:"PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON"`
-	Packet_forwarding_engine_support_mx_common	string	`json:"PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON"`
-	Fips_mode_utilities	string	`json:"FIPS_MODE_UTILITIES"`
-	Online_documentation	string	`json:"ONLINE_DOCUMENTATION"`
-	Services_aacl_container_package	string	`json:"SERVICES_AACL_CONTAINER_PACKAGE"`
-	Services_application_level_gateways	string	`json:"SERVICES_APPLICATION_LEVEL_GATEWAYS"`
-	Appid_services	string	`json:"APPID_SERVICES"`
-	Border_gateway_function_package	string	`json:"BORDER_GATEWAY_FUNCTION_PACKAGE"`
-	Services_captive_portal_content_delivery_package	string	`json:"SERVICES_CAPTIVE_PORTAL_CONTENT_DELIVERY_PACKAGE"`
-	Services_http_content_management_package	string	`json:"SERVICES_HTTP_CONTENT_MANAGEMENT_PACKAGE"`
-	Idp_services	string	`json:"IDP_SERVICES"`
-	Services_jflow_container_package	string	`json:"SERVICES_JFLOW_CONTAINER_PACKAGE"`
-	Services_ll_pdf_container_package	string	`json:"SERVICES_LL_PDF_CONTAINER_PACKAGE"`
-	Services_mobilenext_software_package	string	`json:"SERVICES_MOBILENEXT_SOFTWARE_PACKAGE"`
-	Services_mobile_subscriber_service_package	string	`json:"SERVICES_MOBILE_SUBSCRIBER_SERVICE_PACKAGE"`
-	Services_nat	string	`json:"SERVICES_NAT"`
-	Services_ptsp_container_package	string	`json:"SERVICES_PTSP_CONTAINER_PACKAGE"`
-	Services_rpm	string	`json:"SERVICES_RPM"`
-	Services_stateful_firewall	string	`json:"SERVICES_STATEFUL_FIREWALL"`
-	Voice_services_container_package	string	`json:"VOICE_SERVICES_CONTAINER_PACKAGE"`
-	Services_crypto	string	`json:"SERVICES_CRYPTO"`
-	Services_ssl	string	`json:"SERVICES_SSL"`
-	Services_ipsec	string	`json:"SERVICES_IPSEC"`
-	Platform_software_suite	string	`json:"PLATFORM_SOFTWARE_SUITE"`
-	Runtime_software_suite	string	`json:"RUNTIME_SOFTWARE_SUITE"`
-	Routing_software_suite	string	`json:"ROUTING_SOFTWARE_SUITE"`
-	Py_base_i386	string	`json:"PY_BASE_I386"`
-	Lab_package	string	`json:"LAB_PACKAGE"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Qfabric_system_id	string	`json:"QFABRIC_SYSTEM_ID"`
-	Other_device_properties	[]string	`json:"OTHER_DEVICE_PROPERTIES"`
-	Other_properties_versions	[]string	`json:"OTHER_PROPERTIES_VERSIONS"`
-	Redis_version	string	`json:"REDIS_VERSION"`
+	Services_crypto                                  string   `json:"SERVICES_CRYPTO"`
+	Services_ssl                                     string   `json:"SERVICES_SSL"`
+	Runtime_software_suite                           string   `json:"RUNTIME_SOFTWARE_SUITE"`
+	Serial_number                                    string   `json:"SERIAL_NUMBER"`
+	Services_rpm                                     string   `json:"SERVICES_RPM"`
+	Routing_software_suite                           string   `json:"ROUTING_SOFTWARE_SUITE"`
+	Other_properties_versions                        []string `json:"OTHER_PROPERTIES_VERSIONS"`
+	Junos_version                                    string   `json:"JUNOS_VERSION"`
+	Packet_forwarding_engine_support_mx_common       string   `json:"PACKET_FORWARDING_ENGINE_SUPPORT_MX_COMMON"`
+	Appid_services                                   string   `json:"APPID_SERVICES"`
+	Services_captive_portal_content_delivery_package string   `json:"SERVICES_CAPTIVE_PORTAL_CONTENT_DELIVERY_PACKAGE"`
+	Hostname                                         string   `json:"HOSTNAME"`
+	Border_gateway_function_package                  string   `json:"BORDER_GATEWAY_FUNCTION_PACKAGE"`
+	Idp_services                                     string   `json:"IDP_SERVICES"`
+	Services_jflow_container_package                 string   `json:"SERVICES_JFLOW_CONTAINER_PACKAGE"`
+	Services_application_level_gateways              string   `json:"SERVICES_APPLICATION_LEVEL_GATEWAYS"`
+	Py_base_i386                                     string   `json:"PY_BASE_I386"`
+	Qfabric_system_id                                string   `json:"QFABRIC_SYSTEM_ID"`
+	Lab_package                                      string   `json:"LAB_PACKAGE"`
+	Base_os_software_suite                           string   `json:"BASE_OS_SOFTWARE_SUITE"`
+	Online_documentation                             string   `json:"ONLINE_DOCUMENTATION"`
+	Services_aacl_container_package                  string   `json:"SERVICES_AACL_CONTAINER_PACKAGE"`
+	Services_nat                                     string   `json:"SERVICES_NAT"`
+	Services_mobilenext_software_package             string   `json:"SERVICES_MOBILENEXT_SOFTWARE_PACKAGE"`
+	Services_mobile_subscriber_service_package       string   `json:"SERVICES_MOBILE_SUBSCRIBER_SERVICE_PACKAGE"`
+	Redis_version                                    string   `json:"REDIS_VERSION"`
+	Kernel_software_suite                            string   `json:"KERNEL_SOFTWARE_SUITE"`
+	Packet_forwarding_engine_support_m_t_ex_common   string   `json:"PACKET_FORWARDING_ENGINE_SUPPORT_M_T_EX_COMMON"`
+	Fips_mode_utilities                              string   `json:"FIPS_MODE_UTILITIES"`
+	Services_http_content_management_package         string   `json:"SERVICES_HTTP_CONTENT_MANAGEMENT_PACKAGE"`
+	Services_ipsec                                   string   `json:"SERVICES_IPSEC"`
+	Model                                            string   `json:"MODEL"`
+	Base_os_boot                                     string   `json:"BASE_OS_BOOT"`
+	Services_ll_pdf_container_package                string   `json:"SERVICES_LL_PDF_CONTAINER_PACKAGE"`
+	Voice_services_container_package                 string   `json:"VOICE_SERVICES_CONTAINER_PACKAGE"`
+	Other_device_properties                          []string `json:"OTHER_DEVICE_PROPERTIES"`
+	Crypto_software_suite                            string   `json:"CRYPTO_SOFTWARE_SUITE"`
+	Services_ptsp_container_package                  string   `json:"SERVICES_PTSP_CONTAINER_PACKAGE"`
+	Services_stateful_firewall                       string   `json:"SERVICES_STATEFUL_FIREWALL"`
+	Platform_software_suite                          string   `json:"PLATFORM_SOFTWARE_SUITE"`
 }
 
-var ShowVersion_Template = `Value Required HOSTNAME (\S+)
+var ShowVersion_Template string = `Value Required HOSTNAME (\S+)
 Value MODEL (\S+)
 Value JUNOS_VERSION ([\S\s]*)
 Value BASE_OS_BOOT (\S+)

@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowNvePeers struct {
-	Interface	string	`json:"INTERFACE"`
-	Peer	string	`json:"PEER"`
-	State	string	`json:"STATE"`
-	Type	string	`json:"TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Type        string `json:"TYPE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Peer        string `json:"PEER"`
+	State       string `json:"STATE"`
 }
 
-var ShowNvePeers_Template = `Value INTERFACE (\S+)
+var ShowNvePeers_Template string = `Value INTERFACE (\S+)
 Value PEER (\d+.\d+.\d+.\d+)
 Value STATE (Up|Down)
 Value TYPE (\S+)

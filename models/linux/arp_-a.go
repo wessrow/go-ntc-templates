@@ -1,14 +1,14 @@
-package linux 
+package linux
 
 type ArpA struct {
-	Rev_dns	string	`json:"REV_DNS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Hw_type	string	`json:"HW_TYPE"`
-	Interface	string	`json:"INTERFACE"`
+	Rev_dns     string `json:"REV_DNS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Hw_type     string `json:"HW_TYPE"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var ArpA_Template = `Value REV_DNS (\S+)
+var ArpA_Template string = `Value REV_DNS (\S+)
 Value IP_ADDRESS (\S+)
 Value MAC_ADDRESS (\S+)
 Value HW_TYPE (\S+)

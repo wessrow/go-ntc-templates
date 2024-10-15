@@ -1,19 +1,19 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayVersion struct {
-	Olt_version	string	`json:"OLT_VERSION"`
-	Patch	string	`json:"PATCH"`
-	Product	string	`json:"PRODUCT"`
-	Mainboard_type	string	`json:"MAINBOARD_TYPE"`
-	Current_program_area	string	`json:"CURRENT_PROGRAM_AREA"`
-	Current_data_area	string	`json:"CURRENT_DATA_AREA"`
-	Program_area_a_version	string	`json:"PROGRAM_AREA_A_VERSION"`
-	Program_area_b_version	string	`json:"PROGRAM_AREA_B_VERSION"`
-	Data_area_a_version	string	`json:"DATA_AREA_A_VERSION"`
-	Data_area_b_version	string	`json:"DATA_AREA_B_VERSION"`
+	Patch                  string `json:"PATCH"`
+	Mainboard_type         string `json:"MAINBOARD_TYPE"`
+	Current_data_area      string `json:"CURRENT_DATA_AREA"`
+	Data_area_a_version    string `json:"DATA_AREA_A_VERSION"`
+	Data_area_b_version    string `json:"DATA_AREA_B_VERSION"`
+	Olt_version            string `json:"OLT_VERSION"`
+	Product                string `json:"PRODUCT"`
+	Current_program_area   string `json:"CURRENT_PROGRAM_AREA"`
+	Program_area_a_version string `json:"PROGRAM_AREA_A_VERSION"`
+	Program_area_b_version string `json:"PROGRAM_AREA_B_VERSION"`
 }
 
-var DisplayVersion_Template = `Value Filldown OLT_VERSION (\S+)
+var DisplayVersion_Template string = `Value Filldown OLT_VERSION (\S+)
 Value Filldown PATCH (\S+)
 Value Filldown PRODUCT (\S+)
 Value MAINBOARD_TYPE (\S+)

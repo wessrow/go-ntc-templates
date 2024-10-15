@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowAdjacency struct {
-	Interface	string	`json:"INTERFACE"`
-	Endpoint	string	`json:"ENDPOINT"`
-	Rewrite_headers	[]string	`json:"REWRITE_HEADERS"`
-	Recursive_interface	string	`json:"RECURSIVE_INTERFACE"`
-	Recursive_nexthop	string	`json:"RECURSIVE_NEXTHOP"`
+	Endpoint            string   `json:"ENDPOINT"`
+	Rewrite_headers     []string `json:"REWRITE_HEADERS"`
+	Recursive_interface string   `json:"RECURSIVE_INTERFACE"`
+	Recursive_nexthop   string   `json:"RECURSIVE_NEXTHOP"`
+	Interface           string   `json:"INTERFACE"`
 }
 
-var ShowAdjacency_Template = `Value Required INTERFACE (\S+)
+var ShowAdjacency_Template string = `Value Required INTERFACE (\S+)
 Value Required ENDPOINT (\S+)
 Value List REWRITE_HEADERS ([A-F0-9]+)
 Value RECURSIVE_INTERFACE (\S+)

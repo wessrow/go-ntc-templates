@@ -1,24 +1,24 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntAutofind struct {
-	Number	string	`json:"NUMBER"`
-	Fsp	string	`json:"FSP"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Password	string	`json:"PASSWORD"`
-	Loid	string	`json:"LOID"`
-	Checkcode	string	`json:"CHECKCODE"`
-	Vendor_id	string	`json:"VENDOR_ID"`
-	Ont_version	string	`json:"ONT_VERSION"`
-	Ont_software_version	string	`json:"ONT_SOFTWARE_VERSION"`
-	Ont_equipment_id	string	`json:"ONT_EQUIPMENT_ID"`
-	Ont_customized_info	string	`json:"ONT_CUSTOMIZED_INFO"`
-	Ont_mac	string	`json:"ONT_MAC"`
-	Ont_equipment_serial_number	string	`json:"ONT_EQUIPMENT_SERIAL_NUMBER"`
-	Ont_autofind_time	string	`json:"ONT_AUTOFIND_TIME"`
-	Multi_channel	string	`json:"MULTI_CHANNEL"`
+	Number                      string `json:"NUMBER"`
+	Checkcode                   string `json:"CHECKCODE"`
+	Ont_software_version        string `json:"ONT_SOFTWARE_VERSION"`
+	Ont_equipment_id            string `json:"ONT_EQUIPMENT_ID"`
+	Fsp                         string `json:"FSP"`
+	Ont_version                 string `json:"ONT_VERSION"`
+	Ont_autofind_time           string `json:"ONT_AUTOFIND_TIME"`
+	Serial_number               string `json:"SERIAL_NUMBER"`
+	Password                    string `json:"PASSWORD"`
+	Loid                        string `json:"LOID"`
+	Vendor_id                   string `json:"VENDOR_ID"`
+	Ont_customized_info         string `json:"ONT_CUSTOMIZED_INFO"`
+	Ont_mac                     string `json:"ONT_MAC"`
+	Ont_equipment_serial_number string `json:"ONT_EQUIPMENT_SERIAL_NUMBER"`
+	Multi_channel               string `json:"MULTI_CHANNEL"`
 }
 
-var DisplayOntAutofind_Template = `Value NUMBER (\d+)
+var DisplayOntAutofind_Template string = `Value NUMBER (\d+)
 Value FSP (\d+\/\d+\/\d+)
 Value SERIAL_NUMBER (\w+\s*\(.*\))
 Value PASSWORD (\S+)

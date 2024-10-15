@@ -1,27 +1,27 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVersion struct {
-	Software_image	string	`json:"SOFTWARE_IMAGE"`
-	Version	string	`json:"VERSION"`
-	Release	string	`json:"RELEASE"`
-	Rommon	string	`json:"ROMMON"`
-	Hostname	string	`json:"HOSTNAME"`
-	Uptime	string	`json:"UPTIME"`
-	Uptime_years	string	`json:"UPTIME_YEARS"`
-	Uptime_weeks	string	`json:"UPTIME_WEEKS"`
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
-	Reload_reason	string	`json:"RELOAD_REASON"`
-	Running_image	string	`json:"RUNNING_IMAGE"`
-	Hardware	[]string	`json:"HARDWARE"`
-	Serial	[]string	`json:"SERIAL"`
-	Config_register	string	`json:"CONFIG_REGISTER"`
-	Mac_address	[]string	`json:"MAC_ADDRESS"`
-	Restarted	string	`json:"RESTARTED"`
+	Uptime_years    string   `json:"UPTIME_YEARS"`
+	Serial          []string `json:"SERIAL"`
+	Mac_address     []string `json:"MAC_ADDRESS"`
+	Restarted       string   `json:"RESTARTED"`
+	Rommon          string   `json:"ROMMON"`
+	Reload_reason   string   `json:"RELOAD_REASON"`
+	Release         string   `json:"RELEASE"`
+	Uptime_hours    string   `json:"UPTIME_HOURS"`
+	Running_image   string   `json:"RUNNING_IMAGE"`
+	Config_register string   `json:"CONFIG_REGISTER"`
+	Software_image  string   `json:"SOFTWARE_IMAGE"`
+	Version         string   `json:"VERSION"`
+	Uptime_weeks    string   `json:"UPTIME_WEEKS"`
+	Uptime_days     string   `json:"UPTIME_DAYS"`
+	Uptime_minutes  string   `json:"UPTIME_MINUTES"`
+	Hardware        []string `json:"HARDWARE"`
+	Hostname        string   `json:"HOSTNAME"`
+	Uptime          string   `json:"UPTIME"`
 }
 
-var ShowVersion_Template = `Value SOFTWARE_IMAGE (\S+)
+var ShowVersion_Template string = `Value SOFTWARE_IMAGE (\S+)
 Value VERSION (.+?)
 Value RELEASE (\S+)
 Value ROMMON (\S+)

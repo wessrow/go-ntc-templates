@@ -1,35 +1,35 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowCryptoSessionDetail struct {
-	Interface	string	`json:"INTERFACE"`
-	Session_status	string	`json:"SESSION_STATUS"`
-	Profile	string	`json:"PROFILE"`
-	Uptime	string	`json:"UPTIME"`
-	Peer	string	`json:"PEER"`
-	Port	string	`json:"PORT"`
-	Fvrf	string	`json:"FVRF"`
-	Ivrf	string	`json:"IVRF"`
-	Description	string	`json:"DESCRIPTION"`
-	Phase1_id	string	`json:"PHASE1_ID"`
-	Session_id	string	`json:"SESSION_ID"`
-	Local_ip	string	`json:"LOCAL_IP"`
-	Local_port	string	`json:"LOCAL_PORT"`
-	Remote_ip	string	`json:"REMOTE_IP"`
-	Remote_port	string	`json:"REMOTE_PORT"`
-	Ikev1_status	string	`json:"IKEV1_STATUS"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Conn_id	string	`json:"CONN_ID"`
-	Lifetime	string	`json:"LIFETIME"`
-	Permit	string	`json:"PERMIT"`
-	Src_host	string	`json:"SRC_HOST"`
-	Src_mask	string	`json:"SRC_MASK"`
-	Dst_host	string	`json:"DST_HOST"`
-	Dst_mask	string	`json:"DST_MASK"`
-	Active_sa	string	`json:"ACTIVE_SA"`
-	Origin	string	`json:"ORIGIN"`
+	Profile        string `json:"PROFILE"`
+	Uptime         string `json:"UPTIME"`
+	Fvrf           string `json:"FVRF"`
+	Local_port     string `json:"LOCAL_PORT"`
+	Remote_ip      string `json:"REMOTE_IP"`
+	Remote_port    string `json:"REMOTE_PORT"`
+	Ikev1_status   string `json:"IKEV1_STATUS"`
+	Lifetime       string `json:"LIFETIME"`
+	Src_host       string `json:"SRC_HOST"`
+	Dst_host       string `json:"DST_HOST"`
+	Dst_mask       string `json:"DST_MASK"`
+	Interface      string `json:"INTERFACE"`
+	Session_status string `json:"SESSION_STATUS"`
+	Peer           string `json:"PEER"`
+	Port           string `json:"PORT"`
+	Description    string `json:"DESCRIPTION"`
+	Session_id     string `json:"SESSION_ID"`
+	Local_ip       string `json:"LOCAL_IP"`
+	Active_sa      string `json:"ACTIVE_SA"`
+	Ivrf           string `json:"IVRF"`
+	Phase1_id      string `json:"PHASE1_ID"`
+	Capabilities   string `json:"CAPABILITIES"`
+	Conn_id        string `json:"CONN_ID"`
+	Permit         string `json:"PERMIT"`
+	Src_mask       string `json:"SRC_MASK"`
+	Origin         string `json:"ORIGIN"`
 }
 
-var ShowCryptoSessionDetail_Template = `Value Required INTERFACE (\S+)
+var ShowCryptoSessionDetail_Template string = `Value Required INTERFACE (\S+)
 Value Required SESSION_STATUS (\S+)
 Value PROFILE (\S+)
 Value UPTIME (\S+)

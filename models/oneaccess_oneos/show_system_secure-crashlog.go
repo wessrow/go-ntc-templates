@@ -1,27 +1,27 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSystemSecureCrashlog struct {
-	Coredump_file	string	`json:"COREDUMP_FILE"`
-	Crash_caused_by	string	`json:"CRASH_CAUSED_BY"`
-	Crash_time	string	`json:"CRASH_TIME"`
-	Crash_filename	string	`json:"CRASH_FILENAME"`
-	Serial	[]string	`json:"SERIAL"`
-	Deviceid	string	`json:"DEVICEID"`
-	Software	string	`json:"SOFTWARE"`
-	Boot_version	string	`json:"BOOT_VERSION"`
-	Recovery_version	string	`json:"RECOVERY_VERSION"`
-	Restarted	string	`json:"RESTARTED"`
-	Reload_reason	string	`json:"RELOAD_REASON"`
-	Uptime	string	`json:"UPTIME"`
-	Uptime_seconds	string	`json:"UPTIME_SECONDS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Version	string	`json:"VERSION"`
-	Core_generated_by	string	`json:"CORE_GENERATED_BY"`
+	Reload_reason     string   `json:"RELOAD_REASON"`
+	Uptime            string   `json:"UPTIME"`
+	Version           string   `json:"VERSION"`
+	Coredump_file     string   `json:"COREDUMP_FILE"`
+	Crash_time        string   `json:"CRASH_TIME"`
+	Software          string   `json:"SOFTWARE"`
+	Boot_version      string   `json:"BOOT_VERSION"`
+	Core_generated_by string   `json:"CORE_GENERATED_BY"`
+	Crash_caused_by   string   `json:"CRASH_CAUSED_BY"`
+	Recovery_version  string   `json:"RECOVERY_VERSION"`
+	Uptime_minutes    string   `json:"UPTIME_MINUTES"`
+	Uptime_hours      string   `json:"UPTIME_HOURS"`
+	Uptime_days       string   `json:"UPTIME_DAYS"`
+	Crash_filename    string   `json:"CRASH_FILENAME"`
+	Serial            []string `json:"SERIAL"`
+	Deviceid          string   `json:"DEVICEID"`
+	Restarted         string   `json:"RESTARTED"`
+	Uptime_seconds    string   `json:"UPTIME_SECONDS"`
 }
 
-var ShowSystemSecureCrashlog_Template = `Value COREDUMP_FILE (coredump.*txt)
+var ShowSystemSecureCrashlog_Template string = `Value COREDUMP_FILE (coredump.*txt)
 Value CRASH_CAUSED_BY (.*\S)
 Value CRASH_TIME (.*\S)
 Value CRASH_FILENAME (.*\S)

@@ -1,17 +1,17 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowVrfAllDetail struct {
-	Vrf	string	`json:"VRF"`
-	Rd	string	`json:"RD"`
-	Rt_import	[]string	`json:"RT_IMPORT"`
-	Rt_export	[]string	`json:"RT_EXPORT"`
-	Vpn_id	string	`json:"VPN_ID"`
-	Mode	string	`json:"MODE"`
-	Description	string	`json:"DESCRIPTION"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Description string   `json:"DESCRIPTION"`
+	Interfaces  []string `json:"INTERFACES"`
+	Vrf         string   `json:"VRF"`
+	Rd          string   `json:"RD"`
+	Rt_import   []string `json:"RT_IMPORT"`
+	Rt_export   []string `json:"RT_EXPORT"`
+	Vpn_id      string   `json:"VPN_ID"`
+	Mode        string   `json:"MODE"`
 }
 
-var ShowVrfAllDetail_Template = `Value VRF (\S+)
+var ShowVrfAllDetail_Template string = `Value VRF (\S+)
 Value RD (\S+|not set)
 Value List RT_IMPORT (\S+)
 Value List RT_EXPORT (\S+)

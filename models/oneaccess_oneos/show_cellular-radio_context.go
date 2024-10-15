@@ -1,29 +1,29 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowCellularRadioContext struct {
-	Context	string	`json:"CONTEXT"`
-	Controller	string	`json:"CONTROLLER"`
-	Interface	string	`json:"INTERFACE"`
-	Cellular_profile	string	`json:"CELLULAR_PROFILE"`
-	Bearer_technology	string	`json:"BEARER_TECHNOLOGY"`
-	Ipv4_address	string	`json:"IPV4_ADDRESS"`
-	Ipv4_subnet	string	`json:"IPV4_SUBNET"`
-	Ipv4_gateway	string	`json:"IPV4_GATEWAY"`
-	Ipv4_dns1	string	`json:"IPV4_DNS1"`
-	Ipv4_dns2	string	`json:"IPV4_DNS2"`
-	Data_conn	string	`json:"DATA_CONN"`
-	Lastcall_end_reason	string	`json:"LASTCALL_END_REASON"`
-	Tx_packets	string	`json:"TX_PACKETS"`
-	Rx_packets	string	`json:"RX_PACKETS"`
-	Tx_packet_errors	string	`json:"TX_PACKET_ERRORS"`
-	Rx_packet_errors	string	`json:"RX_PACKET_ERRORS"`
-	Tx_packet_overflow	string	`json:"TX_PACKET_OVERFLOW"`
-	Rx_packet_overflow	string	`json:"RX_PACKET_OVERFLOW"`
-	Tx_bytes	string	`json:"TX_BYTES"`
-	Rx_bytes	string	`json:"RX_BYTES"`
+	Cellular_profile    string `json:"CELLULAR_PROFILE"`
+	Bearer_technology   string `json:"BEARER_TECHNOLOGY"`
+	Ipv4_subnet         string `json:"IPV4_SUBNET"`
+	Lastcall_end_reason string `json:"LASTCALL_END_REASON"`
+	Tx_packets          string `json:"TX_PACKETS"`
+	Tx_packet_errors    string `json:"TX_PACKET_ERRORS"`
+	Rx_packet_errors    string `json:"RX_PACKET_ERRORS"`
+	Ipv4_address        string `json:"IPV4_ADDRESS"`
+	Rx_packets          string `json:"RX_PACKETS"`
+	Rx_packet_overflow  string `json:"RX_PACKET_OVERFLOW"`
+	Rx_bytes            string `json:"RX_BYTES"`
+	Context             string `json:"CONTEXT"`
+	Controller          string `json:"CONTROLLER"`
+	Ipv4_gateway        string `json:"IPV4_GATEWAY"`
+	Ipv4_dns1           string `json:"IPV4_DNS1"`
+	Ipv4_dns2           string `json:"IPV4_DNS2"`
+	Interface           string `json:"INTERFACE"`
+	Data_conn           string `json:"DATA_CONN"`
+	Tx_packet_overflow  string `json:"TX_PACKET_OVERFLOW"`
+	Tx_bytes            string `json:"TX_BYTES"`
 }
 
-var ShowCellularRadioContext_Template = `Value Required CONTEXT (\d+)
+var ShowCellularRadioContext_Template string = `Value Required CONTEXT (\d+)
 Value CONTROLLER (\d+)
 Value INTERFACE (Virtual\-Ethernet\s\S+)
 Value CELLULAR_PROFILE (\d+)

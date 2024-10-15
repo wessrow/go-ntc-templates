@@ -1,24 +1,24 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowDhcpLease struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Interface	string	`json:"INTERFACE"`
-	Server	string	`json:"SERVER"`
-	State_id	string	`json:"STATE_ID"`
-	State	string	`json:"STATE"`
-	Transaction_id	string	`json:"TRANSACTION_ID"`
-	Time_lease	string	`json:"TIME_LEASE"`
-	Time_renewal	string	`json:"TIME_RENEWAL"`
-	Time_rebound	string	`json:"TIME_REBOUND"`
-	Time_next_fire	string	`json:"TIME_NEXT_FIRE"`
-	Gateway	string	`json:"GATEWAY"`
-	Retry_count	string	`json:"RETRY_COUNT"`
-	Client_id	string	`json:"CLIENT_ID"`
-	Hostname	string	`json:"HOSTNAME"`
+	Server         string `json:"SERVER"`
+	State_id       string `json:"STATE_ID"`
+	State          string `json:"STATE"`
+	Time_lease     string `json:"TIME_LEASE"`
+	Time_rebound   string `json:"TIME_REBOUND"`
+	Ip_address     string `json:"IP_ADDRESS"`
+	Hostname       string `json:"HOSTNAME"`
+	Interface      string `json:"INTERFACE"`
+	Transaction_id string `json:"TRANSACTION_ID"`
+	Time_renewal   string `json:"TIME_RENEWAL"`
+	Time_next_fire string `json:"TIME_NEXT_FIRE"`
+	Gateway        string `json:"GATEWAY"`
+	Retry_count    string `json:"RETRY_COUNT"`
+	Client_id      string `json:"CLIENT_ID"`
+	Netmask        string `json:"NETMASK"`
 }
 
-var ShowDhcpLease_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowDhcpLease_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value NETMASK (\d+\.\d+\.\d+\.\d+)
 Value INTERFACE (\S+)
 Value SERVER (\d+\.\d+\.\d+\.\d+)

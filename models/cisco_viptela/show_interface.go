@@ -1,26 +1,26 @@
-package cisco_viptela 
+package cisco_viptela
 
 type ShowInterface struct {
-	Vpn	string	`json:"VPN"`
-	Interface	string	`json:"INTERFACE"`
-	Af_type	string	`json:"AF_TYPE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Admin_status	string	`json:"ADMIN_STATUS"`
-	Oper_status	string	`json:"OPER_STATUS"`
-	Tracker_status	string	`json:"TRACKER_STATUS"`
-	Encap_type	string	`json:"ENCAP_TYPE"`
-	Port_type	string	`json:"PORT_TYPE"`
-	Mtu	string	`json:"MTU"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	Mss_adjust	string	`json:"MSS_ADJUST"`
-	Uptime	string	`json:"UPTIME"`
-	Rx_packets	string	`json:"RX_PACKETS"`
-	Tx_packets	string	`json:"TX_PACKETS"`
+	Encap_type     string `json:"ENCAP_TYPE"`
+	Mtu            string `json:"MTU"`
+	Vpn            string `json:"VPN"`
+	Interface      string `json:"INTERFACE"`
+	Oper_status    string `json:"OPER_STATUS"`
+	Af_type        string `json:"AF_TYPE"`
+	Admin_status   string `json:"ADMIN_STATUS"`
+	Uptime         string `json:"UPTIME"`
+	Ip_address     string `json:"IP_ADDRESS"`
+	Tracker_status string `json:"TRACKER_STATUS"`
+	Mss_adjust     string `json:"MSS_ADJUST"`
+	Duplex         string `json:"DUPLEX"`
+	Rx_packets     string `json:"RX_PACKETS"`
+	Tx_packets     string `json:"TX_PACKETS"`
+	Port_type      string `json:"PORT_TYPE"`
+	Mac_address    string `json:"MAC_ADDRESS"`
+	Speed          string `json:"SPEED"`
 }
 
-var ShowInterface_Template = `Value VPN (\d+)
+var ShowInterface_Template string = `Value VPN (\d+)
 Value INTERFACE (\S+)
 Value AF_TYPE (\S+)
 Value IP_ADDRESS (\S+)

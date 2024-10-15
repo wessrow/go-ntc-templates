@@ -1,17 +1,17 @@
-package hp_comware 
+package hp_comware
 
 type DisplayDeviceManuinfo struct {
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Slot_type	string	`json:"SLOT_TYPE"`
-	Slot_id	string	`json:"SLOT_ID"`
-	Device_name	string	`json:"DEVICE_NAME"`
-	Device_serial_number	string	`json:"DEVICE_SERIAL_NUMBER"`
-	Manufacturing_date	string	`json:"MANUFACTURING_DATE"`
-	Vendor_name	string	`json:"VENDOR_NAME"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Mac_address          string `json:"MAC_ADDRESS"`
+	Chassis_id           string `json:"CHASSIS_ID"`
+	Slot_type            string `json:"SLOT_TYPE"`
+	Slot_id              string `json:"SLOT_ID"`
+	Device_name          string `json:"DEVICE_NAME"`
+	Device_serial_number string `json:"DEVICE_SERIAL_NUMBER"`
+	Manufacturing_date   string `json:"MANUFACTURING_DATE"`
+	Vendor_name          string `json:"VENDOR_NAME"`
 }
 
-var DisplayDeviceManuinfo_Template = `Value Filldown CHASSIS_ID (\d+)
+var DisplayDeviceManuinfo_Template string = `Value Filldown CHASSIS_ID (\d+)
 Value SLOT_TYPE ([sS]lot|Subslot|Fan|Power|Chassis)
 Value SLOT_ID (\d+|self)
 Value DEVICE_NAME (.+)

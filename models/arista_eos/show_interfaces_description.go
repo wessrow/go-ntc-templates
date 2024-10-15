@@ -1,13 +1,13 @@
-package arista_eos 
+package arista_eos
 
 type ShowInterfacesDescription struct {
-	Port	string	`json:"PORT"`
-	Status	string	`json:"STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Status      string `json:"STATUS"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
+	Port        string `json:"PORT"`
 }
 
-var ShowInterfacesDescription_Template = `Value PORT (\S+)
+var ShowInterfacesDescription_Template string = `Value PORT (\S+)
 Value STATUS (up|down|admin\s+down)
 Value PROTOCOL (up|down|lowerlayerdown|notpresent|unknown)
 Value DESCRIPTION (\S.*?)

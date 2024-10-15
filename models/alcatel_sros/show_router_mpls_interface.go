@@ -1,15 +1,15 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterMplsInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Port	string	`json:"PORT"`
-	Admin_status	string	`json:"ADMIN_STATUS"`
-	Oper_status_v4	string	`json:"OPER_STATUS_V4"`
-	Oper_status_v6	string	`json:"OPER_STATUS_V6"`
-	Te_metric	string	`json:"TE_METRIC"`
+	Te_metric      string `json:"TE_METRIC"`
+	Interface      string `json:"INTERFACE"`
+	Port           string `json:"PORT"`
+	Admin_status   string `json:"ADMIN_STATUS"`
+	Oper_status_v4 string `json:"OPER_STATUS_V4"`
+	Oper_status_v6 string `json:"OPER_STATUS_V6"`
 }
 
-var ShowRouterMplsInterface_Template = `Value Required INTERFACE (\S+)
+var ShowRouterMplsInterface_Template string = `Value Required INTERFACE (\S+)
 Value Required PORT (\S+)
 Value Required ADMIN_STATUS (Up|Down)
 Value Required OPER_STATUS_V4 (Up|Down)

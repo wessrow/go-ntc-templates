@@ -1,12 +1,12 @@
-package ubiquiti_edgeswitch 
+package ubiquiti_edgeswitch
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Type	string	`json:"TYPE"`
+	Vlan_id   string `json:"VLAN_ID"`
+	Vlan_name string `json:"VLAN_NAME"`
+	Type      string `json:"TYPE"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 Value VLAN_NAME (.*?)
 Value TYPE (\S+)
 

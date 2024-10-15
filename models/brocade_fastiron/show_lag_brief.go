@@ -1,16 +1,16 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowLagBrief struct {
-	Lagnameshort	string	`json:"lagnameshort"`
-	Lagtype	string	`json:"lagtype"`
-	Deployed	string	`json:"deployed"`
-	Trunkid	string	`json:"trunkid"`
-	Primaryinterface	string	`json:"primaryinterface"`
-	Portlist	string	`json:"portlist"`
-	Portlistcont	string	`json:"portlistcont"`
+	Deployed         string `json:"deployed"`
+	Trunkid          string `json:"trunkid"`
+	Primaryinterface string `json:"primaryinterface"`
+	Portlist         string `json:"portlist"`
+	Portlistcont     string `json:"portlistcont"`
+	Lagnameshort     string `json:"lagnameshort"`
+	Lagtype          string `json:"lagtype"`
 }
 
-var ShowLagBrief_Template = `Value lagnameshort ([0-9\/\sA-Za-z\-\.]+)
+var ShowLagBrief_Template string = `Value lagnameshort ([0-9\/\sA-Za-z\-\.]+)
 Value lagtype (dynamic|static)
 Value deployed (Y|N)
 Value trunkid (\d+)

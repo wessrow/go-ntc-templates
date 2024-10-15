@@ -1,17 +1,17 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowArp struct {
-	Address	string	`json:"ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	[]string	`json:"INTERFACE"`
-	State	string	`json:"STATE"`
-	External_vlan	string	`json:"EXTERNAL_VLAN"`
-	Internal_vlan	string	`json:"INTERNAL_VLAN"`
-	Sub_interface	[]string	`json:"SUB_INTERFACE"`
+	Internal_vlan string   `json:"INTERNAL_VLAN"`
+	Sub_interface []string `json:"SUB_INTERFACE"`
+	Address       string   `json:"ADDRESS"`
+	Age           string   `json:"AGE"`
+	Mac_address   string   `json:"MAC_ADDRESS"`
+	Interface     []string `json:"INTERFACE"`
+	State         string   `json:"STATE"`
+	External_vlan string   `json:"EXTERNAL_VLAN"`
 }
 
-var ShowArp_Template = `Value ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowArp_Template string = `Value ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value AGE (\S+)
 Value MAC_ADDRESS (\S+)
 Value List INTERFACE (\S+)

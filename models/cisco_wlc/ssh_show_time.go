@@ -1,20 +1,20 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowTime struct {
-	Time	string	`json:"TIME"`
-	Tz_delta	string	`json:"TZ_DELTA"`
-	Timezone	string	`json:"TIMEZONE"`
-	Tz_name	string	`json:"TZ_NAME"`
-	Ntp_version	string	`json:"NTP_VERSION"`
-	Ntp_polling_interval	string	`json:"NTP_POLLING_INTERVAL"`
-	Index	string	`json:"INDEX"`
-	Ntp_key_index	string	`json:"NTP_KEY_INDEX"`
-	Ntp_server	string	`json:"NTP_SERVER"`
-	Status	string	`json:"STATUS"`
-	Ntp_msg_auth_status	string	`json:"NTP_MSG_AUTH_STATUS"`
+	Ntp_msg_auth_status  string `json:"NTP_MSG_AUTH_STATUS"`
+	Time                 string `json:"TIME"`
+	Ntp_key_index        string `json:"NTP_KEY_INDEX"`
+	Ntp_server           string `json:"NTP_SERVER"`
+	Ntp_version          string `json:"NTP_VERSION"`
+	Ntp_polling_interval string `json:"NTP_POLLING_INTERVAL"`
+	Index                string `json:"INDEX"`
+	Status               string `json:"STATUS"`
+	Tz_delta             string `json:"TZ_DELTA"`
+	Timezone             string `json:"TIMEZONE"`
+	Tz_name              string `json:"TZ_NAME"`
 }
 
-var SshShowTime_Template = `Value Filldown TIME (.+)
+var SshShowTime_Template string = `Value Filldown TIME (.+)
 Value Filldown TZ_DELTA (\S+)
 Value Filldown TIMEZONE (.+)
 Value Filldown TZ_NAME (.+)

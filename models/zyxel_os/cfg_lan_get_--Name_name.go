@@ -1,18 +1,18 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgLanGetNameName struct {
-	Name	string	`json:"NAME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Dhcp	string	`json:"DHCP"`
-	Dhcp_start_ip	string	`json:"DHCP_START_IP"`
-	Dhcp_end_ip	string	`json:"DHCP_END_IP"`
-	Dhcp_autoreserve	string	`json:"DHCP_AUTORESERVE"`
-	Dhcp_lease	string	`json:"DHCP_LEASE"`
-	Ipv6_active	string	`json:"IPV6_ACTIVE"`
+	Name             string `json:"NAME"`
+	Dhcp             string `json:"DHCP"`
+	Dhcp_start_ip    string `json:"DHCP_START_IP"`
+	Ipv6_active      string `json:"IPV6_ACTIVE"`
+	Ip_address       string `json:"IP_ADDRESS"`
+	Netmask          string `json:"NETMASK"`
+	Dhcp_end_ip      string `json:"DHCP_END_IP"`
+	Dhcp_autoreserve string `json:"DHCP_AUTORESERVE"`
+	Dhcp_lease       string `json:"DHCP_LEASE"`
 }
 
-var CfgLanGetNameName_Template = `Value NAME (\S.*)
+var CfgLanGetNameName_Template string = `Value NAME (\S.*)
 Value IP_ADDRESS (\S*)
 Value NETMASK (\S*)
 Value DHCP (Enable|Disable)

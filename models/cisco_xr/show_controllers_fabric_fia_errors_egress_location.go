@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllersFabricFiaErrorsEgressLocation struct {
-	Fia	string	`json:"FIA"`
-	Category	string	`json:"CATEGORY"`
-	To_spaui_error_0	string	`json:"TO_SPAUI_ERROR_0"`
-	To_spaui_error_1	string	`json:"TO_SPAUI_ERROR_1"`
-	Rl_over_under_flow_cnt	string	`json:"RL_OVER_UNDER_FLOW_CNT"`
+	To_spaui_error_1       string `json:"TO_SPAUI_ERROR_1"`
+	Rl_over_under_flow_cnt string `json:"RL_OVER_UNDER_FLOW_CNT"`
+	Fia                    string `json:"FIA"`
+	Category               string `json:"CATEGORY"`
+	To_spaui_error_0       string `json:"TO_SPAUI_ERROR_0"`
 }
 
-var ShowControllersFabricFiaErrorsEgressLocation_Template = `Value FIA (\S+)
+var ShowControllersFabricFiaErrorsEgressLocation_Template string = `Value FIA (\S+)
 Value CATEGORY (\S+)
 Value TO_SPAUI_ERROR_0 (\d+)
 Value TO_SPAUI_ERROR_1 (\d+)

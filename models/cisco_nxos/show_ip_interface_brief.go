@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpInterfaceBrief struct {
-	Vrf	string	`json:"VRF"`
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Link	string	`json:"LINK"`
-	Proto	string	`json:"PROTO"`
+	Interface  string `json:"INTERFACE"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Status     string `json:"STATUS"`
+	Link       string `json:"LINK"`
+	Proto      string `json:"PROTO"`
+	Vrf        string `json:"VRF"`
 }
 
-var ShowIpInterfaceBrief_Template = `Value Filldown VRF (\S+)
+var ShowIpInterfaceBrief_Template string = `Value Filldown VRF (\S+)
 Value Required INTERFACE (\S+)
 Value Required IP_ADDRESS ([a-zA-Z0-9./]+|forward-enabled)
 Value STATUS (\S+-\S+)

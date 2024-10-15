@@ -1,15 +1,15 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowArpAllVrfs struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Port_id	string	`json:"PORT_ID"`
-	Physical_port	string	`json:"PHYSICAL_PORT"`
-	State	string	`json:"STATE"`
-	Vrf	string	`json:"VRF"`
+	Physical_port string `json:"PHYSICAL_PORT"`
+	State         string `json:"STATE"`
+	Vrf           string `json:"VRF"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Mac_address   string `json:"MAC_ADDRESS"`
+	Port_id       string `json:"PORT_ID"`
 }
 
-var ShowArpAllVrfs_Template = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowArpAllVrfs_Template string = `Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value MAC_ADDRESS (\S+)
 Value PORT_ID (\S+)
 Value PHYSICAL_PORT (\S+)

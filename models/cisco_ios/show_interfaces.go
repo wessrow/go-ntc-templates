@@ -1,51 +1,51 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Bia	string	`json:"BIA"`
-	Description	string	`json:"DESCRIPTION"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Mtu	string	`json:"MTU"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Media_type	string	`json:"MEDIA_TYPE"`
-	Bandwidth	string	`json:"BANDWIDTH"`
-	Delay	string	`json:"DELAY"`
-	Encapsulation	string	`json:"ENCAPSULATION"`
-	Last_input	string	`json:"LAST_INPUT"`
-	Last_output	string	`json:"LAST_OUTPUT"`
-	Last_output_hang	string	`json:"LAST_OUTPUT_HANG"`
-	Queue_strategy	string	`json:"QUEUE_STRATEGY"`
-	Input_rate	string	`json:"INPUT_RATE"`
-	Output_rate	string	`json:"OUTPUT_RATE"`
-	Input_pps	string	`json:"INPUT_PPS"`
-	Output_pps	string	`json:"OUTPUT_PPS"`
-	Input_packets	string	`json:"INPUT_PACKETS"`
-	Output_packets	string	`json:"OUTPUT_PACKETS"`
-	Runts	string	`json:"RUNTS"`
-	Giants	string	`json:"GIANTS"`
-	Input_errors	string	`json:"INPUT_ERRORS"`
-	Crc	string	`json:"CRC"`
-	Frame	string	`json:"FRAME"`
-	Overrun	string	`json:"OVERRUN"`
-	Abort	string	`json:"ABORT"`
-	Output_errors	string	`json:"OUTPUT_ERRORS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_id_inner	string	`json:"VLAN_ID_INNER"`
-	Vlan_id_outer	string	`json:"VLAN_ID_OUTER"`
-	Queue_size	string	`json:"QUEUE_SIZE"`
-	Queue_max	string	`json:"QUEUE_MAX"`
-	Queue_drops	string	`json:"QUEUE_DROPS"`
-	Queue_flushes	string	`json:"QUEUE_FLUSHES"`
-	Queue_output_drops	string	`json:"QUEUE_OUTPUT_DROPS"`
+	Delay              string `json:"DELAY"`
+	Encapsulation      string `json:"ENCAPSULATION"`
+	Output_pps         string `json:"OUTPUT_PPS"`
+	Frame              string `json:"FRAME"`
+	Output_rate        string `json:"OUTPUT_RATE"`
+	Input_pps          string `json:"INPUT_PPS"`
+	Queue_output_drops string `json:"QUEUE_OUTPUT_DROPS"`
+	Hardware_type      string `json:"HARDWARE_TYPE"`
+	Bandwidth          string `json:"BANDWIDTH"`
+	Input_errors       string `json:"INPUT_ERRORS"`
+	Duplex             string `json:"DUPLEX"`
+	Queue_strategy     string `json:"QUEUE_STRATEGY"`
+	Input_rate         string `json:"INPUT_RATE"`
+	Output_packets     string `json:"OUTPUT_PACKETS"`
+	Bia                string `json:"BIA"`
+	Description        string `json:"DESCRIPTION"`
+	Ip_address         string `json:"IP_ADDRESS"`
+	Prefix_length      string `json:"PREFIX_LENGTH"`
+	Vlan_id_outer      string `json:"VLAN_ID_OUTER"`
+	Input_packets      string `json:"INPUT_PACKETS"`
+	Output_errors      string `json:"OUTPUT_ERRORS"`
+	Queue_drops        string `json:"QUEUE_DROPS"`
+	Queue_flushes      string `json:"QUEUE_FLUSHES"`
+	Mac_address        string `json:"MAC_ADDRESS"`
+	Speed              string `json:"SPEED"`
+	Media_type         string `json:"MEDIA_TYPE"`
+	Last_output        string `json:"LAST_OUTPUT"`
+	Overrun            string `json:"OVERRUN"`
+	Abort              string `json:"ABORT"`
+	Interface          string `json:"INTERFACE"`
+	Mtu                string `json:"MTU"`
+	Last_output_hang   string `json:"LAST_OUTPUT_HANG"`
+	Runts              string `json:"RUNTS"`
+	Giants             string `json:"GIANTS"`
+	Queue_max          string `json:"QUEUE_MAX"`
+	Vlan_id            string `json:"VLAN_ID"`
+	Vlan_id_inner      string `json:"VLAN_ID_INNER"`
+	Queue_size         string `json:"QUEUE_SIZE"`
+	Link_status        string `json:"LINK_STATUS"`
+	Protocol_status    string `json:"PROTOCOL_STATUS"`
+	Last_input         string `json:"LAST_INPUT"`
+	Crc                string `json:"CRC"`
 }
 
-var ShowInterfaces_Template = `Value Required INTERFACE (\S+)
+var ShowInterfaces_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value PROTOCOL_STATUS (.+?)
 Value HARDWARE_TYPE ([\w \-]+)
@@ -96,8 +96,8 @@ Start
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}\s*$$
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY},\s*$$
-  ^\s+Encapsulation\s+${ENCAPSULATION}, Vlan ID\s+${VLAN_ID}.+$$
-  ^\s+Encapsulation\s+${ENCAPSULATION}, outer ID\s+${VLAN_ID_OUTER}, inner ID\s+${VLAN_ID_INNER}.+$$
+  ^\s+Encapsulation\s+${ENCAPSULATION}, Vlan ID\s+${VLAN_ID}
+  ^\s+Encapsulation\s+${ENCAPSULATION}, outer ID\s+${VLAN_ID_OUTER}, inner ID\s+${VLAN_ID_INNER}
   ^\s+Encapsulation\s+${ENCAPSULATION},.+$$
   ^\s+Last\s+input\s+${LAST_INPUT},\s+output\s+${LAST_OUTPUT},\s+output\s+hang\s+${LAST_OUTPUT_HANG}\s*$$
   ^\s+Input\s+queue:\s+${QUEUE_SIZE}\/${QUEUE_MAX}\/${QUEUE_DROPS}\/${QUEUE_FLUSHES}\s+\(size\/max\/drops\/flushes\);\s+Total output\s+drops:\s+${QUEUE_OUTPUT_DROPS}\s*$$

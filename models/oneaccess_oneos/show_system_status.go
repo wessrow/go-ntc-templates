@@ -1,24 +1,24 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSystemStatus struct {
-	Serial	[]string	`json:"SERIAL"`
-	Device_id	string	`json:"DEVICE_ID"`
-	Software	string	`json:"SOFTWARE"`
-	Boot_version	string	`json:"BOOT_VERSION"`
-	Recovery_version	string	`json:"RECOVERY_VERSION"`
-	Boot_flags	string	`json:"BOOT_FLAGS"`
-	System_time	string	`json:"SYSTEM_TIME"`
-	Restarted	string	`json:"RESTARTED"`
-	Reload_reason	string	`json:"RELOAD_REASON"`
-	Uptime	string	`json:"UPTIME"`
-	Uptime_seconds	string	`json:"UPTIME_SECONDS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Version	string	`json:"VERSION"`
+	System_time      string   `json:"SYSTEM_TIME"`
+	Restarted        string   `json:"RESTARTED"`
+	Uptime_days      string   `json:"UPTIME_DAYS"`
+	Serial           []string `json:"SERIAL"`
+	Device_id        string   `json:"DEVICE_ID"`
+	Software         string   `json:"SOFTWARE"`
+	Boot_version     string   `json:"BOOT_VERSION"`
+	Boot_flags       string   `json:"BOOT_FLAGS"`
+	Version          string   `json:"VERSION"`
+	Reload_reason    string   `json:"RELOAD_REASON"`
+	Uptime           string   `json:"UPTIME"`
+	Uptime_seconds   string   `json:"UPTIME_SECONDS"`
+	Recovery_version string   `json:"RECOVERY_VERSION"`
+	Uptime_minutes   string   `json:"UPTIME_MINUTES"`
+	Uptime_hours     string   `json:"UPTIME_HOURS"`
 }
 
-var ShowSystemStatus_Template = `Value List SERIAL (\w+)
+var ShowSystemStatus_Template string = `Value List SERIAL (\w+)
 Value DEVICE_ID ([^ ]+)
 Value SOFTWARE (.+)
 Value BOOT_VERSION (.+)

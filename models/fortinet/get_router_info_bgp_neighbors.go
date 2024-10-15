@@ -1,30 +1,30 @@
-package fortinet 
+package fortinet
 
 type GetRouterInfoBgpNeighbors struct {
-	Neighbor	string	`json:"NEIGHBOR"`
-	Bgp_version	string	`json:"BGP_VERSION"`
-	Remote_asn	string	`json:"REMOTE_ASN"`
-	Local_asn	string	`json:"LOCAL_ASN"`
-	Remote_router_id	string	`json:"REMOTE_ROUTER_ID"`
-	Bgp_state	string	`json:"BGP_STATE"`
-	Uptime	string	`json:"UPTIME"`
-	Addr_family	[]string	`json:"ADDR_FAMILY"`
-	Table_version	[]string	`json:"TABLE_VERSION"`
-	Nei_table_version	[]string	`json:"NEI_TABLE_VERSION"`
-	Inbound_routemap	[]string	`json:"INBOUND_ROUTEMAP"`
-	Outbound_routemap	[]string	`json:"OUTBOUND_ROUTEMAP"`
-	Accepted_prefixes	[]string	`json:"ACCEPTED_PREFIXES"`
-	Accepted_prefixes_rib	[]string	`json:"ACCEPTED_PREFIXES_RIB"`
-	Announced_prefixes	[]string	`json:"ANNOUNCED_PREFIXES"`
-	Localhost_ip	string	`json:"LOCALHOST_IP"`
-	Localhost_port	string	`json:"LOCALHOST_PORT"`
-	Remote_ip	string	`json:"REMOTE_IP"`
-	Remote_port	string	`json:"REMOTE_PORT"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_interface	string	`json:"NEXTHOP_INTERFACE"`
+	Neighbor              string   `json:"NEIGHBOR"`
+	Addr_family           []string `json:"ADDR_FAMILY"`
+	Nei_table_version     []string `json:"NEI_TABLE_VERSION"`
+	Accepted_prefixes_rib []string `json:"ACCEPTED_PREFIXES_RIB"`
+	Localhost_ip          string   `json:"LOCALHOST_IP"`
+	Remote_port           string   `json:"REMOTE_PORT"`
+	Bgp_version           string   `json:"BGP_VERSION"`
+	Uptime                string   `json:"UPTIME"`
+	Accepted_prefixes     []string `json:"ACCEPTED_PREFIXES"`
+	Announced_prefixes    []string `json:"ANNOUNCED_PREFIXES"`
+	Remote_asn            string   `json:"REMOTE_ASN"`
+	Local_asn             string   `json:"LOCAL_ASN"`
+	Bgp_state             string   `json:"BGP_STATE"`
+	Localhost_port        string   `json:"LOCALHOST_PORT"`
+	Remote_ip             string   `json:"REMOTE_IP"`
+	Nexthop_ip            string   `json:"NEXTHOP_IP"`
+	Remote_router_id      string   `json:"REMOTE_ROUTER_ID"`
+	Table_version         []string `json:"TABLE_VERSION"`
+	Inbound_routemap      []string `json:"INBOUND_ROUTEMAP"`
+	Outbound_routemap     []string `json:"OUTBOUND_ROUTEMAP"`
+	Nexthop_interface     string   `json:"NEXTHOP_INTERFACE"`
 }
 
-var GetRouterInfoBgpNeighbors_Template = `Value NEIGHBOR (\S+)
+var GetRouterInfoBgpNeighbors_Template string = `Value NEIGHBOR (\S+)
 Value BGP_VERSION (\d+)
 Value REMOTE_ASN (\d+)
 Value LOCAL_ASN (\d+)

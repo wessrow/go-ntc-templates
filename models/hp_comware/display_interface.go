@@ -1,25 +1,25 @@
-package hp_comware 
+package hp_comware
 
 type DisplayInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Line_status	string	`json:"LINE_STATUS"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	Mtu	string	`json:"MTU"`
-	L2mtu	string	`json:"L2MTU"`
-	Hw_address	[]string	`json:"HW_ADDRESS"`
-	Description	string	`json:"DESCRIPTION"`
-	Bandwidth	string	`json:"BANDWIDTH"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Port_link_type	string	`json:"PORT_LINK_TYPE"`
-	Untagged_vlan_id	string	`json:"UNTAGGED_VLAN_ID"`
-	Vlan_native	string	`json:"VLAN_NATIVE"`
-	Vlan_passing	[]string	`json:"VLAN_PASSING"`
-	Vlan_permitted	[]string	`json:"VLAN_PERMITTED"`
+	Ip_address       []string `json:"IP_ADDRESS"`
+	Description      string   `json:"DESCRIPTION"`
+	Untagged_vlan_id string   `json:"UNTAGGED_VLAN_ID"`
+	Interface        string   `json:"INTERFACE"`
+	L2mtu            string   `json:"L2MTU"`
+	Vlan_permitted   []string `json:"VLAN_PERMITTED"`
+	Protocol_status  string   `json:"PROTOCOL_STATUS"`
+	Bandwidth        string   `json:"BANDWIDTH"`
+	Duplex           string   `json:"DUPLEX"`
+	Port_link_type   string   `json:"PORT_LINK_TYPE"`
+	Vlan_native      string   `json:"VLAN_NATIVE"`
+	Vlan_passing     []string `json:"VLAN_PASSING"`
+	Line_status      string   `json:"LINE_STATUS"`
+	Mtu              string   `json:"MTU"`
+	Hw_address       []string `json:"HW_ADDRESS"`
+	Speed            string   `json:"SPEED"`
 }
 
-var DisplayInterface_Template = `Value Required INTERFACE (\S+)
+var DisplayInterface_Template string = `Value Required INTERFACE (\S+)
 Value LINE_STATUS (UP|DOWN|Administratively DOWN)
 Value PROTOCOL_STATUS (UP(\(spoofing\))?|DOWN)
 Value List IP_ADDRESS (\S+)

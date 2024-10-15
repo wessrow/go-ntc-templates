@@ -1,11 +1,11 @@
-package ciena_saos 
+package ciena_saos
 
 type SshServerShowKey struct {
-	Username	string	`json:"USERNAME"`
-	Key_status	string	`json:"KEY_STATUS"`
+	Key_status string `json:"KEY_STATUS"`
+	Username   string `json:"USERNAME"`
 }
 
-var SshServerShowKey_Template = `Value USERNAME (\S+)
+var SshServerShowKey_Template string = `Value USERNAME (\S+)
 Value KEY_STATUS (\S+)
 
 Start

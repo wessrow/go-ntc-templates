@@ -1,30 +1,30 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowMetro struct {
-	Ringid	string	`json:"ringid"`
-	Vlantype	string	`json:"vlantype"`
-	Ringname	string	`json:"ringname"`
-	Ringstate	string	`json:"ringstate"`
-	Ringrole	string	`json:"ringrole"`
-	Mastervlan	string	`json:"mastervlan"`
-	Topogroup	string	`json:"topogroup"`
-	Hellotime	string	`json:"hellotime"`
-	Prefwingtime	string	`json:"prefwingtime"`
-	Port1interface	string	`json:"port1interface"`
-	Port1role	string	`json:"port1role"`
-	Port1state	string	`json:"port1state"`
-	Port1inttype	string	`json:"port1inttype"`
-	Port2interface	string	`json:"port2interface"`
-	Port2role	string	`json:"port2role"`
-	Port2state	string	`json:"port2state"`
-	Port2inttype	string	`json:"port2inttype"`
-	Rhpssent	string	`json:"rhpssent"`
-	Rhpsrecvd	string	`json:"rhpsrecvd"`
-	Tcrbpdusrecvd	string	`json:"tcrbpdusrecvd"`
-	Statechanges	string	`json:"statechanges"`
+	Port2state     string `json:"port2state"`
+	Statechanges   string `json:"statechanges"`
+	Ringid         string `json:"ringid"`
+	Vlantype       string `json:"vlantype"`
+	Ringrole       string `json:"ringrole"`
+	Port2role      string `json:"port2role"`
+	Rhpssent       string `json:"rhpssent"`
+	Tcrbpdusrecvd  string `json:"tcrbpdusrecvd"`
+	Ringstate      string `json:"ringstate"`
+	Topogroup      string `json:"topogroup"`
+	Port1interface string `json:"port1interface"`
+	Port2interface string `json:"port2interface"`
+	Port1role      string `json:"port1role"`
+	Port1state     string `json:"port1state"`
+	Port1inttype   string `json:"port1inttype"`
+	Port2inttype   string `json:"port2inttype"`
+	Ringname       string `json:"ringname"`
+	Mastervlan     string `json:"mastervlan"`
+	Hellotime      string `json:"hellotime"`
+	Prefwingtime   string `json:"prefwingtime"`
+	Rhpsrecvd      string `json:"rhpsrecvd"`
 }
 
-var ShowMetro_Template = `Value ringid (\d+)
+var ShowMetro_Template string = `Value ringid (\d+)
 Value Required vlantype (\w+)
 Value ringname ([a-zA-Z0-9\-\"\ ]+)
 Value ringstate (enabled|disabled)

@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowArchive struct {
-	State	string	`json:"STATE"`
-	Next_filename	string	`json:"NEXT_FILENAME"`
-	Filenames	[]string	`json:"FILENAMES"`
-	Current_index	string	`json:"CURRENT_INDEX"`
+	Filenames     []string `json:"FILENAMES"`
+	Current_index string   `json:"CURRENT_INDEX"`
+	State         string   `json:"STATE"`
+	Next_filename string   `json:"NEXT_FILENAME"`
 }
 
-var ShowArchive_Template = `Value STATE (\w+\s\w+)
+var ShowArchive_Template string = `Value STATE (\w+\s\w+)
 Value NEXT_FILENAME (\S+)
 Value List FILENAMES (\S+)
 Value CURRENT_INDEX (\d+)

@@ -1,15 +1,15 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIpInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Ok	string	`json:"OK"`
-	Status	string	`json:"STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Ok          string `json:"OK"`
+	Status      string `json:"STATUS"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
+	Interface   string `json:"INTERFACE"`
+	Ip_address  string `json:"IP_ADDRESS"`
 }
 
-var ShowIpInterfaceBrief_Template = `Value INTERFACE (\S+(?:\s\S+)?)
+var ShowIpInterfaceBrief_Template string = `Value INTERFACE (\S+(?:\s\S+)?)
 Value IP_ADDRESS (\S+)
 Value OK (YES|NO|Yes|No|yes|no)
 Value STATUS (up|down|administratively down)

@@ -1,33 +1,33 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSystemHardware struct {
-	Device	string	`json:"DEVICE"`
-	Cpu	string	`json:"CPU"`
-	Core_fequency	string	`json:"CORE_FEQUENCY"`
-	Ddr_frequency	string	`json:"DDR_FREQUENCY"`
-	Core_complex_bus_frequency	string	`json:"CORE_COMPLEX_BUS_FREQUENCY"`
-	Platform_frequency	string	`json:"PLATFORM_FREQUENCY"`
-	Physical_ram_size	string	`json:"PHYSICAL_RAM_SIZE"`
-	One_os_ram_size	string	`json:"ONE_OS_RAM_SIZE"`
-	Nand_flash_size	string	`json:"NAND_FLASH_SIZE"`
-	Ram_disk	string	`json:"RAM_DISK"`
-	Flash_disk	string	`json:"FLASH_DISK"`
-	Uplink	string	`json:"UPLINK"`
-	Isdn	string	`json:"ISDN"`
-	Radio	string	`json:"RADIO"`
-	Usb	string	`json:"USB"`
-	Usb0	string	`json:"USB0"`
-	Usb1	string	`json:"USB1"`
-	Dsp	string	`json:"DSP"`
-	Wlan	string	`json:"WLAN"`
-	Ports	string	`json:"PORTS"`
-	Uplink_ports	string	`json:"UPLINK_PORTS"`
-	Secure_boot_protection	string	`json:"SECURE_BOOT_PROTECTION"`
-	Wlan0	string	`json:"WLAN0"`
-	Wlan1	string	`json:"WLAN1"`
+	One_os_ram_size            string `json:"ONE_OS_RAM_SIZE"`
+	Isdn                       string `json:"ISDN"`
+	Usb1                       string `json:"USB1"`
+	Dsp                        string `json:"DSP"`
+	Wlan1                      string `json:"WLAN1"`
+	Cpu                        string `json:"CPU"`
+	Core_fequency              string `json:"CORE_FEQUENCY"`
+	Physical_ram_size          string `json:"PHYSICAL_RAM_SIZE"`
+	Uplink_ports               string `json:"UPLINK_PORTS"`
+	Wlan0                      string `json:"WLAN0"`
+	Device                     string `json:"DEVICE"`
+	Flash_disk                 string `json:"FLASH_DISK"`
+	Radio                      string `json:"RADIO"`
+	Uplink                     string `json:"UPLINK"`
+	Usb                        string `json:"USB"`
+	Ports                      string `json:"PORTS"`
+	Secure_boot_protection     string `json:"SECURE_BOOT_PROTECTION"`
+	Core_complex_bus_frequency string `json:"CORE_COMPLEX_BUS_FREQUENCY"`
+	Platform_frequency         string `json:"PLATFORM_FREQUENCY"`
+	Ram_disk                   string `json:"RAM_DISK"`
+	Wlan                       string `json:"WLAN"`
+	Ddr_frequency              string `json:"DDR_FREQUENCY"`
+	Nand_flash_size            string `json:"NAND_FLASH_SIZE"`
+	Usb0                       string `json:"USB0"`
 }
 
-var ShowSystemHardware_Template = `Value DEVICE (\S+)
+var ShowSystemHardware_Template string = `Value DEVICE (\S+)
 Value CPU (.*)
 Value CORE_FEQUENCY (\d+)
 Value DDR_FREQUENCY (\d+)

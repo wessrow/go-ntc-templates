@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowDmvpn struct {
-	Peer_nbma	string	`json:"PEER_NBMA"`
-	Peer_tunnel	string	`json:"PEER_TUNNEL"`
-	State	string	`json:"STATE"`
-	Uptime	string	`json:"UPTIME"`
-	Attribute	string	`json:"ATTRIBUTE"`
+	Peer_nbma   string `json:"PEER_NBMA"`
+	Peer_tunnel string `json:"PEER_TUNNEL"`
+	State       string `json:"STATE"`
+	Uptime      string `json:"UPTIME"`
+	Attribute   string `json:"ATTRIBUTE"`
 }
 
-var ShowDmvpn_Template = `Value PEER_NBMA (\S*?)
+var ShowDmvpn_Template string = `Value PEER_NBMA (\S*?)
 Value PEER_TUNNEL (\S*?)
 Value STATE (\S*?)
 Value UPTIME (\S*?)

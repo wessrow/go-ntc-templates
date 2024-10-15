@@ -1,16 +1,16 @@
-package cisco_viptela 
+package cisco_viptela
 
 type ShowArp struct {
-	Vpn	string	`json:"VPN"`
-	Name	string	`json:"NAME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	State	string	`json:"STATE"`
-	Idle_timer	string	`json:"IDLE_TIMER"`
-	Uptime	string	`json:"UPTIME"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	State       string `json:"STATE"`
+	Idle_timer  string `json:"IDLE_TIMER"`
+	Uptime      string `json:"UPTIME"`
+	Vpn         string `json:"VPN"`
+	Name        string `json:"NAME"`
+	Ip_address  string `json:"IP_ADDRESS"`
 }
 
-var ShowArp_Template = `Value VPN (\d+)
+var ShowArp_Template string = `Value VPN (\d+)
 Value NAME (\S+)
 Value IP_ADDRESS (\S+)
 Value MAC_ADDRESS (\S+)

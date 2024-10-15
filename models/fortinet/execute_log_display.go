@@ -1,20 +1,20 @@
-package fortinet 
+package fortinet
 
 type ExecuteLogDisplay struct {
-	Logs_found	string	`json:"LOGS_FOUND"`
-	Logs_returned	string	`json:"LOGS_RETURNED"`
-	Logs_searched	string	`json:"LOGS_SEARCHED"`
-	Message_number	string	`json:"MESSAGE_NUMBER"`
-	Year	string	`json:"YEAR"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Hour	string	`json:"HOUR"`
-	Minute	string	`json:"MINUTE"`
-	Second	string	`json:"SECOND"`
-	Message	string	`json:"MESSAGE"`
+	Month          string `json:"MONTH"`
+	Day            string `json:"DAY"`
+	Second         string `json:"SECOND"`
+	Message        string `json:"MESSAGE"`
+	Logs_found     string `json:"LOGS_FOUND"`
+	Logs_returned  string `json:"LOGS_RETURNED"`
+	Logs_searched  string `json:"LOGS_SEARCHED"`
+	Message_number string `json:"MESSAGE_NUMBER"`
+	Year           string `json:"YEAR"`
+	Hour           string `json:"HOUR"`
+	Minute         string `json:"MINUTE"`
 }
 
-var ExecuteLogDisplay_Template = `Value LOGS_FOUND (\d+)
+var ExecuteLogDisplay_Template string = `Value LOGS_FOUND (\d+)
 Value LOGS_RETURNED (\d+)
 Value LOGS_SEARCHED (\d+(?:\.\d+)?)
 Value MESSAGE_NUMBER (\d+)

@@ -1,15 +1,15 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowIsisAdjacency struct {
-	Interface	string	`json:"INTERFACE"`
-	System_id	string	`json:"SYSTEM_ID"`
-	Type	string	`json:"TYPE"`
-	State	string	`json:"STATE"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Snpa	string	`json:"SNPA"`
+	Interface string `json:"INTERFACE"`
+	System_id string `json:"SYSTEM_ID"`
+	Type      string `json:"TYPE"`
+	State     string `json:"STATE"`
+	Hold_time string `json:"HOLD_TIME"`
+	Snpa      string `json:"SNPA"`
 }
 
-var ShowIsisAdjacency_Template = `Value INTERFACE (\S+)
+var ShowIsisAdjacency_Template string = `Value INTERFACE (\S+)
 Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value TYPE (\d)
 Value STATE (\S+)

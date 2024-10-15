@@ -1,17 +1,17 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgNatAddrMapGet struct {
-	Index	string	`json:"INDEX"`
-	Name	string	`json:"NAME"`
-	Interface	string	`json:"INTERFACE"`
-	Type	string	`json:"TYPE"`
-	Local_start_ip	string	`json:"LOCAL_START_IP"`
-	Local_end_ip	string	`json:"LOCAL_END_IP"`
-	Global_start_ip	string	`json:"GLOBAL_START_IP"`
-	Global_end_ip	string	`json:"GLOBAL_END_IP"`
+	Global_start_ip string `json:"GLOBAL_START_IP"`
+	Global_end_ip   string `json:"GLOBAL_END_IP"`
+	Index           string `json:"INDEX"`
+	Name            string `json:"NAME"`
+	Interface       string `json:"INTERFACE"`
+	Type            string `json:"TYPE"`
+	Local_start_ip  string `json:"LOCAL_START_IP"`
+	Local_end_ip    string `json:"LOCAL_END_IP"`
 }
 
-var CfgNatAddrMapGet_Template = `Value INDEX (\d+)
+var CfgNatAddrMapGet_Template string = `Value INDEX (\d+)
 Value NAME (.+\w)
 Value INTERFACE ((Default|WWAN|(A|V)?DSL))
 Value TYPE (([oO]ne|[mM]any)-to-([oO]ne|[mM]any))

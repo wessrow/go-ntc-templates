@@ -1,20 +1,20 @@
-package juniper_screenos 
+package juniper_screenos
 
 type GetRoute struct {
-	Vr	string	`json:"VR"`
-	Best	string	`json:"BEST"`
-	Id	string	`json:"ID"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Outinterface	string	`json:"OUTINTERFACE"`
-	Nexthop	string	`json:"NEXTHOP"`
-	Protocol	string	`json:"PROTOCOL"`
-	Pref	string	`json:"PREF"`
-	Metric	string	`json:"METRIC"`
-	Vsys	string	`json:"VSYS"`
+	Vr            string `json:"VR"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Nexthop       string `json:"NEXTHOP"`
+	Pref          string `json:"PREF"`
+	Vsys          string `json:"VSYS"`
+	Best          string `json:"BEST"`
+	Id            string `json:"ID"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Outinterface  string `json:"OUTINTERFACE"`
+	Protocol      string `json:"PROTOCOL"`
+	Metric        string `json:"METRIC"`
 }
 
-var GetRoute_Template = `Value Filldown VR (\S+)
+var GetRoute_Template string = `Value Filldown VR (\S+)
 Value BEST (\S+)
 Value ID (\d+)
 Value Required IP_ADDRESS (\d+(\.\d+){3})

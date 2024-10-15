@@ -1,19 +1,19 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowCpuUsageDetailed struct {
-	Core	string	`json:"CORE"`
-	Cpu_5_sec	string	`json:"CPU_5_SEC"`
-	Cpu_5_sec_dp	string	`json:"CPU_5_SEC_DP"`
-	Cpu_5_sec_cp	string	`json:"CPU_5_SEC_CP"`
-	Cpu_1_min	string	`json:"CPU_1_MIN"`
-	Cpu_1_min_dp	string	`json:"CPU_1_MIN_DP"`
-	Cpu_1_min_cp	string	`json:"CPU_1_MIN_CP"`
-	Cpu_5_min	string	`json:"CPU_5_MIN"`
-	Cpu_5_min_dp	string	`json:"CPU_5_MIN_DP"`
-	Cpu_5_min_cp	string	`json:"CPU_5_MIN_CP"`
+	Cpu_5_sec    string `json:"CPU_5_SEC"`
+	Cpu_5_sec_cp string `json:"CPU_5_SEC_CP"`
+	Cpu_1_min    string `json:"CPU_1_MIN"`
+	Cpu_5_min_cp string `json:"CPU_5_MIN_CP"`
+	Core         string `json:"CORE"`
+	Cpu_5_sec_dp string `json:"CPU_5_SEC_DP"`
+	Cpu_1_min_dp string `json:"CPU_1_MIN_DP"`
+	Cpu_1_min_cp string `json:"CPU_1_MIN_CP"`
+	Cpu_5_min    string `json:"CPU_5_MIN"`
+	Cpu_5_min_dp string `json:"CPU_5_MIN_DP"`
 }
 
-var ShowCpuUsageDetailed_Template = `Value CORE (Core\s\d+)
+var ShowCpuUsageDetailed_Template string = `Value CORE (Core\s\d+)
 Value CPU_5_SEC (\d+\.\d+)
 Value CPU_5_SEC_DP (\d+\.\d+)
 Value CPU_5_SEC_CP (\d+\.\d+)

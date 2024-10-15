@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowNveVni struct {
-	Interface	string	`json:"INTERFACE"`
-	Vni	string	`json:"VNI"`
-	Mcast_group	string	`json:"MCAST_GROUP"`
-	State	string	`json:"STATE"`
-	Mode	string	`json:"MODE"`
-	Type	string	`json:"TYPE"`
-	Bd_vrf	string	`json:"BD_VRF"`
+	Mcast_group string `json:"MCAST_GROUP"`
+	State       string `json:"STATE"`
+	Mode        string `json:"MODE"`
+	Type        string `json:"TYPE"`
+	Bd_vrf      string `json:"BD_VRF"`
+	Interface   string `json:"INTERFACE"`
+	Vni         string `json:"VNI"`
 }
 
-var ShowNveVni_Template = `Value INTERFACE (\S+)
+var ShowNveVni_Template string = `Value INTERFACE (\S+)
 Value VNI (\d+)
 Value MCAST_GROUP (\S+)
 Value STATE (Up|Down)

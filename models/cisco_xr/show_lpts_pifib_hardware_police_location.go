@@ -1,18 +1,18 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowLptsPifibHardwarePoliceLocation struct {
-	Location	string	`json:"LOCATION"`
-	Flowtype	string	`json:"FLOWTYPE"`
-	Policer	string	`json:"POLICER"`
-	Type	string	`json:"TYPE"`
-	Cur_rate	string	`json:"CUR_RATE"`
-	Def_rate	string	`json:"DEF_RATE"`
-	Accepted	string	`json:"ACCEPTED"`
-	Dropped	string	`json:"DROPPED"`
-	Tos_value	string	`json:"TOS_VALUE"`
+	Accepted  string `json:"ACCEPTED"`
+	Type      string `json:"TYPE"`
+	Cur_rate  string `json:"CUR_RATE"`
+	Policer   string `json:"POLICER"`
+	Def_rate  string `json:"DEF_RATE"`
+	Dropped   string `json:"DROPPED"`
+	Tos_value string `json:"TOS_VALUE"`
+	Location  string `json:"LOCATION"`
+	Flowtype  string `json:"FLOWTYPE"`
 }
 
-var ShowLptsPifibHardwarePoliceLocation_Template = `Value Filldown LOCATION (\S+?)
+var ShowLptsPifibHardwarePoliceLocation_Template string = `Value Filldown LOCATION (\S+?)
 Value FLOWTYPE (\S+)
 Value POLICER (\d+)
 Value TYPE (\S+)

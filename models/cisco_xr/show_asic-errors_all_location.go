@@ -1,18 +1,18 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowAsicErrorsAllLocation struct {
-	Asic	string	`json:"ASIC"`
-	Instance	string	`json:"INSTANCE"`
-	Number_of_nodes	string	`json:"NUMBER_OF_NODES"`
-	Sbe_error_count	string	`json:"SBE_ERROR_COUNT"`
-	Mbe_error_count	string	`json:"MBE_ERROR_COUNT"`
-	Parity_error_count	string	`json:"PARITY_ERROR_COUNT"`
-	Crc_error_count	string	`json:"CRC_ERROR_COUNT"`
-	Generic_error_count	string	`json:"GENERIC_ERROR_COUNT"`
-	Reset_error_count	string	`json:"RESET_ERROR_COUNT"`
+	Instance            string `json:"INSTANCE"`
+	Mbe_error_count     string `json:"MBE_ERROR_COUNT"`
+	Reset_error_count   string `json:"RESET_ERROR_COUNT"`
+	Asic                string `json:"ASIC"`
+	Number_of_nodes     string `json:"NUMBER_OF_NODES"`
+	Sbe_error_count     string `json:"SBE_ERROR_COUNT"`
+	Parity_error_count  string `json:"PARITY_ERROR_COUNT"`
+	Crc_error_count     string `json:"CRC_ERROR_COUNT"`
+	Generic_error_count string `json:"GENERIC_ERROR_COUNT"`
 }
 
-var ShowAsicErrorsAllLocation_Template = `Value Filldown ASIC (\S+)
+var ShowAsicErrorsAllLocation_Template string = `Value Filldown ASIC (\S+)
 Value Required INSTANCE (\d+)
 Value NUMBER_OF_NODES (\d+)
 Value SBE_ERROR_COUNT (\d+)

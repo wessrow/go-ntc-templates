@@ -1,27 +1,27 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowDot1xAll struct {
-	Sysauthcontrol	string	`json:"SYSAUTHCONTROL"`
-	Dot1xversion	string	`json:"DOT1XVERSION"`
-	Critical_recovery_delay	string	`json:"CRITICAL_RECOVERY_DELAY"`
-	Critical_eapol	string	`json:"CRITICAL_EAPOL"`
-	Interface	string	`json:"INTERFACE"`
-	Pae	string	`json:"PAE"`
-	Portcontrol	string	`json:"PORTCONTROL"`
-	Controldirection	string	`json:"CONTROLDIRECTION"`
-	Hostmode	string	`json:"HOSTMODE"`
-	Reauthentication	string	`json:"REAUTHENTICATION"`
-	Quietperiod	string	`json:"QUIETPERIOD"`
-	Servertimeout	string	`json:"SERVERTIMEOUT"`
-	Supptimeout	string	`json:"SUPPTIMEOUT"`
-	Reauthperiod	string	`json:"REAUTHPERIOD"`
-	Reauthmax	string	`json:"REAUTHMAX"`
-	Masreq	string	`json:"MASREQ"`
-	Txperiod	string	`json:"TXPERIOD"`
-	Ratelimitperiod	string	`json:"RATELIMITPERIOD"`
+	Dot1xversion            string `json:"DOT1XVERSION"`
+	Hostmode                string `json:"HOSTMODE"`
+	Reauthentication        string `json:"REAUTHENTICATION"`
+	Masreq                  string `json:"MASREQ"`
+	Critical_recovery_delay string `json:"CRITICAL_RECOVERY_DELAY"`
+	Interface               string `json:"INTERFACE"`
+	Pae                     string `json:"PAE"`
+	Critical_eapol          string `json:"CRITICAL_EAPOL"`
+	Quietperiod             string `json:"QUIETPERIOD"`
+	Ratelimitperiod         string `json:"RATELIMITPERIOD"`
+	Reauthmax               string `json:"REAUTHMAX"`
+	Txperiod                string `json:"TXPERIOD"`
+	Sysauthcontrol          string `json:"SYSAUTHCONTROL"`
+	Portcontrol             string `json:"PORTCONTROL"`
+	Controldirection        string `json:"CONTROLDIRECTION"`
+	Servertimeout           string `json:"SERVERTIMEOUT"`
+	Supptimeout             string `json:"SUPPTIMEOUT"`
+	Reauthperiod            string `json:"REAUTHPERIOD"`
 }
 
-var ShowDot1xAll_Template = `Value Filldown SYSAUTHCONTROL (\w+)
+var ShowDot1xAll_Template string = `Value Filldown SYSAUTHCONTROL (\w+)
 Value Filldown DOT1XVERSION (\d)
 Value Filldown CRITICAL_RECOVERY_DELAY (\d+)
 Value Filldown CRITICAL_EAPOL (\w+)

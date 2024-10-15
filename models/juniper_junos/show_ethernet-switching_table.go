@@ -1,15 +1,15 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowEthernetSwitchingTable struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Bridge_domain_id	string	`json:"BRIDGE_DOMAIN_ID"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Mac_flag	string	`json:"MAC_FLAG"`
-	Age	string	`json:"AGE"`
-	Logical_interface	string	`json:"LOGICAL_INTERFACE"`
+	Vlan_id           string `json:"VLAN_ID"`
+	Bridge_domain_id  string `json:"BRIDGE_DOMAIN_ID"`
+	Mac_address       string `json:"MAC_ADDRESS"`
+	Mac_flag          string `json:"MAC_FLAG"`
+	Age               string `json:"AGE"`
+	Logical_interface string `json:"LOGICAL_INTERFACE"`
 }
 
-var ShowEthernetSwitchingTable_Template = `Value VLAN_ID (\S+)
+var ShowEthernetSwitchingTable_Template string = `Value VLAN_ID (\S+)
 Value BRIDGE_DOMAIN_ID (\S+)
 Value MAC_ADDRESS (\S+)
 Value MAC_FLAG (\S+)

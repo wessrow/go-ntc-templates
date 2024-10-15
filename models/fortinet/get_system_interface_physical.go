@@ -1,18 +1,18 @@
-package fortinet 
+package fortinet
 
 type GetSystemInterfacePhysical struct {
-	Name	string	`json:"NAME"`
-	Mode	string	`json:"MODE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Netmask	string	`json:"NETMASK"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Ipv6netmask	string	`json:"IPV6NETMASK"`
-	Status	string	`json:"STATUS"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
+	Name         string `json:"NAME"`
+	Mode         string `json:"MODE"`
+	Status       string `json:"STATUS"`
+	Duplex       string `json:"DUPLEX"`
+	Ip_address   string `json:"IP_ADDRESS"`
+	Netmask      string `json:"NETMASK"`
+	Ipv6_address string `json:"IPV6_ADDRESS"`
+	Ipv6netmask  string `json:"IPV6NETMASK"`
+	Speed        string `json:"SPEED"`
 }
 
-var GetSystemInterfacePhysical_Template = `#
+var GetSystemInterfacePhysical_Template string = `#
 # Refried Jello, Stephen Kiely
 # 2021-01-06 - Initial Version
 #

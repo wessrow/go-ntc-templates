@@ -1,14 +1,14 @@
-package eltex 
+package eltex
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Type	string	`json:"TYPE"`
-	Authorization	string	`json:"AUTHORIZATION"`
-	Created_by	string	`json:"CREATED_BY"`
+	Vlan_id       string `json:"VLAN_ID"`
+	Vlan_name     string `json:"VLAN_NAME"`
+	Type          string `json:"TYPE"`
+	Authorization string `json:"AUTHORIZATION"`
+	Created_by    string `json:"CREATED_BY"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 Value VLAN_NAME (\S+)
 Value TYPE (\S+)
 Value AUTHORIZATION (\S+)

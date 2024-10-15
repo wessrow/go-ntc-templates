@@ -1,14 +1,14 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowLldpNeighbors struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Parent_interface	string	`json:"PARENT_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Parent_interface   string `json:"PARENT_INTERFACE"`
+	Chassis_id         string `json:"CHASSIS_ID"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
 }
 
-var ShowLldpNeighbors_Template = `Value Required LOCAL_INTERFACE (\S+)
+var ShowLldpNeighbors_Template string = `Value Required LOCAL_INTERFACE (\S+)
 Value Required PARENT_INTERFACE (\S+)
 Value Required CHASSIS_ID (\S+)
 Value Required NEIGHBOR_INTERFACE (\S+)

@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type AdminShowInventory struct {
-	Name	string	`json:"NAME"`
-	Descr	string	`json:"DESCR"`
-	Pid	string	`json:"PID"`
-	Vid	string	`json:"VID"`
-	Sn	string	`json:"SN"`
+	Name  string `json:"NAME"`
+	Descr string `json:"DESCR"`
+	Pid   string `json:"PID"`
+	Vid   string `json:"VID"`
+	Sn    string `json:"SN"`
 }
 
-var AdminShowInventory_Template = `Value Required NAME (.*?)
+var AdminShowInventory_Template string = `Value Required NAME (.*?)
 Value DESCR (.*?)
 Value PID (\S+)
 Value VID (\S+)

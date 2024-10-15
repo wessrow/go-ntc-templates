@@ -1,25 +1,25 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowObjectGroup struct {
-	Type	string	`json:"TYPE"`
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Nested_groups	string	`json:"NESTED_GROUPS"`
-	Any	string	`json:"ANY"`
-	Host	string	`json:"HOST"`
-	Host_range_start	string	`json:"HOST_RANGE_START"`
-	Host_range_end	string	`json:"HOST_RANGE_END"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Protocol	string	`json:"PROTOCOL"`
-	Port_match	string	`json:"PORT_MATCH"`
-	Port	string	`json:"PORT"`
-	Port_range_start	string	`json:"PORT_RANGE_START"`
-	Port_range_end	string	`json:"PORT_RANGE_END"`
-	Icmp_type	string	`json:"ICMP_TYPE"`
+	Host_range_start string `json:"HOST_RANGE_START"`
+	Host_range_end   string `json:"HOST_RANGE_END"`
+	Protocol         string `json:"PROTOCOL"`
+	Type             string `json:"TYPE"`
+	Any              string `json:"ANY"`
+	Port_range_end   string `json:"PORT_RANGE_END"`
+	Network          string `json:"NETWORK"`
+	Netmask          string `json:"NETMASK"`
+	Nested_groups    string `json:"NESTED_GROUPS"`
+	Host             string `json:"HOST"`
+	Port             string `json:"PORT"`
+	Port_range_start string `json:"PORT_RANGE_START"`
+	Name             string `json:"NAME"`
+	Description      string `json:"DESCRIPTION"`
+	Port_match       string `json:"PORT_MATCH"`
+	Icmp_type        string `json:"ICMP_TYPE"`
 }
 
-var ShowObjectGroup_Template = `Value Required,Filldown TYPE (Service|Network)
+var ShowObjectGroup_Template string = `Value Required,Filldown TYPE (Service|Network)
 Value Required,Filldown NAME (\S+)
 Value DESCRIPTION (.+)
 Value NESTED_GROUPS (\S+)

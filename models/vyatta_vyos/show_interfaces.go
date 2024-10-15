@@ -1,13 +1,13 @@
-package vyatta_vyos 
+package vyatta_vyos
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	[]string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Description	string	`json:"DESCRIPTION"`
+	Interface   string   `json:"INTERFACE"`
+	Ip_address  []string `json:"IP_ADDRESS"`
+	Status      string   `json:"STATUS"`
+	Description string   `json:"DESCRIPTION"`
 }
 
-var ShowInterfaces_Template = `Value INTERFACE (\S+)
+var ShowInterfaces_Template string = `Value INTERFACE (\S+)
 Value List IP_ADDRESS (\S+)
 Value STATUS (\S+)
 Value DESCRIPTION (.+?)

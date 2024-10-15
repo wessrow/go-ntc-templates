@@ -1,21 +1,21 @@
-package edgecore 
+package edgecore
 
 type ShowVersion struct {
-	Unit	string	`json:"UNIT"`
-	Serial	string	`json:"SERIAL"`
-	Service_tag	string	`json:"SERVICE_TAG"`
-	Hardware_version	string	`json:"HARDWARE_VERSION"`
-	Chip_id	string	`json:"CHIP_ID"`
-	Epld_version	string	`json:"EPLD_VERSION"`
-	Num_of_ports	string	`json:"NUM_OF_PORTS"`
-	Power_status	string	`json:"POWER_STATUS"`
-	Redundant_power_status	string	`json:"REDUNDANT_POWER_STATUS"`
-	Loader_version	string	`json:"LOADER_VERSION"`
-	Rom_version	string	`json:"ROM_VERSION"`
-	Operation_code_version	string	`json:"OPERATION_CODE_VERSION"`
+	Serial                 string `json:"SERIAL"`
+	Chip_id                string `json:"CHIP_ID"`
+	Num_of_ports           string `json:"NUM_OF_PORTS"`
+	Rom_version            string `json:"ROM_VERSION"`
+	Operation_code_version string `json:"OPERATION_CODE_VERSION"`
+	Unit                   string `json:"UNIT"`
+	Service_tag            string `json:"SERVICE_TAG"`
+	Hardware_version       string `json:"HARDWARE_VERSION"`
+	Epld_version           string `json:"EPLD_VERSION"`
+	Power_status           string `json:"POWER_STATUS"`
+	Redundant_power_status string `json:"REDUNDANT_POWER_STATUS"`
+	Loader_version         string `json:"LOADER_VERSION"`
 }
 
-var ShowVersion_Template = `Value UNIT (\d+)
+var ShowVersion_Template string = `Value UNIT (\d+)
 Value SERIAL (.*)
 Value SERVICE_TAG (.*)
 Value HARDWARE_VERSION (.*)

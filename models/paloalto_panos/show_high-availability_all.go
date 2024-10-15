@@ -1,29 +1,29 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowHighAvailabilityAll struct {
-	Group	string	`json:"GROUP"`
-	Mode	string	`json:"MODE"`
-	State	string	`json:"STATE"`
-	Ha1_link_state	string	`json:"HA1_LINK_STATE"`
-	Ha1_link_setting	string	`json:"HA1_LINK_SETTING"`
-	Ha2_link_state	string	`json:"HA2_LINK_STATE"`
-	Ha2_link_setting	string	`json:"HA2_LINK_SETTING"`
-	Priority	string	`json:"PRIORITY"`
-	Preemptive	string	`json:"PREEMPTIVE"`
-	Sw_version	string	`json:"SW_VERSION"`
-	App_content_compatibility	string	`json:"APP_CONTENT_COMPATIBILITY"`
-	Anti_virus_compatibility	string	`json:"ANTI_VIRUS_COMPATIBILITY"`
-	Threat_content_compatibility	string	`json:"THREAT_CONTENT_COMPATIBILITY"`
-	Vpn_client_sw_compatibility	string	`json:"VPN_CLIENT_SW_COMPATIBILITY"`
-	Global_protect_client_sw_compatibility	string	`json:"GLOBAL_PROTECT_CLIENT_SW_COMPATIBILITY"`
-	State_sync	string	`json:"STATE_SYNC"`
-	Link_monitoring_enabled	string	`json:"LINK_MONITORING_ENABLED"`
-	Path_monitoring_enabled	string	`json:"PATH_MONITORING_ENABLED"`
-	Config_sync	string	`json:"CONFIG_SYNC"`
-	Running_configuration	string	`json:"RUNNING_CONFIGURATION"`
+	Vpn_client_sw_compatibility            string `json:"VPN_CLIENT_SW_COMPATIBILITY"`
+	Group                                  string `json:"GROUP"`
+	App_content_compatibility              string `json:"APP_CONTENT_COMPATIBILITY"`
+	State_sync                             string `json:"STATE_SYNC"`
+	Link_monitoring_enabled                string `json:"LINK_MONITORING_ENABLED"`
+	Running_configuration                  string `json:"RUNNING_CONFIGURATION"`
+	Ha2_link_state                         string `json:"HA2_LINK_STATE"`
+	Threat_content_compatibility           string `json:"THREAT_CONTENT_COMPATIBILITY"`
+	Ha1_link_setting                       string `json:"HA1_LINK_SETTING"`
+	Priority                               string `json:"PRIORITY"`
+	Global_protect_client_sw_compatibility string `json:"GLOBAL_PROTECT_CLIENT_SW_COMPATIBILITY"`
+	Path_monitoring_enabled                string `json:"PATH_MONITORING_ENABLED"`
+	Config_sync                            string `json:"CONFIG_SYNC"`
+	State                                  string `json:"STATE"`
+	Ha1_link_state                         string `json:"HA1_LINK_STATE"`
+	Preemptive                             string `json:"PREEMPTIVE"`
+	Sw_version                             string `json:"SW_VERSION"`
+	Anti_virus_compatibility               string `json:"ANTI_VIRUS_COMPATIBILITY"`
+	Mode                                   string `json:"MODE"`
+	Ha2_link_setting                       string `json:"HA2_LINK_SETTING"`
 }
 
-var ShowHighAvailabilityAll_Template = `Value Filldown GROUP (\d+)
+var ShowHighAvailabilityAll_Template string = `Value Filldown GROUP (\d+)
 Value Required MODE (\S+)
 Value STATE (\S+)
 Value HA1_LINK_STATE (\S+)

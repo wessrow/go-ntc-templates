@@ -1,13 +1,13 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowRedundancySummary struct {
-	Primary	string	`json:"PRIMARY"`
-	Backup	string	`json:"BACKUP"`
-	Status	string	`json:"STATUS"`
-	Nsr	string	`json:"NSR"`
+	Primary string `json:"PRIMARY"`
+	Backup  string `json:"BACKUP"`
+	Status  string `json:"STATUS"`
+	Nsr     string `json:"NSR"`
 }
 
-var ShowRedundancySummary_Template = `Value PRIMARY (\S+)
+var ShowRedundancySummary_Template string = `Value PRIMARY (\S+)
 Value BACKUP (\S+)
 Value STATUS ((\S+(\s\S+)*))
 Value NSR (\S+)

@@ -1,14 +1,14 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowRunningConfigSystemTime struct {
-	Timezone	string	`json:"TIMEZONE"`
-	Preferred_ntp_server	string	`json:"PREFERRED_NTP_SERVER"`
-	Preferred_ntp_server_type	string	`json:"PREFERRED_NTP_SERVER_TYPE"`
-	Backup_ntp_server	string	`json:"BACKUP_NTP_SERVER"`
-	Backup_ntp_server_type	string	`json:"BACKUP_NTP_SERVER_TYPE"`
+	Timezone                  string `json:"TIMEZONE"`
+	Preferred_ntp_server      string `json:"PREFERRED_NTP_SERVER"`
+	Preferred_ntp_server_type string `json:"PREFERRED_NTP_SERVER_TYPE"`
+	Backup_ntp_server         string `json:"BACKUP_NTP_SERVER"`
+	Backup_ntp_server_type    string `json:"BACKUP_NTP_SERVER_TYPE"`
 }
 
-var ShowRunningConfigSystemTime_Template = `Value TIMEZONE (\w+)
+var ShowRunningConfigSystemTime_Template string = `Value TIMEZONE (\w+)
 Value PREFERRED_NTP_SERVER ([A-F0-9\.\:]+)
 Value PREFERRED_NTP_SERVER_TYPE (\w+)
 Value BACKUP_NTP_SERVER ([A-F0-9\.\:]+)

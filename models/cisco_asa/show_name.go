@@ -1,11 +1,11 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowName struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Name	string	`json:"NAME"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Name       string `json:"NAME"`
 }
 
-var ShowName_Template = `Value IP_ADDRESS (\d+.\d+.\d+.\d+)
+var ShowName_Template string = `Value IP_ADDRESS (\d+.\d+.\d+.\d+)
 Value NAME (\S+)
 
 Start

@@ -1,16 +1,16 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowVoiceVoicePortPriAllHisto struct {
-	Port	string	`json:"PORT"`
-	Physical_type	string	`json:"PHYSICAL_TYPE"`
-	Proto_descriptor	string	`json:"PROTO_DESCRIPTOR"`
-	Attached_voip_dial_peer	string	`json:"ATTACHED_VOIP_DIAL_PEER"`
-	Date_last_reset	string	`json:"DATE_LAST_RESET"`
-	Max_channels_used	string	`json:"MAX_CHANNELS_USED"`
-	Max_channels_available	string	`json:"MAX_CHANNELS_AVAILABLE"`
+	Port                    string `json:"PORT"`
+	Physical_type           string `json:"PHYSICAL_TYPE"`
+	Proto_descriptor        string `json:"PROTO_DESCRIPTOR"`
+	Attached_voip_dial_peer string `json:"ATTACHED_VOIP_DIAL_PEER"`
+	Date_last_reset         string `json:"DATE_LAST_RESET"`
+	Max_channels_used       string `json:"MAX_CHANNELS_USED"`
+	Max_channels_available  string `json:"MAX_CHANNELS_AVAILABLE"`
 }
 
-var ShowVoiceVoicePortPriAllHisto_Template = `Value Required PORT (\d+\/\d+)
+var ShowVoiceVoicePortPriAllHisto_Template string = `Value Required PORT (\d+\/\d+)
 Value PHYSICAL_TYPE (\S+)
 Value PROTO_DESCRIPTOR (\S+)
 Value ATTACHED_VOIP_DIAL_PEER (\d+)

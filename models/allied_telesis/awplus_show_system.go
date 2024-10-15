@@ -1,13 +1,13 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowSystem struct {
-	Hardware	[]string	`json:"HARDWARE"`
-	Serial	[]string	`json:"SERIAL"`
-	Version	string	`json:"VERSION"`
-	Hostname	string	`json:"HOSTNAME"`
+	Version  string   `json:"VERSION"`
+	Hostname string   `json:"HOSTNAME"`
+	Hardware []string `json:"HARDWARE"`
+	Serial   []string `json:"SERIAL"`
 }
 
-var AwplusShowSystem_Template = `Value List HARDWARE (\S+)
+var AwplusShowSystem_Template string = `Value List HARDWARE (\S+)
 Value List SERIAL (\S+)
 Value VERSION (\S+)
 Value HOSTNAME (\S+)

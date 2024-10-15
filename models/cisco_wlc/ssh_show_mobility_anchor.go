@@ -1,13 +1,13 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowMobilityAnchor struct {
-	Wlan_id	string	`json:"WLAN_ID"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Priority	string	`json:"PRIORITY"`
+	Status     string `json:"STATUS"`
+	Priority   string `json:"PRIORITY"`
+	Wlan_id    string `json:"WLAN_ID"`
+	Ip_address string `json:"IP_ADDRESS"`
 }
 
-var SshShowMobilityAnchor_Template = `Value WLAN_ID (\d+)
+var SshShowMobilityAnchor_Template string = `Value WLAN_ID (\d+)
 Value IP_ADDRESS (\S+)
 Value STATUS (\S+)
 Value PRIORITY ([1-3])

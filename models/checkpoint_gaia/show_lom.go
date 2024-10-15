@@ -1,11 +1,11 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowLom struct {
-	Version	string	`json:"VERSION"`
-	Lomip	string	`json:"LOMIP"`
+	Version string `json:"VERSION"`
+	Lomip   string `json:"LOMIP"`
 }
 
-var ShowLom_Template = `Value VERSION (\S+)
+var ShowLom_Template string = `Value VERSION (\S+)
 Value LOMIP ((?:[0-9]{1,3}\.){3}[0-9]{1,3}(/\d{1,2})?|\w+)
 
 Start

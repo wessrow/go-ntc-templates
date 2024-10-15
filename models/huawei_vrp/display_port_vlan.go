@@ -1,13 +1,13 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayPortVlan struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_type	string	`json:"LINK_TYPE"`
-	Pvid	string	`json:"PVID"`
-	Trunk_vlan_list	[]string	`json:"TRUNK_VLAN_LIST"`
+	Trunk_vlan_list []string `json:"TRUNK_VLAN_LIST"`
+	Interface       string   `json:"INTERFACE"`
+	Link_type       string   `json:"LINK_TYPE"`
+	Pvid            string   `json:"PVID"`
 }
 
-var DisplayPortVlan_Template = `Value Required INTERFACE ([\w\.\/\-]+)
+var DisplayPortVlan_Template string = `Value Required INTERFACE ([\w\.\/\-]+)
 Value LINK_TYPE (trunk|access|auto|hybrid|desirable)
 Value PVID (\d+)
 Value List TRUNK_VLAN_LIST (\d+\-\d+|\d+)

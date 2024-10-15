@@ -1,19 +1,19 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowTacacs struct {
-	Tacacs_server	string	`json:"TACACS_SERVER"`
-	Server_port	string	`json:"SERVER_PORT"`
-	Socket_opens	string	`json:"SOCKET_OPENS"`
-	Socket_closes	string	`json:"SOCKET_CLOSES"`
-	Socket_aborts	string	`json:"SOCKET_ABORTS"`
-	Socket_errors	string	`json:"SOCKET_ERRORS"`
-	Socket_timeouts	string	`json:"SOCKET_TIMEOUTS"`
-	Failed_connections	string	`json:"FAILED_CONNECTIONS"`
-	Packets_sent	string	`json:"PACKETS_SENT"`
-	Packet_received	string	`json:"PACKET_RECEIVED"`
+	Server_port        string `json:"SERVER_PORT"`
+	Socket_closes      string `json:"SOCKET_CLOSES"`
+	Socket_timeouts    string `json:"SOCKET_TIMEOUTS"`
+	Failed_connections string `json:"FAILED_CONNECTIONS"`
+	Tacacs_server      string `json:"TACACS_SERVER"`
+	Socket_opens       string `json:"SOCKET_OPENS"`
+	Socket_aborts      string `json:"SOCKET_ABORTS"`
+	Socket_errors      string `json:"SOCKET_ERRORS"`
+	Packets_sent       string `json:"PACKETS_SENT"`
+	Packet_received    string `json:"PACKET_RECEIVED"`
 }
 
-var ShowTacacs_Template = `Value TACACS_SERVER (.+?)
+var ShowTacacs_Template string = `Value TACACS_SERVER (.+?)
 Value SERVER_PORT (\d+)
 Value SOCKET_OPENS (\d+)
 Value SOCKET_CLOSES (\d+)

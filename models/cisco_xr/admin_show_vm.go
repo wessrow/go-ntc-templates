@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type AdminShowVm struct {
-	Location	string	`json:"LOCATION"`
-	Id	string	`json:"ID"`
-	Status	string	`json:"STATUS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Hb_sent	string	`json:"HB_SENT"`
-	Hb_recv	string	`json:"HB_RECV"`
+	Status     string `json:"STATUS"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Hb_sent    string `json:"HB_SENT"`
+	Hb_recv    string `json:"HB_RECV"`
+	Location   string `json:"LOCATION"`
+	Id         string `json:"ID"`
 }
 
-var AdminShowVm_Template = `Value Filldown LOCATION (\S+)
+var AdminShowVm_Template string = `Value Filldown LOCATION (\S+)
 Value ID (\S+)
 Value Required STATUS (\S+)
 Value Required IP_ADDRESS (\S+)

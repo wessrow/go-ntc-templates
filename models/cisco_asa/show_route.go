@@ -1,18 +1,18 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowRoute struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Type	string	`json:"TYPE"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthopip	string	`json:"NEXTHOPIP"`
-	Nexthopif	string	`json:"NEXTHOPIF"`
-	Uptime	string	`json:"UPTIME"`
+	Distance  string `json:"DISTANCE"`
+	Metric    string `json:"METRIC"`
+	Nexthopip string `json:"NEXTHOPIP"`
+	Nexthopif string `json:"NEXTHOPIF"`
+	Netmask   string `json:"NETMASK"`
+	Type      string `json:"TYPE"`
+	Network   string `json:"NETWORK"`
+	Uptime    string `json:"UPTIME"`
+	Protocol  string `json:"PROTOCOL"`
 }
 
-var ShowRoute_Template = `Value Filldown PROTOCOL (C|S|R|B|D|O|i|L)
+var ShowRoute_Template string = `Value Filldown PROTOCOL (C|S|R|B|D|O|i|L)
 Value Filldown TYPE (\w{0,2})
 Value Required,Filldown NETWORK (\d+\.\d+\.\d+\.\d+|\S+)
 Value Filldown NETMASK (\d+\.\d+\.\d+\.\d+)

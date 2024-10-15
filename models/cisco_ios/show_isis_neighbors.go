@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIsisNeighbors struct {
-	System_id	string	`json:"SYSTEM_ID"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	State	string	`json:"STATE"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Circuit_id	string	`json:"CIRCUIT_ID"`
+	Hold_time  string `json:"HOLD_TIME"`
+	Circuit_id string `json:"CIRCUIT_ID"`
+	System_id  string `json:"SYSTEM_ID"`
+	Type       string `json:"TYPE"`
+	Interface  string `json:"INTERFACE"`
+	Ip_address string `json:"IP_ADDRESS"`
+	State      string `json:"STATE"`
 }
 
-var ShowIsisNeighbors_Template = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
+var ShowIsisNeighbors_Template string = `Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value TYPE (L\d)
 Value INTERFACE (\S+)
 Value IP_ADDRESS (\d+.\d+.\d+.\d+)

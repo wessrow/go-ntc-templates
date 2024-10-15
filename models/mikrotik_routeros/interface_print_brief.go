@@ -1,19 +1,19 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfacePrintBrief struct {
-	Id	string	`json:"ID"`
-	Dynamic	string	`json:"DYNAMIC"`
-	Status	string	`json:"STATUS"`
-	Slave	string	`json:"SLAVE"`
-	Name	string	`json:"NAME"`
-	Type	string	`json:"TYPE"`
-	Actual_mtu	string	`json:"ACTUAL_MTU"`
-	L2mtu	string	`json:"L2MTU"`
-	Max_l2mtu	string	`json:"MAX_L2MTU"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Actual_mtu  string `json:"ACTUAL_MTU"`
+	L2mtu       string `json:"L2MTU"`
+	Max_l2mtu   string `json:"MAX_L2MTU"`
+	Status      string `json:"STATUS"`
+	Dynamic     string `json:"DYNAMIC"`
+	Slave       string `json:"SLAVE"`
+	Name        string `json:"NAME"`
+	Type        string `json:"TYPE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Id          string `json:"ID"`
 }
 
-var InterfacePrintBrief_Template = `Value ID (\d+)
+var InterfacePrintBrief_Template string = `Value ID (\d+)
 Value DYNAMIC (D)
 Value STATUS (X|R)
 Value SLAVE (S)

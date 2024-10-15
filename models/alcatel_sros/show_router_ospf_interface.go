@@ -1,15 +1,15 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterOspfInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Area	string	`json:"AREA"`
-	Desig_rtr	string	`json:"DESIG_RTR"`
-	Bkup_desig_rtr	string	`json:"BKUP_DESIG_RTR"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Oper_state	string	`json:"OPER_STATE"`
+	Area           string `json:"AREA"`
+	Desig_rtr      string `json:"DESIG_RTR"`
+	Bkup_desig_rtr string `json:"BKUP_DESIG_RTR"`
+	Admin_state    string `json:"ADMIN_STATE"`
+	Oper_state     string `json:"OPER_STATE"`
+	Interface      string `json:"INTERFACE"`
 }
 
-var ShowRouterOspfInterface_Template = `Value Required INTERFACE (\S+)
+var ShowRouterOspfInterface_Template string = `Value Required INTERFACE (\S+)
 Value Required AREA (\S+)
 Value Required DESIG_RTR (\S+)
 Value Required BKUP_DESIG_RTR (\S+)

@@ -1,18 +1,18 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowTacacsSummary struct {
-	Fallback_test_interval	string	`json:"FALLBACK_TEST_INTERVAL"`
-	Index	string	`json:"INDEX"`
-	Authentication_addr	string	`json:"AUTHENTICATION_ADDR"`
-	Authorization_addr	string	`json:"AUTHORIZATION_ADDR"`
-	Accounting_addr	string	`json:"ACCOUNTING_ADDR"`
-	Port	string	`json:"PORT"`
-	State	string	`json:"STATE"`
-	Timeout	string	`json:"TIMEOUT"`
-	Mgmt_timeout	string	`json:"MGMT_TIMEOUT"`
+	Fallback_test_interval string `json:"FALLBACK_TEST_INTERVAL"`
+	Authorization_addr     string `json:"AUTHORIZATION_ADDR"`
+	State                  string `json:"STATE"`
+	Timeout                string `json:"TIMEOUT"`
+	Mgmt_timeout           string `json:"MGMT_TIMEOUT"`
+	Index                  string `json:"INDEX"`
+	Authentication_addr    string `json:"AUTHENTICATION_ADDR"`
+	Accounting_addr        string `json:"ACCOUNTING_ADDR"`
+	Port                   string `json:"PORT"`
 }
 
-var SshShowTacacsSummary_Template = `Value Filldown FALLBACK_TEST_INTERVAL (\d+)
+var SshShowTacacsSummary_Template string = `Value Filldown FALLBACK_TEST_INTERVAL (\d+)
 Value Required INDEX (\d+)
 Value AUTHENTICATION_ADDR (\S+)
 Value AUTHORIZATION_ADDR (\S+)

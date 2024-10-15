@@ -1,29 +1,29 @@
-package fortinet 
+package fortinet
 
 type DiagnoseSysTop struct {
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
-	Userspace_app_cpu	string	`json:"USERSPACE_APP_CPU"`
-	N_cpu	string	`json:"N_CPU"`
-	System_app_cpu	string	`json:"SYSTEM_APP_CPU"`
-	Idle_cpu	string	`json:"IDLE_CPU"`
-	Wa_cpu	string	`json:"WA_CPU"`
-	Hi_cpu	string	`json:"HI_CPU"`
-	Si_cpu	string	`json:"SI_CPU"`
-	St_cpu	string	`json:"ST_CPU"`
-	Total_memory	string	`json:"TOTAL_MEMORY"`
-	Free_memory	string	`json:"FREE_MEMORY"`
-	Total_shared_memory_pages	string	`json:"TOTAL_SHARED_MEMORY_PAGES"`
-	Process_name	string	`json:"PROCESS_NAME"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Process_state	string	`json:"PROCESS_STATE"`
-	Process_cpu_usage	string	`json:"PROCESS_CPU_USAGE"`
-	Process_memory_usage	string	`json:"PROCESS_MEMORY_USAGE"`
-	Process_cpu_core	string	`json:"PROCESS_CPU_CORE"`
+	Uptime_days               string `json:"UPTIME_DAYS"`
+	N_cpu                     string `json:"N_CPU"`
+	Process_cpu_usage         string `json:"PROCESS_CPU_USAGE"`
+	Process_memory_usage      string `json:"PROCESS_MEMORY_USAGE"`
+	Process_state             string `json:"PROCESS_STATE"`
+	Process_cpu_core          string `json:"PROCESS_CPU_CORE"`
+	Idle_cpu                  string `json:"IDLE_CPU"`
+	Wa_cpu                    string `json:"WA_CPU"`
+	Total_memory              string `json:"TOTAL_MEMORY"`
+	Process_id                string `json:"PROCESS_ID"`
+	Free_memory               string `json:"FREE_MEMORY"`
+	Hi_cpu                    string `json:"HI_CPU"`
+	Si_cpu                    string `json:"SI_CPU"`
+	St_cpu                    string `json:"ST_CPU"`
+	Total_shared_memory_pages string `json:"TOTAL_SHARED_MEMORY_PAGES"`
+	Uptime_hours              string `json:"UPTIME_HOURS"`
+	Uptime_minutes            string `json:"UPTIME_MINUTES"`
+	Userspace_app_cpu         string `json:"USERSPACE_APP_CPU"`
+	System_app_cpu            string `json:"SYSTEM_APP_CPU"`
+	Process_name              string `json:"PROCESS_NAME"`
 }
 
-var DiagnoseSysTop_Template = `Value UPTIME_DAYS (\d+)
+var DiagnoseSysTop_Template string = `Value UPTIME_DAYS (\d+)
 Value UPTIME_HOURS (\d+)
 Value UPTIME_MINUTES (\d+)
 Value USERSPACE_APP_CPU (\d+)

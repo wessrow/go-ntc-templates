@@ -1,18 +1,18 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgWlanGet struct {
-	Index	string	`json:"INDEX"`
-	Band	string	`json:"BAND"`
-	Ssid	string	`json:"SSID"`
-	Enabled	string	`json:"ENABLED"`
-	Bandwidth	string	`json:"BANDWIDTH"`
-	Channel	string	`json:"CHANNEL"`
-	Max_devices	string	`json:"MAX_DEVICES"`
-	Encryption_type	string	`json:"ENCRYPTION_TYPE"`
-	Key	string	`json:"KEY"`
+	Channel         string `json:"CHANNEL"`
+	Encryption_type string `json:"ENCRYPTION_TYPE"`
+	Band            string `json:"BAND"`
+	Ssid            string `json:"SSID"`
+	Bandwidth       string `json:"BANDWIDTH"`
+	Max_devices     string `json:"MAX_DEVICES"`
+	Key             string `json:"KEY"`
+	Index           string `json:"INDEX"`
+	Enabled         string `json:"ENABLED"`
 }
 
-var CfgWlanGet_Template = `Value INDEX (\d+)
+var CfgWlanGet_Template string = `Value INDEX (\d+)
 Value BAND (2\.4GHz|5GHz)
 Value SSID (.+\S)
 Value ENABLED (0|1)

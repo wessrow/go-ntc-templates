@@ -1,15 +1,15 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowRunningConfigSnmpGroup struct {
-	Groupname	string	`json:"GROUPNAME"`
-	Version	string	`json:"VERSION"`
-	Priviledge	string	`json:"PRIVILEDGE"`
-	Write	string	`json:"WRITE"`
-	Read	string	`json:"READ"`
-	Notify	string	`json:"NOTIFY"`
+	Priviledge string `json:"PRIVILEDGE"`
+	Write      string `json:"WRITE"`
+	Read       string `json:"READ"`
+	Notify     string `json:"NOTIFY"`
+	Groupname  string `json:"GROUPNAME"`
+	Version    string `json:"VERSION"`
 }
 
-var ShowRunningConfigSnmpGroup_Template = `Value GROUPNAME ([-\w]+)
+var ShowRunningConfigSnmpGroup_Template string = `Value GROUPNAME ([-\w]+)
 Value VERSION (\d)
 Value PRIVILEDGE (\w+)
 Value WRITE (\w+)

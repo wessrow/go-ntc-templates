@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpDhcpSnoopingBinding struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Vlan	string	`json:"VLAN"`
-	Interface	string	`json:"INTERFACE"`
-	Type	string	`json:"TYPE"`
-	Lease	string	`json:"LEASE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Vlan        string `json:"VLAN"`
+	Interface   string `json:"INTERFACE"`
+	Type        string `json:"TYPE"`
+	Lease       string `json:"LEASE"`
 }
 
-var ShowIpDhcpSnoopingBinding_Template = `Value Required IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+var ShowIpDhcpSnoopingBinding_Template string = `Value Required IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
 Value Required MAC_ADDRESS ([0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2})
 Value Required VLAN ([0-9]+)
 Value Required INTERFACE (\S+)

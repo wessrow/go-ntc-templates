@@ -1,23 +1,23 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpRoutePrintDetail struct {
-	Number	string	`json:"NUMBER"`
-	Comment	string	`json:"COMMENT"`
-	Active	string	`json:"ACTIVE"`
-	Dynamic	string	`json:"DYNAMIC"`
-	Protocol	string	`json:"PROTOCOL"`
-	Discard_packet	string	`json:"DISCARD_PACKET"`
-	Network	string	`json:"NETWORK"`
-	Mask	string	`json:"MASK"`
-	Pref_src	string	`json:"PREF_SRC"`
-	Gateway	string	`json:"GATEWAY"`
-	Gateway_status	string	`json:"GATEWAY_STATUS"`
-	Check_gateway	string	`json:"CHECK_GATEWAY"`
-	Distance	string	`json:"DISTANCE"`
-	Type	string	`json:"TYPE"`
+	Pref_src       string `json:"PREF_SRC"`
+	Number         string `json:"NUMBER"`
+	Gateway_status string `json:"GATEWAY_STATUS"`
+	Check_gateway  string `json:"CHECK_GATEWAY"`
+	Type           string `json:"TYPE"`
+	Protocol       string `json:"PROTOCOL"`
+	Discard_packet string `json:"DISCARD_PACKET"`
+	Mask           string `json:"MASK"`
+	Gateway        string `json:"GATEWAY"`
+	Distance       string `json:"DISTANCE"`
+	Comment        string `json:"COMMENT"`
+	Active         string `json:"ACTIVE"`
+	Dynamic        string `json:"DYNAMIC"`
+	Network        string `json:"NETWORK"`
 }
 
-var IpRoutePrintDetail_Template = `Value NUMBER (\d+)
+var IpRoutePrintDetail_Template string = `Value NUMBER (\d+)
 Value COMMENT (.*?)
 Value ACTIVE (.)
 Value DYNAMIC (.)

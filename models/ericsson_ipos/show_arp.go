@@ -1,16 +1,16 @@
-package ericsson_ipos 
+package ericsson_ipos
 
 type ShowArp struct {
-	Host	string	`json:"HOST"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ttl	string	`json:"TTL"`
-	Type	string	`json:"TYPE"`
-	Circuit	string	`json:"CIRCUIT"`
-	Context	string	`json:"CONTEXT"`
-	Context_id	string	`json:"CONTEXT_ID"`
+	Context     string `json:"CONTEXT"`
+	Context_id  string `json:"CONTEXT_ID"`
+	Host        string `json:"HOST"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Ttl         string `json:"TTL"`
+	Type        string `json:"TYPE"`
+	Circuit     string `json:"CIRCUIT"`
 }
 
-var ShowArp_Template = `Value Required HOST (\d+\.\d+\.\d+\.\d+)
+var ShowArp_Template string = `Value Required HOST (\d+\.\d+\.\d+\.\d+)
 Value Required MAC_ADDRESS (\S+)
 Value Required TTL (\S+)
 Value Required TYPE (\S+)

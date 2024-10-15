@@ -1,16 +1,16 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowRedundancyDetail struct {
-	Redundancy_mgmt_addr	string	`json:"REDUNDANCY_MGMT_ADDR"`
-	Peer_redundancy_mgmt_addr	string	`json:"PEER_REDUNDANCY_MGMT_ADDR"`
-	Redundancy_port_addr	string	`json:"REDUNDANCY_PORT_ADDR"`
-	Peer_redundancy_port_addr	string	`json:"PEER_REDUNDANCY_PORT_ADDR"`
-	Peer_service_port_addr	string	`json:"PEER_SERVICE_PORT_ADDR"`
-	Keep_alive_timeout	string	`json:"KEEP_ALIVE_TIMEOUT"`
-	Peer_search_timeout	string	`json:"PEER_SEARCH_TIMEOUT"`
+	Keep_alive_timeout        string `json:"KEEP_ALIVE_TIMEOUT"`
+	Peer_search_timeout       string `json:"PEER_SEARCH_TIMEOUT"`
+	Redundancy_mgmt_addr      string `json:"REDUNDANCY_MGMT_ADDR"`
+	Peer_redundancy_mgmt_addr string `json:"PEER_REDUNDANCY_MGMT_ADDR"`
+	Redundancy_port_addr      string `json:"REDUNDANCY_PORT_ADDR"`
+	Peer_redundancy_port_addr string `json:"PEER_REDUNDANCY_PORT_ADDR"`
+	Peer_service_port_addr    string `json:"PEER_SERVICE_PORT_ADDR"`
 }
 
-var SshShowRedundancyDetail_Template = `Value REDUNDANCY_MGMT_ADDR (\S+)
+var SshShowRedundancyDetail_Template string = `Value REDUNDANCY_MGMT_ADDR (\S+)
 Value PEER_REDUNDANCY_MGMT_ADDR (\S+)
 Value REDUNDANCY_PORT_ADDR (\S+)
 Value PEER_REDUNDANCY_PORT_ADDR (\S+)

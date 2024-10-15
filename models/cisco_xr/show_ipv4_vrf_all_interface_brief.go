@@ -1,14 +1,14 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIpv4VrfAllInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Proto	string	`json:"PROTO"`
-	Vrf	string	`json:"VRF"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Status     string `json:"STATUS"`
+	Proto      string `json:"PROTO"`
+	Vrf        string `json:"VRF"`
+	Interface  string `json:"INTERFACE"`
 }
 
-var ShowIpv4VrfAllInterfaceBrief_Template = `Value Required INTERFACE ([\w\./-]+)
+var ShowIpv4VrfAllInterfaceBrief_Template string = `Value Required INTERFACE ([\w\./-]+)
 Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value STATUS (\w+)
 Value PROTO (\w+)

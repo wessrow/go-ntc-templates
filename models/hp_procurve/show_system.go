@@ -1,30 +1,30 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowSystem struct {
-	Name	string	`json:"NAME"`
-	Contact	string	`json:"CONTACT"`
-	Location	string	`json:"LOCATION"`
-	Mac_age	string	`json:"MAC_AGE"`
-	Timezone	string	`json:"TIMEZONE"`
-	Daylight_rule	string	`json:"DAYLIGHT_RULE"`
-	Software_version	string	`json:"SOFTWARE_VERSION"`
-	Rom_version	string	`json:"ROM_VERSION"`
-	Allow_mods	string	`json:"ALLOW_MODS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Serial	string	`json:"SERIAL"`
-	Uptime	string	`json:"UPTIME"`
-	Cpu_util	string	`json:"CPU_UTIL"`
-	Mem_tot	string	`json:"MEM_TOT"`
-	Mem_free	string	`json:"MEM_FREE"`
-	Packets_rx	string	`json:"PACKETS_RX"`
-	Packets_tx	string	`json:"PACKETS_TX"`
-	Packets_tot	string	`json:"PACKETS_TOT"`
-	Buffers_free	string	`json:"BUFFERS_FREE"`
-	Buffers_lowest	string	`json:"BUFFERS_LOWEST"`
-	Buffers_missed	string	`json:"BUFFERS_MISSED"`
+	Rom_version      string `json:"ROM_VERSION"`
+	Allow_mods       string `json:"ALLOW_MODS"`
+	Serial           string `json:"SERIAL"`
+	Cpu_util         string `json:"CPU_UTIL"`
+	Contact          string `json:"CONTACT"`
+	Location         string `json:"LOCATION"`
+	Timezone         string `json:"TIMEZONE"`
+	Software_version string `json:"SOFTWARE_VERSION"`
+	Mem_tot          string `json:"MEM_TOT"`
+	Packets_tx       string `json:"PACKETS_TX"`
+	Buffers_lowest   string `json:"BUFFERS_LOWEST"`
+	Name             string `json:"NAME"`
+	Mac_age          string `json:"MAC_AGE"`
+	Daylight_rule    string `json:"DAYLIGHT_RULE"`
+	Mac_address      string `json:"MAC_ADDRESS"`
+	Uptime           string `json:"UPTIME"`
+	Mem_free         string `json:"MEM_FREE"`
+	Buffers_missed   string `json:"BUFFERS_MISSED"`
+	Packets_rx       string `json:"PACKETS_RX"`
+	Packets_tot      string `json:"PACKETS_TOT"`
+	Buffers_free     string `json:"BUFFERS_FREE"`
 }
 
-var ShowSystem_Template = `Value NAME (\S+)
+var ShowSystem_Template string = `Value NAME (\S+)
 Value CONTACT (.+)
 Value LOCATION (.+)
 Value MAC_AGE (\d+)

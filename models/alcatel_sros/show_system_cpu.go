@@ -1,13 +1,13 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowSystemCpu struct {
-	Name	string	`json:"NAME"`
-	Cpu_time	string	`json:"CPU_TIME"`
-	Cpu_usage	string	`json:"CPU_USAGE"`
-	Capacity_usage	string	`json:"CAPACITY_USAGE"`
+	Name           string `json:"NAME"`
+	Cpu_time       string `json:"CPU_TIME"`
+	Cpu_usage      string `json:"CPU_USAGE"`
+	Capacity_usage string `json:"CAPACITY_USAGE"`
 }
 
-var ShowSystemCpu_Template = `Value NAME (\S.*?)
+var ShowSystemCpu_Template string = `Value NAME (\S.*?)
 Value CPU_TIME (\S+)
 Value CPU_USAGE (\S+)
 Value CAPACITY_USAGE (\S+)

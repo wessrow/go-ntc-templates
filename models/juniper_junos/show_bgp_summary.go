@@ -1,23 +1,23 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowBgpSummary struct {
-	Peer_ip	string	`json:"PEER_IP"`
-	Peer_as	string	`json:"PEER_AS"`
-	In_pkt	string	`json:"IN_PKT"`
-	Out_pkt	string	`json:"OUT_PKT"`
-	Out_q	string	`json:"OUT_Q"`
-	Flaps	string	`json:"FLAPS"`
-	Last_flap	string	`json:"LAST_FLAP"`
-	Up_down	string	`json:"UP_DOWN"`
-	State	string	`json:"STATE"`
-	Interface	string	`json:"INTERFACE"`
-	Active	string	`json:"ACTIVE"`
-	Received	string	`json:"RECEIVED"`
-	Accepted	string	`json:"ACCEPTED"`
-	Damped	string	`json:"DAMPED"`
+	Interface string `json:"INTERFACE"`
+	Received  string `json:"RECEIVED"`
+	State     string `json:"STATE"`
+	Peer_ip   string `json:"PEER_IP"`
+	Peer_as   string `json:"PEER_AS"`
+	Up_down   string `json:"UP_DOWN"`
+	Out_pkt   string `json:"OUT_PKT"`
+	Damped    string `json:"DAMPED"`
+	Last_flap string `json:"LAST_FLAP"`
+	Active    string `json:"ACTIVE"`
+	Accepted  string `json:"ACCEPTED"`
+	In_pkt    string `json:"IN_PKT"`
+	Out_q     string `json:"OUT_Q"`
+	Flaps     string `json:"FLAPS"`
 }
 
-var ShowBgpSummary_Template = `Value Required PEER_IP ([0-9a-f:\.]+)
+var ShowBgpSummary_Template string = `Value Required PEER_IP ([0-9a-f:\.]+)
 Value Required PEER_AS (\d+)
 Value IN_PKT (\d+)
 Value OUT_PKT (\d+)

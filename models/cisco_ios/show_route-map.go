@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowRouteMap struct {
-	Name	string	`json:"NAME"`
-	Action	string	`json:"ACTION"`
-	Seq	string	`json:"SEQ"`
-	Match_clauses	[]string	`json:"MATCH_CLAUSES"`
-	Set_clauses	[]string	`json:"SET_CLAUSES"`
+	Seq           string   `json:"SEQ"`
+	Match_clauses []string `json:"MATCH_CLAUSES"`
+	Set_clauses   []string `json:"SET_CLAUSES"`
+	Name          string   `json:"NAME"`
+	Action        string   `json:"ACTION"`
 }
 
-var ShowRouteMap_Template = `Value Required NAME (\S+)
+var ShowRouteMap_Template string = `Value Required NAME (\S+)
 Value Required ACTION (\S+)
 Value Required SEQ (\d+)
 Value List MATCH_CLAUSES (.+?)

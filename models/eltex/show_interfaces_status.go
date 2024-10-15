@@ -1,21 +1,21 @@
-package eltex 
+package eltex
 
 type ShowInterfacesStatus struct {
-	Interface	string	`json:"INTERFACE"`
-	Type	string	`json:"TYPE"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Bw	string	`json:"BW"`
-	Neg	string	`json:"NEG"`
-	Flow_ctrl	string	`json:"FLOW_CTRL"`
-	Link_state	string	`json:"LINK_STATE"`
-	Up_time	string	`json:"UP_TIME"`
-	Back_pressure	string	`json:"BACK_PRESSURE"`
-	Mdix_mode	string	`json:"MDIX_MODE"`
-	Interface_mode	string	`json:"INTERFACE_MODE"`
+	Interface      string `json:"INTERFACE"`
+	Type           string `json:"TYPE"`
+	Neg            string `json:"NEG"`
+	Link_state     string `json:"LINK_STATE"`
+	Up_time        string `json:"UP_TIME"`
+	Interface_mode string `json:"INTERFACE_MODE"`
+	Duplex         string `json:"DUPLEX"`
+	Speed          string `json:"SPEED"`
+	Bw             string `json:"BW"`
+	Flow_ctrl      string `json:"FLOW_CTRL"`
+	Back_pressure  string `json:"BACK_PRESSURE"`
+	Mdix_mode      string `json:"MDIX_MODE"`
 }
 
-var ShowInterfacesStatus_Template = `Value INTERFACE (\S+)
+var ShowInterfacesStatus_Template string = `Value INTERFACE (\S+)
 Value TYPE (\S+)
 Value DUPLEX (\S+)
 Value SPEED (\d+|--)

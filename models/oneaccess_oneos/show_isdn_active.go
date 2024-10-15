@@ -1,18 +1,18 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIsdnActive struct {
-	App	string	`json:"APP"`
-	Call_type	string	`json:"CALL_TYPE"`
-	Calling_nbr	string	`json:"CALLING_NBR"`
-	Called_nbr	string	`json:"CALLED_NBR"`
-	Duration	string	`json:"DURATION"`
-	Port	string	`json:"PORT"`
-	Bchannel	string	`json:"BCHANNEL"`
-	Call_ref	string	`json:"CALL_REF"`
-	Call_id	string	`json:"CALL_ID"`
+	Port        string `json:"PORT"`
+	Bchannel    string `json:"BCHANNEL"`
+	Call_ref    string `json:"CALL_REF"`
+	Call_id     string `json:"CALL_ID"`
+	Call_type   string `json:"CALL_TYPE"`
+	Calling_nbr string `json:"CALLING_NBR"`
+	Called_nbr  string `json:"CALLED_NBR"`
+	Duration    string `json:"DURATION"`
+	App         string `json:"APP"`
 }
 
-var ShowIsdnActive_Template = `Value Required APP (\S+)
+var ShowIsdnActive_Template string = `Value Required APP (\S+)
 Value CALL_TYPE (\S+)
 Value CALLING_NBR (\S+)
 Value CALLED_NBR (\S+)

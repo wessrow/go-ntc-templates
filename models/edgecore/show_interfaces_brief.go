@@ -1,19 +1,19 @@
-package edgecore 
+package edgecore
 
 type ShowInterfacesBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Name	string	`json:"NAME"`
-	Status	string	`json:"STATUS"`
-	Pvid	string	`json:"PVID"`
-	Priority	string	`json:"PRIORITY"`
-	Negotiation	string	`json:"NEGOTIATION"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	Type	string	`json:"TYPE"`
-	Trunk	string	`json:"TRUNK"`
+	Name        string `json:"NAME"`
+	Trunk       string `json:"TRUNK"`
+	Interface   string `json:"INTERFACE"`
+	Status      string `json:"STATUS"`
+	Pvid        string `json:"PVID"`
+	Priority    string `json:"PRIORITY"`
+	Negotiation string `json:"NEGOTIATION"`
+	Speed       string `json:"SPEED"`
+	Duplex      string `json:"DUPLEX"`
+	Type        string `json:"TYPE"`
 }
 
-var ShowInterfacesBrief_Template = `Value INTERFACE (\S+\s+\d+\s*/\s*\d+)
+var ShowInterfacesBrief_Template string = `Value INTERFACE (\S+\s+\d+\s*/\s*\d+)
 Value NAME (.*?)
 Value STATUS (Up|Down|Disabled)
 Value PVID (\d+)

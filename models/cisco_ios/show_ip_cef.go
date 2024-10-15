@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpCef struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Nexthop	[]string	`json:"NEXTHOP"`
-	Interface	[]string	`json:"INTERFACE"`
+	Ip_address    string   `json:"IP_ADDRESS"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Nexthop       []string `json:"NEXTHOP"`
+	Interface     []string `json:"INTERFACE"`
 }
 
-var ShowIpCef_Template = `#
+var ShowIpCef_Template string = `#
 # This template is only compatible with the following command
 #   - show ip cef [vrf NAME]
 # This is enforced by INDEX file

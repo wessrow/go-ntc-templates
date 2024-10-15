@@ -1,22 +1,22 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowPlatformDiag struct {
-	Chassis_type	string	`json:"CHASSIS_TYPE"`
-	Slot_number	string	`json:"SLOT_NUMBER"`
-	Module_sku	string	`json:"MODULE_SKU"`
-	State	string	`json:"STATE"`
-	Running_state	string	`json:"RUNNING_STATE"`
-	Internal_state	string	`json:"INTERNAL_STATE"`
-	Internal_operational_state	string	`json:"INTERNAL_OPERATIONAL_STATE"`
-	Insert_time	string	`json:"INSERT_TIME"`
-	Uptime	string	`json:"UPTIME"`
-	Hardware_signal	string	`json:"HARDWARE_SIGNAL"`
-	Packet_signal	string	`json:"PACKET_SIGNAL"`
-	Cpld_version	string	`json:"CPLD_VERSION"`
-	Firmware_version	string	`json:"FIRMWARE_VERSION"`
+	State                      string `json:"STATE"`
+	Running_state              string `json:"RUNNING_STATE"`
+	Internal_state             string `json:"INTERNAL_STATE"`
+	Insert_time                string `json:"INSERT_TIME"`
+	Uptime                     string `json:"UPTIME"`
+	Packet_signal              string `json:"PACKET_SIGNAL"`
+	Cpld_version               string `json:"CPLD_VERSION"`
+	Chassis_type               string `json:"CHASSIS_TYPE"`
+	Slot_number                string `json:"SLOT_NUMBER"`
+	Module_sku                 string `json:"MODULE_SKU"`
+	Internal_operational_state string `json:"INTERNAL_OPERATIONAL_STATE"`
+	Hardware_signal            string `json:"HARDWARE_SIGNAL"`
+	Firmware_version           string `json:"FIRMWARE_VERSION"`
 }
 
-var ShowPlatformDiag_Template = `Value Filldown CHASSIS_TYPE (.*?)
+var ShowPlatformDiag_Template string = `Value Filldown CHASSIS_TYPE (.*?)
 Value Required SLOT_NUMBER (.*?)
 Value MODULE_SKU (.+?)
 Value STATE (.+)

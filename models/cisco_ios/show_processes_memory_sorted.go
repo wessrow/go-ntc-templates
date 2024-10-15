@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowProcessesMemorySorted struct {
-	Memory_total	string	`json:"MEMORY_TOTAL"`
-	Memory_used	string	`json:"MEMORY_USED"`
-	Memory_free	string	`json:"MEMORY_FREE"`
-	Process_id	[]string	`json:"PROCESS_ID"`
-	Process_allocated	[]string	`json:"PROCESS_ALLOCATED"`
-	Process_freed	[]string	`json:"PROCESS_FREED"`
-	Process_holding	[]string	`json:"PROCESS_HOLDING"`
-	Process	[]string	`json:"PROCESS"`
+	Memory_free       string   `json:"MEMORY_FREE"`
+	Process_id        []string `json:"PROCESS_ID"`
+	Process_allocated []string `json:"PROCESS_ALLOCATED"`
+	Process_freed     []string `json:"PROCESS_FREED"`
+	Process_holding   []string `json:"PROCESS_HOLDING"`
+	Process           []string `json:"PROCESS"`
+	Memory_total      string   `json:"MEMORY_TOTAL"`
+	Memory_used       string   `json:"MEMORY_USED"`
 }
 
-var ShowProcessesMemorySorted_Template = `Value MEMORY_TOTAL (\d+)
+var ShowProcessesMemorySorted_Template string = `Value MEMORY_TOTAL (\d+)
 Value MEMORY_USED (\d+)
 Value MEMORY_FREE (\d+)
 Value List PROCESS_ID (\d+)

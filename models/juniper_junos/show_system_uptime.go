@@ -1,35 +1,35 @@
-package juniper_junos 
+package juniper_junos
 
 type ShowSystemUptime struct {
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
-	Time_source	string	`json:"TIME_SOURCE"`
-	Boot_time	string	`json:"BOOT_TIME"`
-	Boot_timezone	string	`json:"BOOT_TIMEZONE"`
-	Boot_month	string	`json:"BOOT_MONTH"`
-	Boot_day	string	`json:"BOOT_DAY"`
-	Boot_year	string	`json:"BOOT_YEAR"`
-	Protocols_time	string	`json:"PROTOCOLS_TIME"`
-	Protocols_timezone	string	`json:"PROTOCOLS_TIMEZONE"`
-	Protocols_month	string	`json:"PROTOCOLS_MONTH"`
-	Protocols_day	string	`json:"PROTOCOLS_DAY"`
-	Protocols_year	string	`json:"PROTOCOLS_YEAR"`
-	Last_config_time	string	`json:"LAST_CONFIG_TIME"`
-	Last_config_timezone	string	`json:"LAST_CONFIG_TIMEZONE"`
-	Last_config_month	string	`json:"LAST_CONFIG_MONTH"`
-	Last_config_day	string	`json:"LAST_CONFIG_DAY"`
-	Last_config_year	string	`json:"LAST_CONFIG_YEAR"`
-	Last_config_user	string	`json:"LAST_CONFIG_USER"`
-	Users	string	`json:"USERS"`
-	Load_average_1min	string	`json:"LOAD_AVERAGE_1MIN"`
-	Load_average_5min	string	`json:"LOAD_AVERAGE_5MIN"`
-	Load_average_15min	string	`json:"LOAD_AVERAGE_15MIN"`
+	Last_config_year     string `json:"LAST_CONFIG_YEAR"`
+	Last_config_user     string `json:"LAST_CONFIG_USER"`
+	Load_average_5min    string `json:"LOAD_AVERAGE_5MIN"`
+	Timezone             string `json:"TIMEZONE"`
+	Boot_time            string `json:"BOOT_TIME"`
+	Boot_month           string `json:"BOOT_MONTH"`
+	Protocols_month      string `json:"PROTOCOLS_MONTH"`
+	Last_config_day      string `json:"LAST_CONFIG_DAY"`
+	Last_config_month    string `json:"LAST_CONFIG_MONTH"`
+	Time                 string `json:"TIME"`
+	Month                string `json:"MONTH"`
+	Day                  string `json:"DAY"`
+	Protocols_time       string `json:"PROTOCOLS_TIME"`
+	Protocols_year       string `json:"PROTOCOLS_YEAR"`
+	Year                 string `json:"YEAR"`
+	Boot_day             string `json:"BOOT_DAY"`
+	Protocols_timezone   string `json:"PROTOCOLS_TIMEZONE"`
+	Last_config_timezone string `json:"LAST_CONFIG_TIMEZONE"`
+	Load_average_1min    string `json:"LOAD_AVERAGE_1MIN"`
+	Users                string `json:"USERS"`
+	Load_average_15min   string `json:"LOAD_AVERAGE_15MIN"`
+	Time_source          string `json:"TIME_SOURCE"`
+	Boot_timezone        string `json:"BOOT_TIMEZONE"`
+	Boot_year            string `json:"BOOT_YEAR"`
+	Protocols_day        string `json:"PROTOCOLS_DAY"`
+	Last_config_time     string `json:"LAST_CONFIG_TIME"`
 }
 
-var ShowSystemUptime_Template = `Value TIME (\d+:\d+:\d+)
+var ShowSystemUptime_Template string = `Value TIME (\d+:\d+:\d+)
 Value TIMEZONE (\S+)
 Value MONTH (\w+)
 Value DAY (\d+)

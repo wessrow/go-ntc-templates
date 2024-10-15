@@ -1,14 +1,14 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowModuleDetails struct {
-	Module	string	`json:"MODULE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Mod_hw	string	`json:"MOD_HW"`
-	Mod_fw	string	`json:"MOD_FW"`
-	Mod_sw	string	`json:"MOD_SW"`
+	Mod_fw      string `json:"MOD_FW"`
+	Mod_sw      string `json:"MOD_SW"`
+	Module      string `json:"MODULE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Mod_hw      string `json:"MOD_HW"`
 }
 
-var ShowModuleDetails_Template = `Value Key MODULE (\d+|sfr|ips|cxsc)
+var ShowModuleDetails_Template string = `Value Key MODULE (\d+|sfr|ips|cxsc)
 Value MAC_ADDRESS (\S+\s+to\s+\S+)
 Value MOD_HW (\S+)
 Value MOD_FW (\S+(\s+\[\w+\])?)

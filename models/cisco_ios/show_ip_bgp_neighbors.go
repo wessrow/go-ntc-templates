@@ -1,21 +1,21 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpBgpNeighbors struct {
-	Neighbor	string	`json:"NEIGHBOR"`
-	Vrf	string	`json:"VRF"`
-	Remote_as	string	`json:"REMOTE_AS"`
-	Peer_group	string	`json:"PEER_GROUP"`
-	Remote_router_id	string	`json:"REMOTE_ROUTER_ID"`
-	Bgp_state	string	`json:"BGP_STATE"`
-	Localhost_ip	string	`json:"LOCALHOST_IP"`
-	Localhost_port	string	`json:"LOCALHOST_PORT"`
-	Remote_ip	string	`json:"REMOTE_IP"`
-	Remote_port	string	`json:"REMOTE_PORT"`
-	Inbound_routemap	string	`json:"INBOUND_ROUTEMAP"`
-	Outbound_routemap	string	`json:"OUTBOUND_ROUTEMAP"`
+	Outbound_routemap string `json:"OUTBOUND_ROUTEMAP"`
+	Localhost_port    string `json:"LOCALHOST_PORT"`
+	Neighbor          string `json:"NEIGHBOR"`
+	Vrf               string `json:"VRF"`
+	Remote_as         string `json:"REMOTE_AS"`
+	Peer_group        string `json:"PEER_GROUP"`
+	Remote_router_id  string `json:"REMOTE_ROUTER_ID"`
+	Bgp_state         string `json:"BGP_STATE"`
+	Localhost_ip      string `json:"LOCALHOST_IP"`
+	Remote_ip         string `json:"REMOTE_IP"`
+	Remote_port       string `json:"REMOTE_PORT"`
+	Inbound_routemap  string `json:"INBOUND_ROUTEMAP"`
 }
 
-var ShowIpBgpNeighbors_Template = `Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+var ShowIpBgpNeighbors_Template string = `Value NEIGHBOR (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 Value VRF (\S+)
 Value REMOTE_AS (\d+)
 Value PEER_GROUP (\S+)

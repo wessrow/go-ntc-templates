@@ -1,14 +1,14 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpv6InterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Linkipaddr	string	`json:"LINKIPADDR"`
-	Status	string	`json:"STATUS"`
-	Proto	string	`json:"PROTO"`
+	Ipv6_address string `json:"IPV6_ADDRESS"`
+	Linkipaddr   string `json:"LINKIPADDR"`
+	Status       string `json:"STATUS"`
+	Proto        string `json:"PROTO"`
+	Interface    string `json:"INTERFACE"`
 }
 
-var ShowIpv6InterfaceBrief_Template = `Value Required INTERFACE (\S+)
+var ShowIpv6InterfaceBrief_Template string = `Value Required INTERFACE (\S+)
 Value Required IPV6_ADDRESS ([a-zA-Z0-9:/]+)
 Value LINKIPADDR ([a-zA-Z0-9:/]+)
 Value STATUS (\S+/\S+)

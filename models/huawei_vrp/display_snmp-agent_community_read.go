@@ -1,14 +1,14 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplaySnmpAgentCommunityRead struct {
-	Name	string	`json:"NAME"`
-	Group	string	`json:"GROUP"`
-	Storage_type	string	`json:"STORAGE_TYPE"`
-	View	string	`json:"VIEW"`
-	Acl	string	`json:"ACL"`
+	View         string `json:"VIEW"`
+	Acl          string `json:"ACL"`
+	Name         string `json:"NAME"`
+	Group        string `json:"GROUP"`
+	Storage_type string `json:"STORAGE_TYPE"`
 }
 
-var DisplaySnmpAgentCommunityRead_Template = `Value NAME (\S+)
+var DisplaySnmpAgentCommunityRead_Template string = `Value NAME (\S+)
 Value GROUP (\S+)
 Value STORAGE_TYPE (volatile|nonVolatile|permanent|readOnly|other)
 Value VIEW (\S+)

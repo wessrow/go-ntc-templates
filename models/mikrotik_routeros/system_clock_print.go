@@ -1,15 +1,15 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type SystemClockPrint struct {
-	Time	string	`json:"TIME"`
-	Date	string	`json:"DATE"`
-	Time_zone_autodetect	string	`json:"TIME_ZONE_AUTODETECT"`
-	Time_zone_name	string	`json:"TIME_ZONE_NAME"`
-	Gmt_offset	string	`json:"GMT_OFFSET"`
-	Dst_active	string	`json:"DST_ACTIVE"`
+	Dst_active           string `json:"DST_ACTIVE"`
+	Time                 string `json:"TIME"`
+	Date                 string `json:"DATE"`
+	Time_zone_autodetect string `json:"TIME_ZONE_AUTODETECT"`
+	Time_zone_name       string `json:"TIME_ZONE_NAME"`
+	Gmt_offset           string `json:"GMT_OFFSET"`
 }
 
-var SystemClockPrint_Template = `Value TIME (\d{2}\:\d{2}\:\d{2})
+var SystemClockPrint_Template string = `Value TIME (\d{2}\:\d{2}\:\d{2})
 Value DATE ([a-z]{3}\/\d{2}\/\d{4})
 Value TIME_ZONE_AUTODETECT (yes|no)
 Value TIME_ZONE_NAME (\S+)

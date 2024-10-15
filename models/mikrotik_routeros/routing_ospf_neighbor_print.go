@@ -1,15 +1,15 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type RoutingOspfNeighborPrint struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Up_time	string	`json:"UP_TIME"`
-	Address	string	`json:"ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Neighbor_id string `json:"NEIGHBOR_ID"`
+	Priority    string `json:"PRIORITY"`
+	State       string `json:"STATE"`
+	Up_time     string `json:"UP_TIME"`
+	Address     string `json:"ADDRESS"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var RoutingOspfNeighborPrint_Template = `Value NEIGHBOR_ID (\S+)
+var RoutingOspfNeighborPrint_Template string = `Value NEIGHBOR_ID (\S+)
 Value PRIORITY (\d+)
 Value STATE (\S+)
 Value UP_TIME (\S+)

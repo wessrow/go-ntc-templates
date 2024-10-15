@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpDeviceTrackingAll struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Interface	string	`json:"INTERFACE"`
-	Probe_timeout	string	`json:"PROBE_TIMEOUT"`
-	State	string	`json:"STATE"`
-	Source	string	`json:"SOURCE"`
+	Vlan_id       string `json:"VLAN_ID"`
+	Interface     string `json:"INTERFACE"`
+	Probe_timeout string `json:"PROBE_TIMEOUT"`
+	State         string `json:"STATE"`
+	Source        string `json:"SOURCE"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Mac_address   string `json:"MAC_ADDRESS"`
 }
 
-var ShowIpDeviceTrackingAll_Template = `Value Required IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+var ShowIpDeviceTrackingAll_Template string = `Value Required IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
 Value MAC_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value Required VLAN_ID ([0-9]+)
 Value Required INTERFACE (\S+)

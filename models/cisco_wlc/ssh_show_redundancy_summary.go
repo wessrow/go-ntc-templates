@@ -1,20 +1,20 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowRedundancySummary struct {
-	Redundancy_mode	string	`json:"REDUNDANCY_MODE"`
-	Local_state	string	`json:"LOCAL_STATE"`
-	Peer_state	string	`json:"PEER_STATE"`
-	Unit	string	`json:"UNIT"`
-	Unit_id	string	`json:"UNIT_ID"`
-	Redundancy_state	string	`json:"REDUNDANCY_STATE"`
-	Mobility_mac	string	`json:"MOBILITY_MAC"`
-	Redundancy_port	string	`json:"REDUNDANCY_PORT"`
-	Bulksync_status	string	`json:"BULKSYNC_STATUS"`
-	Avg_redundancy_peer_latency	string	`json:"AVG_REDUNDANCY_PEER_LATENCY"`
-	Avg_mgmt_gw_latency	string	`json:"AVG_MGMT_GW_LATENCY"`
+	Local_state                 string `json:"LOCAL_STATE"`
+	Peer_state                  string `json:"PEER_STATE"`
+	Unit_id                     string `json:"UNIT_ID"`
+	Redundancy_port             string `json:"REDUNDANCY_PORT"`
+	Avg_redundancy_peer_latency string `json:"AVG_REDUNDANCY_PEER_LATENCY"`
+	Redundancy_mode             string `json:"REDUNDANCY_MODE"`
+	Redundancy_state            string `json:"REDUNDANCY_STATE"`
+	Mobility_mac                string `json:"MOBILITY_MAC"`
+	Bulksync_status             string `json:"BULKSYNC_STATUS"`
+	Avg_mgmt_gw_latency         string `json:"AVG_MGMT_GW_LATENCY"`
+	Unit                        string `json:"UNIT"`
 }
 
-var SshShowRedundancySummary_Template = `Value REDUNDANCY_MODE (\S+\s+\S+)
+var SshShowRedundancySummary_Template string = `Value REDUNDANCY_MODE (\S+\s+\S+)
 Value LOCAL_STATE (\S+)
 Value PEER_STATE (\S+\s+\S+)
 Value UNIT (\S+)

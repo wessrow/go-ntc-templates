@@ -1,19 +1,19 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowInterfacesBrief struct {
-	Interface	string	`json:"interface"`
-	Linkstate	string	`json:"linkstate"`
-	Portstate	string	`json:"portstate"`
-	Duplex	string	`json:"duplex"`
-	Speed	string	`json:"speed"`
-	Trunkid	string	`json:"trunkid"`
-	Tagonly	string	`json:"tagonly"`
-	Pvid	string	`json:"pvid"`
-	Priority	string	`json:"priority"`
-	Mac	string	`json:"mac"`
+	Portstate string `json:"portstate"`
+	Duplex    string `json:"duplex"`
+	Tagonly   string `json:"tagonly"`
+	Pvid      string `json:"pvid"`
+	Mac       string `json:"mac"`
+	Interface string `json:"interface"`
+	Linkstate string `json:"linkstate"`
+	Speed     string `json:"speed"`
+	Trunkid   string `json:"trunkid"`
+	Priority  string `json:"priority"`
 }
 
-var ShowInterfacesBrief_Template = `Value interface ([0-9\/velb]+)
+var ShowInterfacesBrief_Template string = `Value interface ([0-9\/velb]+)
 Value linkstate (Up|Disabled|Down)
 Value portstate ([a-zA-Z\/]+)
 Value duplex ([a-zA-Z\/]+)

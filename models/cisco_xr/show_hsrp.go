@@ -1,17 +1,17 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowHsrp struct {
-	Interface	string	`json:"INTERFACE"`
-	Group	string	`json:"GROUP"`
-	Prio	string	`json:"PRIO"`
-	Preempt	string	`json:"PREEMPT"`
-	State	string	`json:"STATE"`
-	Active_addr	string	`json:"ACTIVE_ADDR"`
-	Standby_addr	string	`json:"STANDBY_ADDR"`
-	Group_addr	string	`json:"GROUP_ADDR"`
+	Prio         string `json:"PRIO"`
+	Preempt      string `json:"PREEMPT"`
+	State        string `json:"STATE"`
+	Active_addr  string `json:"ACTIVE_ADDR"`
+	Standby_addr string `json:"STANDBY_ADDR"`
+	Group_addr   string `json:"GROUP_ADDR"`
+	Interface    string `json:"INTERFACE"`
+	Group        string `json:"GROUP"`
 }
 
-var ShowHsrp_Template = `Value INTERFACE (\S+)
+var ShowHsrp_Template string = `Value INTERFACE (\S+)
 Value GROUP (\d+)
 Value PRIO (\d+)
 Value PREEMPT (P)

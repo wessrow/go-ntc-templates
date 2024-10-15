@@ -1,17 +1,17 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowSharing struct {
-	Config_master	string	`json:"CONFIG_MASTER"`
-	Current_master	string	`json:"CURRENT_MASTER"`
-	Agg_control	string	`json:"AGG_CONTROL"`
-	Ld_share_algorithm	[]string	`json:"LD_SHARE_ALGORITHM"`
-	Ld_share_group	[]string	`json:"LD_SHARE_GROUP"`
-	Agg_mbr	[]string	`json:"AGG_MBR"`
-	Link_state	[]string	`json:"LINK_STATE"`
-	Link_up_transitions	[]string	`json:"LINK_UP_TRANSITIONS"`
+	Link_state          []string `json:"LINK_STATE"`
+	Link_up_transitions []string `json:"LINK_UP_TRANSITIONS"`
+	Config_master       string   `json:"CONFIG_MASTER"`
+	Current_master      string   `json:"CURRENT_MASTER"`
+	Agg_control         string   `json:"AGG_CONTROL"`
+	Ld_share_algorithm  []string `json:"LD_SHARE_ALGORITHM"`
+	Ld_share_group      []string `json:"LD_SHARE_GROUP"`
+	Agg_mbr             []string `json:"AGG_MBR"`
 }
 
-var ShowSharing_Template = `Value Filldown CONFIG_MASTER (\d+)
+var ShowSharing_Template string = `Value Filldown CONFIG_MASTER (\d+)
 Value Filldown CURRENT_MASTER (\d+)
 Value Filldown AGG_CONTROL (\S+)
 Value List LD_SHARE_ALGORITHM (L2|L3|L3_L4|custom)

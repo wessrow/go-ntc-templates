@@ -1,18 +1,18 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowOspfVrfAllNeighbor struct {
-	Process	string	`json:"PROCESS"`
-	Vrf	string	`json:"VRF"`
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Dead_time	string	`json:"DEAD_TIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Neighbor_uptime	string	`json:"NEIGHBOR_UPTIME"`
+	Vrf             string `json:"VRF"`
+	State           string `json:"STATE"`
+	Dead_time       string `json:"DEAD_TIME"`
+	Interface       string `json:"INTERFACE"`
+	Process         string `json:"PROCESS"`
+	Neighbor_id     string `json:"NEIGHBOR_ID"`
+	Priority        string `json:"PRIORITY"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	Neighbor_uptime string `json:"NEIGHBOR_UPTIME"`
 }
 
-var ShowOspfVrfAllNeighbor_Template = `Value Filldown PROCESS (\d+)
+var ShowOspfVrfAllNeighbor_Template string = `Value Filldown PROCESS (\d+)
 Value Filldown VRF (\S+)
 Value Required NEIGHBOR_ID (\d+.\d+.\d+.\d+)
 Value PRIORITY (\d+)

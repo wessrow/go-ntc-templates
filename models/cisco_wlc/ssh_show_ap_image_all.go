@@ -1,17 +1,17 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowApImageAll struct {
-	Ap_name	string	`json:"AP_NAME"`
-	Primary_image	string	`json:"PRIMARY_IMAGE"`
-	Backup_image	string	`json:"BACKUP_IMAGE"`
-	Predownload_status	string	`json:"PREDOWNLOAD_STATUS"`
-	Predownload_version	string	`json:"PREDOWNLOAD_VERSION"`
-	Next_retry_time	string	`json:"NEXT_RETRY_TIME"`
-	Retry_count	string	`json:"RETRY_COUNT"`
-	Flexcon_predown	string	`json:"FLEXCON_PREDOWN"`
+	Retry_count         string `json:"RETRY_COUNT"`
+	Flexcon_predown     string `json:"FLEXCON_PREDOWN"`
+	Ap_name             string `json:"AP_NAME"`
+	Primary_image       string `json:"PRIMARY_IMAGE"`
+	Backup_image        string `json:"BACKUP_IMAGE"`
+	Predownload_status  string `json:"PREDOWNLOAD_STATUS"`
+	Predownload_version string `json:"PREDOWNLOAD_VERSION"`
+	Next_retry_time     string `json:"NEXT_RETRY_TIME"`
 }
 
-var SshShowApImageAll_Template = `Value AP_NAME (\S+)
+var SshShowApImageAll_Template string = `Value AP_NAME (\S+)
 Value PRIMARY_IMAGE ([0-9\.]+)
 Value BACKUP_IMAGE ([0-9\.]+)
 Value PREDOWNLOAD_STATUS (\S+)

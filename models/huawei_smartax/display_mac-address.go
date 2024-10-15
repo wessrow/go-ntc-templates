@@ -1,18 +1,18 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayMacAddress struct {
-	Service_port_index	string	`json:"SERVICE_PORT_INDEX"`
-	Bundle_index	string	`json:"BUNDLE_INDEX"`
-	Type	string	`json:"TYPE"`
-	Mac	string	`json:"MAC"`
-	Mac_type	string	`json:"MAC_TYPE"`
-	Fsp	string	`json:"FSP"`
-	Ont_id	string	`json:"ONT_ID"`
-	Gem_index	string	`json:"GEM_INDEX"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Type               string `json:"TYPE"`
+	Mac_type           string `json:"MAC_TYPE"`
+	Vlan_id            string `json:"VLAN_ID"`
+	Service_port_index string `json:"SERVICE_PORT_INDEX"`
+	Bundle_index       string `json:"BUNDLE_INDEX"`
+	Mac                string `json:"MAC"`
+	Fsp                string `json:"FSP"`
+	Ont_id             string `json:"ONT_ID"`
+	Gem_index          string `json:"GEM_INDEX"`
 }
 
-var DisplayMacAddress_Template = `Value SERVICE_PORT_INDEX (\d+)
+var DisplayMacAddress_Template string = `Value SERVICE_PORT_INDEX (\d+)
 Value BUNDLE_INDEX (\d+)
 Value TYPE (eth|gpon|epon)
 Value Required MAC ([0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4})

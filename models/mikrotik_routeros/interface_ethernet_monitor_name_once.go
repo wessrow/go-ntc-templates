@@ -1,42 +1,42 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfaceEthernetMonitorNameOnce struct {
-	Name	string	`json:"NAME"`
-	Status	string	`json:"STATUS"`
-	Auto_negotiation	string	`json:"AUTO_NEGOTIATION"`
-	Default_cable_settings	string	`json:"DEFAULT_CABLE_SETTINGS"`
-	Rate	string	`json:"RATE"`
-	Full_duplex	string	`json:"FULL_DUPLEX"`
-	Tx_flow_control	string	`json:"TX_FLOW_CONTROL"`
-	Rx_flow_control	string	`json:"RX_FLOW_CONTROL"`
-	Combo_state	string	`json:"COMBO_STATE"`
-	Sfp_module_present	string	`json:"SFP_MODULE_PRESENT"`
-	Sfp_rx_loss	string	`json:"SFP_RX_LOSS"`
-	Sfp_tx_fault	string	`json:"SFP_TX_FAULT"`
-	Sfp_type	string	`json:"SFP_TYPE"`
-	Sfp_connector_type	string	`json:"SFP_CONNECTOR_TYPE"`
-	Sfp_link_length_9um	string	`json:"SFP_LINK_LENGTH_9UM"`
-	Sfp_link_length_50um	string	`json:"SFP_LINK_LENGTH_50UM"`
-	Sfp_link_length_62um	string	`json:"SFP_LINK_LENGTH_62UM"`
-	Sfp_link_length_copper	string	`json:"SFP_LINK_LENGTH_COPPER"`
-	Sfp_vendor_name	string	`json:"SFP_VENDOR_NAME"`
-	Sfp_vendor_part_number	string	`json:"SFP_VENDOR_PART_NUMBER"`
-	Sfp_vendor_revision	string	`json:"SFP_VENDOR_REVISION"`
-	Sfp_vendor_serial	string	`json:"SFP_VENDOR_SERIAL"`
-	Sfp_manufacturing_date	string	`json:"SFP_MANUFACTURING_DATE"`
-	Sfp_wavelength	string	`json:"SFP_WAVELENGTH"`
-	Sfp_temperature	string	`json:"SFP_TEMPERATURE"`
-	Sfp_supply_voltage	string	`json:"SFP_SUPPLY_VOLTAGE"`
-	Sfp_tx_bias_current	string	`json:"SFP_TX_BIAS_CURRENT"`
-	Sfp_tx_power	string	`json:"SFP_TX_POWER"`
-	Sfp_rx_power	string	`json:"SFP_RX_POWER"`
-	Eeprom_checksum	string	`json:"EEPROM_CHECKSUM"`
-	Eeprom	[]string	`json:"EEPROM"`
-	Advertising	string	`json:"ADVERTISING"`
-	Link_partner_advertising	string	`json:"LINK_PARTNER_ADVERTISING"`
+	Sfp_link_length_9um      string   `json:"SFP_LINK_LENGTH_9UM"`
+	Sfp_link_length_50um     string   `json:"SFP_LINK_LENGTH_50UM"`
+	Sfp_supply_voltage       string   `json:"SFP_SUPPLY_VOLTAGE"`
+	Name                     string   `json:"NAME"`
+	Sfp_rx_loss              string   `json:"SFP_RX_LOSS"`
+	Sfp_vendor_part_number   string   `json:"SFP_VENDOR_PART_NUMBER"`
+	Sfp_vendor_serial        string   `json:"SFP_VENDOR_SERIAL"`
+	Tx_flow_control          string   `json:"TX_FLOW_CONTROL"`
+	Sfp_tx_fault             string   `json:"SFP_TX_FAULT"`
+	Sfp_connector_type       string   `json:"SFP_CONNECTOR_TYPE"`
+	Auto_negotiation         string   `json:"AUTO_NEGOTIATION"`
+	Full_duplex              string   `json:"FULL_DUPLEX"`
+	Sfp_tx_power             string   `json:"SFP_TX_POWER"`
+	Sfp_rx_power             string   `json:"SFP_RX_POWER"`
+	Eeprom                   []string `json:"EEPROM"`
+	Link_partner_advertising string   `json:"LINK_PARTNER_ADVERTISING"`
+	Sfp_wavelength           string   `json:"SFP_WAVELENGTH"`
+	Sfp_temperature          string   `json:"SFP_TEMPERATURE"`
+	Sfp_module_present       string   `json:"SFP_MODULE_PRESENT"`
+	Sfp_type                 string   `json:"SFP_TYPE"`
+	Sfp_link_length_62um     string   `json:"SFP_LINK_LENGTH_62UM"`
+	Sfp_link_length_copper   string   `json:"SFP_LINK_LENGTH_COPPER"`
+	Sfp_vendor_revision      string   `json:"SFP_VENDOR_REVISION"`
+	Sfp_manufacturing_date   string   `json:"SFP_MANUFACTURING_DATE"`
+	Status                   string   `json:"STATUS"`
+	Rx_flow_control          string   `json:"RX_FLOW_CONTROL"`
+	Default_cable_settings   string   `json:"DEFAULT_CABLE_SETTINGS"`
+	Advertising              string   `json:"ADVERTISING"`
+	Sfp_vendor_name          string   `json:"SFP_VENDOR_NAME"`
+	Sfp_tx_bias_current      string   `json:"SFP_TX_BIAS_CURRENT"`
+	Eeprom_checksum          string   `json:"EEPROM_CHECKSUM"`
+	Rate                     string   `json:"RATE"`
+	Combo_state              string   `json:"COMBO_STATE"`
 }
 
-var InterfaceEthernetMonitorNameOnce_Template = `Value NAME (\S+)
+var InterfaceEthernetMonitorNameOnce_Template string = `Value NAME (\S+)
 Value STATUS (\S+)
 Value AUTO_NEGOTIATION (\S+)
 Value DEFAULT_CABLE_SETTINGS (\S+)

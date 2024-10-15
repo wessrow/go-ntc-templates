@@ -1,18 +1,18 @@
-package cisco_s300 
+package cisco_s300
 
 type ShowInterfacesStatus struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Neg	string	`json:"NEG"`
-	Flowctrl	string	`json:"FLOWCTRL"`
-	Linkstate	string	`json:"LINKSTATE"`
-	Backpressure	string	`json:"BACKPRESSURE"`
-	Mdixmode	string	`json:"MDIXMODE"`
+	Flowctrl     string `json:"FLOWCTRL"`
+	Neg          string `json:"NEG"`
+	Linkstate    string `json:"LINKSTATE"`
+	Backpressure string `json:"BACKPRESSURE"`
+	Mdixmode     string `json:"MDIXMODE"`
+	Port         string `json:"PORT"`
+	Type         string `json:"TYPE"`
+	Duplex       string `json:"DUPLEX"`
+	Speed        string `json:"SPEED"`
 }
 
-var ShowInterfacesStatus_Template = `Value PORT (\S+)
+var ShowInterfacesStatus_Template string = `Value PORT (\S+)
 Value TYPE (\S+)
 Value DUPLEX (Full|Half|--)
 Value SPEED (\d+|--)

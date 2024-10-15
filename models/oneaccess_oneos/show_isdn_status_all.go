@@ -1,28 +1,28 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIsdnStatusAll struct {
-	Isdn_line	string	`json:"ISDN_LINE"`
-	Physical_type	string	`json:"PHYSICAL_TYPE"`
-	Protocol_descriptor	string	`json:"PROTOCOL_DESCRIPTOR"`
-	Protocol_linecode	string	`json:"PROTOCOL_LINECODE"`
-	Protocol_framing	string	`json:"PROTOCOL_FRAMING"`
-	Config_state	string	`json:"CONFIG_STATE"`
-	Loop_state	string	`json:"LOOP_STATE"`
-	L1_status	string	`json:"L1_STATUS"`
-	Ais	string	`json:"AIS"`
-	Los	string	`json:"LOS"`
-	Rai	string	`json:"RAI"`
-	Pri_ais_occurrences	string	`json:"PRI_AIS_OCCURRENCES"`
-	Pri_los_occurrences	string	`json:"PRI_LOS_OCCURRENCES"`
-	Pri_rdi_occurrences	string	`json:"PRI_RDI_OCCURRENCES"`
-	L2_status	string	`json:"L2_STATUS"`
-	L2_tx_frames_dchannel	string	`json:"L2_TX_FRAMES_DCHANNEL"`
-	L2_rx_frames_dchannel	string	`json:"L2_RX_FRAMES_DCHANNEL"`
-	L3_active_calls	string	`json:"L3_ACTIVE_CALLS"`
-	L3_call_details	[]string	`json:"L3_CALL_DETAILS"`
+	Pri_rdi_occurrences   string   `json:"PRI_RDI_OCCURRENCES"`
+	Protocol_descriptor   string   `json:"PROTOCOL_DESCRIPTOR"`
+	Protocol_framing      string   `json:"PROTOCOL_FRAMING"`
+	Config_state          string   `json:"CONFIG_STATE"`
+	L1_status             string   `json:"L1_STATUS"`
+	Ais                   string   `json:"AIS"`
+	Los                   string   `json:"LOS"`
+	Pri_ais_occurrences   string   `json:"PRI_AIS_OCCURRENCES"`
+	Pri_los_occurrences   string   `json:"PRI_LOS_OCCURRENCES"`
+	Protocol_linecode     string   `json:"PROTOCOL_LINECODE"`
+	L3_active_calls       string   `json:"L3_ACTIVE_CALLS"`
+	L3_call_details       []string `json:"L3_CALL_DETAILS"`
+	L2_status             string   `json:"L2_STATUS"`
+	Physical_type         string   `json:"PHYSICAL_TYPE"`
+	Loop_state            string   `json:"LOOP_STATE"`
+	Rai                   string   `json:"RAI"`
+	Isdn_line             string   `json:"ISDN_LINE"`
+	L2_rx_frames_dchannel string   `json:"L2_RX_FRAMES_DCHANNEL"`
+	L2_tx_frames_dchannel string   `json:"L2_TX_FRAMES_DCHANNEL"`
 }
 
-var ShowIsdnStatusAll_Template = `Value Required ISDN_LINE (\d+\/\d+)
+var ShowIsdnStatusAll_Template string = `Value Required ISDN_LINE (\d+\/\d+)
 Value PHYSICAL_TYPE (\S+)
 Value PROTOCOL_DESCRIPTOR (\S+)
 Value PROTOCOL_LINECODE (\S+)

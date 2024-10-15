@@ -1,11 +1,11 @@
-package hp_comware 
+package hp_comware
 
 type DisplayIpVpnInstance struct {
-	Name	string	`json:"NAME"`
-	Rd	string	`json:"RD"`
+	Name string `json:"NAME"`
+	Rd   string `json:"RD"`
 }
 
-var DisplayIpVpnInstance_Template = `Value Required NAME (\S+)
+var DisplayIpVpnInstance_Template string = `Value Required NAME (\S+)
 Value RD (\d+:\d+)
 
 Start

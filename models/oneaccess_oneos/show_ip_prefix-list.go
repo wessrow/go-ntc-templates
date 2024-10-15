@@ -1,18 +1,18 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIpPrefixList struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Sequence	string	`json:"SEQUENCE"`
-	Action	string	`json:"ACTION"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Le	string	`json:"LE"`
-	Ge	string	`json:"GE"`
+	Le          string `json:"LE"`
+	Ge          string `json:"GE"`
+	Sequence    string `json:"SEQUENCE"`
+	Network     string `json:"NETWORK"`
+	Description string `json:"DESCRIPTION"`
+	Action      string `json:"ACTION"`
+	Netmask     string `json:"NETMASK"`
+	Protocol    string `json:"PROTOCOL"`
+	Name        string `json:"NAME"`
 }
 
-var ShowIpPrefixList_Template = `Value Required,Filldown PROTOCOL (\S+)
+var ShowIpPrefixList_Template string = `Value Required,Filldown PROTOCOL (\S+)
 Value Required,Filldown NAME (\S+)
 Value Filldown DESCRIPTION (.*)
 Value Required SEQUENCE (\d+)

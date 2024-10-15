@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowCdpNeighbors struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Holdtime	string	`json:"HOLDTIME"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Platform	string	`json:"PLATFORM"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Platform           string `json:"PLATFORM"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Holdtime           string `json:"HOLDTIME"`
+	Capabilities       string `json:"CAPABILITIES"`
 }
 
-var ShowCdpNeighbors_Template = `Value Required,Filldown NEIGHBOR_NAME (\S+)
+var ShowCdpNeighbors_Template string = `Value Required,Filldown NEIGHBOR_NAME (\S+)
 Value Required LOCAL_INTERFACE (\S+)
 Value HOLDTIME (\d+)
 Value CAPABILITIES ([\S+\s+]+?)

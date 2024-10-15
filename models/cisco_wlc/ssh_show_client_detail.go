@@ -1,21 +1,21 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowClientDetail struct {
-	Client_username	string	`json:"CLIENT_USERNAME"`
-	Ap_name	string	`json:"AP_NAME"`
-	Client_state	string	`json:"CLIENT_STATE"`
-	Wireless_lan_network_name	string	`json:"WIRELESS_LAN_NETWORK_NAME"`
-	Wireless_lan_profile_name	string	`json:"WIRELESS_LAN_PROFILE_NAME"`
-	Connected_for	string	`json:"CONNECTED_FOR"`
-	Connected_for_measurement	string	`json:"CONNECTED_FOR_MEASUREMENT"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Radio_signal_strength_indicator	string	`json:"RADIO_SIGNAL_STRENGTH_INDICATOR"`
-	Signal_to_noise_ratio	string	`json:"SIGNAL_TO_NOISE_RATIO"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Ip_address                      string `json:"IP_ADDRESS"`
+	Ap_name                         string `json:"AP_NAME"`
+	Client_state                    string `json:"CLIENT_STATE"`
+	Wireless_lan_profile_name       string `json:"WIRELESS_LAN_PROFILE_NAME"`
+	Connected_for_measurement       string `json:"CONNECTED_FOR_MEASUREMENT"`
+	Interface                       string `json:"INTERFACE"`
+	Radio_signal_strength_indicator string `json:"RADIO_SIGNAL_STRENGTH_INDICATOR"`
+	Signal_to_noise_ratio           string `json:"SIGNAL_TO_NOISE_RATIO"`
+	Vlan_id                         string `json:"VLAN_ID"`
+	Client_username                 string `json:"CLIENT_USERNAME"`
+	Wireless_lan_network_name       string `json:"WIRELESS_LAN_NETWORK_NAME"`
+	Connected_for                   string `json:"CONNECTED_FOR"`
 }
 
-var SshShowClientDetail_Template = `Value CLIENT_USERNAME (.+?)
+var SshShowClientDetail_Template string = `Value CLIENT_USERNAME (.+?)
 Value AP_NAME (.+?)
 Value CLIENT_STATE (\S+)
 Value WIRELESS_LAN_NETWORK_NAME (.+?)

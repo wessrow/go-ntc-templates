@@ -1,17 +1,17 @@
-package extreme_exos 
+package extreme_exos
 
 type ShowIparp struct {
-	Vr	string	`json:"VR"`
-	Destination	string	`json:"DESTINATION"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Port	string	`json:"PORT"`
-	Static	string	`json:"STATIC"`
-	Age	string	`json:"AGE"`
-	Vlan	string	`json:"VLAN"`
-	Vid	string	`json:"VID"`
+	Static      string `json:"STATIC"`
+	Age         string `json:"AGE"`
+	Vlan        string `json:"VLAN"`
+	Vid         string `json:"VID"`
+	Vr          string `json:"VR"`
+	Destination string `json:"DESTINATION"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Port        string `json:"PORT"`
 }
 
-var ShowIparp_Template = `Value VR (\S+)
+var ShowIparp_Template string = `Value VR (\S+)
 Value DESTINATION (\d+\.\d+\.\d+\.\d+)
 Value MAC_ADDRESS ([0-9A-Fa-f:]+|incomplete)
 Value PORT (\S+)

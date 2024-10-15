@@ -1,28 +1,28 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpOspfDatabaseRouter struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Area	string	`json:"AREA"`
-	Lsa_age	string	`json:"LSA_AGE"`
-	Lsa_options	string	`json:"LSA_OPTIONS"`
-	Lsa_type	string	`json:"LSA_TYPE"`
-	Lsa_id	string	`json:"LSA_ID"`
-	Lsa_adv_router	string	`json:"LSA_ADV_ROUTER"`
-	Lsa_seq_number	string	`json:"LSA_SEQ_NUMBER"`
-	Lsa_checksum	string	`json:"LSA_CHECKSUM"`
-	Lsa_length	string	`json:"LSA_LENGTH"`
-	Lsa_num_links	string	`json:"LSA_NUM_LINKS"`
-	Lsa_abr	string	`json:"LSA_ABR"`
-	Lsa_asbr	string	`json:"LSA_ASBR"`
-	Ls_link_type	string	`json:"LS_LINK_TYPE"`
-	Ls_link_id	string	`json:"LS_LINK_ID"`
-	Ls_link_data	string	`json:"LS_LINK_DATA"`
-	Ls_mtid_metrics	string	`json:"LS_MTID_METRICS"`
-	Ls_tos_0_metrics	string	`json:"LS_TOS_0_METRICS"`
+	Area             string `json:"AREA"`
+	Lsa_id           string `json:"LSA_ID"`
+	Lsa_adv_router   string `json:"LSA_ADV_ROUTER"`
+	Lsa_length       string `json:"LSA_LENGTH"`
+	Lsa_abr          string `json:"LSA_ABR"`
+	Lsa_asbr         string `json:"LSA_ASBR"`
+	Ls_link_id       string `json:"LS_LINK_ID"`
+	Router_id        string `json:"ROUTER_ID"`
+	Ls_mtid_metrics  string `json:"LS_MTID_METRICS"`
+	Ls_tos_0_metrics string `json:"LS_TOS_0_METRICS"`
+	Ls_link_data     string `json:"LS_LINK_DATA"`
+	Lsa_checksum     string `json:"LSA_CHECKSUM"`
+	Lsa_options      string `json:"LSA_OPTIONS"`
+	Lsa_seq_number   string `json:"LSA_SEQ_NUMBER"`
+	Lsa_num_links    string `json:"LSA_NUM_LINKS"`
+	Ls_link_type     string `json:"LS_LINK_TYPE"`
+	Lsa_type         string `json:"LSA_TYPE"`
+	Lsa_age          string `json:"LSA_AGE"`
+	Process_id       string `json:"PROCESS_ID"`
 }
 
-var ShowIpOspfDatabaseRouter_Template = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+var ShowIpOspfDatabaseRouter_Template string = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown PROCESS_ID (\d+)
 Value Filldown AREA (\d+\.\d+\.\d+\.\d+|\d+)
 Value Filldown LSA_AGE (\d+)

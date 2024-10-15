@@ -1,27 +1,27 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVrrpAll struct {
-	Interface	string	`json:"INTERFACE"`
-	Group	string	`json:"GROUP"`
-	Addr_family	string	`json:"ADDR_FAMILY"`
-	State	string	`json:"STATE"`
-	State_duration	string	`json:"STATE_DURATION"`
-	Virtual_ip_address	string	`json:"VIRTUAL_IP_ADDRESS"`
-	Virtual_mac_address	string	`json:"VIRTUAL_MAC_ADDRESS"`
-	Adv_interval	string	`json:"ADV_INTERVAL"`
-	Preempt	string	`json:"PREEMPT"`
-	Priority	string	`json:"PRIORITY"`
-	Priority_configured	string	`json:"PRIORITY_CONFIGURED"`
-	Track_obj	string	`json:"TRACK_OBJ"`
-	Track_status	string	`json:"TRACK_STATUS"`
-	Track_action	string	`json:"TRACK_ACTION"`
-	Master_ip_address	string	`json:"MASTER_IP_ADDRESS"`
-	Master_priority	string	`json:"MASTER_PRIORITY"`
-	Master_adv_interval	string	`json:"MASTER_ADV_INTERVAL"`
-	Master_down_interval	string	`json:"MASTER_DOWN_INTERVAL"`
+	Master_down_interval string `json:"MASTER_DOWN_INTERVAL"`
+	Virtual_mac_address  string `json:"VIRTUAL_MAC_ADDRESS"`
+	Priority             string `json:"PRIORITY"`
+	State_duration       string `json:"STATE_DURATION"`
+	Virtual_ip_address   string `json:"VIRTUAL_IP_ADDRESS"`
+	Preempt              string `json:"PREEMPT"`
+	Track_status         string `json:"TRACK_STATUS"`
+	Master_ip_address    string `json:"MASTER_IP_ADDRESS"`
+	Master_adv_interval  string `json:"MASTER_ADV_INTERVAL"`
+	Interface            string `json:"INTERFACE"`
+	Group                string `json:"GROUP"`
+	State                string `json:"STATE"`
+	Priority_configured  string `json:"PRIORITY_CONFIGURED"`
+	Track_obj            string `json:"TRACK_OBJ"`
+	Track_action         string `json:"TRACK_ACTION"`
+	Master_priority      string `json:"MASTER_PRIORITY"`
+	Addr_family          string `json:"ADDR_FAMILY"`
+	Adv_interval         string `json:"ADV_INTERVAL"`
 }
 
-var ShowVrrpAll_Template = `Value INTERFACE (\S+)
+var ShowVrrpAll_Template string = `Value INTERFACE (\S+)
 Value GROUP (\d+)
 Value ADDR_FAMILY (\S+)
 Value STATE (\w+)

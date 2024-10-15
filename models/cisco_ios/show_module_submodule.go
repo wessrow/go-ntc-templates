@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowModuleSubmodule struct {
-	Module	string	`json:"MODULE"`
-	Submodule	string	`json:"SUBMODULE"`
-	Submodule_model	string	`json:"SUBMODULE_MODEL"`
-	Submodule_serial	string	`json:"SUBMODULE_SERIAL"`
-	Submodule_hw	string	`json:"SUBMODULE_HW"`
-	Submodule_status	string	`json:"SUBMODULE_STATUS"`
+	Submodule_serial string `json:"SUBMODULE_SERIAL"`
+	Submodule_hw     string `json:"SUBMODULE_HW"`
+	Submodule_status string `json:"SUBMODULE_STATUS"`
+	Module           string `json:"MODULE"`
+	Submodule        string `json:"SUBMODULE"`
+	Submodule_model  string `json:"SUBMODULE_MODEL"`
 }
 
-var ShowModuleSubmodule_Template = `Value Key MODULE (\d+)
+var ShowModuleSubmodule_Template string = `Value Key MODULE (\d+)
 Value SUBMODULE (.+?)
 Value SUBMODULE_MODEL (\S+)
 Value SUBMODULE_SERIAL (\S+)

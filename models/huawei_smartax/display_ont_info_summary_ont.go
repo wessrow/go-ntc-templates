@@ -1,14 +1,14 @@
-package huawei_smartax 
+package huawei_smartax
 
 type DisplayOntInfoSummaryOnt struct {
-	Ont_id	string	`json:"ONT_ID"`
-	Run_state	string	`json:"RUN_STATE"`
-	Last_uptime	string	`json:"LAST_UPTIME"`
-	Last_downtime	string	`json:"LAST_DOWNTIME"`
-	Last_downcause	string	`json:"LAST_DOWNCAUSE"`
+	Last_downcause string `json:"LAST_DOWNCAUSE"`
+	Ont_id         string `json:"ONT_ID"`
+	Run_state      string `json:"RUN_STATE"`
+	Last_uptime    string `json:"LAST_UPTIME"`
+	Last_downtime  string `json:"LAST_DOWNTIME"`
 }
 
-var DisplayOntInfoSummaryOnt_Template = `Value Key ONT_ID (\d+)
+var DisplayOntInfoSummaryOnt_Template string = `Value Key ONT_ID (\d+)
 Value RUN_STATE (\w+)
 Value LAST_UPTIME (\S+\s*\S+)
 Value LAST_DOWNTIME (\S+\s*\S+)

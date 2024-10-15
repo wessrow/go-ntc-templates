@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpRoute struct {
-	Vrf	string	`json:"VRF"`
-	Protocol	string	`json:"PROTOCOL"`
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Direct	string	`json:"DIRECT"`
-	Next_hop	[]string	`json:"NEXT_HOP"`
-	Interface	[]string	`json:"INTERFACE"`
+	Distance      string   `json:"DISTANCE"`
+	Next_hop      []string `json:"NEXT_HOP"`
+	Interface     []string `json:"INTERFACE"`
+	Direct        string   `json:"DIRECT"`
+	Vrf           string   `json:"VRF"`
+	Protocol      string   `json:"PROTOCOL"`
+	Network       string   `json:"NETWORK"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Metric        string   `json:"METRIC"`
 }
 
-var ShowIpRoute_Template = `Value Filldown VRF (\S+)
+var ShowIpRoute_Template string = `Value Filldown VRF (\S+)
 Value PROTOCOL (\S+\s\S+?|\w?)
 Value Required NETWORK (\d+\.\d+\.\d+\.\d+)
 Value PREFIX_LENGTH (\d+)

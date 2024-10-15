@@ -1,26 +1,26 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowSysinfo struct {
-	Product_version	string	`json:"PRODUCT_VERSION"`
-	Bootloader_version	string	`json:"BOOTLOADER_VERSION"`
-	Field_recovery_image_version	string	`json:"FIELD_RECOVERY_IMAGE_VERSION"`
-	Firmware_version	string	`json:"FIRMWARE_VERSION"`
-	Build_type	string	`json:"BUILD_TYPE"`
-	System_name	string	`json:"SYSTEM_NAME"`
-	System_location	string	`json:"SYSTEM_LOCATION"`
-	System_contact	string	`json:"SYSTEM_CONTACT"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Last_reset	string	`json:"LAST_RESET"`
-	System_up_time	string	`json:"SYSTEM_UP_TIME"`
-	System_timezone_location	string	`json:"SYSTEM_TIMEZONE_LOCATION"`
-	Configured_country	string	`json:"CONFIGURED_COUNTRY"`
-	Number_wlans	string	`json:"NUMBER_WLANS"`
-	Number_active_clients	string	`json:"NUMBER_ACTIVE_CLIENTS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Maximum_aps	string	`json:"MAXIMUM_APS"`
+	System_up_time               string `json:"SYSTEM_UP_TIME"`
+	Configured_country           string `json:"CONFIGURED_COUNTRY"`
+	Number_wlans                 string `json:"NUMBER_WLANS"`
+	Number_active_clients        string `json:"NUMBER_ACTIVE_CLIENTS"`
+	Mac_address                  string `json:"MAC_ADDRESS"`
+	Maximum_aps                  string `json:"MAXIMUM_APS"`
+	System_contact               string `json:"SYSTEM_CONTACT"`
+	System_name                  string `json:"SYSTEM_NAME"`
+	Ip_address                   string `json:"IP_ADDRESS"`
+	Firmware_version             string `json:"FIRMWARE_VERSION"`
+	Bootloader_version           string `json:"BOOTLOADER_VERSION"`
+	System_location              string `json:"SYSTEM_LOCATION"`
+	System_timezone_location     string `json:"SYSTEM_TIMEZONE_LOCATION"`
+	Product_version              string `json:"PRODUCT_VERSION"`
+	Build_type                   string `json:"BUILD_TYPE"`
+	Last_reset                   string `json:"LAST_RESET"`
+	Field_recovery_image_version string `json:"FIELD_RECOVERY_IMAGE_VERSION"`
 }
 
-var SshShowSysinfo_Template = `Value PRODUCT_VERSION (.*)
+var SshShowSysinfo_Template string = `Value PRODUCT_VERSION (.*)
 Value BOOTLOADER_VERSION (.*)
 Value FIELD_RECOVERY_IMAGE_VERSION (.*)
 Value FIRMWARE_VERSION (.*)

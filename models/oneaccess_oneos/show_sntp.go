@@ -1,21 +1,21 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSntp struct {
-	Server	string	`json:"SERVER"`
-	Source	string	`json:"SOURCE"`
-	Stratum	string	`json:"STRATUM"`
-	Version	string	`json:"VERSION"`
-	Last	string	`json:"LAST"`
-	Receive	string	`json:"RECEIVE"`
-	Learn_from	string	`json:"LEARN_FROM"`
-	Interface	string	`json:"INTERFACE"`
-	Vrf	string	`json:"VRF"`
-	Failed_auth_pkts	string	`json:"FAILED_AUTH_PKTS"`
-	Broadcast	string	`json:"BROADCAST"`
-	Authentication	string	`json:"AUTHENTICATION"`
+	Last             string `json:"LAST"`
+	Receive          string `json:"RECEIVE"`
+	Learn_from       string `json:"LEARN_FROM"`
+	Vrf              string `json:"VRF"`
+	Broadcast        string `json:"BROADCAST"`
+	Server           string `json:"SERVER"`
+	Source           string `json:"SOURCE"`
+	Version          string `json:"VERSION"`
+	Authentication   string `json:"AUTHENTICATION"`
+	Stratum          string `json:"STRATUM"`
+	Interface        string `json:"INTERFACE"`
+	Failed_auth_pkts string `json:"FAILED_AUTH_PKTS"`
 }
 
-var ShowSntp_Template = `Value Required SERVER (\S+)
+var ShowSntp_Template string = `Value Required SERVER (\S+)
 Value SOURCE (\S+(\s\S+)?)
 Value STRATUM (\d+)
 Value VERSION (\d+)

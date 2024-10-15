@@ -1,17 +1,17 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowLldpNeighborsDetail struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Neighbor_description	string	`json:"NEIGHBOR_DESCRIPTION"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Neighbor_interface   string `json:"NEIGHBOR_INTERFACE"`
+	Chassis_id           string `json:"CHASSIS_ID"`
+	Mgmt_address         string `json:"MGMT_ADDRESS"`
+	Neighbor_description string `json:"NEIGHBOR_DESCRIPTION"`
+	Capabilities         string `json:"CAPABILITIES"`
+	Vlan_id              string `json:"VLAN_ID"`
+	Neighbor_name        string `json:"NEIGHBOR_NAME"`
+	Local_interface      string `json:"LOCAL_INTERFACE"`
 }
 
-var ShowLldpNeighborsDetail_Template = `Value Required NEIGHBOR_NAME (\S+)
+var ShowLldpNeighborsDetail_Template string = `Value Required NEIGHBOR_NAME (\S+)
 Value Required LOCAL_INTERFACE (\S+)
 Value Required NEIGHBOR_INTERFACE (\S+)
 Value CHASSIS_ID (\w+?\.\w+?\.\w+?)

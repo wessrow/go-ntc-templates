@@ -1,17 +1,17 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVersion struct {
-	Uptime	string	`json:"UPTIME"`
-	Last_reboot_reason	string	`json:"LAST_REBOOT_REASON"`
-	Bios	string	`json:"BIOS"`
-	Os	string	`json:"OS"`
-	Boot_image	string	`json:"BOOT_IMAGE"`
-	Platform	string	`json:"PLATFORM"`
-	Hostname	string	`json:"HOSTNAME"`
-	Serial	string	`json:"SERIAL"`
+	Platform           string `json:"PLATFORM"`
+	Hostname           string `json:"HOSTNAME"`
+	Serial             string `json:"SERIAL"`
+	Uptime             string `json:"UPTIME"`
+	Last_reboot_reason string `json:"LAST_REBOOT_REASON"`
+	Bios               string `json:"BIOS"`
+	Os                 string `json:"OS"`
+	Boot_image         string `json:"BOOT_IMAGE"`
 }
 
-var ShowVersion_Template = `Value UPTIME ((\d+\s\w+.s.,?\s?){4})
+var ShowVersion_Template string = `Value UPTIME ((\d+\s\w+.s.,?\s?){4})
 Value LAST_REBOOT_REASON (.+)
 Value BIOS (\d+.\d+(.+)?)
 Value OS (\d+.\d+(.+)?)

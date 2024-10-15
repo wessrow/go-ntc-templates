@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowIsisNeighbors struct {
-	Instance	string	`json:"INSTANCE"`
-	Vrf	string	`json:"VRF"`
-	System_id	string	`json:"SYSTEM_ID"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Snpa	string	`json:"SNPA"`
-	State	string	`json:"STATE"`
-	Hold_time	string	`json:"HOLD_TIME"`
-	Circuit_id	string	`json:"CIRCUIT_ID"`
+	System_id  string `json:"SYSTEM_ID"`
+	Snpa       string `json:"SNPA"`
+	Hold_time  string `json:"HOLD_TIME"`
+	Instance   string `json:"INSTANCE"`
+	Vrf        string `json:"VRF"`
+	Type       string `json:"TYPE"`
+	Interface  string `json:"INTERFACE"`
+	State      string `json:"STATE"`
+	Circuit_id string `json:"CIRCUIT_ID"`
 }
 
-var ShowIsisNeighbors_Template = `Value INSTANCE (\S+)
+var ShowIsisNeighbors_Template string = `Value INSTANCE (\S+)
 Value VRF (\S+)
 Value SYSTEM_ID ((\d+.\d+.\d+)|\S+)
 Value TYPE ((L\d)+)

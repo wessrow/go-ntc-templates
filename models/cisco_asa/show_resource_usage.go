@@ -1,15 +1,15 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowResourceUsage struct {
-	Resource	string	`json:"RESOURCE"`
-	Current	string	`json:"CURRENT"`
-	Peak	string	`json:"PEAK"`
-	Limit	string	`json:"LIMIT"`
-	Denied	string	`json:"DENIED"`
-	Context	string	`json:"CONTEXT"`
+	Peak     string `json:"PEAK"`
+	Limit    string `json:"LIMIT"`
+	Denied   string `json:"DENIED"`
+	Context  string `json:"CONTEXT"`
+	Resource string `json:"RESOURCE"`
+	Current  string `json:"CURRENT"`
 }
 
-var ShowResourceUsage_Template = `Value Required RESOURCE (.+?)
+var ShowResourceUsage_Template string = `Value Required RESOURCE (.+?)
 Value CURRENT (\d+)
 Value PEAK (\d+)
 Value LIMIT (\S+)

@@ -1,15 +1,15 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpArpPrintTerseWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Flags	string	`json:"FLAGS"`
-	Address	string	`json:"ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Published	string	`json:"PUBLISHED"`
+	Index       string `json:"INDEX"`
+	Flags       string `json:"FLAGS"`
+	Address     string `json:"ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Published   string `json:"PUBLISHED"`
 }
 
-var IpArpPrintTerseWithoutPaging_Template = `Value INDEX (\d+)
+var IpArpPrintTerseWithoutPaging_Template string = `Value INDEX (\d+)
 Value FLAGS ([XIHDPC]+)
 Value ADDRESS (\S+)
 Value MAC_ADDRESS (\S+)

@@ -1,15 +1,15 @@
-package cisco_apic 
+package cisco_apic
 
 type FabricShowVlanExtended struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	[]string	`json:"VLAN_NAME"`
-	Vlan_encap	[]string	`json:"VLAN_ENCAP"`
-	Vlan_ports	[]string	`json:"VLAN_PORTS"`
-	Node_number	string	`json:"NODE_NUMBER"`
-	Node_name	string	`json:"NODE_NAME"`
+	Vlan_ports  []string `json:"VLAN_PORTS"`
+	Node_number string   `json:"NODE_NUMBER"`
+	Node_name   string   `json:"NODE_NAME"`
+	Vlan_id     string   `json:"VLAN_ID"`
+	Vlan_name   []string `json:"VLAN_NAME"`
+	Vlan_encap  []string `json:"VLAN_ENCAP"`
 }
 
-var FabricShowVlanExtended_Template = `Value Required VLAN_ID (\d+)
+var FabricShowVlanExtended_Template string = `Value Required VLAN_ID (\d+)
 Value List VLAN_NAME ([\w:-]+)
 Value List VLAN_ENCAP ([\w:-]+,?)
 Value List VLAN_PORTS ((\S+,?\s?)+)

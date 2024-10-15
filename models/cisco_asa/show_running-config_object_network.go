@@ -1,19 +1,19 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowRunningConfigObjectNetwork struct {
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Type	string	`json:"TYPE"`
-	Host	string	`json:"HOST"`
-	Network	string	`json:"NETWORK"`
-	Netmask	string	`json:"NETMASK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Start_ip	string	`json:"START_IP"`
-	End_ip	string	`json:"END_IP"`
-	Fqdn	string	`json:"FQDN"`
+	Description   string `json:"DESCRIPTION"`
+	Type          string `json:"TYPE"`
+	Netmask       string `json:"NETMASK"`
+	End_ip        string `json:"END_IP"`
+	Fqdn          string `json:"FQDN"`
+	Name          string `json:"NAME"`
+	Host          string `json:"HOST"`
+	Network       string `json:"NETWORK"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Start_ip      string `json:"START_IP"`
 }
 
-var ShowRunningConfigObjectNetwork_Template = `Value Required NAME (\S+)
+var ShowRunningConfigObjectNetwork_Template string = `Value Required NAME (\S+)
 Value DESCRIPTION (.+)
 Value TYPE (host|subnet|range|fqdn)
 Value HOST (\S+)

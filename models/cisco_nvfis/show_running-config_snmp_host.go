@@ -1,15 +1,15 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowRunningConfigSnmpHost struct {
-	Username	string	`json:"USERNAME"`
-	Hostname	string	`json:"HOSTNAME"`
-	Version	string	`json:"VERSION"`
-	Port	string	`json:"PORT"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Securitylevel	string	`json:"SECURITYLEVEL"`
+	Hostname      string `json:"HOSTNAME"`
+	Version       string `json:"VERSION"`
+	Port          string `json:"PORT"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Securitylevel string `json:"SECURITYLEVEL"`
+	Username      string `json:"USERNAME"`
 }
 
-var ShowRunningConfigSnmpHost_Template = `Value USERNAME ([-\w]+)
+var ShowRunningConfigSnmpHost_Template string = `Value USERNAME ([-\w]+)
 Value HOSTNAME ([-\w]+)
 Value VERSION (\d+)
 Value PORT (\d+)

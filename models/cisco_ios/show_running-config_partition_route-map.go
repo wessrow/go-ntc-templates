@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowRunningConfigPartitionRouteMap struct {
-	Route_map_name	string	`json:"ROUTE_MAP_NAME"`
-	Sequence	string	`json:"SEQUENCE"`
-	Match_metric_value	string	`json:"MATCH_METRIC_VALUE"`
-	Match_prefix_list	string	`json:"MATCH_PREFIX_LIST"`
-	Match_community_value	string	`json:"MATCH_COMMUNITY_VALUE"`
-	Set_community_value	string	`json:"SET_COMMUNITY_VALUE"`
-	Set_local_pref_value	string	`json:"SET_LOCAL_PREF_VALUE"`
-	Set_prepend_as_path	string	`json:"SET_PREPEND_AS_PATH"`
+	Set_local_pref_value  string `json:"SET_LOCAL_PREF_VALUE"`
+	Set_prepend_as_path   string `json:"SET_PREPEND_AS_PATH"`
+	Route_map_name        string `json:"ROUTE_MAP_NAME"`
+	Sequence              string `json:"SEQUENCE"`
+	Match_metric_value    string `json:"MATCH_METRIC_VALUE"`
+	Match_prefix_list     string `json:"MATCH_PREFIX_LIST"`
+	Match_community_value string `json:"MATCH_COMMUNITY_VALUE"`
+	Set_community_value   string `json:"SET_COMMUNITY_VALUE"`
 }
 
-var ShowRunningConfigPartitionRouteMap_Template = `Value Required ROUTE_MAP_NAME (\w+)
+var ShowRunningConfigPartitionRouteMap_Template string = `Value Required ROUTE_MAP_NAME (\w+)
 Value SEQUENCE (\d+)
 Value MATCH_METRIC_VALUE (\d+)
 Value MATCH_PREFIX_LIST (\w+)

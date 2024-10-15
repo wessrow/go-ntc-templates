@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpSourceBinding struct {
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Lease	string	`json:"LEASE"`
-	Type	string	`json:"TYPE"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Interface	string	`json:"INTERFACE"`
+	Type        string `json:"TYPE"`
+	Vlan_id     string `json:"VLAN_ID"`
+	Interface   string `json:"INTERFACE"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Lease       string `json:"LEASE"`
 }
 
-var ShowIpSourceBinding_Template = `Value Required MAC_ADDRESS ((?:[0-9a-fA-F]{2}[:-]){5}(?:[0-9a-fA-F]{2}))
+var ShowIpSourceBinding_Template string = `Value Required MAC_ADDRESS ((?:[0-9a-fA-F]{2}[:-]){5}(?:[0-9a-fA-F]{2}))
 Value Required IP_ADDRESS ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
 Value Required LEASE ([0-9]+)
 Value Required TYPE (\S+)

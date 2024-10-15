@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowPimIpv4Neighbor struct {
-	Vrf	string	`json:"VRF"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	Interface	string	`json:"INTERFACE"`
-	Uptime	string	`json:"UPTIME"`
-	Expires	string	`json:"EXPIRES"`
-	Mode	string	`json:"MODE"`
-	Transport	string	`json:"TRANSPORT"`
+	Vrf       string `json:"VRF"`
+	Neighbor  string `json:"NEIGHBOR"`
+	Interface string `json:"INTERFACE"`
+	Uptime    string `json:"UPTIME"`
+	Expires   string `json:"EXPIRES"`
+	Mode      string `json:"MODE"`
+	Transport string `json:"TRANSPORT"`
 }
 
-var ShowPimIpv4Neighbor_Template = `Value Filldown VRF (\S+)
+var ShowPimIpv4Neighbor_Template string = `Value Filldown VRF (\S+)
 Value Required NEIGHBOR (\d+\.\d+\.\d+\.\d+)
 Value INTERFACE ([\w\./-]+)
 Value UPTIME (\S+)

@@ -1,15 +1,15 @@
-package hp_comware 
+package hp_comware
 
 type DisplayLinkAggregationVerbose struct {
-	Interface	string	`json:"INTERFACE"`
-	Creation_mode	string	`json:"CREATION_MODE"`
-	Aggregation_mode	string	`json:"AGGREGATION_MODE"`
-	Loadsharing	string	`json:"LOADSHARING"`
-	Local_interfaces	[]string	`json:"LOCAL_INTERFACES"`
-	Remote_interfaces	[]string	`json:"REMOTE_INTERFACES"`
+	Remote_interfaces []string `json:"REMOTE_INTERFACES"`
+	Interface         string   `json:"INTERFACE"`
+	Creation_mode     string   `json:"CREATION_MODE"`
+	Aggregation_mode  string   `json:"AGGREGATION_MODE"`
+	Loadsharing       string   `json:"LOADSHARING"`
+	Local_interfaces  []string `json:"LOCAL_INTERFACES"`
 }
 
-var DisplayLinkAggregationVerbose_Template = `Value Required INTERFACE (\S+)
+var DisplayLinkAggregationVerbose_Template string = `Value Required INTERFACE (\S+)
 Value CREATION_MODE (.+)
 Value AGGREGATION_MODE (.+)
 Value LOADSHARING (.+)

@@ -1,16 +1,16 @@
-package cisco_nvfis 
+package cisco_nvfis
 
 type ShowNic struct {
-	Slotid	string	`json:"SLOTID"`
-	Adapter	string	`json:"ADAPTER"`
-	Vendor	string	`json:"VENDOR"`
-	Devid	string	`json:"DEVID"`
-	Mode	string	`json:"MODE"`
-	Devno	string	`json:"DEVNO"`
-	Pnics	string	`json:"PNICS"`
+	Devid   string `json:"DEVID"`
+	Mode    string `json:"MODE"`
+	Devno   string `json:"DEVNO"`
+	Pnics   string `json:"PNICS"`
+	Slotid  string `json:"SLOTID"`
+	Adapter string `json:"ADAPTER"`
+	Vendor  string `json:"VENDOR"`
 }
 
-var ShowNic_Template = `Value SLOTID (\d+)
+var ShowNic_Template string = `Value SLOTID (\d+)
 Value ADAPTER (.+?)
 Value VENDOR (\d+)
 Value DEVID (\d+)

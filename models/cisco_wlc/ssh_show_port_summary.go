@@ -1,18 +1,18 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowPortSummary struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Stp_status	string	`json:"STP_STATUS"`
-	Admin_mode	string	`json:"ADMIN_MODE"`
-	Physical_mode	string	`json:"PHYSICAL_MODE"`
-	Physical_status	string	`json:"PHYSICAL_STATUS"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Link_trap	string	`json:"LINK_TRAP"`
-	Poe	string	`json:"POE"`
+	Port            string `json:"PORT"`
+	Admin_mode      string `json:"ADMIN_MODE"`
+	Link_status     string `json:"LINK_STATUS"`
+	Poe             string `json:"POE"`
+	Type            string `json:"TYPE"`
+	Stp_status      string `json:"STP_STATUS"`
+	Physical_mode   string `json:"PHYSICAL_MODE"`
+	Physical_status string `json:"PHYSICAL_STATUS"`
+	Link_trap       string `json:"LINK_TRAP"`
 }
 
-var SshShowPortSummary_Template = `Value PORT (\S+)
+var SshShowPortSummary_Template string = `Value PORT (\S+)
 Value TYPE (\S+)
 Value STP_STATUS (\S+)
 Value ADMIN_MODE (\S+)

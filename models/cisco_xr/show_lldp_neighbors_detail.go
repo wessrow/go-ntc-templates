@@ -1,19 +1,19 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowLldpNeighborsDetail struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Chassis_id	string	`json:"CHASSIS_ID"`
-	Neighbor_port_description	string	`json:"NEIGHBOR_PORT_DESCRIPTION"`
-	Neighbor_port_id	string	`json:"NEIGHBOR_PORT_ID"`
-	Neighbor	string	`json:"NEIGHBOR"`
-	System_description	string	`json:"SYSTEM_DESCRIPTION"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Management_ip	string	`json:"MANAGEMENT_IP"`
-	Management_ipv6	string	`json:"MANAGEMENT_IPv6"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Neighbor                  string `json:"NEIGHBOR"`
+	Neighbor_port_description string `json:"NEIGHBOR_PORT_DESCRIPTION"`
+	Neighbor_port_id          string `json:"NEIGHBOR_PORT_ID"`
+	System_description        string `json:"SYSTEM_DESCRIPTION"`
+	Capabilities              string `json:"CAPABILITIES"`
+	Management_ip             string `json:"MANAGEMENT_IP"`
+	Management_ipv6           string `json:"MANAGEMENT_IPv6"`
+	Mac_address               string `json:"MAC_ADDRESS"`
+	Local_interface           string `json:"LOCAL_INTERFACE"`
+	Chassis_id                string `json:"CHASSIS_ID"`
 }
 
-var ShowLldpNeighborsDetail_Template = `Value LOCAL_INTERFACE (\S+)
+var ShowLldpNeighborsDetail_Template string = `Value LOCAL_INTERFACE (\S+)
 Value CHASSIS_ID ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value NEIGHBOR_PORT_DESCRIPTION (.*)
 Value NEIGHBOR_PORT_ID (.*)

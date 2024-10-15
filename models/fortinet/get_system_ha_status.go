@@ -1,24 +1,24 @@
-package fortinet 
+package fortinet
 
 type GetSystemHaStatus struct {
-	Ha_health	[]string	`json:"HA_HEALTH"`
-	Model	string	`json:"MODEL"`
-	Ha_mode	string	`json:"HA_MODE"`
-	Ha_group	string	`json:"HA_GROUP"`
-	Cluster_uptime	string	`json:"CLUSTER_UPTIME"`
-	Cluster_state_changed_time	string	`json:"CLUSTER_STATE_CHANGED_TIME"`
-	Ha_session_pickup_status	string	`json:"HA_SESSION_PICKUP_STATUS"`
-	Ha_session_pickup_delay	string	`json:"HA_SESSION_PICKUP_DELAY"`
-	Ha_override_status	string	`json:"HA_OVERRIDE_STATUS"`
-	Ha_master_unit_name	string	`json:"HA_MASTER_UNIT_NAME"`
-	Ha_slave_unit_name	string	`json:"HA_SLAVE_UNIT_NAME"`
-	Ha_master_unit_serial	string	`json:"HA_MASTER_UNIT_SERIAL"`
-	Ha_slave_unit_serial	string	`json:"HA_SLAVE_UNIT_SERIAL"`
-	Ha_master_unit_index	string	`json:"HA_MASTER_UNIT_INDEX"`
-	Ha_slave_unit_index	string	`json:"HA_SLAVE_UNIT_INDEX"`
+	Ha_health                  []string `json:"HA_HEALTH"`
+	Ha_session_pickup_status   string   `json:"HA_SESSION_PICKUP_STATUS"`
+	Ha_slave_unit_serial       string   `json:"HA_SLAVE_UNIT_SERIAL"`
+	Cluster_uptime             string   `json:"CLUSTER_UPTIME"`
+	Ha_override_status         string   `json:"HA_OVERRIDE_STATUS"`
+	Ha_master_unit_name        string   `json:"HA_MASTER_UNIT_NAME"`
+	Ha_master_unit_serial      string   `json:"HA_MASTER_UNIT_SERIAL"`
+	Ha_master_unit_index       string   `json:"HA_MASTER_UNIT_INDEX"`
+	Ha_slave_unit_index        string   `json:"HA_SLAVE_UNIT_INDEX"`
+	Model                      string   `json:"MODEL"`
+	Ha_group                   string   `json:"HA_GROUP"`
+	Cluster_state_changed_time string   `json:"CLUSTER_STATE_CHANGED_TIME"`
+	Ha_session_pickup_delay    string   `json:"HA_SESSION_PICKUP_DELAY"`
+	Ha_slave_unit_name         string   `json:"HA_SLAVE_UNIT_NAME"`
+	Ha_mode                    string   `json:"HA_MODE"`
 }
 
-var GetSystemHaStatus_Template = `#
+var GetSystemHaStatus_Template string = `#
 # FG Version: 5.6, 6.0, 6.2, 6.4, 7.0
 # HW        : varied
 #

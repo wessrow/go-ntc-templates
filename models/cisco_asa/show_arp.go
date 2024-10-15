@@ -1,13 +1,13 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowArp struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Age         string `json:"AGE"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowArp_Template = `Value Required INTERFACE (\S+)
+var ShowArp_Template string = `Value Required INTERFACE (\S+)
 Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required AGE (\S+)
 Value Required MAC_ADDRESS (\S+)

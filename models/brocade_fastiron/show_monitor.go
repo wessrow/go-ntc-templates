@@ -1,12 +1,12 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowMonitor struct {
-	Monitoredport	string	`json:"monitoredport"`
-	Inputmirror	string	`json:"inputmirror"`
-	Outputmirror	string	`json:"outputmirror"`
+	Monitoredport string `json:"monitoredport"`
+	Inputmirror   string `json:"inputmirror"`
+	Outputmirror  string `json:"outputmirror"`
 }
 
-var ShowMonitor_Template = `Value monitoredport ([0-9\/]+)
+var ShowMonitor_Template string = `Value monitoredport ([0-9\/]+)
 Value inputmirror ([0-9\/\(\)\ UM]+)
 Value outputmirror ([0-9\/\(\)\ UM]+)
 

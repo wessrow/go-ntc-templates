@@ -1,23 +1,23 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowInterfacesAll struct {
-	Interface	string	`json:"INTERFACE"`
-	State	string	`json:"STATE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Link_state	string	`json:"LINK_STATE"`
-	Mtu	string	`json:"MTU"`
-	Instance	string	`json:"INSTANCE"`
-	Autoneg	string	`json:"AUTONEG"`
-	Speed	string	`json:"SPEED"`
-	Comment	string	`json:"COMMENT"`
-	Ipv4_address	string	`json:"IPV4_ADDRESS"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Ipv6_ll_address	string	`json:"IPV6_LL_ADDRESS"`
-	Ipv6_ll_mask	string	`json:"IPV6_LL_MASK"`
+	Link_state      string `json:"LINK_STATE"`
+	Comment         string `json:"COMMENT"`
+	Ipv6_ll_address string `json:"IPV6_LL_ADDRESS"`
+	Type            string `json:"TYPE"`
+	Instance        string `json:"INSTANCE"`
+	Autoneg         string `json:"AUTONEG"`
+	Ipv6_address    string `json:"IPV6_ADDRESS"`
+	Mtu             string `json:"MTU"`
+	State           string `json:"STATE"`
+	Ipv4_address    string `json:"IPV4_ADDRESS"`
+	Interface       string `json:"INTERFACE"`
+	Speed           string `json:"SPEED"`
+	Ipv6_ll_mask    string `json:"IPV6_LL_MASK"`
+	Mac_address     string `json:"MAC_ADDRESS"`
 }
 
-var ShowInterfacesAll_Template = `Value INTERFACE (\S+)
+var ShowInterfacesAll_Template string = `Value INTERFACE (\S+)
 Value STATE (\w+)
 Value MAC_ADDRESS (.*)
 Value TYPE (\S+)

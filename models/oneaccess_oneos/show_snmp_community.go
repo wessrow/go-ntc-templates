@@ -1,13 +1,13 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSnmpCommunity struct {
-	Name	string	`json:"NAME"`
-	Security_name	string	`json:"SECURITY_NAME"`
-	Acl	string	`json:"ACL"`
-	Group	string	`json:"GROUP"`
+	Name          string `json:"NAME"`
+	Security_name string `json:"SECURITY_NAME"`
+	Acl           string `json:"ACL"`
+	Group         string `json:"GROUP"`
 }
 
-var ShowSnmpCommunity_Template = `Value NAME (\S+)
+var ShowSnmpCommunity_Template string = `Value NAME (\S+)
 Value SECURITY_NAME (\S+)
 Value ACL (\S+)
 Value GROUP (\S+)

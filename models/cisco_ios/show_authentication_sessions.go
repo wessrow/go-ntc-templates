@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowAuthenticationSessions struct {
-	Interface	string	`json:"INTERFACE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Method	string	`json:"METHOD"`
-	Domain	string	`json:"DOMAIN"`
-	Status	string	`json:"STATUS"`
-	Session	string	`json:"SESSION"`
+	Method      string `json:"METHOD"`
+	Domain      string `json:"DOMAIN"`
+	Status      string `json:"STATUS"`
+	Session     string `json:"SESSION"`
+	Interface   string `json:"INTERFACE"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowAuthenticationSessions_Template = `Value INTERFACE (.+?)
+var ShowAuthenticationSessions_Template string = `Value INTERFACE (.+?)
 Value MAC_ADDRESS (.+?)
 Value METHOD (.+?)
 Value DOMAIN (.+?)

@@ -1,11 +1,11 @@
-package allied_telesis 
+package allied_telesis
 
 type AwplusShowStaticChannelGroup struct {
-	Po_name	string	`json:"PO_NAME"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Interfaces []string `json:"INTERFACES"`
+	Po_name    string   `json:"PO_NAME"`
 }
 
-var AwplusShowStaticChannelGroup_Template = `Value PO_NAME (\S+)
+var AwplusShowStaticChannelGroup_Template string = `Value PO_NAME (\S+)
 Value List INTERFACES (\w+\.\d\.\w+)
 
 Start

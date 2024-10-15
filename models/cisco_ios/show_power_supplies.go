@@ -1,11 +1,11 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowPowerSupplies struct {
-	Ps_needed	string	`json:"PS_NEEDED"`
-	Ps_avail	string	`json:"PS_AVAIL"`
+	Ps_avail  string `json:"PS_AVAIL"`
+	Ps_needed string `json:"PS_NEEDED"`
 }
 
-var ShowPowerSupplies_Template = `####
+var ShowPowerSupplies_Template string = `####
 # For 4500 switches
 ###
 Value PS_NEEDED (\d)

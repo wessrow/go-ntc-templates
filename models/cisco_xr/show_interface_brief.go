@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Intf_state	string	`json:"INTF_STATE"`
-	Linep_state	string	`json:"LINEP_STATE"`
-	Encap_type	string	`json:"ENCAP_TYPE"`
-	Mtu	string	`json:"MTU"`
-	Int_bw	string	`json:"INT_BW"`
+	Int_bw      string `json:"INT_BW"`
+	Interface   string `json:"INTERFACE"`
+	Intf_state  string `json:"INTF_STATE"`
+	Linep_state string `json:"LINEP_STATE"`
+	Encap_type  string `json:"ENCAP_TYPE"`
+	Mtu         string `json:"MTU"`
 }
 
-var ShowInterfaceBrief_Template = `Value INTERFACE ([\w+/]+)
+var ShowInterfaceBrief_Template string = `Value INTERFACE ([\w+/]+)
 Value INTF_STATE (up|down|admin-down)
 Value LINEP_STATE (up|down|admin-down)
 Value ENCAP_TYPE (\S+)

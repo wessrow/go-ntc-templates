@@ -1,11 +1,11 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowWirelessTagPolicySummary struct {
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
+	Description string `json:"DESCRIPTION"`
+	Name        string `json:"NAME"`
 }
 
-var ShowWirelessTagPolicySummary_Template = `Value Required NAME (\S+)
+var ShowWirelessTagPolicySummary_Template string = `Value Required NAME (\S+)
 Value DESCRIPTION (.+?)
 
 Start

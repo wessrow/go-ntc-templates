@@ -1,14 +1,14 @@
-package ruckus_fastiron 
+package ruckus_fastiron
 
 type ShowVersion struct {
-	Version	[]string	`json:"VERSION"`
-	Bootcode	[]string	`json:"BOOTCODE"`
-	Hardware	string	`json:"HARDWARE"`
-	Serial	[]string	`json:"SERIAL"`
-	Uptime	[]string	`json:"UPTIME"`
+	Version  []string `json:"VERSION"`
+	Bootcode []string `json:"BOOTCODE"`
+	Hardware string   `json:"HARDWARE"`
+	Serial   []string `json:"SERIAL"`
+	Uptime   []string `json:"UPTIME"`
 }
 
-var ShowVersion_Template = `Value List VERSION (\S+)
+var ShowVersion_Template string = `Value List VERSION (\S+)
 Value List BOOTCODE (\S+\s+\S+)
 Value HARDWARE (.*)
 Value List SERIAL (\S+)

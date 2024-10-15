@@ -1,20 +1,20 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVrfDetail struct {
-	Name	string	`json:"NAME"`
-	Id	string	`json:"ID"`
-	Vpn_id	string	`json:"VPN_ID"`
-	State	string	`json:"STATE"`
-	Default_rd	string	`json:"DEFAULT_RD"`
-	Max_routes	string	`json:"MAX_ROUTES"`
-	Mid_threshold	string	`json:"MID_THRESHOLD"`
-	Table_id	[]string	`json:"TABLE_ID"`
-	Address_family	[]string	`json:"ADDRESS_FAMILY"`
-	Fwd_id	[]string	`json:"FWD_ID"`
-	Table_status	[]string	`json:"TABLE_STATUS"`
+	Name           string   `json:"NAME"`
+	Mid_threshold  string   `json:"MID_THRESHOLD"`
+	Default_rd     string   `json:"DEFAULT_RD"`
+	Max_routes     string   `json:"MAX_ROUTES"`
+	Table_id       []string `json:"TABLE_ID"`
+	Address_family []string `json:"ADDRESS_FAMILY"`
+	Fwd_id         []string `json:"FWD_ID"`
+	Id             string   `json:"ID"`
+	Vpn_id         string   `json:"VPN_ID"`
+	State          string   `json:"STATE"`
+	Table_status   []string `json:"TABLE_STATUS"`
 }
 
-var ShowVrfDetail_Template = `Value Required NAME (\S+)
+var ShowVrfDetail_Template string = `Value Required NAME (\S+)
 Value ID (\S+)
 Value VPN_ID (\S+)
 Value STATE (\S+)

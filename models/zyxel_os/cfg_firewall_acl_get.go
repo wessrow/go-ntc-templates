@@ -1,18 +1,18 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgFirewallAclGet struct {
-	Index	string	`json:"INDEX"`
-	Enable	string	`json:"ENABLE"`
-	Order	string	`json:"ORDER"`
-	Name	string	`json:"NAME"`
-	Source_ip	string	`json:"SOURCE_IP"`
-	Destination_ip	string	`json:"DESTINATION_IP"`
-	Protocol	string	`json:"PROTOCOL"`
-	Ports	string	`json:"PORTS"`
-	Action	string	`json:"ACTION"`
+	Index          string `json:"INDEX"`
+	Enable         string `json:"ENABLE"`
+	Destination_ip string `json:"DESTINATION_IP"`
+	Order          string `json:"ORDER"`
+	Name           string `json:"NAME"`
+	Source_ip      string `json:"SOURCE_IP"`
+	Protocol       string `json:"PROTOCOL"`
+	Ports          string `json:"PORTS"`
+	Action         string `json:"ACTION"`
 }
 
-var CfgFirewallAclGet_Template = `Value INDEX (\d+)
+var CfgFirewallAclGet_Template string = `Value INDEX (\d+)
 Value ENABLE (true|false)
 Value ORDER (\d+)
 Value NAME (.+\S)

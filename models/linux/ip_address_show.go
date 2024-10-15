@@ -1,25 +1,25 @@
-package linux 
+package linux
 
 type IpAddressShow struct {
-	Id	string	`json:"ID"`
-	Interface	string	`json:"INTERFACE"`
-	Flags	string	`json:"FLAGS"`
-	Mtu	string	`json:"MTU"`
-	Qdisc	string	`json:"QDISC"`
-	State	string	`json:"STATE"`
-	Group	string	`json:"GROUP"`
-	Qlen	string	`json:"QLEN"`
-	Master	string	`json:"MASTER"`
-	Type	string	`json:"TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Broadcast	string	`json:"BROADCAST"`
-	Ip_addresses	[]string	`json:"IP_ADDRESSES"`
-	Ip_masks	[]string	`json:"IP_MASKS"`
-	Ipv6_addresses	[]string	`json:"IPV6_ADDRESSES"`
-	Ipv6_masks	[]string	`json:"IPV6_MASKS"`
+	Mac_address    string   `json:"MAC_ADDRESS"`
+	Ip_masks       []string `json:"IP_MASKS"`
+	Ipv6_masks     []string `json:"IPV6_MASKS"`
+	Master         string   `json:"MASTER"`
+	Flags          string   `json:"FLAGS"`
+	Group          string   `json:"GROUP"`
+	Type           string   `json:"TYPE"`
+	Ip_addresses   []string `json:"IP_ADDRESSES"`
+	Id             string   `json:"ID"`
+	Mtu            string   `json:"MTU"`
+	Broadcast      string   `json:"BROADCAST"`
+	Ipv6_addresses []string `json:"IPV6_ADDRESSES"`
+	Interface      string   `json:"INTERFACE"`
+	State          string   `json:"STATE"`
+	Qlen           string   `json:"QLEN"`
+	Qdisc          string   `json:"QDISC"`
 }
 
-var IpAddressShow_Template = `Value Required ID (\d+)
+var IpAddressShow_Template string = `Value Required ID (\d+)
 Value Required INTERFACE ([^:]+)
 Value Required FLAGS (\S+)
 Value Required MTU (\d+)

@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowPimNeighbor struct {
-	Neighbor	string	`json:"NEIGHBOR"`
-	Interface	string	`json:"INTERFACE"`
-	Uptime	string	`json:"UPTIME"`
-	Expires	string	`json:"EXPIRES"`
-	Dr	string	`json:"DR"`
-	Pri	string	`json:"PRI"`
-	Flags	string	`json:"FLAGS"`
+	Pri       string `json:"PRI"`
+	Flags     string `json:"FLAGS"`
+	Neighbor  string `json:"NEIGHBOR"`
+	Interface string `json:"INTERFACE"`
+	Uptime    string `json:"UPTIME"`
+	Expires   string `json:"EXPIRES"`
+	Dr        string `json:"DR"`
 }
 
-var ShowPimNeighbor_Template = `Value NEIGHBOR (\S+)
+var ShowPimNeighbor_Template string = `Value NEIGHBOR (\S+)
 Value INTERFACE (\S+)
 Value UPTIME ((\S+(\s\S+)*))
 Value EXPIRES (\S+)

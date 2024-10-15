@@ -1,16 +1,16 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfaceEthernetPoePrintWithoutPaging struct {
-	Index	string	`json:"INDEX"`
-	Interface	string	`json:"INTERFACE"`
-	Poe_out	string	`json:"POE_OUT"`
-	Poe_voltage	string	`json:"POE_VOLTAGE"`
-	Poe_priority	string	`json:"POE_PRIORITY"`
-	Power_cycle_ping_enabled	string	`json:"POWER_CYCLE_PING_ENABLED"`
-	Power_cycle_interval	string	`json:"POWER_CYCLE_INTERVAL"`
+	Index                    string `json:"INDEX"`
+	Interface                string `json:"INTERFACE"`
+	Poe_out                  string `json:"POE_OUT"`
+	Poe_voltage              string `json:"POE_VOLTAGE"`
+	Poe_priority             string `json:"POE_PRIORITY"`
+	Power_cycle_ping_enabled string `json:"POWER_CYCLE_PING_ENABLED"`
+	Power_cycle_interval     string `json:"POWER_CYCLE_INTERVAL"`
 }
 
-var InterfaceEthernetPoePrintWithoutPaging_Template = `Value INDEX (\d+)
+var InterfaceEthernetPoePrintWithoutPaging_Template string = `Value INDEX (\d+)
 Value INTERFACE (\S+)
 Value POE_OUT (\S+)
 Value POE_VOLTAGE (\S+)

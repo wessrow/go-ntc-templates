@@ -1,14 +1,14 @@
-package edgecore 
+package edgecore
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Type	string	`json:"TYPE"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Status	string	`json:"STATUS"`
-	Ports	[]string	`json:"PORTS"`
+	Vlan_id   string   `json:"VLAN_ID"`
+	Type      string   `json:"TYPE"`
+	Vlan_name string   `json:"VLAN_NAME"`
+	Status    string   `json:"STATUS"`
+	Ports     []string `json:"PORTS"`
 }
 
-var ShowVlan_Template = `Value VLAN_ID (\d+)
+var ShowVlan_Template string = `Value VLAN_ID (\d+)
 Value TYPE (\S+)
 Value VLAN_NAME (.*)
 Value STATUS (\S+)

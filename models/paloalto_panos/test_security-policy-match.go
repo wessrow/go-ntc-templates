@@ -1,25 +1,25 @@
-package paloalto_panos 
+package paloalto_panos
 
 type TestSecurityPolicyMatch struct {
-	Name	string	`json:"NAME"`
-	Index	string	`json:"INDEX"`
-	From	string	`json:"FROM"`
-	Source	string	`json:"SOURCE"`
-	Source_region	string	`json:"SOURCE_REGION"`
-	To	string	`json:"TO"`
-	Destination	string	`json:"DESTINATION"`
-	Destination_region	string	`json:"DESTINATION_REGION"`
-	User	string	`json:"USER"`
-	Source_device	string	`json:"SOURCE_DEVICE"`
-	Destination_device	string	`json:"DESTINATION_DEVICE"`
-	Category	string	`json:"CATEGORY"`
-	Application_service	string	`json:"APPLICATION_SERVICE"`
-	Action	string	`json:"ACTION"`
-	Icmp_unreachable	string	`json:"ICMP_UNREACHABLE"`
-	Terminal	string	`json:"TERMINAL"`
+	To                  string `json:"TO"`
+	Destination_region  string `json:"DESTINATION_REGION"`
+	Icmp_unreachable    string `json:"ICMP_UNREACHABLE"`
+	Name                string `json:"NAME"`
+	Source_device       string `json:"SOURCE_DEVICE"`
+	Source_region       string `json:"SOURCE_REGION"`
+	Destination         string `json:"DESTINATION"`
+	User                string `json:"USER"`
+	Category            string `json:"CATEGORY"`
+	Application_service string `json:"APPLICATION_SERVICE"`
+	Terminal            string `json:"TERMINAL"`
+	Index               string `json:"INDEX"`
+	Source              string `json:"SOURCE"`
+	Destination_device  string `json:"DESTINATION_DEVICE"`
+	Action              string `json:"ACTION"`
+	From                string `json:"FROM"`
 }
 
-var TestSecurityPolicyMatch_Template = `Value Required NAME (.*?)
+var TestSecurityPolicyMatch_Template string = `Value Required NAME (.*?)
 Value Required INDEX (\d+)
 Value FROM (\S+)
 Value SOURCE (\S+|\[.*\])

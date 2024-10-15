@@ -1,17 +1,17 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfaceEthernetPrint struct {
-	Id	string	`json:"ID"`
-	Status	string	`json:"STATUS"`
-	Slave	string	`json:"SLAVE"`
-	Name	string	`json:"NAME"`
-	Mtu	string	`json:"MTU"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Arp	string	`json:"ARP"`
-	Switch	string	`json:"SWITCH"`
+	Status      string `json:"STATUS"`
+	Slave       string `json:"SLAVE"`
+	Name        string `json:"NAME"`
+	Mtu         string `json:"MTU"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Arp         string `json:"ARP"`
+	Switch      string `json:"SWITCH"`
+	Id          string `json:"ID"`
 }
 
-var InterfaceEthernetPrint_Template = `Value ID (\d+)
+var InterfaceEthernetPrint_Template string = `Value ID (\d+)
 Value STATUS (X|R)
 Value SLAVE (S)
 Value NAME (\S+)

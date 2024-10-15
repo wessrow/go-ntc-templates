@@ -1,13 +1,13 @@
-package ruckus_fastiron 
+package ruckus_fastiron
 
 type ShowMediaValidation struct {
-	Interface	string	`json:"INTERFACE"`
-	Vendor	string	`json:"VENDOR"`
-	Optic_description	string	`json:"OPTIC_DESCRIPTION"`
-	Optic_type	string	`json:"OPTIC_TYPE"`
+	Interface         string `json:"INTERFACE"`
+	Vendor            string `json:"VENDOR"`
+	Optic_description string `json:"OPTIC_DESCRIPTION"`
+	Optic_type        string `json:"OPTIC_TYPE"`
 }
 
-var ShowMediaValidation_Template = `Value Required INTERFACE (\d\S+)
+var ShowMediaValidation_Template string = `Value Required INTERFACE (\d\S+)
 Value VENDOR (\S+)
 Value OPTIC_DESCRIPTION (.*)
 Value OPTIC_TYPE (\S+)

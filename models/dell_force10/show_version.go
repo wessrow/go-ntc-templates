@@ -1,12 +1,12 @@
-package dell_force10 
+package dell_force10
 
 type ShowVersion struct {
-	Os_version	string	`json:"OS_VERSION"`
-	Uptime	string	`json:"UPTIME"`
-	Device_type	string	`json:"DEVICE_TYPE"`
+	Os_version  string `json:"OS_VERSION"`
+	Uptime      string `json:"UPTIME"`
+	Device_type string `json:"DEVICE_TYPE"`
 }
 
-var ShowVersion_Template = `Value OS_VERSION (\S+)
+var ShowVersion_Template string = `Value OS_VERSION (\S+)
 Value UPTIME (.+)
 Value DEVICE_TYPE (\S+)
 

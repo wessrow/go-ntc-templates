@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowInterfacesTransceiverDetail struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Current_value	string	`json:"CURRENT_VALUE"`
-	High_alarm_threshold	string	`json:"HIGH_ALARM_THRESHOLD"`
-	High_warn_threshold	string	`json:"HIGH_WARN_THRESHOLD"`
-	Low_alarm_threshold	string	`json:"LOW_ALARM_THRESHOLD"`
-	Low_warn_threshold	string	`json:"LOW_WARN_THRESHOLD"`
+	Port                 string `json:"PORT"`
+	Type                 string `json:"TYPE"`
+	Current_value        string `json:"CURRENT_VALUE"`
+	High_alarm_threshold string `json:"HIGH_ALARM_THRESHOLD"`
+	High_warn_threshold  string `json:"HIGH_WARN_THRESHOLD"`
+	Low_alarm_threshold  string `json:"LOW_ALARM_THRESHOLD"`
+	Low_warn_threshold   string `json:"LOW_WARN_THRESHOLD"`
 }
 
-var ShowInterfacesTransceiverDetail_Template = `Value Required PORT (\S+)
+var ShowInterfacesTransceiverDetail_Template string = `Value Required PORT (\S+)
 Value Filldown TYPE ((\S|\s)+?)
 Value CURRENT_VALUE (\S+)
 Value HIGH_ALARM_THRESHOLD (\S+)

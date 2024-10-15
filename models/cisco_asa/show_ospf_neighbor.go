@@ -1,15 +1,15 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowOspfNeighbor struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Dead_time	string	`json:"DEAD_TIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Dead_time   string `json:"DEAD_TIME"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Neighbor_id string `json:"NEIGHBOR_ID"`
+	Priority    string `json:"PRIORITY"`
+	State       string `json:"STATE"`
 }
 
-var ShowOspfNeighbor_Template = `Value NEIGHBOR_ID (\d+\.\d+\.\d+\.\d+)
+var ShowOspfNeighbor_Template string = `Value NEIGHBOR_ID (\d+\.\d+\.\d+\.\d+)
 Value PRIORITY (\S+)
 Value STATE (\S+\/\s+\-|\S+)
 Value DEAD_TIME (\d+:\d+:\d+)

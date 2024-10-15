@@ -1,11 +1,11 @@
-package arista_eos 
+package arista_eos
 
 type ShowHostname struct {
-	Hostname	string	`json:"HOSTNAME"`
-	Fqdn	string	`json:"FQDN"`
+	Hostname string `json:"HOSTNAME"`
+	Fqdn     string `json:"FQDN"`
 }
 
-var ShowHostname_Template = `Value HOSTNAME (\S+?)
+var ShowHostname_Template string = `Value HOSTNAME (\S+?)
 Value FQDN (\S+?)
 
 Start

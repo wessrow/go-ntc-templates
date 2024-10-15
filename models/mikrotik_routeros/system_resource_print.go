@@ -1,32 +1,32 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type SystemResourcePrint struct {
-	Uptime	string	`json:"UPTIME"`
-	Uptime_weeks	string	`json:"UPTIME_WEEKS"`
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
-	Uptime_seconds	string	`json:"UPTIME_SECONDS"`
-	Version	string	`json:"VERSION"`
-	Build_time	string	`json:"BUILD_TIME"`
-	Factory_software	string	`json:"FACTORY_SOFTWARE"`
-	Free_memory	string	`json:"FREE_MEMORY"`
-	Total_memory	string	`json:"TOTAL_MEMORY"`
-	Cpu	string	`json:"CPU"`
-	Cpu_count	string	`json:"CPU_COUNT"`
-	Cpu_frequency	string	`json:"CPU_FREQUENCY"`
-	Cpu_load	string	`json:"CPU_LOAD"`
-	Free_hdd_space	string	`json:"FREE_HDD_SPACE"`
-	Total_hdd_space	string	`json:"TOTAL_HDD_SPACE"`
-	Write_sect_since_reboot	string	`json:"WRITE_SECT_SINCE_REBOOT"`
-	Write_sect_total	string	`json:"WRITE_SECT_TOTAL"`
-	Bad_blocks	string	`json:"BAD_BLOCKS"`
-	Architecture_name	string	`json:"ARCHITECTURE_NAME"`
-	Board_name	string	`json:"BOARD_NAME"`
-	Platform	string	`json:"PLATFORM"`
+	Cpu_frequency           string `json:"CPU_FREQUENCY"`
+	Write_sect_total        string `json:"WRITE_SECT_TOTAL"`
+	Architecture_name       string `json:"ARCHITECTURE_NAME"`
+	Uptime_minutes          string `json:"UPTIME_MINUTES"`
+	Uptime_seconds          string `json:"UPTIME_SECONDS"`
+	Version                 string `json:"VERSION"`
+	Cpu_load                string `json:"CPU_LOAD"`
+	Write_sect_since_reboot string `json:"WRITE_SECT_SINCE_REBOOT"`
+	Platform                string `json:"PLATFORM"`
+	Free_memory             string `json:"FREE_MEMORY"`
+	Total_memory            string `json:"TOTAL_MEMORY"`
+	Free_hdd_space          string `json:"FREE_HDD_SPACE"`
+	Bad_blocks              string `json:"BAD_BLOCKS"`
+	Board_name              string `json:"BOARD_NAME"`
+	Uptime                  string `json:"UPTIME"`
+	Uptime_weeks            string `json:"UPTIME_WEEKS"`
+	Factory_software        string `json:"FACTORY_SOFTWARE"`
+	Cpu                     string `json:"CPU"`
+	Cpu_count               string `json:"CPU_COUNT"`
+	Total_hdd_space         string `json:"TOTAL_HDD_SPACE"`
+	Uptime_days             string `json:"UPTIME_DAYS"`
+	Uptime_hours            string `json:"UPTIME_HOURS"`
+	Build_time              string `json:"BUILD_TIME"`
 }
 
-var SystemResourcePrint_Template = `Value UPTIME (\w+)
+var SystemResourcePrint_Template string = `Value UPTIME (\w+)
 Value UPTIME_WEEKS (\d+)
 Value UPTIME_DAYS (\d+)
 Value UPTIME_HOURS (\d+)
@@ -46,7 +46,7 @@ Value TOTAL_HDD_SPACE (\d+\.\d{1}(K|M|G)iB)
 Value WRITE_SECT_SINCE_REBOOT (\d+)
 Value WRITE_SECT_TOTAL (\d+)
 Value BAD_BLOCKS (\d{1,3}(\.\d+)?%)
-Value ARCHITECTURE_NAME (powerpc|x86|mipsbe|mipsle)
+Value ARCHITECTURE_NAME (\S*)
 Value BOARD_NAME (.+)
 Value PLATFORM (.+)
 

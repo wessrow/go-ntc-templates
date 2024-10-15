@@ -1,12 +1,12 @@
-package arista_eos 
+package arista_eos
 
 type ShowVrf struct {
-	Vrf	string	`json:"VRF"`
-	Rd	string	`json:"RD"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Interfaces []string `json:"INTERFACES"`
+	Vrf        string   `json:"VRF"`
+	Rd         string   `json:"RD"`
 }
 
-var ShowVrf_Template = `Value VRF (\S+)
+var ShowVrf_Template string = `Value VRF (\S+)
 Value RD (\d\S+|<.+>)
 Value List INTERFACES ([\w\./-]+)
 

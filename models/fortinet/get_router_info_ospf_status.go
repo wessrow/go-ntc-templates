@@ -1,16 +1,16 @@
-package fortinet 
+package fortinet
 
 type GetRouterInfoOspfStatus struct {
-	Process_name	string	`json:"PROCESS_NAME"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Process_status	string	`json:"PROCESS_STATUS"`
-	Attached_areas_number	string	`json:"ATTACHED_AREAS_NUMBER"`
-	Attached_area	[]string	`json:"ATTACHED_AREA"`
-	Attached_area_interfaces	[]string	`json:"ATTACHED_AREA_INTERFACES"`
-	Attached_area_fully_adjacent_neighbors	[]string	`json:"ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS"`
+	Process_name                           string   `json:"PROCESS_NAME"`
+	Process_id                             string   `json:"PROCESS_ID"`
+	Process_status                         string   `json:"PROCESS_STATUS"`
+	Attached_areas_number                  string   `json:"ATTACHED_AREAS_NUMBER"`
+	Attached_area                          []string `json:"ATTACHED_AREA"`
+	Attached_area_interfaces               []string `json:"ATTACHED_AREA_INTERFACES"`
+	Attached_area_fully_adjacent_neighbors []string `json:"ATTACHED_AREA_FULLY_ADJACENT_NEIGHBORS"`
 }
 
-var GetRouterInfoOspfStatus_Template = `Value PROCESS_NAME (.*)
+var GetRouterInfoOspfStatus_Template string = `Value PROCESS_NAME (.*)
 Value PROCESS_ID (\S+)
 Value PROCESS_STATUS (.+)
 Value ATTACHED_AREAS_NUMBER (\d+)

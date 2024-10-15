@@ -1,18 +1,18 @@
-package cisco_asa 
+package cisco_asa
 
 type Dir struct {
-	File_system	string	`json:"FILE_SYSTEM"`
-	Id	string	`json:"ID"`
-	Permissions	string	`json:"PERMISSIONS"`
-	Size	string	`json:"SIZE"`
-	Total_size	string	`json:"TOTAL_SIZE"`
-	Total_free	string	`json:"TOTAL_FREE"`
-	Total_percent_free	string	`json:"TOTAL_PERCENT_FREE"`
-	Date_time	string	`json:"DATE_TIME"`
-	Name	string	`json:"NAME"`
+	Id                 string `json:"ID"`
+	Permissions        string `json:"PERMISSIONS"`
+	Size               string `json:"SIZE"`
+	Total_size         string `json:"TOTAL_SIZE"`
+	Total_percent_free string `json:"TOTAL_PERCENT_FREE"`
+	File_system        string `json:"FILE_SYSTEM"`
+	Total_free         string `json:"TOTAL_FREE"`
+	Date_time          string `json:"DATE_TIME"`
+	Name               string `json:"NAME"`
 }
 
-var Dir_Template = `Value Filldown FILE_SYSTEM (\S+)
+var Dir_Template string = `Value Filldown FILE_SYSTEM (\S+)
 Value ID (\d+)
 Value PERMISSIONS (\S+)
 Value SIZE (\d+)

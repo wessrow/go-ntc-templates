@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpv6Neighbors struct {
-	Address	string	`json:"ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
+	Type        string `json:"TYPE"`
+	Interface   string `json:"INTERFACE"`
+	Address     string `json:"ADDRESS"`
+	Age         string `json:"AGE"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowIpv6Neighbors_Template = `Value ADDRESS (\S+)
+var ShowIpv6Neighbors_Template string = `Value ADDRESS (\S+)
 Value AGE (\d+|-)
 Value MAC_ADDRESS (\S+|-)
 Value TYPE (\S+)

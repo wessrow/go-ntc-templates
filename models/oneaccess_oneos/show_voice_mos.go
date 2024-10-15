@@ -1,29 +1,29 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowVoiceMos struct {
-	Curr_nbr_call	string	`json:"CURR_NBR_CALL"`
-	Curr_avg_mos	string	`json:"CURR_AVG_MOS"`
-	Curr_min_mos	string	`json:"CURR_MIN_MOS"`
-	Curr_max_mos	string	`json:"CURR_MAX_MOS"`
-	Curr_avg_erl	string	`json:"CURR_AVG_ERL"`
-	Curr_avg_acom	string	`json:"CURR_AVG_ACOM"`
-	Curr_avg_loss_rate	string	`json:"CURR_AVG_LOSS_RATE"`
-	Curr_avg_jitter	string	`json:"CURR_AVG_JITTER"`
-	Curr_avg_max_delay	string	`json:"CURR_AVG_MAX_DELAY"`
-	Curr_avg_pdd	string	`json:"CURR_AVG_PDD"`
-	Prev_nbr_call	string	`json:"PREV_NBR_CALL"`
-	Prev_avg_mos	string	`json:"PREV_AVG_MOS"`
-	Prev_min_mos	string	`json:"PREV_MIN_MOS"`
-	Prev_max_mos	string	`json:"PREV_MAX_MOS"`
-	Prev_avg_erl	string	`json:"PREV_AVG_ERL"`
-	Prev_avg_acom	string	`json:"PREV_AVG_ACOM"`
-	Prev_avg_loss_rate	string	`json:"PREV_AVG_LOSS_RATE"`
-	Prev_avg_jitter	string	`json:"PREV_AVG_JITTER"`
-	Prev_avg_max_delay	string	`json:"PREV_AVG_MAX_DELAY"`
-	Prev_avg_pdd	string	`json:"PREV_AVG_PDD"`
+	Prev_min_mos       string `json:"PREV_MIN_MOS"`
+	Prev_avg_acom      string `json:"PREV_AVG_ACOM"`
+	Prev_avg_jitter    string `json:"PREV_AVG_JITTER"`
+	Prev_avg_max_delay string `json:"PREV_AVG_MAX_DELAY"`
+	Curr_min_mos       string `json:"CURR_MIN_MOS"`
+	Curr_avg_erl       string `json:"CURR_AVG_ERL"`
+	Curr_avg_loss_rate string `json:"CURR_AVG_LOSS_RATE"`
+	Curr_avg_acom      string `json:"CURR_AVG_ACOM"`
+	Prev_avg_loss_rate string `json:"PREV_AVG_LOSS_RATE"`
+	Prev_avg_pdd       string `json:"PREV_AVG_PDD"`
+	Curr_max_mos       string `json:"CURR_MAX_MOS"`
+	Prev_nbr_call      string `json:"PREV_NBR_CALL"`
+	Prev_avg_mos       string `json:"PREV_AVG_MOS"`
+	Curr_avg_max_delay string `json:"CURR_AVG_MAX_DELAY"`
+	Curr_avg_pdd       string `json:"CURR_AVG_PDD"`
+	Prev_max_mos       string `json:"PREV_MAX_MOS"`
+	Prev_avg_erl       string `json:"PREV_AVG_ERL"`
+	Curr_nbr_call      string `json:"CURR_NBR_CALL"`
+	Curr_avg_mos       string `json:"CURR_AVG_MOS"`
+	Curr_avg_jitter    string `json:"CURR_AVG_JITTER"`
 }
 
-var ShowVoiceMos_Template = `Value CURR_NBR_CALL (\d+\.\d+|\d+)
+var ShowVoiceMos_Template string = `Value CURR_NBR_CALL (\d+\.\d+|\d+)
 Value CURR_AVG_MOS (\d+\.\d+|\d+)
 Value CURR_MIN_MOS (\d+\.\d+|\d+)
 Value CURR_MAX_MOS (\d+\.\d+|\d+)

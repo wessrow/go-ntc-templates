@@ -1,21 +1,21 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type Ping struct {
-	Seq	[]string	`json:"SEQ"`
-	Host	[]string	`json:"HOST"`
-	Size	[]string	`json:"SIZE"`
-	Ttl	[]string	`json:"TTL"`
-	Time	[]string	`json:"TIME"`
-	Status	[]string	`json:"STATUS"`
-	Sent	string	`json:"SENT"`
-	Received	string	`json:"RECEIVED"`
-	Packet_loss	string	`json:"PACKET_LOSS"`
-	Min_rtt	string	`json:"MIN_RTT"`
-	Avg_rtt	string	`json:"AVG_RTT"`
-	Max_rtt	string	`json:"MAX_RTT"`
+	Packet_loss string   `json:"PACKET_LOSS"`
+	Min_rtt     string   `json:"MIN_RTT"`
+	Avg_rtt     string   `json:"AVG_RTT"`
+	Seq         []string `json:"SEQ"`
+	Host        []string `json:"HOST"`
+	Size        []string `json:"SIZE"`
+	Received    string   `json:"RECEIVED"`
+	Max_rtt     string   `json:"MAX_RTT"`
+	Ttl         []string `json:"TTL"`
+	Time        []string `json:"TIME"`
+	Status      []string `json:"STATUS"`
+	Sent        string   `json:"SENT"`
 }
 
-var Ping_Template = `Value List SEQ (\d+)
+var Ping_Template string = `Value List SEQ (\d+)
 Value List HOST (\S+)
 Value List SIZE (\d+)
 Value List TTL (\d+)

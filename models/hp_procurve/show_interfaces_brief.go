@@ -1,18 +1,18 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowInterfacesBrief struct {
-	Port	string	`json:"PORT"`
-	Type	string	`json:"TYPE"`
-	Intrusion_alert	string	`json:"INTRUSION_ALERT"`
-	Enabled	string	`json:"ENABLED"`
-	Status	string	`json:"STATUS"`
-	Mode	string	`json:"MODE"`
-	Mdi_mode	string	`json:"MDI_MODE"`
-	Flow_ctrl	string	`json:"FLOW_CTRL"`
-	Bcast_limit	string	`json:"BCAST_LIMIT"`
+	Type            string `json:"TYPE"`
+	Enabled         string `json:"ENABLED"`
+	Mode            string `json:"MODE"`
+	Mdi_mode        string `json:"MDI_MODE"`
+	Flow_ctrl       string `json:"FLOW_CTRL"`
+	Port            string `json:"PORT"`
+	Status          string `json:"STATUS"`
+	Bcast_limit     string `json:"BCAST_LIMIT"`
+	Intrusion_alert string `json:"INTRUSION_ALERT"`
 }
 
-var ShowInterfacesBrief_Template = `Value PORT ([a-zA-Z0-9\-]+)
+var ShowInterfacesBrief_Template string = `Value PORT ([a-zA-Z0-9\-]+)
 Value TYPE (\S*)
 Value INTRUSION_ALERT (Yes|No)
 Value ENABLED (Yes|No)

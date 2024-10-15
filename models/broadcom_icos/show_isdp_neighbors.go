@@ -1,15 +1,15 @@
-package broadcom_icos 
+package broadcom_icos
 
 type ShowIsdpNeighbors struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Holdtime	string	`json:"HOLDTIME"`
-	Capabilities	string	`json:"CAPABILITIES"`
-	Platform	string	`json:"PLATFORM"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Capabilities       string `json:"CAPABILITIES"`
+	Platform           string `json:"PLATFORM"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Holdtime           string `json:"HOLDTIME"`
 }
 
-var ShowIsdpNeighbors_Template = `Value NEIGHBOR_NAME (\S+)
+var ShowIsdpNeighbors_Template string = `Value NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value HOLDTIME (\S+)
 Value CAPABILITIES ([\w]{1}(?:\s[\w]){0,2})

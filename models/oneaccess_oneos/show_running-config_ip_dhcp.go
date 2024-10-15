@@ -1,17 +1,17 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRunningConfigIpDhcp struct {
-	Pool	string	`json:"POOL"`
-	Vrf	string	`json:"VRF"`
-	Default_router	string	`json:"DEFAULT_ROUTER"`
-	Domain_name	string	`json:"DOMAIN_NAME"`
-	Dns	[]string	`json:"DNS"`
-	Network	string	`json:"NETWORK"`
-	Lease	string	`json:"LEASE"`
-	Excluded	string	`json:"EXCLUDED"`
+	Vrf            string   `json:"VRF"`
+	Default_router string   `json:"DEFAULT_ROUTER"`
+	Domain_name    string   `json:"DOMAIN_NAME"`
+	Dns            []string `json:"DNS"`
+	Network        string   `json:"NETWORK"`
+	Lease          string   `json:"LEASE"`
+	Excluded       string   `json:"EXCLUDED"`
+	Pool           string   `json:"POOL"`
 }
 
-var ShowRunningConfigIpDhcp_Template = `Value POOL (\S+)
+var ShowRunningConfigIpDhcp_Template string = `Value POOL (\S+)
 Value VRF (\S+)
 Value DEFAULT_ROUTER (\d+\.\d+\.\d+\.\d+)
 Value DOMAIN_NAME (\S+)

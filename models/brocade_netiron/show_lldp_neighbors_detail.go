@@ -1,20 +1,20 @@
-package brocade_netiron 
+package brocade_netiron
 
 type ShowLldpNeighborsDetail struct {
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_port_id	string	`json:"NEIGHBOR_PORT_ID"`
-	Holdtime	string	`json:"HOLDTIME"`
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Mgmt_address	string	`json:"MGMT_ADDRESS"`
-	Neighbor_lacp_index	string	`json:"NEIGHBOR_LACP_INDEX"`
-	Neighbor_max_frame_size	string	`json:"NEIGHBOR_MAX_FRAME_SIZE"`
-	Neighbor_mau	string	`json:"NEIGHBOR_MAU"`
-	Capabilities	string	`json:"CAPABILITIES"`
+	Neighbor_port_id        string `json:"NEIGHBOR_PORT_ID"`
+	Neighbor_interface      string `json:"NEIGHBOR_INTERFACE"`
+	Mgmt_address            string `json:"MGMT_ADDRESS"`
+	Neighbor_lacp_index     string `json:"NEIGHBOR_LACP_INDEX"`
+	Neighbor_max_frame_size string `json:"NEIGHBOR_MAX_FRAME_SIZE"`
+	Local_interface         string `json:"LOCAL_INTERFACE"`
+	Holdtime                string `json:"HOLDTIME"`
+	Neighbor_name           string `json:"NEIGHBOR_NAME"`
+	Vlan_id                 string `json:"VLAN_ID"`
+	Neighbor_mau            string `json:"NEIGHBOR_MAU"`
+	Capabilities            string `json:"CAPABILITIES"`
 }
 
-var ShowLldpNeighborsDetail_Template = `Value Filldown LOCAL_INTERFACE ([0-9\/]+)
+var ShowLldpNeighborsDetail_Template string = `Value Filldown LOCAL_INTERFACE ([0-9\/]+)
 Value Required NEIGHBOR_PORT_ID (\w+\.\w+\.\w+)
 Value HOLDTIME (\d+)
 Value NEIGHBOR_NAME (.+)

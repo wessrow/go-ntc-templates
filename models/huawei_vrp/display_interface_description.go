@@ -1,13 +1,13 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayInterfaceDescription struct {
-	Interface	string	`json:"INTERFACE"`
-	Phy	string	`json:"PHY"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Interface   string `json:"INTERFACE"`
+	Phy         string `json:"PHY"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var DisplayInterfaceDescription_Template = `Value INTERFACE (\S+)
+var DisplayInterfaceDescription_Template string = `Value INTERFACE (\S+)
 Value PHY (down|\*down|up|up\(s\))
 Value PROTOCOL (down|\*down|up|up\(s\))
 Value DESCRIPTION (\S+.*?)

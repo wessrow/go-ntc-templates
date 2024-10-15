@@ -1,25 +1,25 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowMplsTrafficEngTunnels struct {
-	Name	string	`json:"NAME"`
-	Desc	string	`json:"DESC"`
-	Dest	string	`json:"DEST"`
-	Admin	string	`json:"ADMIN"`
-	Oper	string	`json:"OPER"`
-	Path	string	`json:"PATH"`
-	Signal	string	`json:"SIGNAL"`
-	Inlabel	string	`json:"INLABEL"`
-	Inlabel_id	string	`json:"INLABEL_ID"`
-	Outlabel	string	`json:"OUTLABEL"`
-	Outlabel_id	string	`json:"OUTLABEL_ID"`
-	Src	string	`json:"SRC"`
-	Dst	string	`json:"DST"`
-	Id	string	`json:"ID"`
-	Instance	string	`json:"INSTANCE"`
-	Ip_route	[]string	`json:"IP_ROUTE"`
+	Signal      string   `json:"SIGNAL"`
+	Inlabel     string   `json:"INLABEL"`
+	Dst         string   `json:"DST"`
+	Instance    string   `json:"INSTANCE"`
+	Admin       string   `json:"ADMIN"`
+	Oper        string   `json:"OPER"`
+	Path        string   `json:"PATH"`
+	Outlabel    string   `json:"OUTLABEL"`
+	Outlabel_id string   `json:"OUTLABEL_ID"`
+	Id          string   `json:"ID"`
+	Dest        string   `json:"DEST"`
+	Desc        string   `json:"DESC"`
+	Inlabel_id  string   `json:"INLABEL_ID"`
+	Ip_route    []string `json:"IP_ROUTE"`
+	Name        string   `json:"NAME"`
+	Src         string   `json:"SRC"`
 }
 
-var ShowMplsTrafficEngTunnels_Template = `Value Required NAME (\S+)
+var ShowMplsTrafficEngTunnels_Template string = `Value Required NAME (\S+)
 Value DESC (\S+)
 Value DEST (\S+)
 Value ADMIN (\S+)

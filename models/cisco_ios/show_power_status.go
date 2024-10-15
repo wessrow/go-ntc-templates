@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowPowerStatus struct {
-	Ps	string	`json:"PS"`
-	Input_type	string	`json:"INPUT_TYPE"`
-	Input_status	string	`json:"INPUT_STATUS"`
-	Model	string	`json:"MODEL"`
-	Type	string	`json:"TYPE"`
-	Status	string	`json:"STATUS"`
-	Fan_sensor	string	`json:"FAN_SENSOR"`
-	Inline_status	string	`json:"INLINE_STATUS"`
+	Status        string `json:"STATUS"`
+	Fan_sensor    string `json:"FAN_SENSOR"`
+	Inline_status string `json:"INLINE_STATUS"`
+	Ps            string `json:"PS"`
+	Input_type    string `json:"INPUT_TYPE"`
+	Input_status  string `json:"INPUT_STATUS"`
+	Model         string `json:"MODEL"`
+	Type          string `json:"TYPE"`
 }
 
-var ShowPowerStatus_Template = `####
+var ShowPowerStatus_Template string = `####
 # For 4500 switches
 ###
 Value Required PS (\S+)

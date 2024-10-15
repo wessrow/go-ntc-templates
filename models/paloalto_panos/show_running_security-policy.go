@@ -1,23 +1,23 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowRunningSecurityPolicy struct {
-	Name	string	`json:"NAME"`
-	From	string	`json:"FROM"`
-	Source	string	`json:"SOURCE"`
-	Source_region	string	`json:"SOURCE_REGION"`
-	To	string	`json:"TO"`
-	Destination	string	`json:"DESTINATION"`
-	Destination_region	string	`json:"DESTINATION_REGION"`
-	User	string	`json:"USER"`
-	Category	string	`json:"CATEGORY"`
-	Application_service	string	`json:"APPLICATION_SERVICE"`
-	Action	string	`json:"ACTION"`
-	Icmp_unreachable	string	`json:"ICMP_UNREACHABLE"`
-	Terminal	string	`json:"TERMINAL"`
-	Type	string	`json:"TYPE"`
+	From                string `json:"FROM"`
+	To                  string `json:"TO"`
+	Destination         string `json:"DESTINATION"`
+	Application_service string `json:"APPLICATION_SERVICE"`
+	Name                string `json:"NAME"`
+	Destination_region  string `json:"DESTINATION_REGION"`
+	User                string `json:"USER"`
+	Terminal            string `json:"TERMINAL"`
+	Action              string `json:"ACTION"`
+	Type                string `json:"TYPE"`
+	Source              string `json:"SOURCE"`
+	Source_region       string `json:"SOURCE_REGION"`
+	Category            string `json:"CATEGORY"`
+	Icmp_unreachable    string `json:"ICMP_UNREACHABLE"`
 }
 
-var ShowRunningSecurityPolicy_Template = `Value Filldown NAME (.*?)
+var ShowRunningSecurityPolicy_Template string = `Value Filldown NAME (.*?)
 Value Required FROM (\S+)
 Value SOURCE (\S+)
 Value SOURCE_REGION (\S+)

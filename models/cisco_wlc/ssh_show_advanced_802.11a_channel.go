@@ -1,23 +1,23 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowAdvanced80211aChannel struct {
-	Assign_mode	string	`json:"ASSIGN_MODE"`
-	Update_time	string	`json:"UPDATE_TIME"`
-	Anchor_time	string	`json:"ANCHOR_TIME"`
-	Noise	string	`json:"NOISE"`
-	Interfer	string	`json:"INTERFER"`
-	Load	string	`json:"LOAD"`
-	Device_aware	string	`json:"DEVICE_AWARE"`
-	Cleanair_driven	string	`json:"CLEANAIR_DRIVEN"`
-	Leader	string	`json:"LEADER"`
-	Dca_sensitivity	string	`json:"DCA_SENSITIVITY"`
-	Dca_width	string	`json:"DCA_WIDTH"`
-	Dca_min	string	`json:"DCA_MIN"`
-	Dca_channels	[]string	`json:"DCA_CHANNELS"`
-	Unused_dca_channels	[]string	`json:"UNUSED_DCA_CHANNELS"`
+	Interfer            string   `json:"INTERFER"`
+	Dca_min             string   `json:"DCA_MIN"`
+	Unused_dca_channels []string `json:"UNUSED_DCA_CHANNELS"`
+	Dca_sensitivity     string   `json:"DCA_SENSITIVITY"`
+	Dca_channels        []string `json:"DCA_CHANNELS"`
+	Assign_mode         string   `json:"ASSIGN_MODE"`
+	Anchor_time         string   `json:"ANCHOR_TIME"`
+	Load                string   `json:"LOAD"`
+	Leader              string   `json:"LEADER"`
+	Dca_width           string   `json:"DCA_WIDTH"`
+	Update_time         string   `json:"UPDATE_TIME"`
+	Noise               string   `json:"NOISE"`
+	Device_aware        string   `json:"DEVICE_AWARE"`
+	Cleanair_driven     string   `json:"CLEANAIR_DRIVEN"`
 }
 
-var SshShowAdvanced80211aChannel_Template = `Value ASSIGN_MODE (\w+)
+var SshShowAdvanced80211aChannel_Template string = `Value ASSIGN_MODE (\w+)
 Value UPDATE_TIME (\d+ \w+)
 Value ANCHOR_TIME (\d+)
 Value NOISE (\w+)

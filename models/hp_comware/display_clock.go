@@ -1,15 +1,15 @@
-package hp_comware 
+package hp_comware
 
 type DisplayClock struct {
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Dayweek	string	`json:"DAYWEEK"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
+	Day      string `json:"DAY"`
+	Year     string `json:"YEAR"`
+	Time     string `json:"TIME"`
+	Timezone string `json:"TIMEZONE"`
+	Dayweek  string `json:"DAYWEEK"`
+	Month    string `json:"MONTH"`
 }
 
-var DisplayClock_Template = `Value TIME (\d+:\d+:\d+)
+var DisplayClock_Template string = `Value TIME (\d+:\d+:\d+)
 Value TIMEZONE (\S+)
 Value DAYWEEK (\w+)
 Value MONTH (\d+)

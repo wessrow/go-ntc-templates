@@ -1,52 +1,52 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowBgpNeighbors struct {
-	Neighbor	string	`json:"NEIGHBOR"`
-	Remote_as	string	`json:"REMOTE_AS"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Type	string	`json:"TYPE"`
-	Description	string	`json:"DESCRIPTION"`
-	Remote_router_id	string	`json:"REMOTE_ROUTER_ID"`
-	Cluster_id	string	`json:"CLUSTER_ID"`
-	State	string	`json:"STATE"`
-	Uptime	string	`json:"UPTIME"`
-	Nsr_state	string	`json:"NSR_STATE"`
-	Holdtime	string	`json:"HOLDTIME"`
-	Keepalive	string	`json:"KEEPALIVE"`
-	Nsr	string	`json:"NSR"`
-	Gr	string	`json:"GR"`
-	Afi	[]string	`json:"AFI"`
-	Version	[]string	`json:"VERSION"`
-	Route_reflector_role	[]string	`json:"ROUTE_REFLECTOR_ROLE"`
-	Policy_incoming	[]string	`json:"POLICY_INCOMING"`
-	Policy_outgoing	[]string	`json:"POLICY_OUTGOING"`
-	Prefixes_in	[]string	`json:"PREFIXES_IN"`
-	Prefixes_in_best	[]string	`json:"PREFIXES_IN_BEST"`
-	Prefixes_out	[]string	`json:"PREFIXES_OUT"`
-	Prefixes_out_suppressed	[]string	`json:"PREFIXES_OUT_SUPPRESSED"`
-	Prefixes_out_withdrawn	[]string	`json:"PREFIXES_OUT_WITHDRAWN"`
-	Max_prefixes	[]string	`json:"MAX_PREFIXES"`
-	Max_prefixes_warn_percent	[]string	`json:"MAX_PREFIXES_WARN_PERCENT"`
-	Default_originate	[]string	`json:"DEFAULT_ORIGINATE"`
-	Last_ack_version	[]string	`json:"LAST_ACK_VERSION"`
-	Last_synced_ack_version	[]string	`json:"LAST_SYNCED_ACK_VERSION"`
-	Connections_established	string	`json:"CONNECTIONS_ESTABLISHED"`
-	Connections_dropped	string	`json:"CONNECTIONS_DROPPED"`
-	Local_address	string	`json:"LOCAL_ADDRESS"`
-	Local_port	string	`json:"LOCAL_PORT"`
-	Remote_address	string	`json:"REMOTE_ADDRESS"`
-	Remote_port	string	`json:"REMOTE_PORT"`
-	Last_reset	string	`json:"LAST_RESET"`
-	Last_reset_reason	string	`json:"LAST_RESET_REASON"`
-	Last_notification_sent	string	`json:"LAST_NOTIFICATION_SENT"`
-	Error_code	string	`json:"ERROR_CODE"`
-	Last_notification_received	string	`json:"LAST_NOTIFICATION_RECEIVED"`
-	Peer_error_code	string	`json:"PEER_ERROR_CODE"`
-	Peer_reset_reason	string	`json:"PEER_RESET_REASON"`
-	Max_hops	string	`json:"MAX_HOPS"`
+	Error_code                 string   `json:"ERROR_CODE"`
+	Neighbor                   string   `json:"NEIGHBOR"`
+	Type                       string   `json:"TYPE"`
+	Remote_port                string   `json:"REMOTE_PORT"`
+	Local_as                   string   `json:"LOCAL_AS"`
+	Remote_router_id           string   `json:"REMOTE_ROUTER_ID"`
+	Policy_outgoing            []string `json:"POLICY_OUTGOING"`
+	Policy_incoming            []string `json:"POLICY_INCOMING"`
+	Last_ack_version           []string `json:"LAST_ACK_VERSION"`
+	Connections_established    string   `json:"CONNECTIONS_ESTABLISHED"`
+	Remote_address             string   `json:"REMOTE_ADDRESS"`
+	Last_reset                 string   `json:"LAST_RESET"`
+	Keepalive                  string   `json:"KEEPALIVE"`
+	Version                    []string `json:"VERSION"`
+	Route_reflector_role       []string `json:"ROUTE_REFLECTOR_ROLE"`
+	Prefixes_out_withdrawn     []string `json:"PREFIXES_OUT_WITHDRAWN"`
+	Peer_reset_reason          string   `json:"PEER_RESET_REASON"`
+	Max_hops                   string   `json:"MAX_HOPS"`
+	Nsr                        string   `json:"NSR"`
+	Prefixes_in                []string `json:"PREFIXES_IN"`
+	Prefixes_in_best           []string `json:"PREFIXES_IN_BEST"`
+	Local_port                 string   `json:"LOCAL_PORT"`
+	Remote_as                  string   `json:"REMOTE_AS"`
+	Connections_dropped        string   `json:"CONNECTIONS_DROPPED"`
+	Local_address              string   `json:"LOCAL_ADDRESS"`
+	Prefixes_out_suppressed    []string `json:"PREFIXES_OUT_SUPPRESSED"`
+	Max_prefixes               []string `json:"MAX_PREFIXES"`
+	Max_prefixes_warn_percent  []string `json:"MAX_PREFIXES_WARN_PERCENT"`
+	Last_notification_received string   `json:"LAST_NOTIFICATION_RECEIVED"`
+	Peer_error_code            string   `json:"PEER_ERROR_CODE"`
+	State                      string   `json:"STATE"`
+	Nsr_state                  string   `json:"NSR_STATE"`
+	Holdtime                   string   `json:"HOLDTIME"`
+	Prefixes_out               []string `json:"PREFIXES_OUT"`
+	Last_synced_ack_version    []string `json:"LAST_SYNCED_ACK_VERSION"`
+	Description                string   `json:"DESCRIPTION"`
+	Cluster_id                 string   `json:"CLUSTER_ID"`
+	Gr                         string   `json:"GR"`
+	Last_reset_reason          string   `json:"LAST_RESET_REASON"`
+	Last_notification_sent     string   `json:"LAST_NOTIFICATION_SENT"`
+	Uptime                     string   `json:"UPTIME"`
+	Afi                        []string `json:"AFI"`
+	Default_originate          []string `json:"DEFAULT_ORIGINATE"`
 }
 
-var ShowBgpNeighbors_Template = `Value NEIGHBOR (\S+)
+var ShowBgpNeighbors_Template string = `Value NEIGHBOR (\S+)
 Value REMOTE_AS (\d+)
 Value LOCAL_AS (\d+)
 Value TYPE (\w+)

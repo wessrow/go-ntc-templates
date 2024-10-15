@@ -1,18 +1,18 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpEigrpNeighbors struct {
-	As	string	`json:"AS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Hold	string	`json:"HOLD"`
-	Uptime	string	`json:"UPTIME"`
-	Srtt	string	`json:"SRTT"`
-	Rto	string	`json:"RTO"`
-	Q_cnt	string	`json:"Q_CNT"`
-	Seq_num	string	`json:"SEQ_NUM"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Uptime     string `json:"UPTIME"`
+	Q_cnt      string `json:"Q_CNT"`
+	Seq_num    string `json:"SEQ_NUM"`
+	As         string `json:"AS"`
+	Interface  string `json:"INTERFACE"`
+	Hold       string `json:"HOLD"`
+	Srtt       string `json:"SRTT"`
+	Rto        string `json:"RTO"`
 }
 
-var ShowIpEigrpNeighbors_Template = `Value Filldown AS (\d+)
+var ShowIpEigrpNeighbors_Template string = `Value Filldown AS (\d+)
 Value Required IP_ADDRESS ([0-9A-Fa-f:\.]+)
 Value INTERFACE (\S+)
 Value HOLD (\d+)

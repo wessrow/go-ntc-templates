@@ -1,13 +1,13 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowMacAddressTable struct {
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Type	string	`json:"TYPE"`
-	Port	string	`json:"PORT"`
+	Type        string `json:"TYPE"`
+	Port        string `json:"PORT"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Vlan_id     string `json:"VLAN_ID"`
 }
 
-var ShowMacAddressTable_Template = `Value MAC_ADDRESS (\S+)
+var ShowMacAddressTable_Template string = `Value MAC_ADDRESS (\S+)
 Value VLAN_ID (\d+)
 Value TYPE (\S+)
 Value PORT (\S+)

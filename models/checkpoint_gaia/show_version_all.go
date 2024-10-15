@@ -1,13 +1,13 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowVersionAll struct {
-	Version	string	`json:"VERSION"`
-	Build	string	`json:"BUILD"`
-	Kernel	string	`json:"KERNEL"`
-	Architecture	string	`json:"ARCHITECTURE"`
+	Version      string `json:"VERSION"`
+	Build        string `json:"BUILD"`
+	Kernel       string `json:"KERNEL"`
+	Architecture string `json:"ARCHITECTURE"`
 }
 
-var ShowVersionAll_Template = `Value VERSION (\S+)
+var ShowVersionAll_Template string = `Value VERSION (\S+)
 Value BUILD (\S+)
 Value KERNEL (\S+)
 Value ARCHITECTURE (\S+)

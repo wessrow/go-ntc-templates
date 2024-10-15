@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowEnvironmentTemperature struct {
-	Current_value	string	`json:"CURRENT_VALUE"`
-	Major_threshold	string	`json:"MAJOR_THRESHOLD"`
-	Minor_threshold	string	`json:"MINOR_THRESHOLD"`
-	Status	string	`json:"STATUS"`
-	Module	string	`json:"MODULE"`
-	Sensor	string	`json:"SENSOR"`
+	Status          string `json:"STATUS"`
+	Module          string `json:"MODULE"`
+	Sensor          string `json:"SENSOR"`
+	Current_value   string `json:"CURRENT_VALUE"`
+	Major_threshold string `json:"MAJOR_THRESHOLD"`
+	Minor_threshold string `json:"MINOR_THRESHOLD"`
 }
 
-var ShowEnvironmentTemperature_Template = `Value CURRENT_VALUE (\d+)
+var ShowEnvironmentTemperature_Template string = `Value CURRENT_VALUE (\d+)
 Value MAJOR_THRESHOLD (\d+)
 Value MINOR_THRESHOLD (\d+)
 Value STATUS (\S+)

@@ -1,17 +1,17 @@
-package ubiquiti_edgerouter 
+package ubiquiti_edgerouter
 
 type ShowNatRules struct {
-	Rule	string	`json:"RULE"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Src_address	string	`json:"SRC_ADDRESS"`
-	Dest_address	string	`json:"DEST_ADDRESS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Src_port	string	`json:"SRC_PORT"`
-	Dest_port	string	`json:"DEST_PORT"`
+	Protocol     string `json:"PROTOCOL"`
+	Src_port     string `json:"SRC_PORT"`
+	Dest_port    string `json:"DEST_PORT"`
+	Rule         string `json:"RULE"`
+	Type         string `json:"TYPE"`
+	Interface    string `json:"INTERFACE"`
+	Src_address  string `json:"SRC_ADDRESS"`
+	Dest_address string `json:"DEST_ADDRESS"`
 }
 
-var ShowNatRules_Template = `Value RULE (\d+)
+var ShowNatRules_Template string = `Value RULE (\d+)
 Value TYPE (\S+)
 Value INTERFACE (\S+)
 Value SRC_ADDRESS ((\d+\.\d+\.\d+\.\d+((/\d+)?))|---)

@@ -1,29 +1,29 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIpBgpSummary struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Vrf	string	`json:"VRF"`
-	Rib_entries	string	`json:"RIB_ENTRIES"`
-	Rib_memory	string	`json:"RIB_MEMORY"`
-	Peers	string	`json:"PEERS"`
-	Bgp_memory	string	`json:"BGP_MEMORY"`
-	As_path_entries	string	`json:"AS_PATH_ENTRIES"`
-	Communtiy_entries	string	`json:"COMMUNTIY_ENTRIES"`
-	Bgp_neighbor	string	`json:"BGP_NEIGHBOR"`
-	Address_family	string	`json:"ADDRESS_FAMILY"`
-	Neighbor_as	string	`json:"NEIGHBOR_AS"`
-	Message_received	string	`json:"MESSAGE_RECEIVED"`
-	Message_sent	string	`json:"MESSAGE_SENT"`
-	Table_version	string	`json:"TABLE_VERSION"`
-	In_queue	string	`json:"IN_QUEUE"`
-	Out_queue	string	`json:"OUT_QUEUE"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_prefix_received	string	`json:"STATE_PREFIX_RECEIVED"`
-	Total_neighbors	string	`json:"TOTAL_NEIGHBORS"`
+	Rib_entries           string `json:"RIB_ENTRIES"`
+	Bgp_memory            string `json:"BGP_MEMORY"`
+	Router_id             string `json:"ROUTER_ID"`
+	Vrf                   string `json:"VRF"`
+	As_path_entries       string `json:"AS_PATH_ENTRIES"`
+	Message_received      string `json:"MESSAGE_RECEIVED"`
+	Message_sent          string `json:"MESSAGE_SENT"`
+	Out_queue             string `json:"OUT_QUEUE"`
+	Up_down               string `json:"UP_DOWN"`
+	Rib_memory            string `json:"RIB_MEMORY"`
+	Communtiy_entries     string `json:"COMMUNTIY_ENTRIES"`
+	Address_family        string `json:"ADDRESS_FAMILY"`
+	State_prefix_received string `json:"STATE_PREFIX_RECEIVED"`
+	Total_neighbors       string `json:"TOTAL_NEIGHBORS"`
+	Local_as              string `json:"LOCAL_AS"`
+	Peers                 string `json:"PEERS"`
+	Bgp_neighbor          string `json:"BGP_NEIGHBOR"`
+	Neighbor_as           string `json:"NEIGHBOR_AS"`
+	Table_version         string `json:"TABLE_VERSION"`
+	In_queue              string `json:"IN_QUEUE"`
 }
 
-var ShowIpBgpSummary_Template = `Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
+var ShowIpBgpSummary_Template string = `Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
 Value Filldown LOCAL_AS (\d+(\.\d+)?)
 Value Filldown VRF (\w+)
 Value Filldown RIB_ENTRIES (\d+)

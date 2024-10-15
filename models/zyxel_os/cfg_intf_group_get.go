@@ -1,14 +1,14 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgIntfGroupGet struct {
-	Index	string	`json:"INDEX"`
-	Name	string	`json:"NAME"`
-	Wan_intf	string	`json:"WAN_INTF"`
-	Interface	string	`json:"INTERFACE"`
-	Criteria	string	`json:"CRITERIA"`
+	Index     string `json:"INDEX"`
+	Name      string `json:"NAME"`
+	Wan_intf  string `json:"WAN_INTF"`
+	Interface string `json:"INTERFACE"`
+	Criteria  string `json:"CRITERIA"`
 }
 
-var CfgIntfGroupGet_Template = `Value INDEX (\d+)
+var CfgIntfGroupGet_Template string = `Value INDEX (\d+)
 Value NAME (.+\w)
 Value WAN_INTF (Any\sWAN|((WWAN|ADSL|VDSL),?)+)
 Value INTERFACE ((N/A|.+\w))

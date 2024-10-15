@@ -1,15 +1,15 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowIpv6Route struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Network	string	`json:"NETWORK"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Nexthopip	string	`json:"NEXTHOPIP"`
-	Interface	string	`json:"INTERFACE"`
-	Comment	string	`json:"COMMENT"`
+	Comment       string `json:"COMMENT"`
+	Protocol      string `json:"PROTOCOL"`
+	Network       string `json:"NETWORK"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Nexthopip     string `json:"NEXTHOPIP"`
+	Interface     string `json:"INTERFACE"`
 }
 
-var ShowIpv6Route_Template = `Value PROTOCOL (C|S|R|B|O|A|K|H|P|U|i)
+var ShowIpv6Route_Template string = `Value PROTOCOL (C|S|R|B|O|A|K|H|P|U|i)
 Value NETWORK ([0-9a-f:]*)
 Value PREFIX_LENGTH (\d{1,3})
 Value NEXTHOPIP ([0-9a-f:]*)

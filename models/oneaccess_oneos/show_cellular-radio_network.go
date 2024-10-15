@@ -1,26 +1,26 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowCellularRadioNetwork struct {
-	Operator	string	`json:"OPERATOR"`
-	Signal_strength	string	`json:"SIGNAL_STRENGTH"`
-	Rssi	string	`json:"RSSI"`
-	Rsrq	string	`json:"RSRQ"`
-	Rsrp	string	`json:"RSRP"`
-	Snr	string	`json:"SNR"`
-	Radio_technology	string	`json:"RADIO_TECHNOLOGY"`
-	Register_state	string	`json:"REGISTER_STATE"`
-	Attach_state	string	`json:"ATTACH_STATE"`
-	Resets_loss_registrations	string	`json:"RESETS_LOSS_REGISTRATIONS"`
-	Resets_failed_registrations	string	`json:"RESETS_FAILED_REGISTRATIONS"`
-	Resets_modem	string	`json:"RESETS_MODEM"`
-	Resets_unknown	string	`json:"RESETS_UNKNOWN"`
-	Lac	string	`json:"LAC"`
-	Cell_id	string	`json:"CELL_ID"`
-	Tac	string	`json:"TAC"`
-	Plmn	string	`json:"PLMN"`
+	Operator                    string `json:"OPERATOR"`
+	Resets_unknown              string `json:"RESETS_UNKNOWN"`
+	Cell_id                     string `json:"CELL_ID"`
+	Rsrq                        string `json:"RSRQ"`
+	Snr                         string `json:"SNR"`
+	Attach_state                string `json:"ATTACH_STATE"`
+	Resets_failed_registrations string `json:"RESETS_FAILED_REGISTRATIONS"`
+	Lac                         string `json:"LAC"`
+	Tac                         string `json:"TAC"`
+	Plmn                        string `json:"PLMN"`
+	Signal_strength             string `json:"SIGNAL_STRENGTH"`
+	Rssi                        string `json:"RSSI"`
+	Radio_technology            string `json:"RADIO_TECHNOLOGY"`
+	Register_state              string `json:"REGISTER_STATE"`
+	Resets_modem                string `json:"RESETS_MODEM"`
+	Rsrp                        string `json:"RSRP"`
+	Resets_loss_registrations   string `json:"RESETS_LOSS_REGISTRATIONS"`
 }
 
-var ShowCellularRadioNetwork_Template = `Value Required OPERATOR (.*)
+var ShowCellularRadioNetwork_Template string = `Value Required OPERATOR (.*)
 Value SIGNAL_STRENGTH (.*)
 Value RSSI (\S+)
 Value RSRQ (\S+)

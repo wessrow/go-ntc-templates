@@ -1,13 +1,13 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowSoftwareImage struct {
-	Bank	string	`json:"BANK"`
-	Software	string	`json:"SOFTWARE"`
-	Created	string	`json:"CREATED"`
-	Checksum	string	`json:"CHECKSUM"`
+	Bank     string `json:"BANK"`
+	Software string `json:"SOFTWARE"`
+	Created  string `json:"CREATED"`
+	Checksum string `json:"CHECKSUM"`
 }
 
-var ShowSoftwareImage_Template = `Value Required,Key BANK (Active|Alternate)
+var ShowSoftwareImage_Template string = `Value Required,Key BANK (Active|Alternate)
 Value SOFTWARE (\S+)
 Value CREATED (.*)
 Value CHECKSUM (\S+)

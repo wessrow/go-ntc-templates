@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowNvePeers struct {
-	Interface	string	`json:"INTERFACE"`
-	Vni	string	`json:"VNI"`
-	Type	string	`json:"TYPE"`
-	Peer	string	`json:"PEER"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	State	string	`json:"STATE"`
+	Peer        string `json:"PEER"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	State       string `json:"STATE"`
+	Interface   string `json:"INTERFACE"`
+	Vni         string `json:"VNI"`
+	Type        string `json:"TYPE"`
 }
 
-var ShowNvePeers_Template = `Value INTERFACE (\S+)
+var ShowNvePeers_Template string = `Value INTERFACE (\S+)
 Value VNI (\d+)
 Value TYPE (L2CP|L3CP)
 Value PEER (\d+.\d+.\d+.\d+)

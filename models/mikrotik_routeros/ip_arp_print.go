@@ -1,14 +1,14 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpArpPrint struct {
-	Num	string	`json:"NUM"`
-	Flags	string	`json:"FLAGS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Num         string `json:"NUM"`
+	Flags       string `json:"FLAGS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var IpArpPrint_Template = `Value NUM (\d+)
+var IpArpPrint_Template string = `Value NUM (\d+)
 Value FLAGS ([XIHDPC]+)
 Value IP_ADDRESS (\S+)
 Value MAC_ADDRESS ((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})

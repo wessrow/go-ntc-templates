@@ -1,16 +1,16 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowAssetAll struct {
-	Platform	string	`json:"PLATFORM"`
-	Model	string	`json:"MODEL"`
-	Serial	string	`json:"SERIAL"`
-	Slot	string	`json:"SLOT"`
-	Descr	string	`json:"DESCR"`
-	Lom_status	string	`json:"LOM_STATUS"`
-	Lom_rev	string	`json:"LOM_REV"`
+	Platform   string `json:"PLATFORM"`
+	Model      string `json:"MODEL"`
+	Serial     string `json:"SERIAL"`
+	Slot       string `json:"SLOT"`
+	Descr      string `json:"DESCR"`
+	Lom_status string `json:"LOM_STATUS"`
+	Lom_rev    string `json:"LOM_REV"`
 }
 
-var ShowAssetAll_Template = `Value PLATFORM (\S+)
+var ShowAssetAll_Template string = `Value PLATFORM (\S+)
 Value MODEL (.*)
 Value SERIAL (.*)
 Value SLOT (\d)

@@ -1,15 +1,15 @@
-package arista_eos 
+package arista_eos
 
 type BashDfH struct {
-	File_system	string	`json:"FILE_SYSTEM"`
-	Size	string	`json:"SIZE"`
-	Used	string	`json:"USED"`
-	Avail	string	`json:"AVAIL"`
-	Use_percent	string	`json:"USE_PERCENT"`
-	Mounted_on	string	`json:"MOUNTED_ON"`
+	Mounted_on  string `json:"MOUNTED_ON"`
+	File_system string `json:"FILE_SYSTEM"`
+	Size        string `json:"SIZE"`
+	Used        string `json:"USED"`
+	Avail       string `json:"AVAIL"`
+	Use_percent string `json:"USE_PERCENT"`
 }
 
-var BashDfH_Template = `Value FILE_SYSTEM (\S+)
+var BashDfH_Template string = `Value FILE_SYSTEM (\S+)
 Value SIZE (\S+)
 Value USED (\S+)
 Value AVAIL (\S+)

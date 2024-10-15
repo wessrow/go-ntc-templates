@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpOspfDatabase struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Process_id	string	`json:"PROCESS_ID"`
-	Area	string	`json:"AREA"`
-	Link_id	string	`json:"LINK_ID"`
-	Adv_router	string	`json:"ADV_ROUTER"`
-	Age	string	`json:"AGE"`
-	Link_count	string	`json:"LINK_COUNT"`
-	Tag	string	`json:"TAG"`
+	Tag        string `json:"TAG"`
+	Router_id  string `json:"ROUTER_ID"`
+	Process_id string `json:"PROCESS_ID"`
+	Area       string `json:"AREA"`
+	Link_id    string `json:"LINK_ID"`
+	Adv_router string `json:"ADV_ROUTER"`
+	Age        string `json:"AGE"`
+	Link_count string `json:"LINK_COUNT"`
 }
 
-var ShowIpOspfDatabase_Template = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
+var ShowIpOspfDatabase_Template string = `Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown PROCESS_ID (\d+)
 Value Filldown AREA (\d+\.\d+\.\d+\.\d+|\d+)
 Value LINK_ID (\d+\.\d+\.\d+\.\d+)

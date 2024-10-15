@@ -1,19 +1,19 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowApSummary struct {
-	Ap_name	string	`json:"AP_NAME"`
-	Slot	string	`json:"SLOT"`
-	Ap_model	string	`json:"AP_MODEL"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Radio_mac	string	`json:"RADIO_MAC"`
-	Location	string	`json:"LOCATION"`
-	Country	string	`json:"COUNTRY"`
-	Regulatory_domain	string	`json:"REGULATORY_DOMAIN"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	State	string	`json:"STATE"`
+	Slot              string `json:"SLOT"`
+	Mac_address       string `json:"MAC_ADDRESS"`
+	Location          string `json:"LOCATION"`
+	Country           string `json:"COUNTRY"`
+	Regulatory_domain string `json:"REGULATORY_DOMAIN"`
+	Ip_address        string `json:"IP_ADDRESS"`
+	State             string `json:"STATE"`
+	Ap_name           string `json:"AP_NAME"`
+	Ap_model          string `json:"AP_MODEL"`
+	Radio_mac         string `json:"RADIO_MAC"`
 }
 
-var ShowApSummary_Template = `Value AP_NAME (\S+)
+var ShowApSummary_Template string = `Value AP_NAME (\S+)
 Value SLOT (\d+)
 Value AP_MODEL (\S+)
 Value MAC_ADDRESS ([a-fA-F0-9:\.]+)

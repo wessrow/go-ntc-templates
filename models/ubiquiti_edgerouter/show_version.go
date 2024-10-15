@@ -1,16 +1,16 @@
-package ubiquiti_edgerouter 
+package ubiquiti_edgerouter
 
 type ShowVersion struct {
-	Version	string	`json:"VERSION"`
-	Build_id	string	`json:"BUILD_ID"`
-	Build_on	string	`json:"BUILD_ON"`
-	Copyright	string	`json:"COPYRIGHT"`
-	Hardware_model	string	`json:"HARDWARE_MODEL"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Uptime	string	`json:"UPTIME"`
+	Build_on       string `json:"BUILD_ON"`
+	Copyright      string `json:"COPYRIGHT"`
+	Hardware_model string `json:"HARDWARE_MODEL"`
+	Serial_number  string `json:"SERIAL_NUMBER"`
+	Uptime         string `json:"UPTIME"`
+	Version        string `json:"VERSION"`
+	Build_id       string `json:"BUILD_ID"`
 }
 
-var ShowVersion_Template = `Value VERSION (\S+)
+var ShowVersion_Template string = `Value VERSION (\S+)
 Value BUILD_ID (\S+)
 Value BUILD_ON (.+)
 Value COPYRIGHT (.+)

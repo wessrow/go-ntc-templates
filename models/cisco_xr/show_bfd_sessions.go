@@ -1,12 +1,12 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowBfdSessions struct {
-	Interface	string	`json:"INTERFACE"`
-	Dstaddress	string	`json:"DSTADDRESS"`
-	State	string	`json:"STATE"`
+	Dstaddress string `json:"DSTADDRESS"`
+	State      string `json:"STATE"`
+	Interface  string `json:"INTERFACE"`
 }
 
-var ShowBfdSessions_Template = `Value INTERFACE (.+?)
+var ShowBfdSessions_Template string = `Value INTERFACE (.+?)
 Value DSTADDRESS (\d+\.\d+\.\d+\.\d+)
 Value STATE (\S+)
 

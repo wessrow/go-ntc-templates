@@ -1,23 +1,23 @@
-package aruba_os 
+package aruba_os
 
 type ShowApDatabaseLong struct {
-	Ap_name	string	`json:"AP_NAME"`
-	Group	string	`json:"GROUP"`
-	Ap_model	string	`json:"AP_MODEL"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Status	string	`json:"STATUS"`
-	Flags	string	`json:"FLAGS"`
-	Primary	string	`json:"PRIMARY"`
-	Standby	string	`json:"STANDBY"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Serial	string	`json:"SERIAL"`
-	Port	string	`json:"PORT"`
-	Fqln	string	`json:"FQLN"`
-	Outer_ip	string	`json:"OUTER_IP"`
-	User	string	`json:"USER"`
+	Ap_name     string `json:"AP_NAME"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Flags       string `json:"FLAGS"`
+	Standby     string `json:"STANDBY"`
+	Serial      string `json:"SERIAL"`
+	Port        string `json:"PORT"`
+	Group       string `json:"GROUP"`
+	Ap_model    string `json:"AP_MODEL"`
+	Status      string `json:"STATUS"`
+	User        string `json:"USER"`
+	Primary     string `json:"PRIMARY"`
+	Fqln        string `json:"FQLN"`
+	Outer_ip    string `json:"OUTER_IP"`
 }
 
-var ShowApDatabaseLong_Template = `Value AP_NAME (\S+)
+var ShowApDatabaseLong_Template string = `Value AP_NAME (\S+)
 Value GROUP (\S+)
 Value AP_MODEL (\S+)
 Value IP_ADDRESS ((([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))

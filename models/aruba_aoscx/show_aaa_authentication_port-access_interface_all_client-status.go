@@ -1,13 +1,13 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowAaaAuthenticationPortAccessInterfaceAllClientStatus struct {
-	Client_mac	string	`json:"CLIENT_MAC"`
-	Client_name	string	`json:"CLIENT_NAME"`
-	Session_port	string	`json:"SESSION_PORT"`
-	Role	string	`json:"ROLE"`
+	Client_mac   string `json:"CLIENT_MAC"`
+	Client_name  string `json:"CLIENT_NAME"`
+	Session_port string `json:"SESSION_PORT"`
+	Role         string `json:"ROLE"`
 }
 
-var ShowAaaAuthenticationPortAccessInterfaceAllClientStatus_Template = `Value CLIENT_MAC (\S+)
+var ShowAaaAuthenticationPortAccessInterfaceAllClientStatus_Template string = `Value CLIENT_MAC (\S+)
 Value CLIENT_NAME (\S+)
 Value SESSION_PORT (\S+)
 Value ROLE (\S+)

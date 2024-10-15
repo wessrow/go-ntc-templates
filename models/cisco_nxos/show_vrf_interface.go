@@ -1,13 +1,13 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVrfInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Name	string	`json:"NAME"`
-	Id	string	`json:"ID"`
-	Origin	string	`json:"ORIGIN"`
+	Interface string `json:"INTERFACE"`
+	Name      string `json:"NAME"`
+	Id        string `json:"ID"`
+	Origin    string `json:"ORIGIN"`
 }
 
-var ShowVrfInterface_Template = `Value INTERFACE (\S+)
+var ShowVrfInterface_Template string = `Value INTERFACE (\S+)
 Value NAME (\S+)
 Value ID (\S+)
 Value ORIGIN (\S+)

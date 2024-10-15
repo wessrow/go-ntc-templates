@@ -1,15 +1,15 @@
-package arista_eos 
+package arista_eos
 
 type ShowInterfacesTransceiver struct {
-	Port	string	`json:"PORT"`
-	Temp	string	`json:"TEMP"`
-	Voltage	string	`json:"VOLTAGE"`
-	Bias_current	string	`json:"BIAS_CURRENT"`
-	Tx_power	string	`json:"TX_POWER"`
-	Rx_power	string	`json:"RX_POWER"`
+	Bias_current string `json:"BIAS_CURRENT"`
+	Tx_power     string `json:"TX_POWER"`
+	Rx_power     string `json:"RX_POWER"`
+	Port         string `json:"PORT"`
+	Temp         string `json:"TEMP"`
+	Voltage      string `json:"VOLTAGE"`
 }
 
-var ShowInterfacesTransceiver_Template = `Value PORT (\S+)
+var ShowInterfacesTransceiver_Template string = `Value PORT (\S+)
 Value TEMP (\S+)
 Value VOLTAGE (\S+)
 Value BIAS_CURRENT (\S+)

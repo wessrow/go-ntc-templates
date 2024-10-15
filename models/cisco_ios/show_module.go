@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowModule struct {
-	Module	string	`json:"MODULE"`
-	Switch_number	string	`json:"SWITCH_NUMBER"`
-	Port	string	`json:"PORT"`
-	Cardtype	string	`json:"CARDTYPE"`
-	Model	string	`json:"MODEL"`
-	Serial	string	`json:"SERIAL"`
+	Module        string `json:"MODULE"`
+	Switch_number string `json:"SWITCH_NUMBER"`
+	Port          string `json:"PORT"`
+	Cardtype      string `json:"CARDTYPE"`
+	Model         string `json:"MODEL"`
+	Serial        string `json:"SERIAL"`
 }
 
-var ShowModule_Template = `Value Key MODULE (\d+)
+var ShowModule_Template string = `Value Key MODULE (\d+)
 Value Filldown SWITCH_NUMBER (\d+)
 Value PORT (\d+)
 Value CARDTYPE (\S.+?)

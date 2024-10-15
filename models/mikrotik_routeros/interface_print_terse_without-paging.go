@@ -1,26 +1,26 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type InterfacePrintTerseWithoutPaging struct {
-	Id	string	`json:"ID"`
-	Dynamic	string	`json:"DYNAMIC"`
-	Status	string	`json:"STATUS"`
-	Slave	string	`json:"SLAVE"`
-	Comment	string	`json:"COMMENT"`
-	Name	string	`json:"NAME"`
-	Default_name	string	`json:"DEFAULT_NAME"`
-	Type	string	`json:"TYPE"`
-	Mtu	string	`json:"MTU"`
-	Actual_mtu	string	`json:"ACTUAL_MTU"`
-	L2mtu	string	`json:"L2MTU"`
-	Max_l2mtu	string	`json:"MAX_L2MTU"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Fast_path	string	`json:"FAST_PATH"`
-	Last_link_down_time	string	`json:"LAST_LINK_DOWN_TIME"`
-	Last_link_up_time	string	`json:"LAST_LINK_UP_TIME"`
-	Link_downs	string	`json:"LINK_DOWNS"`
+	Slave               string `json:"SLAVE"`
+	Name                string `json:"NAME"`
+	Default_name        string `json:"DEFAULT_NAME"`
+	Mac_address         string `json:"MAC_ADDRESS"`
+	Dynamic             string `json:"DYNAMIC"`
+	Mtu                 string `json:"MTU"`
+	Last_link_down_time string `json:"LAST_LINK_DOWN_TIME"`
+	Link_downs          string `json:"LINK_DOWNS"`
+	Type                string `json:"TYPE"`
+	Actual_mtu          string `json:"ACTUAL_MTU"`
+	L2mtu               string `json:"L2MTU"`
+	Last_link_up_time   string `json:"LAST_LINK_UP_TIME"`
+	Status              string `json:"STATUS"`
+	Comment             string `json:"COMMENT"`
+	Max_l2mtu           string `json:"MAX_L2MTU"`
+	Fast_path           string `json:"FAST_PATH"`
+	Id                  string `json:"ID"`
 }
 
-var InterfacePrintTerseWithoutPaging_Template = `Value ID (\d+)
+var InterfacePrintTerseWithoutPaging_Template string = `Value ID (\d+)
 Value DYNAMIC (D)
 Value STATUS (X|R)
 Value SLAVE (S)

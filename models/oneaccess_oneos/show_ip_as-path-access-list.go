@@ -1,11 +1,11 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowIpAsPathAccessList struct {
-	Name	string	`json:"NAME"`
-	Entries	[]string	`json:"ENTRIES"`
+	Name    string   `json:"NAME"`
+	Entries []string `json:"ENTRIES"`
 }
 
-var ShowIpAsPathAccessList_Template = `Value Required NAME (\S+)
+var ShowIpAsPathAccessList_Template string = `Value Required NAME (\S+)
 Value Required,List ENTRIES (.*)
 
 Start

@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowEtherchannelSummary struct {
-	Group	string	`json:"GROUP"`
-	Bundle_name	string	`json:"BUNDLE_NAME"`
-	Bundle_status	string	`json:"BUNDLE_STATUS"`
-	Bundle_protocol	string	`json:"BUNDLE_PROTOCOL"`
-	Member_interface	[]string	`json:"MEMBER_INTERFACE"`
-	Member_interface_status	[]string	`json:"MEMBER_INTERFACE_STATUS"`
+	Member_interface        []string `json:"MEMBER_INTERFACE"`
+	Member_interface_status []string `json:"MEMBER_INTERFACE_STATUS"`
+	Group                   string   `json:"GROUP"`
+	Bundle_name             string   `json:"BUNDLE_NAME"`
+	Bundle_status           string   `json:"BUNDLE_STATUS"`
+	Bundle_protocol         string   `json:"BUNDLE_PROTOCOL"`
 }
 
-var ShowEtherchannelSummary_Template = `Value Required GROUP (\d+)
+var ShowEtherchannelSummary_Template string = `Value Required GROUP (\d+)
 Value BUNDLE_NAME (\S+)
 Value BUNDLE_STATUS (\D+)
 Value BUNDLE_PROTOCOL (\S+)

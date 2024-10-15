@@ -1,16 +1,16 @@
-package alcatel_sros 
+package alcatel_sros
 
 type ShowRouterRsvpInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Total_sessions	string	`json:"TOTAL_SESSIONS"`
-	Active_sessions	string	`json:"ACTIVE_SESSIONS"`
-	Total_bw	string	`json:"TOTAL_BW"`
-	Resv_bw	string	`json:"RESV_BW"`
-	Admin_state	string	`json:"ADMIN_STATE"`
-	Oper_state	string	`json:"OPER_STATE"`
+	Active_sessions string `json:"ACTIVE_SESSIONS"`
+	Total_bw        string `json:"TOTAL_BW"`
+	Resv_bw         string `json:"RESV_BW"`
+	Admin_state     string `json:"ADMIN_STATE"`
+	Oper_state      string `json:"OPER_STATE"`
+	Interface       string `json:"INTERFACE"`
+	Total_sessions  string `json:"TOTAL_SESSIONS"`
 }
 
-var ShowRouterRsvpInterface_Template = `Value Required INTERFACE (\S+)
+var ShowRouterRsvpInterface_Template string = `Value Required INTERFACE (\S+)
 Value Required TOTAL_SESSIONS (\d+|-)
 Value Required ACTIVE_SESSIONS (\d+|-)
 Value Required TOTAL_BW (\d+|-)

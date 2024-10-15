@@ -1,24 +1,24 @@
-package zte_zxros 
+package zte_zxros
 
 type ShowInterface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Interface_index	string	`json:"INTERFACE_INDEX"`
-	Description	string	`json:"DESCRIPTION"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Ipv4_protocol	string	`json:"IPV4_PROTOCOL"`
-	Ipv6_protocol	string	`json:"IPV6_PROTOCOL"`
-	Detect_status	string	`json:"DETECT_STATUS"`
-	Uptime	string	`json:"UPTIME"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mask	string	`json:"MASK"`
-	Bandwith	string	`json:"BANDWITH"`
-	Mtu	[]string	`json:"MTU"`
+	Link_status     string   `json:"LINK_STATUS"`
+	Protocol_status string   `json:"PROTOCOL_STATUS"`
+	Ipv6_protocol   string   `json:"IPV6_PROTOCOL"`
+	Hardware_type   string   `json:"HARDWARE_TYPE"`
+	Mask            string   `json:"MASK"`
+	Interface       string   `json:"INTERFACE"`
+	Detect_status   string   `json:"DETECT_STATUS"`
+	Uptime          string   `json:"UPTIME"`
+	Mtu             []string `json:"MTU"`
+	Description     string   `json:"DESCRIPTION"`
+	Interface_index string   `json:"INTERFACE_INDEX"`
+	Ipv4_protocol   string   `json:"IPV4_PROTOCOL"`
+	Mac_address     string   `json:"MAC_ADDRESS"`
+	Ip_address      string   `json:"IP_ADDRESS"`
+	Bandwith        string   `json:"BANDWITH"`
 }
 
-var ShowInterface_Template = `Value Required INTERFACE (\S+)
+var ShowInterface_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.+?)
 Value INTERFACE_INDEX (\d+)
 Value DESCRIPTION (.*?)

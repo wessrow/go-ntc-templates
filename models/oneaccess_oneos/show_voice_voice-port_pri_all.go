@@ -1,49 +1,49 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowVoiceVoicePortPriAll struct {
-	Port	string	`json:"PORT"`
-	Physical_type	string	`json:"PHYSICAL_TYPE"`
-	Protocol_descriptor	string	`json:"PROTOCOL_DESCRIPTOR"`
-	Config_state	string	`json:"CONFIG_STATE"`
-	Loop_state	string	`json:"LOOP_STATE"`
-	Framing	string	`json:"FRAMING"`
-	L1_status	string	`json:"L1_STATUS"`
-	Ais	string	`json:"AIS"`
-	Los	string	`json:"LOS"`
-	Rai	string	`json:"RAI"`
-	Pri_ais_occurrences	string	`json:"PRI_AIS_OCCURRENCES"`
-	Pri_los_occurrences	string	`json:"PRI_LOS_OCCURRENCES"`
-	Pri_rai_occurrences	string	`json:"PRI_RAI_OCCURRENCES"`
-	L2_status	string	`json:"L2_STATUS"`
-	Pri_tx_frames_on_d_channel	string	`json:"PRI_TX_FRAMES_ON_D_CHANNEL"`
-	Pri_rx_frames_on_d_channel	string	`json:"PRI_RX_FRAMES_ON_D_CHANNEL"`
-	Attached_voip_dial_peer	string	`json:"ATTACHED_VOIP_DIAL_PEER"`
-	Nbr_voice_communication	string	`json:"NBR_VOICE_COMMunication"`
-	Outgoing_calls	string	`json:"OUTGOING_CALLS"`
-	Outgoing_failures	string	`json:"OUTGOING_FAILURES"`
-	Outgoing_failures_physical_intf_down	string	`json:"OUTGOING_FAILURES_PHYSICAL_INTF_DOWN"`
-	Outgoing_failures_0_normal	string	`json:"OUTGOING_FAILURES_0_NORMAL"`
-	Outgoing_failures_1_normal	string	`json:"OUTGOING_FAILURES_1_NORMAL"`
-	Outgoing_failures_16_normal	string	`json:"OUTGOING_FAILURES_16_NORMAL"`
-	Outgoing_failures_17_busy	string	`json:"OUTGOING_FAILURES_17_BUSY"`
-	Outgoing_failures_18_no_answer	string	`json:"OUTGOING_FAILURES_18_NO_ANSWER"`
-	Outgoing_failures_2_unavailable_resources	string	`json:"OUTGOING_FAILURES_2_UNAVAILABLE_RESOURCES"`
-	Outgoing_failures_3_unavailable_service	string	`json:"OUTGOING_FAILURES_3_UNAVAILABLE_SERVICE"`
-	Outgoing_failures_4_service_not_provided	string	`json:"OUTGOING_FAILURES_4_SERVICE_NOT_PROVIDED"`
-	Outgoing_failures_5_invalid_message	string	`json:"OUTGOING_FAILURES_5_INVALID_MESSAGE"`
-	Outgoing_failures_6_protocol	string	`json:"OUTGOING_FAILURES_6_PROTOCOL"`
-	Outgoing_failures_7_interworking	string	`json:"OUTGOING_FAILURES_7_INTERWORKING"`
-	Incoming_calls	string	`json:"INCOMING_CALLS"`
-	Incoming_calls_backup_invoked	string	`json:"INCOMING_CALLS_BACKUP_INVOKED"`
-	Incoming_failures	string	`json:"INCOMING_FAILURES"`
-	Incoming_failures_remote	string	`json:"INCOMING_FAILURES_REMOTE"`
-	Incoming_failures_unkown_number	string	`json:"INCOMING_FAILURES_UNKOWN_NUMBER"`
-	Incoming_failures_dsp_unavailable	string	`json:"INCOMING_FAILURES_DSP_UNAVAILABLE"`
-	Incoming_failures_no_voip_resource_available	string	`json:"INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE"`
-	Incoming_failures_not_specified	string	`json:"INCOMING_FAILURES_NOT_SPECIFIED"`
+	Protocol_descriptor                          string `json:"PROTOCOL_DESCRIPTOR"`
+	Ais                                          string `json:"AIS"`
+	L2_status                                    string `json:"L2_STATUS"`
+	Outgoing_failures_7_interworking             string `json:"OUTGOING_FAILURES_7_INTERWORKING"`
+	Attached_voip_dial_peer                      string `json:"ATTACHED_VOIP_DIAL_PEER"`
+	Port                                         string `json:"PORT"`
+	Config_state                                 string `json:"CONFIG_STATE"`
+	Los                                          string `json:"LOS"`
+	Pri_rai_occurrences                          string `json:"PRI_RAI_OCCURRENCES"`
+	Outgoing_failures_2_unavailable_resources    string `json:"OUTGOING_FAILURES_2_UNAVAILABLE_RESOURCES"`
+	Incoming_calls                               string `json:"INCOMING_CALLS"`
+	Physical_type                                string `json:"PHYSICAL_TYPE"`
+	Outgoing_failures_1_normal                   string `json:"OUTGOING_FAILURES_1_NORMAL"`
+	Outgoing_failures_16_normal                  string `json:"OUTGOING_FAILURES_16_NORMAL"`
+	Outgoing_failures_17_busy                    string `json:"OUTGOING_FAILURES_17_BUSY"`
+	Incoming_failures_dsp_unavailable            string `json:"INCOMING_FAILURES_DSP_UNAVAILABLE"`
+	Incoming_failures_no_voip_resource_available string `json:"INCOMING_FAILURES_NO_VOIP_RESOURCE_AVAILABLE"`
+	Incoming_failures_not_specified              string `json:"INCOMING_FAILURES_NOT_SPECIFIED"`
+	Outgoing_failures_3_unavailable_service      string `json:"OUTGOING_FAILURES_3_UNAVAILABLE_SERVICE"`
+	Outgoing_failures_5_invalid_message          string `json:"OUTGOING_FAILURES_5_INVALID_MESSAGE"`
+	Incoming_failures                            string `json:"INCOMING_FAILURES"`
+	Incoming_failures_unkown_number              string `json:"INCOMING_FAILURES_UNKOWN_NUMBER"`
+	Incoming_failures_remote                     string `json:"INCOMING_FAILURES_REMOTE"`
+	Rai                                          string `json:"RAI"`
+	Pri_rx_frames_on_d_channel                   string `json:"PRI_RX_FRAMES_ON_D_CHANNEL"`
+	Nbr_voice_communication                      string `json:"NBR_VOICE_COMMunication"`
+	Incoming_calls_backup_invoked                string `json:"INCOMING_CALLS_BACKUP_INVOKED"`
+	Outgoing_calls                               string `json:"OUTGOING_CALLS"`
+	Outgoing_failures                            string `json:"OUTGOING_FAILURES"`
+	Outgoing_failures_18_no_answer               string `json:"OUTGOING_FAILURES_18_NO_ANSWER"`
+	L1_status                                    string `json:"L1_STATUS"`
+	Outgoing_failures_physical_intf_down         string `json:"OUTGOING_FAILURES_PHYSICAL_INTF_DOWN"`
+	Outgoing_failures_0_normal                   string `json:"OUTGOING_FAILURES_0_NORMAL"`
+	Pri_tx_frames_on_d_channel                   string `json:"PRI_TX_FRAMES_ON_D_CHANNEL"`
+	Outgoing_failures_4_service_not_provided     string `json:"OUTGOING_FAILURES_4_SERVICE_NOT_PROVIDED"`
+	Outgoing_failures_6_protocol                 string `json:"OUTGOING_FAILURES_6_PROTOCOL"`
+	Loop_state                                   string `json:"LOOP_STATE"`
+	Framing                                      string `json:"FRAMING"`
+	Pri_ais_occurrences                          string `json:"PRI_AIS_OCCURRENCES"`
+	Pri_los_occurrences                          string `json:"PRI_LOS_OCCURRENCES"`
 }
 
-var ShowVoiceVoicePortPriAll_Template = `Value Required PORT (\d+\/\d+)
+var ShowVoiceVoicePortPriAll_Template string = `Value Required PORT (\d+\/\d+)
 Value PHYSICAL_TYPE (\S+)
 Value PROTOCOL_DESCRIPTOR (\S+)
 Value CONFIG_STATE (\S+)

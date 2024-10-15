@@ -1,13 +1,13 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayMacAddress struct {
-	Destination_address	string	`json:"DESTINATION_ADDRESS"`
-	Destination_port	string	`json:"DESTINATION_PORT"`
-	Type	string	`json:"TYPE"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Vlan_id             string `json:"VLAN_ID"`
+	Destination_address string `json:"DESTINATION_ADDRESS"`
+	Destination_port    string `json:"DESTINATION_PORT"`
+	Type                string `json:"TYPE"`
 }
 
-var DisplayMacAddress_Template = `Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4})
+var DisplayMacAddress_Template string = `Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4})
 Value DESTINATION_PORT ([^,\s]+)
 Value TYPE (\S+)
 Value VLAN_ID (\d+)

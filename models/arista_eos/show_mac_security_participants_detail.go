@@ -1,22 +1,22 @@
-package arista_eos 
+package arista_eos
 
 type ShowMacSecurityParticipantsDetail struct {
-	Interface	string	`json:"INTERFACE"`
-	Ckn	string	`json:"CKN"`
-	Message_id	string	`json:"MESSAGE_ID"`
-	Elected_self	string	`json:"ELECTED_SELF"`
-	Success	string	`json:"SUCCESS"`
-	Principal	string	`json:"PRINCIPAL"`
-	Default	string	`json:"DEFAULT"`
-	Key_server_sci	string	`json:"KEY_SERVER_SCI"`
-	Sak_transmit	string	`json:"SAK_TRANSMIT"`
-	Llpn_exhaustion	string	`json:"LLPN_EXHAUSTION"`
-	Distributed_key_id	string	`json:"DISTRIBUTED_KEY_ID"`
-	Live_peer_list	string	`json:"LIVE_PEER_LIST"`
-	Potential_peer_list	string	`json:"POTENTIAL_PEER_LIST"`
+	Interface           string `json:"INTERFACE"`
+	Ckn                 string `json:"CKN"`
+	Message_id          string `json:"MESSAGE_ID"`
+	Elected_self        string `json:"ELECTED_SELF"`
+	Principal           string `json:"PRINCIPAL"`
+	Llpn_exhaustion     string `json:"LLPN_EXHAUSTION"`
+	Potential_peer_list string `json:"POTENTIAL_PEER_LIST"`
+	Success             string `json:"SUCCESS"`
+	Default             string `json:"DEFAULT"`
+	Key_server_sci      string `json:"KEY_SERVER_SCI"`
+	Sak_transmit        string `json:"SAK_TRANSMIT"`
+	Distributed_key_id  string `json:"DISTRIBUTED_KEY_ID"`
+	Live_peer_list      string `json:"LIVE_PEER_LIST"`
 }
 
-var ShowMacSecurityParticipantsDetail_Template = `Value Filldown INTERFACE (\S+)
+var ShowMacSecurityParticipantsDetail_Template string = `Value Filldown INTERFACE (\S+)
 Value CKN (\S+)
 Value MESSAGE_ID (\S+)
 Value ELECTED_SELF (\S+)

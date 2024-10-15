@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowIpOspfNeighbor struct {
-	Ospf_pid	string	`json:"OSPF_PID"`
-	Vrf	string	`json:"VRF"`
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	State	string	`json:"STATE"`
-	Uptime	string	`json:"UPTIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Interface   string `json:"INTERFACE"`
+	Ospf_pid    string `json:"OSPF_PID"`
+	Vrf         string `json:"VRF"`
+	Neighbor_id string `json:"NEIGHBOR_ID"`
+	State       string `json:"STATE"`
+	Uptime      string `json:"UPTIME"`
+	Ip_address  string `json:"IP_ADDRESS"`
 }
 
-var ShowIpOspfNeighbor_Template = `Value Filldown OSPF_PID (\S+)
+var ShowIpOspfNeighbor_Template string = `Value Filldown OSPF_PID (\S+)
 Value Filldown VRF (\S+)
 Value NEIGHBOR_ID (\d+\.\d+\.\d+\.\d+)
 Value STATE (\S+.\/.\S+)

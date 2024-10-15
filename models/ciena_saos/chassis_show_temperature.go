@@ -1,12 +1,12 @@
-package ciena_saos 
+package ciena_saos
 
 type ChassisShowTemperature struct {
-	Current	string	`json:"CURRENT"`
-	Low	string	`json:"LOW"`
-	High	string	`json:"HIGH"`
+	Current string `json:"CURRENT"`
+	Low     string `json:"LOW"`
+	High    string `json:"HIGH"`
 }
 
-var ChassisShowTemperature_Template = `Value CURRENT (\d+\s*\w+)
+var ChassisShowTemperature_Template string = `Value CURRENT (\d+\s*\w+)
 Value LOW (\d+\s*\w+)
 Value HIGH (\d+\s*\w+)
 

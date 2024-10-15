@@ -1,18 +1,18 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpOspfInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Instance	string	`json:"INSTANCE"`
-	Vrf	string	`json:"VRF"`
-	Area	string	`json:"AREA"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Cost	string	`json:"COST"`
-	State	string	`json:"STATE"`
-	Neighbors	string	`json:"NEIGHBORS"`
+	State         string `json:"STATE"`
+	Neighbors     string `json:"NEIGHBORS"`
+	Instance      string `json:"INSTANCE"`
+	Vrf           string `json:"VRF"`
+	Ip_address    string `json:"IP_ADDRESS"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Cost          string `json:"COST"`
+	Interface     string `json:"INTERFACE"`
+	Area          string `json:"AREA"`
 }
 
-var ShowIpOspfInterfaceBrief_Template = `Value INTERFACE (\S+)
+var ShowIpOspfInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value INSTANCE (\d+)
 Value VRF (\S+)
 Value AREA (\d+\.\d+\.\d+\.\d+)

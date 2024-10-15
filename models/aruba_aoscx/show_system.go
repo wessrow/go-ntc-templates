@@ -1,22 +1,22 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowSystem struct {
-	Hostname	string	`json:"HOSTNAME"`
-	Contact	string	`json:"CONTACT"`
-	Location	string	`json:"LOCATION"`
-	Vendor	string	`json:"VENDOR"`
-	Product	string	`json:"PRODUCT"`
-	Serial	string	`json:"SERIAL"`
-	Base_mac	string	`json:"BASE_MAC"`
-	Version	string	`json:"VERSION"`
-	Time_zone	string	`json:"TIME_ZONE"`
-	Uptime_weeks	string	`json:"UPTIME_WEEKS"`
-	Uptime_days	string	`json:"UPTIME_DAYS"`
-	Uptime_hours	string	`json:"UPTIME_HOURS"`
-	Uptime_minutes	string	`json:"UPTIME_MINUTES"`
+	Uptime_days    string `json:"UPTIME_DAYS"`
+	Hostname       string `json:"HOSTNAME"`
+	Location       string `json:"LOCATION"`
+	Vendor         string `json:"VENDOR"`
+	Uptime_weeks   string `json:"UPTIME_WEEKS"`
+	Version        string `json:"VERSION"`
+	Time_zone      string `json:"TIME_ZONE"`
+	Uptime_hours   string `json:"UPTIME_HOURS"`
+	Uptime_minutes string `json:"UPTIME_MINUTES"`
+	Contact        string `json:"CONTACT"`
+	Product        string `json:"PRODUCT"`
+	Serial         string `json:"SERIAL"`
+	Base_mac       string `json:"BASE_MAC"`
 }
 
-var ShowSystem_Template = `Value Required HOSTNAME (\S+)
+var ShowSystem_Template string = `Value Required HOSTNAME (\S+)
 Value CONTACT (\S+)
 Value LOCATION (\S+)
 Value VENDOR (\S+)

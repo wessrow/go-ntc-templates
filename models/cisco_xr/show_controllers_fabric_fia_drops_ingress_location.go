@@ -1,38 +1,38 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowControllersFabricFiaDropsIngressLocation struct {
-	Fia	string	`json:"FIA"`
-	Category	string	`json:"CATEGORY"`
-	From_spaui_drop_0	string	`json:"FROM_SPAUI_DROP_0"`
-	Accpt_tbl_0	string	`json:"ACCPT_TBL_0"`
-	Ctl_len_0	string	`json:"CTL_LEN_0"`
-	Short_pkt_0	string	`json:"SHORT_PKT_0"`
-	Max_pkt_len_0	string	`json:"MAX_PKT_LEN_0"`
-	Min_pkt_len_0	string	`json:"MIN_PKT_LEN_0"`
-	From_spaui_drop_1	string	`json:"FROM_SPAUI_DROP_1"`
-	Accpt_tbl_1	string	`json:"ACCPT_TBL_1"`
-	Ctl_len_1	string	`json:"CTL_LEN_1"`
-	Short_pkt_1	string	`json:"SHORT_PKT_1"`
-	Max_pkt_len_1	string	`json:"MAX_PKT_LEN_1"`
-	Min_pkt_len_1	string	`json:"MIN_PKT_LEN_1"`
-	Tail_drp	string	`json:"TAIL_DRP"`
-	Vqi_drp	string	`json:"VQI_DRP"`
-	Header_parsing_drp	string	`json:"HEADER_PARSING_DRP"`
-	Pw_to_ni_drp	string	`json:"PW_TO_NI_DRP"`
-	Ni_from_pw_drp	string	`json:"NI_FROM_PW_DRP"`
-	Sp0_crc_err	string	`json:"SP0_CRC_ERR"`
-	Sp0_bad_align	string	`json:"SP0_BAD_ALIGN"`
-	Sp0_bad_code	string	`json:"SP0_BAD_CODE"`
-	Sp0_align_fail	string	`json:"SP0_ALIGN_FAIL"`
-	Sp0_prot_err	string	`json:"SP0_PROT_ERR"`
-	Sp1_crc_err	string	`json:"SP1_CRC_ERR"`
-	Sp1_bad_align	string	`json:"SP1_BAD_ALIGN"`
-	Sp1_bad_code	string	`json:"SP1_BAD_CODE"`
-	Sp1_align_fail	string	`json:"SP1_ALIGN_FAIL"`
-	Sp1_prot_err	string	`json:"SP1_PROT_ERR"`
+	Max_pkt_len_1      string `json:"MAX_PKT_LEN_1"`
+	Ctl_len_0          string `json:"CTL_LEN_0"`
+	Min_pkt_len_0      string `json:"MIN_PKT_LEN_0"`
+	From_spaui_drop_1  string `json:"FROM_SPAUI_DROP_1"`
+	Header_parsing_drp string `json:"HEADER_PARSING_DRP"`
+	Sp0_prot_err       string `json:"SP0_PROT_ERR"`
+	Accpt_tbl_0        string `json:"ACCPT_TBL_0"`
+	Min_pkt_len_1      string `json:"MIN_PKT_LEN_1"`
+	Sp1_bad_align      string `json:"SP1_BAD_ALIGN"`
+	Ctl_len_1          string `json:"CTL_LEN_1"`
+	Sp0_bad_align      string `json:"SP0_BAD_ALIGN"`
+	Sp0_bad_code       string `json:"SP0_BAD_CODE"`
+	Sp1_align_fail     string `json:"SP1_ALIGN_FAIL"`
+	Fia                string `json:"FIA"`
+	Category           string `json:"CATEGORY"`
+	Sp1_prot_err       string `json:"SP1_PROT_ERR"`
+	Short_pkt_0        string `json:"SHORT_PKT_0"`
+	Short_pkt_1        string `json:"SHORT_PKT_1"`
+	Tail_drp           string `json:"TAIL_DRP"`
+	Pw_to_ni_drp       string `json:"PW_TO_NI_DRP"`
+	Sp1_crc_err        string `json:"SP1_CRC_ERR"`
+	Sp1_bad_code       string `json:"SP1_BAD_CODE"`
+	Max_pkt_len_0      string `json:"MAX_PKT_LEN_0"`
+	Accpt_tbl_1        string `json:"ACCPT_TBL_1"`
+	Vqi_drp            string `json:"VQI_DRP"`
+	Sp0_crc_err        string `json:"SP0_CRC_ERR"`
+	From_spaui_drop_0  string `json:"FROM_SPAUI_DROP_0"`
+	Ni_from_pw_drp     string `json:"NI_FROM_PW_DRP"`
+	Sp0_align_fail     string `json:"SP0_ALIGN_FAIL"`
 }
 
-var ShowControllersFabricFiaDropsIngressLocation_Template = `Value FIA (\S+)
+var ShowControllersFabricFiaDropsIngressLocation_Template string = `Value FIA (\S+)
 Value CATEGORY (\S+)
 Value FROM_SPAUI_DROP_0 (\d+)
 Value ACCPT_TBL_0 (\d+)

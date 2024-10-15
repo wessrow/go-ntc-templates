@@ -1,20 +1,20 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowInterfacesBrief struct {
-	Interface	string	`json:"interface"`
-	Linkstate	string	`json:"linkstate"`
-	Portstate	string	`json:"portstate"`
-	Duplex	string	`json:"duplex"`
-	Speed	string	`json:"speed"`
-	Trunkid	string	`json:"trunkid"`
-	Tagonly	string	`json:"tagonly"`
-	Pvid	string	`json:"pvid"`
-	Priority	string	`json:"priority"`
-	Mac	string	`json:"mac"`
-	Name	string	`json:"name"`
+	Duplex    string `json:"duplex"`
+	Tagonly   string `json:"tagonly"`
+	Linkstate string `json:"linkstate"`
+	Portstate string `json:"portstate"`
+	Trunkid   string `json:"trunkid"`
+	Pvid      string `json:"pvid"`
+	Priority  string `json:"priority"`
+	Mac       string `json:"mac"`
+	Name      string `json:"name"`
+	Interface string `json:"interface"`
+	Speed     string `json:"speed"`
 }
 
-var ShowInterfacesBrief_Template = `Value interface (\S+)
+var ShowInterfacesBrief_Template string = `Value interface (\S+)
 Value linkstate (Up|Disable|Down|ERR-DIS)
 Value portstate ([a-zA-Z\/]+)
 Value duplex ([a-zA-Z\/]+)

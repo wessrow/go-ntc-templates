@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpv6Route struct {
-	Protocol	string	`json:"PROTOCOL"`
-	Network	string	`json:"NETWORK"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_if	string	`json:"NEXTHOP_IF"`
+	Nexthop_ip string `json:"NEXTHOP_IP"`
+	Nexthop_if string `json:"NEXTHOP_IF"`
+	Protocol   string `json:"PROTOCOL"`
+	Network    string `json:"NETWORK"`
+	Distance   string `json:"DISTANCE"`
+	Metric     string `json:"METRIC"`
 }
 
-var ShowIpv6Route_Template = `Value Filldown PROTOCOL (\w{1,4})
+var ShowIpv6Route_Template string = `Value Filldown PROTOCOL (\w{1,4})
 Value Filldown NETWORK ([A-Za-z0-9:]+/\d{1,3}(?:/\d{2})?)
 Value Filldown DISTANCE (\d+)
 Value Filldown METRIC (\d+)

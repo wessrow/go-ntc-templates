@@ -1,11 +1,11 @@
-package dell_powerconnect 
+package dell_powerconnect
 
 type ShowInterfacesDescription struct {
-	Interface	string	`json:"INTERFACE"`
-	Description	string	`json:"DESCRIPTION"`
+	Interface   string `json:"INTERFACE"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var ShowInterfacesDescription_Template = `Value INTERFACE (\S+)
+var ShowInterfacesDescription_Template string = `Value INTERFACE (\S+)
 Value DESCRIPTION (\S*)
 
 Start

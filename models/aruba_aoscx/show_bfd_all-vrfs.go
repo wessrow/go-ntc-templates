@@ -1,19 +1,19 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowBfdAllVrfs struct {
-	Admin_status	string	`json:"ADMIN_STATUS"`
-	Src_ip	string	`json:"SRC_IP"`
-	Session	string	`json:"SESSION"`
-	Interface	string	`json:"INTERFACE"`
-	Vrf	string	`json:"VRF"`
-	Source_ip	string	`json:"SOURCE_IP"`
-	Destination_ip	string	`json:"DESTINATION_IP"`
-	Echo	string	`json:"ECHO"`
-	State	string	`json:"STATE"`
-	Application	string	`json:"APPLICATION"`
+	Vrf            string `json:"VRF"`
+	Source_ip      string `json:"SOURCE_IP"`
+	Destination_ip string `json:"DESTINATION_IP"`
+	Echo           string `json:"ECHO"`
+	State          string `json:"STATE"`
+	Admin_status   string `json:"ADMIN_STATUS"`
+	Src_ip         string `json:"SRC_IP"`
+	Session        string `json:"SESSION"`
+	Interface      string `json:"INTERFACE"`
+	Application    string `json:"APPLICATION"`
 }
 
-var ShowBfdAllVrfs_Template = `Value Filldown ADMIN_STATUS (\w+)
+var ShowBfdAllVrfs_Template string = `Value Filldown ADMIN_STATUS (\w+)
 Value Filldown SRC_IP (\S+)
 Value SESSION (\d+)
 Value INTERFACE (\S+)

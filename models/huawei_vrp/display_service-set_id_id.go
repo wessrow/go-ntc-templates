@@ -1,22 +1,22 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayServiceSetIdId struct {
-	Id	string	`json:"ID"`
-	Name	string	`json:"NAME"`
-	Ssid	string	`json:"SSID"`
-	Hide_ssid	string	`json:"HIDE_SSID"`
-	User_isolate	string	`json:"USER_ISOLATE"`
-	Type	string	`json:"TYPE"`
-	Max_nb_user	string	`json:"MAX_NB_USER"`
-	Assoc_timeout	string	`json:"ASSOC_TIMEOUT"`
-	Traffic_profile_name	string	`json:"TRAFFIC_PROFILE_NAME"`
-	Security_profile_name	string	`json:"SECURITY_PROFILE_NAME"`
-	Wlan_bss_interface	string	`json:"WLAN_BSS_INTERFACE"`
-	Igmp_mode	string	`json:"IGMP_MODE"`
-	Forward_mode	string	`json:"FORWARD_MODE"`
+	Forward_mode          string `json:"FORWARD_MODE"`
+	Id                    string `json:"ID"`
+	User_isolate          string `json:"USER_ISOLATE"`
+	Max_nb_user           string `json:"MAX_NB_USER"`
+	Wlan_bss_interface    string `json:"WLAN_BSS_INTERFACE"`
+	Igmp_mode             string `json:"IGMP_MODE"`
+	Traffic_profile_name  string `json:"TRAFFIC_PROFILE_NAME"`
+	Security_profile_name string `json:"SECURITY_PROFILE_NAME"`
+	Name                  string `json:"NAME"`
+	Ssid                  string `json:"SSID"`
+	Hide_ssid             string `json:"HIDE_SSID"`
+	Type                  string `json:"TYPE"`
+	Assoc_timeout         string `json:"ASSOC_TIMEOUT"`
 }
 
-var DisplayServiceSetIdId_Template = `Value ID (\d+)
+var DisplayServiceSetIdId_Template string = `Value ID (\d+)
 Value NAME (\S+)
 Value SSID (\S+)
 Value HIDE_SSID (disable|enable)

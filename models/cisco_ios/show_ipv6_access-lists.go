@@ -1,22 +1,22 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpv6AccessLists struct {
-	Acl_name	string	`json:"ACL_NAME"`
-	Action	string	`json:"ACTION"`
-	Protocol	string	`json:"PROTOCOL"`
-	Ipv6_source	string	`json:"IPV6_SOURCE"`
-	Ipv6_destination	string	`json:"IPV6_DESTINATION"`
-	Src_port_match	string	`json:"SRC_PORT_MATCH"`
-	Sequence	string	`json:"SEQUENCE"`
-	Port_number	string	`json:"PORT_NUMBER"`
-	Log	string	`json:"LOG"`
-	Authentification	string	`json:"AUTHENTIFICATION"`
-	Routing	string	`json:"ROUTING"`
-	Src_port_range_start	string	`json:"SRC_PORT_RANGE_START"`
-	Src_port_range_end	string	`json:"SRC_PORT_RANGE_END"`
+	Routing              string `json:"ROUTING"`
+	Src_port_range_start string `json:"SRC_PORT_RANGE_START"`
+	Src_port_range_end   string `json:"SRC_PORT_RANGE_END"`
+	Action               string `json:"ACTION"`
+	Ipv6_destination     string `json:"IPV6_DESTINATION"`
+	Sequence             string `json:"SEQUENCE"`
+	Log                  string `json:"LOG"`
+	Authentification     string `json:"AUTHENTIFICATION"`
+	Acl_name             string `json:"ACL_NAME"`
+	Protocol             string `json:"PROTOCOL"`
+	Ipv6_source          string `json:"IPV6_SOURCE"`
+	Src_port_match       string `json:"SRC_PORT_MATCH"`
+	Port_number          string `json:"PORT_NUMBER"`
 }
 
-var ShowIpv6AccessLists_Template = `Value Required,Filldown ACL_NAME (\S+)
+var ShowIpv6AccessLists_Template string = `Value Required,Filldown ACL_NAME (\S+)
 Value ACTION (permit|deny)
 Value PROTOCOL (\S+)
 Value IPV6_SOURCE ([A-Za-z0-9:]+(\/(?:\d{1,3})|))

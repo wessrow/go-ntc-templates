@@ -1,20 +1,20 @@
-package ciena_saos 
+package ciena_saos
 
 type PortShow struct {
-	Name	string	`json:"NAME"`
-	Type	string	`json:"TYPE"`
-	Link	string	`json:"LINK"`
-	Duration	string	`json:"DURATION"`
-	Xcvr	string	`json:"XCVR"`
-	Stp	string	`json:"STP"`
-	Mode	string	`json:"MODE"`
-	Autoneg	string	`json:"AUTONEG"`
-	Admin_link	string	`json:"ADMIN_LINK"`
-	Admin_mode	string	`json:"ADMIN_MODE"`
-	Admin_autoneg	string	`json:"ADMIN_AUTONEG"`
+	Name          string `json:"NAME"`
+	Duration      string `json:"DURATION"`
+	Xcvr          string `json:"XCVR"`
+	Admin_link    string `json:"ADMIN_LINK"`
+	Admin_mode    string `json:"ADMIN_MODE"`
+	Admin_autoneg string `json:"ADMIN_AUTONEG"`
+	Type          string `json:"TYPE"`
+	Link          string `json:"LINK"`
+	Stp           string `json:"STP"`
+	Mode          string `json:"MODE"`
+	Autoneg       string `json:"AUTONEG"`
 }
 
-var PortShow_Template = `Value NAME ([0-9A-Za-z\.]+)
+var PortShow_Template string = `Value NAME ([0-9A-Za-z\.]+)
 Value TYPE (\S*)
 Value LINK (Up|Down)
 Value DURATION (\w+\s*\wh\s*\w+m\s*\w+)

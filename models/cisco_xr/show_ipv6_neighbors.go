@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIpv6Neighbors struct {
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Age	string	`json:"AGE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	State	string	`json:"STATE"`
-	Interface	string	`json:"INTERFACE"`
-	Location	string	`json:"LOCATION"`
+	Age          string `json:"AGE"`
+	Mac_address  string `json:"MAC_ADDRESS"`
+	State        string `json:"STATE"`
+	Interface    string `json:"INTERFACE"`
+	Location     string `json:"LOCATION"`
+	Ipv6_address string `json:"IPV6_ADDRESS"`
 }
 
-var ShowIpv6Neighbors_Template = `Value IPV6_ADDRESS (.+?)
+var ShowIpv6Neighbors_Template string = `Value IPV6_ADDRESS (.+?)
 Value AGE (\S+)
 Value MAC_ADDRESS (\S+)
 Value STATE (\S+)

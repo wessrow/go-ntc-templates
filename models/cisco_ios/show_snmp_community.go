@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSnmpCommunity struct {
-	Name	string	`json:"NAME"`
-	Index	string	`json:"INDEX"`
-	Security_name	string	`json:"SECURITY_NAME"`
-	Storage_type	string	`json:"STORAGE_TYPE"`
-	Access_list_number	string	`json:"ACCESS_LIST_NUMBER"`
+	Index              string `json:"INDEX"`
+	Security_name      string `json:"SECURITY_NAME"`
+	Storage_type       string `json:"STORAGE_TYPE"`
+	Access_list_number string `json:"ACCESS_LIST_NUMBER"`
+	Name               string `json:"NAME"`
 }
 
-var ShowSnmpCommunity_Template = `Value NAME (\S+)
+var ShowSnmpCommunity_Template string = `Value NAME (\S+)
 Value INDEX (\S+)
 Value SECURITY_NAME (\S+)
 Value STORAGE_TYPE (\S+)

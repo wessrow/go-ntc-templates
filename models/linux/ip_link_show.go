@@ -1,23 +1,23 @@
-package linux 
+package linux
 
 type IpLinkShow struct {
-	Id	string	`json:"ID"`
-	Interface	string	`json:"INTERFACE"`
-	Flags	string	`json:"FLAGS"`
-	Mtu	string	`json:"MTU"`
-	Qdisc	string	`json:"QDISC"`
-	State	string	`json:"STATE"`
-	Mode	string	`json:"MODE"`
-	Group	string	`json:"GROUP"`
-	Qlen	string	`json:"QLEN"`
-	Master	string	`json:"MASTER"`
-	Type	string	`json:"TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Broadcast	string	`json:"BROADCAST"`
-	Alias	string	`json:"ALIAS"`
+	Id          string `json:"ID"`
+	Mtu         string `json:"MTU"`
+	State       string `json:"STATE"`
+	Mode        string `json:"MODE"`
+	Interface   string `json:"INTERFACE"`
+	Flags       string `json:"FLAGS"`
+	Type        string `json:"TYPE"`
+	Alias       string `json:"ALIAS"`
+	Qdisc       string `json:"QDISC"`
+	Group       string `json:"GROUP"`
+	Qlen        string `json:"QLEN"`
+	Master      string `json:"MASTER"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Broadcast   string `json:"BROADCAST"`
 }
 
-var IpLinkShow_Template = `Value Required ID (\d+)
+var IpLinkShow_Template string = `Value Required ID (\d+)
 Value Required INTERFACE ([^:]+)
 Value Required FLAGS (\S+)
 Value Required MTU (\d+)

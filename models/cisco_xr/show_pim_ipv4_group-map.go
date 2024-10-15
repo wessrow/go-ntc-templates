@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowPimIpv4GroupMap struct {
-	Group_range	string	`json:"GROUP_RANGE"`
-	Protocol	string	`json:"PROTOCOL"`
-	Client	string	`json:"CLIENT"`
-	Groups	string	`json:"GROUPS"`
-	Rp_address	string	`json:"RP_ADDRESS"`
-	Info	string	`json:"INFO"`
+	Protocol    string `json:"PROTOCOL"`
+	Client      string `json:"CLIENT"`
+	Groups      string `json:"GROUPS"`
+	Rp_address  string `json:"RP_ADDRESS"`
+	Info        string `json:"INFO"`
+	Group_range string `json:"GROUP_RANGE"`
 }
 
-var ShowPimIpv4GroupMap_Template = `Value Required GROUP_RANGE (\d+\.\d+\.\d+\.\d+/\d+)
+var ShowPimIpv4GroupMap_Template string = `Value Required GROUP_RANGE (\d+\.\d+\.\d+\.\d+/\d+)
 Value PROTOCOL (\w+)
 Value CLIENT (\w+)
 Value GROUPS (\d+)

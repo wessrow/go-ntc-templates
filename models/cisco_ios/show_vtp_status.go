@@ -1,22 +1,22 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVtpStatus struct {
-	Version	string	`json:"VERSION"`
-	Domain	string	`json:"DOMAIN"`
-	Pruning	string	`json:"PRUNING"`
-	Traps	string	`json:"TRAPS"`
-	Device_id	string	`json:"DEVICE_ID"`
-	Last_modified_server	string	`json:"LAST_MODIFIED_SERVER"`
-	Last_modified_date	string	`json:"LAST_MODIFIED_DATE"`
-	Local_updater_addr	string	`json:"LOCAL_UPDATER_ADDR"`
-	Local_updater_iface	string	`json:"LOCAL_UPDATER_IFACE"`
-	Mode	string	`json:"MODE"`
-	Max_vlans	string	`json:"MAX_VLANS"`
-	Existing_vlan_count	string	`json:"EXISTING_VLAN_COUNT"`
-	Revision_number	string	`json:"REVISION_NUMBER"`
+	Local_updater_iface  string `json:"LOCAL_UPDATER_IFACE"`
+	Max_vlans            string `json:"MAX_VLANS"`
+	Revision_number      string `json:"REVISION_NUMBER"`
+	Device_id            string `json:"DEVICE_ID"`
+	Last_modified_date   string `json:"LAST_MODIFIED_DATE"`
+	Pruning              string `json:"PRUNING"`
+	Traps                string `json:"TRAPS"`
+	Last_modified_server string `json:"LAST_MODIFIED_SERVER"`
+	Local_updater_addr   string `json:"LOCAL_UPDATER_ADDR"`
+	Mode                 string `json:"MODE"`
+	Existing_vlan_count  string `json:"EXISTING_VLAN_COUNT"`
+	Version              string `json:"VERSION"`
+	Domain               string `json:"DOMAIN"`
 }
 
-var ShowVtpStatus_Template = `Value VERSION (\d)
+var ShowVtpStatus_Template string = `Value VERSION (\d)
 Value DOMAIN (\S+)
 Value PRUNING (\S+)
 Value TRAPS (\S+)

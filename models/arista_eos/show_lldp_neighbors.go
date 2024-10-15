@@ -1,12 +1,12 @@
-package arista_eos 
+package arista_eos
 
 type ShowLldpNeighbors struct {
-	Neighbor_name	string	`json:"NEIGHBOR_NAME"`
-	Local_interface	string	`json:"LOCAL_INTERFACE"`
-	Neighbor_interface	string	`json:"NEIGHBOR_INTERFACE"`
+	Neighbor_name      string `json:"NEIGHBOR_NAME"`
+	Local_interface    string `json:"LOCAL_INTERFACE"`
+	Neighbor_interface string `json:"NEIGHBOR_INTERFACE"`
 }
 
-var ShowLldpNeighbors_Template = `Value NEIGHBOR_NAME (\S+)
+var ShowLldpNeighbors_Template string = `Value NEIGHBOR_NAME (\S+)
 Value LOCAL_INTERFACE (\S+)
 Value NEIGHBOR_INTERFACE (\S+)
 

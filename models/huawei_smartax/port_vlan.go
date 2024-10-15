@@ -1,11 +1,11 @@
-package huawei_smartax 
+package huawei_smartax
 
 type PortVlan struct {
-	Success	string	`json:"SUCCESS"`
-	Failed	string	`json:"FAILED"`
+	Success string `json:"SUCCESS"`
+	Failed  string `json:"FAILED"`
 }
 
-var PortVlan_Template = `Value SUCCESS (\d+)
+var PortVlan_Template string = `Value SUCCESS (\d+)
 Value FAILED (\d+)
 
 Start

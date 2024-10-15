@@ -1,16 +1,16 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowInterfaceLogical struct {
-	Interface	string	`json:"INTERFACE"`
-	Id	string	`json:"ID"`
-	Vsys	string	`json:"VSYS"`
-	Zone	string	`json:"ZONE"`
-	Forwarding	string	`json:"FORWARDING"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Ip_address	string	`json:"IP_ADDRESS"`
+	Ip_address string `json:"IP_ADDRESS"`
+	Interface  string `json:"INTERFACE"`
+	Id         string `json:"ID"`
+	Vsys       string `json:"VSYS"`
+	Zone       string `json:"ZONE"`
+	Forwarding string `json:"FORWARDING"`
+	Vlan_id    string `json:"VLAN_ID"`
 }
 
-var ShowInterfaceLogical_Template = `Value INTERFACE (\S+)
+var ShowInterfaceLogical_Template string = `Value INTERFACE (\S+)
 Value ID (\d+)
 Value VSYS (\d+)
 Value ZONE (\S+)

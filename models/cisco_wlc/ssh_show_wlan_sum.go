@@ -1,15 +1,15 @@
-package cisco_wlc 
+package cisco_wlc
 
 type SshShowWlanSum struct {
-	Wlanid	string	`json:"WLANID"`
-	Profile	string	`json:"PROFILE"`
-	Ssid	string	`json:"SSID"`
-	Status	string	`json:"STATUS"`
-	Interface	string	`json:"INTERFACE"`
-	Pmip_mobility	string	`json:"PMIP_MOBILITY"`
+	Ssid          string `json:"SSID"`
+	Status        string `json:"STATUS"`
+	Interface     string `json:"INTERFACE"`
+	Pmip_mobility string `json:"PMIP_MOBILITY"`
+	Wlanid        string `json:"WLANID"`
+	Profile       string `json:"PROFILE"`
 }
 
-var SshShowWlanSum_Template = `Value WLANID (\d+)
+var SshShowWlanSum_Template string = `Value WLANID (\d+)
 Value PROFILE (.+?)
 Value SSID (.+?)
 Value STATUS (Enabled|Disabled)

@@ -1,13 +1,13 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Status	string	`json:"STATUS"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Interfaces []string `json:"INTERFACES"`
+	Vlan_id    string   `json:"VLAN_ID"`
+	Vlan_name  string   `json:"VLAN_NAME"`
+	Status     string   `json:"STATUS"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 Value VLAN_NAME (\S+)
 Value STATUS (\S+)
 Value List INTERFACES ([\w\./]+)

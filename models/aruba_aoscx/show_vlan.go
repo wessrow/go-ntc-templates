@@ -1,15 +1,15 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Status	string	`json:"STATUS"`
-	Reason	string	`json:"REASON"`
-	Type	string	`json:"TYPE"`
-	Interfaces	[]string	`json:"INTERFACES"`
+	Reason     string   `json:"REASON"`
+	Type       string   `json:"TYPE"`
+	Interfaces []string `json:"INTERFACES"`
+	Vlan_id    string   `json:"VLAN_ID"`
+	Vlan_name  string   `json:"VLAN_NAME"`
+	Status     string   `json:"STATUS"`
 }
 
-var ShowVlan_Template = `Value Required VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Required VLAN_ID (\d+)
 Value VLAN_NAME (\S+)
 Value STATUS (\S+)
 Value REASON (\S+)

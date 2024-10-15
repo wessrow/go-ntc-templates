@@ -1,20 +1,20 @@
-package ruckus_fastiron 
+package ruckus_fastiron
 
 type ShowInterfaces struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Interface_up_time	string	`json:"INTERFACE_UP_TIME"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Hardware_type	string	`json:"HARDWARE_TYPE"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Bia	string	`json:"BIA"`
-	Description	string	`json:"DESCRIPTION"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Mtu	string	`json:"MTU"`
+	Mac_address       string `json:"MAC_ADDRESS"`
+	Bia               string `json:"BIA"`
+	Prefix_length     string `json:"PREFIX_LENGTH"`
+	Ip_address        string `json:"IP_ADDRESS"`
+	Mtu               string `json:"MTU"`
+	Interface         string `json:"INTERFACE"`
+	Link_status       string `json:"LINK_STATUS"`
+	Interface_up_time string `json:"INTERFACE_UP_TIME"`
+	Protocol_status   string `json:"PROTOCOL_STATUS"`
+	Hardware_type     string `json:"HARDWARE_TYPE"`
+	Description       string `json:"DESCRIPTION"`
 }
 
-var ShowInterfaces_Template = `Value Required INTERFACE (\S+)
+var ShowInterfaces_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (.*)
 Value INTERFACE_UP_TIME (.*)
 Value PROTOCOL_STATUS (.*)

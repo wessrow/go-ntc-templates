@@ -1,12 +1,12 @@
-package watchguard_firebox 
+package watchguard_firebox
 
 type ShowArp struct {
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Mac_address string `json:"MAC_ADDRESS"`
 }
 
-var ShowArp_Template = `Value INTERFACE (\S+)
+var ShowArp_Template string = `Value INTERFACE (\S+)
 Value IP_ADDRESS ([0-9.]+)
 Value MAC_ADDRESS ([0-9a-fA-F:]+|incomplete)
 

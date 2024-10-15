@@ -1,18 +1,18 @@
-package avaya_ers 
+package avaya_ers
 
 type ShowMlt struct {
-	Id	string	`json:"ID"`
-	Name	string	`json:"NAME"`
-	Active_members	string	`json:"ACTIVE_MEMBERS"`
-	Inactive_members	string	`json:"INACTIVE_MEMBERS"`
-	Bpdu	string	`json:"BPDU"`
-	Mode	string	`json:"MODE"`
-	Status	string	`json:"STATUS"`
-	Type	string	`json:"TYPE"`
-	Lacp_key	string	`json:"LACP_KEY"`
+	Id               string `json:"ID"`
+	Inactive_members string `json:"INACTIVE_MEMBERS"`
+	Mode             string `json:"MODE"`
+	Lacp_key         string `json:"LACP_KEY"`
+	Type             string `json:"TYPE"`
+	Name             string `json:"NAME"`
+	Active_members   string `json:"ACTIVE_MEMBERS"`
+	Bpdu             string `json:"BPDU"`
+	Status           string `json:"STATUS"`
 }
 
-var ShowMlt_Template = `Value Required ID (\d+)
+var ShowMlt_Template string = `Value Required ID (\d+)
 Value NAME (.*?)
 Value ACTIVE_MEMBERS (\S+?)
 Value INACTIVE_MEMBERS (\S+?)

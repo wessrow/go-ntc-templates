@@ -1,25 +1,25 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowIpv4Interface struct {
-	Interface	string	`json:"INTERFACE"`
-	Link_status	string	`json:"LINK_STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Protocol_status	string	`json:"PROTOCOL_STATUS"`
-	Vrf	string	`json:"VRF"`
-	Vrf_id	string	`json:"VRF_ID"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Sec_ip_address	[]string	`json:"SEC_IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Sec_prefix_length	[]string	`json:"SEC_PREFIX_LENGTH"`
-	Mtu	string	`json:"MTU"`
-	Ip_mtu	string	`json:"IP_MTU"`
-	Multicast_groups	[]string	`json:"MULTICAST_GROUPS"`
-	Out_acl	string	`json:"OUT_ACL"`
-	In_acl	string	`json:"IN_ACL"`
-	Rpf_check	string	`json:"RPF_CHECK"`
+	Protocol          string   `json:"PROTOCOL"`
+	Vrf_id            string   `json:"VRF_ID"`
+	Interface         string   `json:"INTERFACE"`
+	Protocol_status   string   `json:"PROTOCOL_STATUS"`
+	Sec_ip_address    []string `json:"SEC_IP_ADDRESS"`
+	Mtu               string   `json:"MTU"`
+	Link_status       string   `json:"LINK_STATUS"`
+	Prefix_length     string   `json:"PREFIX_LENGTH"`
+	Sec_prefix_length []string `json:"SEC_PREFIX_LENGTH"`
+	Multicast_groups  []string `json:"MULTICAST_GROUPS"`
+	Out_acl           string   `json:"OUT_ACL"`
+	Rpf_check         string   `json:"RPF_CHECK"`
+	Vrf               string   `json:"VRF"`
+	Ip_mtu            string   `json:"IP_MTU"`
+	In_acl            string   `json:"IN_ACL"`
+	Ip_address        string   `json:"IP_ADDRESS"`
 }
 
-var ShowIpv4Interface_Template = `Value Required INTERFACE (\S+)
+var ShowIpv4Interface_Template string = `Value Required INTERFACE (\S+)
 Value LINK_STATUS (\S+)
 Value PROTOCOL (\S+)
 Value PROTOCOL_STATUS (\S+)

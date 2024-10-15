@@ -1,21 +1,21 @@
-package fortinet 
+package fortinet
 
 type ExecutePing struct {
-	Sent_packet_size	[]string	`json:"SENT_PACKET_SIZE"`
-	Sent_packet_address	[]string	`json:"SENT_PACKET_ADDRESS"`
-	Sent_packet_icmp_seq	[]string	`json:"SENT_PACKET_ICMP_SEQ"`
-	Sent_packet_ttl	[]string	`json:"SENT_PACKET_TTL"`
-	Sent_packet_time	[]string	`json:"SENT_PACKET_TIME"`
-	Address	string	`json:"ADDRESS"`
-	Transmitted	string	`json:"TRANSMITTED"`
-	Received	string	`json:"RECEIVED"`
-	Packet_loss	string	`json:"PACKET_LOSS"`
-	Min_rtt	string	`json:"MIN_RTT"`
-	Avg_rtt	string	`json:"AVG_RTT"`
-	Max_rtt	string	`json:"MAX_RTT"`
+	Received             string   `json:"RECEIVED"`
+	Min_rtt              string   `json:"MIN_RTT"`
+	Max_rtt              string   `json:"MAX_RTT"`
+	Sent_packet_size     []string `json:"SENT_PACKET_SIZE"`
+	Sent_packet_icmp_seq []string `json:"SENT_PACKET_ICMP_SEQ"`
+	Sent_packet_ttl      []string `json:"SENT_PACKET_TTL"`
+	Address              string   `json:"ADDRESS"`
+	Transmitted          string   `json:"TRANSMITTED"`
+	Sent_packet_address  []string `json:"SENT_PACKET_ADDRESS"`
+	Sent_packet_time     []string `json:"SENT_PACKET_TIME"`
+	Packet_loss          string   `json:"PACKET_LOSS"`
+	Avg_rtt              string   `json:"AVG_RTT"`
 }
 
-var ExecutePing_Template = `Value List SENT_PACKET_SIZE (\d+)
+var ExecutePing_Template string = `Value List SENT_PACKET_SIZE (\d+)
 Value List SENT_PACKET_ADDRESS (\S+)
 Value List SENT_PACKET_ICMP_SEQ (\d+)
 Value List SENT_PACKET_TTL (\d+)

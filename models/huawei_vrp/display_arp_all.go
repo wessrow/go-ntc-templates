@@ -1,15 +1,15 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayArpAll struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Expire	string	`json:"EXPIRE"`
-	Type	string	`json:"TYPE"`
-	Interface	string	`json:"INTERFACE"`
-	Vpn_instance	string	`json:"VPN_INSTANCE"`
+	Vpn_instance string `json:"VPN_INSTANCE"`
+	Ip_address   string `json:"IP_ADDRESS"`
+	Mac_address  string `json:"MAC_ADDRESS"`
+	Expire       string `json:"EXPIRE"`
+	Type         string `json:"TYPE"`
+	Interface    string `json:"INTERFACE"`
 }
 
-var DisplayArpAll_Template = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var DisplayArpAll_Template string = `Value Required IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Required MAC_ADDRESS (\S+)
 Value EXPIRE (\d+)
 Value Required TYPE (\S+\s\S+|\S+)

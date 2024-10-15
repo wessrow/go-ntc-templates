@@ -1,12 +1,12 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowAliases struct {
-	Mode	string	`json:"MODE"`
-	Alias	string	`json:"ALIAS"`
-	Command	string	`json:"COMMAND"`
+	Mode    string `json:"MODE"`
+	Alias   string `json:"ALIAS"`
+	Command string `json:"COMMAND"`
 }
 
-var ShowAliases_Template = `Value Filldown MODE (((\w+)(\s)?){1,})
+var ShowAliases_Template string = `Value Filldown MODE (((\w+)(\s)?){1,})
 Value ALIAS (\w+)
 Value COMMAND ((\w+(\s|\S))+)
 

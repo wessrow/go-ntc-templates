@@ -1,17 +1,17 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSpanningTree struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Interface	string	`json:"INTERFACE"`
-	Role	string	`json:"ROLE"`
-	Status	string	`json:"STATUS"`
-	Cost	string	`json:"COST"`
-	Port_priority	string	`json:"PORT_PRIORITY"`
-	Port_id	string	`json:"PORT_ID"`
-	Type	string	`json:"TYPE"`
+	Status        string `json:"STATUS"`
+	Cost          string `json:"COST"`
+	Port_priority string `json:"PORT_PRIORITY"`
+	Port_id       string `json:"PORT_ID"`
+	Type          string `json:"TYPE"`
+	Vlan_id       string `json:"VLAN_ID"`
+	Interface     string `json:"INTERFACE"`
+	Role          string `json:"ROLE"`
 }
 
-var ShowSpanningTree_Template = `Value Filldown VLAN_ID (\d+)
+var ShowSpanningTree_Template string = `Value Filldown VLAN_ID (\d+)
 Value Required INTERFACE (\S+)
 Value ROLE (\w+)
 Value STATUS (\w+)

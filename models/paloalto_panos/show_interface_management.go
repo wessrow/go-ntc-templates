@@ -1,17 +1,17 @@
-package paloalto_panos 
+package paloalto_panos
 
 type ShowInterfaceManagement struct {
-	Name	string	`json:"NAME"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Ipv4_address	string	`json:"IPV4_ADDRESS"`
-	Ipv4_netmask	string	`json:"IPV4_NETMASK"`
-	Ipv4_gateway	string	`json:"IPV4_GATEWAY"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Ipv6_linklocal	string	`json:"IPV6_LINKLOCAL"`
-	Ipv6_gateway	string	`json:"IPV6_GATEWAY"`
+	Ipv6_address   string `json:"IPV6_ADDRESS"`
+	Ipv6_linklocal string `json:"IPV6_LINKLOCAL"`
+	Ipv6_gateway   string `json:"IPV6_GATEWAY"`
+	Name           string `json:"NAME"`
+	Mac_address    string `json:"MAC_ADDRESS"`
+	Ipv4_address   string `json:"IPV4_ADDRESS"`
+	Ipv4_netmask   string `json:"IPV4_NETMASK"`
+	Ipv4_gateway   string `json:"IPV4_GATEWAY"`
 }
 
-var ShowInterfaceManagement_Template = `Value NAME (.+)
+var ShowInterfaceManagement_Template string = `Value NAME (.+)
 Value MAC_ADDRESS ([a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2}\:[a-fA-F0-9]{2})
 Value IPV4_ADDRESS (\S+)
 Value IPV4_NETMASK (\S+)

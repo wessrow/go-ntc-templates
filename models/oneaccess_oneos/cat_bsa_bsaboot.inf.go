@@ -1,13 +1,13 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type CatBsaBsabootInf struct {
-	Bootfile	string	`json:"BOOTFILE"`
-	Bootfolder	string	`json:"BOOTFOLDER"`
-	Configfile	string	`json:"CONFIGFILE"`
-	Configfolder	string	`json:"CONFIGFOLDER"`
+	Bootfile     string `json:"BOOTFILE"`
+	Bootfolder   string `json:"BOOTFOLDER"`
+	Configfile   string `json:"CONFIGFILE"`
+	Configfolder string `json:"CONFIGFOLDER"`
 }
 
-var CatBsaBsabootInf_Template = `Value BOOTFILE (\S+)
+var CatBsaBsabootInf_Template string = `Value BOOTFILE (\S+)
 Value BOOTFOLDER (/BSA/binaries)
 Value CONFIGFILE (\S+)
 Value CONFIGFOLDER (/BSA/config)

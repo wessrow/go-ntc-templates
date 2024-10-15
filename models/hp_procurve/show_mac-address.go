@@ -1,12 +1,12 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowMacAddress struct {
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Port	string	`json:"PORT"`
-	Vlan_id	string	`json:"VLAN_ID"`
+	Mac_address string `json:"MAC_ADDRESS"`
+	Port        string `json:"PORT"`
+	Vlan_id     string `json:"VLAN_ID"`
 }
 
-var ShowMacAddress_Template = `Value MAC_ADDRESS ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
+var ShowMacAddress_Template string = `Value MAC_ADDRESS ([0-9a-fA-F]{6}-[0-9a-fA-F]{6})
 Value PORT (\S+)
 Value VLAN_ID (\d+)
 

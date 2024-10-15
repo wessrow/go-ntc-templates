@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowClock struct {
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Dayweek	string	`json:"DAYWEEK"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
+	Day      string `json:"DAY"`
+	Year     string `json:"YEAR"`
+	Time     string `json:"TIME"`
+	Timezone string `json:"TIMEZONE"`
+	Dayweek  string `json:"DAYWEEK"`
+	Month    string `json:"MONTH"`
 }
 
-var ShowClock_Template = `Value TIME (\d+:\d+:\d+\.\d+)
+var ShowClock_Template string = `Value TIME (\d+:\d+:\d+\.\d+)
 Value TIMEZONE (\w+)
 Value DAYWEEK (\w+)
 Value MONTH (\w+)

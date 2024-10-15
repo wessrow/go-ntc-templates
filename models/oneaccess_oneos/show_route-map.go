@@ -1,14 +1,14 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRouteMap struct {
-	Name	string	`json:"NAME"`
-	Action	string	`json:"ACTION"`
-	Sequence	string	`json:"SEQUENCE"`
-	Match_clauses	[]string	`json:"MATCH_CLAUSES"`
-	Set_clauses	[]string	`json:"SET_CLAUSES"`
+	Name          string   `json:"NAME"`
+	Action        string   `json:"ACTION"`
+	Sequence      string   `json:"SEQUENCE"`
+	Match_clauses []string `json:"MATCH_CLAUSES"`
+	Set_clauses   []string `json:"SET_CLAUSES"`
 }
 
-var ShowRouteMap_Template = `Value Required NAME (\S+)
+var ShowRouteMap_Template string = `Value Required NAME (\S+)
 Value Required ACTION (\S+)
 Value Required SEQUENCE (\d+)
 Value List MATCH_CLAUSES (.+)

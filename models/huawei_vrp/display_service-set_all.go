@@ -1,12 +1,12 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayServiceSetAll struct {
-	Id	string	`json:"ID"`
-	Name	string	`json:"NAME"`
-	Ssid	string	`json:"SSID"`
+	Ssid string `json:"SSID"`
+	Id   string `json:"ID"`
+	Name string `json:"NAME"`
 }
 
-var DisplayServiceSetAll_Template = `Value ID (\d+)
+var DisplayServiceSetAll_Template string = `Value ID (\d+)
 Value NAME (\w+)
 Value SSID (\w+)
 

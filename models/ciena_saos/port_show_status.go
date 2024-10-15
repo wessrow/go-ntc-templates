@@ -1,18 +1,18 @@
-package ciena_saos 
+package ciena_saos
 
 type PortShowStatus struct {
-	Name	string	`json:"NAME"`
-	Description	string	`json:"DESCRIPTION"`
-	Link	string	`json:"LINK"`
-	Duration	string	`json:"DURATION"`
-	Transceiver	string	`json:"TRANSCEIVER"`
-	Stp	string	`json:"STP"`
-	Speed_duplex	string	`json:"SPEED_DUPLEX"`
-	Mtu	string	`json:"MTU"`
-	Flow_control	string	`json:"FLOW_CONTROL"`
+	Description  string `json:"DESCRIPTION"`
+	Speed_duplex string `json:"SPEED_DUPLEX"`
+	Flow_control string `json:"FLOW_CONTROL"`
+	Stp          string `json:"STP"`
+	Mtu          string `json:"MTU"`
+	Name         string `json:"NAME"`
+	Link         string `json:"LINK"`
+	Duration     string `json:"DURATION"`
+	Transceiver  string `json:"TRANSCEIVER"`
 }
 
-var PortShowStatus_Template = `Value NAME (\S+)
+var PortShowStatus_Template string = `Value NAME (\S+)
 Value DESCRIPTION (\S*)
 Value LINK (Up|Down)
 Value DURATION ([^\|]+)

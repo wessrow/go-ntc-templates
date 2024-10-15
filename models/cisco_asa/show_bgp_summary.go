@@ -1,15 +1,15 @@
-package cisco_asa 
+package cisco_asa
 
 type ShowBgpSummary struct {
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	State_pfxrcd string `json:"STATE_PFXRCD"`
+	Router_id    string `json:"ROUTER_ID"`
+	Local_as     string `json:"LOCAL_AS"`
+	Bgp_neigh    string `json:"BGP_NEIGH"`
+	Neigh_as     string `json:"NEIGH_AS"`
+	Up_down      string `json:"UP_DOWN"`
 }
 
-var ShowBgpSummary_Template = `Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
+var ShowBgpSummary_Template string = `Value Filldown,Required ROUTER_ID ([0-9a-f:\.]+)
 Value Filldown LOCAL_AS (\d+)
 Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
 Value NEIGH_AS (\d+)

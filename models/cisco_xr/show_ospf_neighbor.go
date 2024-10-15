@@ -1,16 +1,16 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowOspfNeighbor struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Dead_time	string	`json:"DEAD_TIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
-	Neighbor_uptime	string	`json:"NEIGHBOR_UPTIME"`
+	Dead_time       string `json:"DEAD_TIME"`
+	Ip_address      string `json:"IP_ADDRESS"`
+	Interface       string `json:"INTERFACE"`
+	Neighbor_uptime string `json:"NEIGHBOR_UPTIME"`
+	Neighbor_id     string `json:"NEIGHBOR_ID"`
+	Priority        string `json:"PRIORITY"`
+	State           string `json:"STATE"`
 }
 
-var ShowOspfNeighbor_Template = `Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+var ShowOspfNeighbor_Template string = `Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
 Value PRIORITY (\d+)
 Value STATE (\S+\/\s+\-|\S+)
 Value DEAD_TIME (\d+:\d+:\d+)

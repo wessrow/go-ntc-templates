@@ -1,27 +1,27 @@
-package yamaha 
+package yamaha
 
 type ShowEnvironment struct {
-	Bootrom	string	`json:"BOOTROM"`
-	Version	string	`json:"VERSION"`
-	Serial	string	`json:"SERIAL"`
-	Cpu_5_sec	string	`json:"CPU_5_SEC"`
-	Cpu_1_min	string	`json:"CPU_1_MIN"`
-	Cpu_5_min	string	`json:"CPU_5_MIN"`
-	Memory_used	string	`json:"MEMORY_USED"`
-	Firmware	string	`json:"FIRMWARE"`
-	Config_file	string	`json:"CONFIG_FILE"`
-	Default_firmware	string	`json:"DEFAULT_FIRMWARE"`
-	Default_config_file	string	`json:"DEFAULT_CONFIG_FILE"`
-	Boot_time	string	`json:"BOOT_TIME"`
-	Current_time	string	`json:"CURRENT_TIME"`
-	Elasped_time	string	`json:"ELASPED_TIME"`
-	Security_class	string	`json:"SECURITY_CLASS"`
-	Forget	string	`json:"FORGET"`
-	Telnet	string	`json:"TELNET"`
-	Inside_temperature	string	`json:"INSIDE_TEMPERATURE"`
+	Cpu_5_min           string `json:"CPU_5_MIN"`
+	Default_firmware    string `json:"DEFAULT_FIRMWARE"`
+	Security_class      string `json:"SECURITY_CLASS"`
+	Inside_temperature  string `json:"INSIDE_TEMPERATURE"`
+	Serial              string `json:"SERIAL"`
+	Default_config_file string `json:"DEFAULT_CONFIG_FILE"`
+	Cpu_1_min           string `json:"CPU_1_MIN"`
+	Config_file         string `json:"CONFIG_FILE"`
+	Boot_time           string `json:"BOOT_TIME"`
+	Current_time        string `json:"CURRENT_TIME"`
+	Elasped_time        string `json:"ELASPED_TIME"`
+	Telnet              string `json:"TELNET"`
+	Bootrom             string `json:"BOOTROM"`
+	Version             string `json:"VERSION"`
+	Firmware            string `json:"FIRMWARE"`
+	Forget              string `json:"FORGET"`
+	Cpu_5_sec           string `json:"CPU_5_SEC"`
+	Memory_used         string `json:"MEMORY_USED"`
 }
 
-var ShowEnvironment_Template = `# You need to set "console character ascci".
+var ShowEnvironment_Template string = `# You need to set "console character ascci".
 Value BOOTROM (\S+)
 Value VERSION (\S+)
 Value SERIAL (\w+)

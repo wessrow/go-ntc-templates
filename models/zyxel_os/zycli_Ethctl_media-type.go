@@ -1,14 +1,14 @@
-package zyxel_os 
+package zyxel_os
 
 type ZycliEthctlMediaType struct {
-	Speed	string	`json:"SPEED"`
-	Enabled	string	`json:"ENABLED"`
-	Negotiated_speed	string	`json:"NEGOTIATED_SPEED"`
-	Negotiated_duplex	string	`json:"NEGOTIATED_DUPLEX"`
-	Link_active	string	`json:"LINK_ACTIVE"`
+	Link_active       string `json:"LINK_ACTIVE"`
+	Speed             string `json:"SPEED"`
+	Enabled           string `json:"ENABLED"`
+	Negotiated_speed  string `json:"NEGOTIATED_SPEED"`
+	Negotiated_duplex string `json:"NEGOTIATED_DUPLEX"`
 }
 
-var ZycliEthctlMediaType_Template = `Value SPEED (\w+)
+var ZycliEthctlMediaType_Template string = `Value SPEED (\w+)
 Value ENABLED (\w+)
 Value NEGOTIATED_SPEED (\w+)
 Value NEGOTIATED_DUPLEX (\w+)

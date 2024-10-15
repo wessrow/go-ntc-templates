@@ -1,15 +1,15 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowProductInfoArea struct {
-	Mac	string	`json:"MAC"`
-	Motherboard	string	`json:"MOTHERBOARD"`
-	Manufacturing_date	string	`json:"MANUFACTURING_DATE"`
-	Serial	[]string	`json:"SERIAL"`
-	Product_name	string	`json:"PRODUCT_NAME"`
-	Commercial_name	string	`json:"COMMERCIAL_NAME"`
+	Serial             []string `json:"SERIAL"`
+	Product_name       string   `json:"PRODUCT_NAME"`
+	Commercial_name    string   `json:"COMMERCIAL_NAME"`
+	Mac                string   `json:"MAC"`
+	Motherboard        string   `json:"MOTHERBOARD"`
+	Manufacturing_date string   `json:"MANUFACTURING_DATE"`
 }
 
-var ShowProductInfoArea_Template = `Value MAC ([\w:]+)
+var ShowProductInfoArea_Template string = `Value MAC ([\w:]+)
 Value MOTHERBOARD (\w.*\w)
 Value MANUFACTURING_DATE ([^ ]+)
 Value List SERIAL ([A-Z]\d+)

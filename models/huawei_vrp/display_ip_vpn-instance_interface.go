@@ -1,12 +1,12 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayIpVpnInstanceInterface struct {
-	Name	string	`json:"NAME"`
-	Id	string	`json:"ID"`
-	Interface_list	[]string	`json:"INTERFACE_LIST"`
+	Id             string   `json:"ID"`
+	Interface_list []string `json:"INTERFACE_LIST"`
+	Name           string   `json:"NAME"`
 }
 
-var DisplayIpVpnInstanceInterface_Template = `Value Required NAME (\S+)
+var DisplayIpVpnInstanceInterface_Template string = `Value Required NAME (\S+)
 Value Required ID (\d+)
 Value List INTERFACE_LIST ([^,]+)
 

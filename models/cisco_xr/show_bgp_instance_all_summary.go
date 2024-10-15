@@ -1,21 +1,21 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowBgpInstanceAllSummary struct {
-	Instance_id	string	`json:"INSTANCE_ID"`
-	Instance_name	string	`json:"INSTANCE_NAME"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Local_as	string	`json:"LOCAL_AS"`
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Msg_rcvd	string	`json:"MSG_RCVD"`
-	Msg_sent	string	`json:"MSG_SENT"`
-	In_queue	string	`json:"IN_QUEUE"`
-	Out_queue	string	`json:"OUT_QUEUE"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	Instance_name string `json:"INSTANCE_NAME"`
+	Local_as      string `json:"LOCAL_AS"`
+	Bgp_neigh     string `json:"BGP_NEIGH"`
+	Msg_rcvd      string `json:"MSG_RCVD"`
+	In_queue      string `json:"IN_QUEUE"`
+	Up_down       string `json:"UP_DOWN"`
+	State_pfxrcd  string `json:"STATE_PFXRCD"`
+	Instance_id   string `json:"INSTANCE_ID"`
+	Router_id     string `json:"ROUTER_ID"`
+	Neigh_as      string `json:"NEIGH_AS"`
+	Msg_sent      string `json:"MSG_SENT"`
+	Out_queue     string `json:"OUT_QUEUE"`
 }
 
-var ShowBgpInstanceAllSummary_Template = `Value Filldown INSTANCE_ID (\d+)
+var ShowBgpInstanceAllSummary_Template string = `Value Filldown INSTANCE_ID (\d+)
 Value Filldown INSTANCE_NAME (\S+)
 Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown LOCAL_AS (\d+)

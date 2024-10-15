@@ -1,15 +1,15 @@
-package aruba_aoscx 
+package aruba_aoscx
 
 type ShowIpRouteAllVrfs struct {
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Vrf	string	`json:"VRF"`
-	Interface	[]string	`json:"INTERFACE"`
-	Metric	[]string	`json:"METRIC"`
-	Status	[]string	`json:"STATUS"`
+	Status        []string `json:"STATUS"`
+	Ip_address    string   `json:"IP_ADDRESS"`
+	Prefix_length string   `json:"PREFIX_LENGTH"`
+	Vrf           string   `json:"VRF"`
+	Interface     []string `json:"INTERFACE"`
+	Metric        []string `json:"METRIC"`
 }
 
-var ShowIpRouteAllVrfs_Template = `Value Filldown IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+var ShowIpRouteAllVrfs_Template string = `Value Filldown IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
 Value Filldown PREFIX_LENGTH (\d+)
 Value Filldown VRF (\S+)
 Value List INTERFACE (\S+)

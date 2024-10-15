@@ -1,15 +1,15 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpOspfNeighbor struct {
-	Neighbor_id	string	`json:"NEIGHBOR_ID"`
-	Priority	string	`json:"PRIORITY"`
-	State	string	`json:"STATE"`
-	Dead_time	string	`json:"DEAD_TIME"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Interface	string	`json:"INTERFACE"`
+	Neighbor_id string `json:"NEIGHBOR_ID"`
+	Priority    string `json:"PRIORITY"`
+	State       string `json:"STATE"`
+	Dead_time   string `json:"DEAD_TIME"`
+	Ip_address  string `json:"IP_ADDRESS"`
+	Interface   string `json:"INTERFACE"`
 }
 
-var ShowIpOspfNeighbor_Template = `Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
+var ShowIpOspfNeighbor_Template string = `Value NEIGHBOR_ID (\d+.\d+.\d+.\d+)
 Value PRIORITY (\d+)
 Value STATE (\S+\/\s+\-|\S+)
 Value DEAD_TIME (\d+:\d+:\d+)

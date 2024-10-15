@@ -1,19 +1,19 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowAccessLists struct {
-	Name	string	`json:"NAME"`
-	Sn	string	`json:"SN"`
-	Action	string	`json:"ACTION"`
-	Protocol	string	`json:"PROTOCOL"`
-	Source	string	`json:"SOURCE"`
-	Range	string	`json:"RANGE"`
-	Port	string	`json:"PORT"`
-	Destination	string	`json:"DESTINATION"`
-	Modifier	string	`json:"MODIFIER"`
-	Remark	string	`json:"REMARK"`
+	Name        string `json:"NAME"`
+	Action      string `json:"ACTION"`
+	Source      string `json:"SOURCE"`
+	Range       string `json:"RANGE"`
+	Port        string `json:"PORT"`
+	Modifier    string `json:"MODIFIER"`
+	Sn          string `json:"SN"`
+	Protocol    string `json:"PROTOCOL"`
+	Destination string `json:"DESTINATION"`
+	Remark      string `json:"REMARK"`
 }
 
-var ShowAccessLists_Template = `# NX-OS ACL structure is quite complex and includes IP, IPv6 and MAC ACL types.
+var ShowAccessLists_Template string = `# NX-OS ACL structure is quite complex and includes IP, IPv6 and MAC ACL types.
 #
 # IP/IPv6 ACL:
 # 	SEQUENCE_NUMBER ACTION PROTOCOL SOURCE [PORT id] [RANGE start finish] DESTINATION [MODIFIER]

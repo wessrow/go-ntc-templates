@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowMacAddressTable struct {
-	Destination_address	string	`json:"DESTINATION_ADDRESS"`
-	Type	string	`json:"TYPE"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Destination_port	[]string	`json:"DESTINATION_PORT"`
+	Destination_port    []string `json:"DESTINATION_PORT"`
+	Destination_address string   `json:"DESTINATION_ADDRESS"`
+	Type                string   `json:"TYPE"`
+	Vlan_id             string   `json:"VLAN_ID"`
 }
 
-var ShowMacAddressTable_Template = `Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+var ShowMacAddressTable_Template string = `Value DESTINATION_ADDRESS ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
 Value TYPE (\S+)
 Value VLAN_ID (\S+)
 Value List DESTINATION_PORT ([^,\s]+)

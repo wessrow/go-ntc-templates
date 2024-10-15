@@ -1,14 +1,14 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowVlans struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Interfaces	[]string	`json:"INTERFACES"`
-	Ip_addresses	[]string	`json:"IP_ADDRESSES"`
-	Ipv6_addresses	[]string	`json:"IPV6_ADDRESSES"`
-	Inner_vlans	[]string	`json:"INNER_VLANS"`
+	Inner_vlans    []string `json:"INNER_VLANS"`
+	Vlan_id        string   `json:"VLAN_ID"`
+	Interfaces     []string `json:"INTERFACES"`
+	Ip_addresses   []string `json:"IP_ADDRESSES"`
+	Ipv6_addresses []string `json:"IPV6_ADDRESSES"`
 }
 
-var ShowVlans_Template = `Value Required VLAN_ID (\d+)
+var ShowVlans_Template string = `Value Required VLAN_ID (\d+)
 Value List INTERFACES ([\w\./-]+)
 Value List IP_ADDRESSES (\S+)
 Value List IPV6_ADDRESSES (\S+)

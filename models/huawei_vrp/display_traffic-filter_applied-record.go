@@ -1,15 +1,15 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayTrafficFilterAppliedRecord struct {
-	Instance_type	string	`json:"INSTANCE_TYPE"`
-	Instance	string	`json:"INSTANCE"`
-	Direction	string	`json:"DIRECTION"`
-	Ip_version	string	`json:"IP_VERSION"`
-	Acl_nb	string	`json:"ACL_NB"`
-	Acl_name	string	`json:"ACL_NAME"`
+	Instance_type string `json:"INSTANCE_TYPE"`
+	Instance      string `json:"INSTANCE"`
+	Direction     string `json:"DIRECTION"`
+	Ip_version    string `json:"IP_VERSION"`
+	Acl_nb        string `json:"ACL_NB"`
+	Acl_name      string `json:"ACL_NAME"`
 }
 
-var DisplayTrafficFilterAppliedRecord_Template = `Value Filldown INSTANCE_TYPE (Interface|Traffic profile)
+var DisplayTrafficFilterAppliedRecord_Template string = `Value Filldown INSTANCE_TYPE (Interface|Traffic profile)
 Value Required INSTANCE (\S+)
 Value Required DIRECTION (inbound|outbound)
 Value IP_VERSION ((ip|IP)v(4|6))

@@ -1,11 +1,11 @@
-package checkpoint_gaia 
+package checkpoint_gaia
 
 type ShowDns struct {
-	Domain	string	`json:"DOMAIN"`
-	Dns_servers	[]string	`json:"DNS_SERVERS"`
+	Domain      string   `json:"DOMAIN"`
+	Dns_servers []string `json:"DNS_SERVERS"`
 }
 
-var ShowDns_Template = `Value DOMAIN (\S+)
+var ShowDns_Template string = `Value DOMAIN (\S+)
 Value List DNS_SERVERS (\S+)
 
 Start

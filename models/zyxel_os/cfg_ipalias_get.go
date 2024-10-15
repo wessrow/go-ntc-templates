@@ -1,16 +1,16 @@
-package zyxel_os 
+package zyxel_os
 
 type CfgIpaliasGet struct {
-	Name	string	`json:"NAME"`
-	Ip_alias_active	string	`json:"IP_ALIAS_ACTIVE"`
-	Ip_alias_address	string	`json:"IP_ALIAS_ADDRESS"`
-	Ip_alias_netmask	string	`json:"IP_ALIAS_NETMASK"`
-	Publan_active	string	`json:"PUBLAN_ACTIVE"`
-	Publan_ip_address	string	`json:"PUBLAN_IP_ADDRESS"`
-	Publan_netmask	string	`json:"PUBLAN_NETMASK"`
+	Ip_alias_netmask  string `json:"IP_ALIAS_NETMASK"`
+	Publan_active     string `json:"PUBLAN_ACTIVE"`
+	Publan_ip_address string `json:"PUBLAN_IP_ADDRESS"`
+	Publan_netmask    string `json:"PUBLAN_NETMASK"`
+	Name              string `json:"NAME"`
+	Ip_alias_active   string `json:"IP_ALIAS_ACTIVE"`
+	Ip_alias_address  string `json:"IP_ALIAS_ADDRESS"`
 }
 
-var CfgIpaliasGet_Template = `Value NAME (.+?)
+var CfgIpaliasGet_Template string = `Value NAME (.+?)
 Value IP_ALIAS_ACTIVE (0|1)
 Value IP_ALIAS_ADDRESS (\S+)
 Value IP_ALIAS_NETMASK (\S+)

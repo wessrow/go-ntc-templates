@@ -1,18 +1,18 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type SystemRouterboardPrint struct {
-	Routerboard	string	`json:"ROUTERBOARD"`
-	Board_name	string	`json:"BOARD_NAME"`
-	Hardware_model	string	`json:"HARDWARE_MODEL"`
-	Revision	string	`json:"REVISION"`
-	Serial_number	string	`json:"SERIAL_NUMBER"`
-	Firmware_type	string	`json:"FIRMWARE_TYPE"`
-	Factory_firmware	string	`json:"FACTORY_FIRMWARE"`
-	Current_firmware	string	`json:"CURRENT_FIRMWARE"`
-	Upgrade_firmware	string	`json:"UPGRADE_FIRMWARE"`
+	Hardware_model   string `json:"HARDWARE_MODEL"`
+	Revision         string `json:"REVISION"`
+	Firmware_type    string `json:"FIRMWARE_TYPE"`
+	Factory_firmware string `json:"FACTORY_FIRMWARE"`
+	Current_firmware string `json:"CURRENT_FIRMWARE"`
+	Upgrade_firmware string `json:"UPGRADE_FIRMWARE"`
+	Routerboard      string `json:"ROUTERBOARD"`
+	Board_name       string `json:"BOARD_NAME"`
+	Serial_number    string `json:"SERIAL_NUMBER"`
 }
 
-var SystemRouterboardPrint_Template = `Value ROUTERBOARD (\S+)
+var SystemRouterboardPrint_Template string = `Value ROUTERBOARD (\S+)
 Value BOARD_NAME (.+)
 Value HARDWARE_MODEL (.+)
 Value REVISION (.+)

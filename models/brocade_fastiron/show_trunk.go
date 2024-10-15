@@ -1,34 +1,34 @@
-package brocade_fastiron 
+package brocade_fastiron
 
 type ShowTrunk struct {
-	Id	string	`json:"ID"`
-	Port1	string	`json:"PORT1"`
-	Port2	string	`json:"PORT2"`
-	Port3	string	`json:"PORT3"`
-	Port4	string	`json:"PORT4"`
-	Port5	string	`json:"PORT5"`
-	Port6	string	`json:"PORT6"`
-	Port7	string	`json:"PORT7"`
-	Port8	string	`json:"PORT8"`
-	Link1	string	`json:"LINK1"`
-	Link2	string	`json:"LINK2"`
-	Link3	string	`json:"LINK3"`
-	Link4	string	`json:"LINK4"`
-	Link5	string	`json:"LINK5"`
-	Link6	string	`json:"LINK6"`
-	Link7	string	`json:"LINK7"`
-	Link8	string	`json:"LINK8"`
-	State1	string	`json:"STATE1"`
-	State2	string	`json:"STATE2"`
-	State3	string	`json:"STATE3"`
-	State4	string	`json:"STATE4"`
-	State5	string	`json:"STATE5"`
-	State6	string	`json:"STATE6"`
-	State7	string	`json:"STATE7"`
-	State8	string	`json:"STATE8"`
+	State7 string `json:"STATE7"`
+	Link1  string `json:"LINK1"`
+	Link3  string `json:"LINK3"`
+	Link5  string `json:"LINK5"`
+	Link8  string `json:"LINK8"`
+	State2 string `json:"STATE2"`
+	State4 string `json:"STATE4"`
+	Port2  string `json:"PORT2"`
+	Port7  string `json:"PORT7"`
+	Port8  string `json:"PORT8"`
+	Link6  string `json:"LINK6"`
+	Link7  string `json:"LINK7"`
+	State1 string `json:"STATE1"`
+	State5 string `json:"STATE5"`
+	Port1  string `json:"PORT1"`
+	Link2  string `json:"LINK2"`
+	Link4  string `json:"LINK4"`
+	Port5  string `json:"PORT5"`
+	Port6  string `json:"PORT6"`
+	State3 string `json:"STATE3"`
+	State6 string `json:"STATE6"`
+	State8 string `json:"STATE8"`
+	Id     string `json:"ID"`
+	Port3  string `json:"PORT3"`
+	Port4  string `json:"PORT4"`
 }
 
-var ShowTrunk_Template = `Value Filldown ID ([0-9\/]+)
+var ShowTrunk_Template string = `Value Filldown ID ([0-9\/]+)
 Value Required PORT1 ([0-9\/]+)
 Value PORT2 ([0-9\/]+)
 Value PORT3 ([0-9\/]+)

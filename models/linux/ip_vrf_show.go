@@ -1,11 +1,11 @@
-package linux 
+package linux
 
 type IpVrfShow struct {
-	Name	string	`json:"NAME"`
-	Table	string	`json:"TABLE"`
+	Name  string `json:"NAME"`
+	Table string `json:"TABLE"`
 }
 
-var IpVrfShow_Template = `Value Required NAME (\S+)
+var IpVrfShow_Template string = `Value Required NAME (\S+)
 Value TABLE (\d+)
 
 Start

@@ -1,14 +1,14 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRunningConfigIpRoute struct {
-	Network	string	`json:"NETWORK"`
-	Mask	string	`json:"MASK"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Nexthop_interface	string	`json:"NEXTHOP_INTERFACE"`
-	Vrf	string	`json:"VRF"`
+	Nexthop_ip        string `json:"NEXTHOP_IP"`
+	Nexthop_interface string `json:"NEXTHOP_INTERFACE"`
+	Vrf               string `json:"VRF"`
+	Network           string `json:"NETWORK"`
+	Mask              string `json:"MASK"`
 }
 
-var ShowRunningConfigIpRoute_Template = `Value Required NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
+var ShowRunningConfigIpRoute_Template string = `Value Required NETWORK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
 Value MASK (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
 Value NEXTHOP_IP (\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})
 Value NEXTHOP_INTERFACE (\w[\w\-\.:\/]+( [\d\.]+)?)

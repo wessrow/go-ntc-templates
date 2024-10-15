@@ -1,13 +1,13 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowPortSecurity struct {
-	Port	string	`json:"PORT"`
-	Learn_mode	string	`json:"LEARN_MODE"`
-	Action	string	`json:"ACTION"`
-	Eavesdrop_prevention	string	`json:"EAVESDROP_PREVENTION"`
+	Learn_mode           string `json:"LEARN_MODE"`
+	Action               string `json:"ACTION"`
+	Eavesdrop_prevention string `json:"EAVESDROP_PREVENTION"`
+	Port                 string `json:"PORT"`
 }
 
-var ShowPortSecurity_Template = `Value PORT (\S+)
+var ShowPortSecurity_Template string = `Value PORT (\S+)
 Value LEARN_MODE (\S+)
 Value ACTION (None|Send\s+Alarm|Send\s+Alarm\S+\s+Disable\s+Port)
 Value EAVESDROP_PREVENTION (Enabled|Disabled)

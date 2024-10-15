@@ -1,16 +1,16 @@
-package fortinet 
+package fortinet
 
 type GetRouterInfoRoutingTableAll struct {
-	Type	string	`json:"TYPE"`
-	Destination	string	`json:"DESTINATION"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Gateway	string	`json:"GATEWAY"`
-	Interface	string	`json:"INTERFACE"`
-	Last_time_update	string	`json:"LAST_TIME_UPDATE"`
+	Type             string `json:"TYPE"`
+	Destination      string `json:"DESTINATION"`
+	Distance         string `json:"DISTANCE"`
+	Metric           string `json:"METRIC"`
+	Gateway          string `json:"GATEWAY"`
+	Interface        string `json:"INTERFACE"`
+	Last_time_update string `json:"LAST_TIME_UPDATE"`
 }
 
-var GetRouterInfoRoutingTableAll_Template = `Value Filldown TYPE ((?:K|C|S|R|B|O|IA|N1|N2|E1|E2|i|L1|L2|ia|\*|\s)+?)
+var GetRouterInfoRoutingTableAll_Template string = `Value Filldown TYPE ((?:K|C|S|R|B|O|IA|N1|N2|E1|E2|i|L1|L2|ia|\*|\s)+?)
 Value Filldown DESTINATION (\S+)
 Value DISTANCE (\d+)
 Value METRIC (\d+)

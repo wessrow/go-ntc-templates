@@ -1,16 +1,16 @@
-package ruckus_fastiron 
+package ruckus_fastiron
 
 type ShowVlan struct {
-	Vlan_id	string	`json:"VLAN_ID"`
-	Vlan_name	string	`json:"VLAN_NAME"`
-	Status	string	`json:"STATUS"`
-	Stack_id	string	`json:"STACK_ID"`
-	Slot	string	`json:"SLOT"`
-	Port	string	`json:"PORT"`
-	Lag	string	`json:"LAG"`
+	Lag       string `json:"LAG"`
+	Vlan_id   string `json:"VLAN_ID"`
+	Vlan_name string `json:"VLAN_NAME"`
+	Status    string `json:"STATUS"`
+	Stack_id  string `json:"STACK_ID"`
+	Slot      string `json:"SLOT"`
+	Port      string `json:"PORT"`
 }
 
-var ShowVlan_Template = `Value Filldown VLAN_ID (\d+)
+var ShowVlan_Template string = `Value Filldown VLAN_ID (\d+)
 Value Filldown VLAN_NAME (\S+)
 Value Required STATUS ((Untagged|Tagged))
 Value STACK_ID (\d+)

@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowIpRouteSummary struct {
-	Route_source	string	`json:"ROUTE_SOURCE"`
-	Name	string	`json:"NAME"`
-	Networks	string	`json:"NETWORKS"`
-	Subnets	string	`json:"SUBNETS"`
-	Replicates	string	`json:"REPLICATES"`
-	Overhead	string	`json:"OVERHEAD"`
-	Memory	string	`json:"MEMORY"`
+	Subnets      string `json:"SUBNETS"`
+	Replicates   string `json:"REPLICATES"`
+	Overhead     string `json:"OVERHEAD"`
+	Memory       string `json:"MEMORY"`
+	Route_source string `json:"ROUTE_SOURCE"`
+	Name         string `json:"NAME"`
+	Networks     string `json:"NETWORKS"`
 }
 
-var ShowIpRouteSummary_Template = `Value Required ROUTE_SOURCE ([^\s][\S ]+?)
+var ShowIpRouteSummary_Template string = `Value Required ROUTE_SOURCE ([^\s][\S ]+?)
 Value Filldown NAME (.*)
 Value NETWORKS (\d*)
 Value SUBNETS (\d*)

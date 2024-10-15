@@ -1,15 +1,15 @@
-package cisco_xr 
+package cisco_xr
 
 type ShowVersion struct {
-	Version	string	`json:"VERSION"`
-	Uptime	string	`json:"UPTIME"`
-	Location	string	`json:"LOCATION"`
-	Hardware	string	`json:"HARDWARE"`
-	Build_host	string	`json:"BUILD_HOST"`
-	Label	string	`json:"LABEL"`
+	Build_host string `json:"BUILD_HOST"`
+	Label      string `json:"LABEL"`
+	Version    string `json:"VERSION"`
+	Uptime     string `json:"UPTIME"`
+	Location   string `json:"LOCATION"`
+	Hardware   string `json:"HARDWARE"`
 }
 
-var ShowVersion_Template = `Value VERSION (\S[^\[]+)
+var ShowVersion_Template string = `Value VERSION (\S[^\[]+)
 Value UPTIME (.+?)
 Value LOCATION (\S+)
 Value HARDWARE (.+)

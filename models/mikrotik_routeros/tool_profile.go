@@ -1,12 +1,12 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type ToolProfile struct {
-	Name	string	`json:"NAME"`
-	Cpu	string	`json:"CPU"`
-	Usage	string	`json:"USAGE"`
+	Name  string `json:"NAME"`
+	Cpu   string `json:"CPU"`
+	Usage string `json:"USAGE"`
 }
 
-var ToolProfile_Template = `Value NAME (\S+)
+var ToolProfile_Template string = `Value NAME (\S+)
 Value CPU (\S+)
 Value USAGE (\d+|\d+.\d+)
 

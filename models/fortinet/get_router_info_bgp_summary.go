@@ -1,13 +1,13 @@
-package fortinet 
+package fortinet
 
 type GetRouterInfoBgpSummary struct {
-	Bgp_neigh	string	`json:"BGP_NEIGH"`
-	Neigh_as	string	`json:"NEIGH_AS"`
-	Up_down	string	`json:"UP_DOWN"`
-	State_pfxrcd	string	`json:"STATE_PFXRCD"`
+	Bgp_neigh    string `json:"BGP_NEIGH"`
+	Neigh_as     string `json:"NEIGH_AS"`
+	Up_down      string `json:"UP_DOWN"`
+	State_pfxrcd string `json:"STATE_PFXRCD"`
 }
 
-var GetRouterInfoBgpSummary_Template = `Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
+var GetRouterInfoBgpSummary_Template string = `Value BGP_NEIGH (\d+?\.\d+?\.\d+?\.\d+?)
 Value NEIGH_AS (\d+)
 Value UP_DOWN (\S+)
 Value STATE_PFXRCD (\w+)

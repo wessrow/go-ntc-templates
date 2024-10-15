@@ -1,22 +1,22 @@
-package arista_eos 
+package arista_eos
 
 type ShowIpOspfSummary struct {
-	Instance	string	`json:"INSTANCE"`
-	Router_id	string	`json:"ROUTER_ID"`
-	Vrf	string	`json:"VRF"`
-	Area	string	`json:"AREA"`
-	Type	string	`json:"TYPE"`
-	Interfaces	string	`json:"INTERFACES"`
-	Neighbors	string	`json:"NEIGHBORS"`
-	Neighbors_full	string	`json:"NEIGHBORS_FULL"`
-	Router_lsas	string	`json:"ROUTER_LSAS"`
-	Network_lsas	string	`json:"NETWORK_LSAS"`
-	Summary_lsas	string	`json:"SUMMARY_LSAS"`
-	Asbr_lsas	string	`json:"ASBR_LSAS"`
-	Nssa_lsas	string	`json:"NSSA_LSAS"`
+	Network_lsas   string `json:"NETWORK_LSAS"`
+	Instance       string `json:"INSTANCE"`
+	Area           string `json:"AREA"`
+	Type           string `json:"TYPE"`
+	Interfaces     string `json:"INTERFACES"`
+	Neighbors      string `json:"NEIGHBORS"`
+	Asbr_lsas      string `json:"ASBR_LSAS"`
+	Nssa_lsas      string `json:"NSSA_LSAS"`
+	Router_id      string `json:"ROUTER_ID"`
+	Vrf            string `json:"VRF"`
+	Neighbors_full string `json:"NEIGHBORS_FULL"`
+	Router_lsas    string `json:"ROUTER_LSAS"`
+	Summary_lsas   string `json:"SUMMARY_LSAS"`
 }
 
-var ShowIpOspfSummary_Template = `Value Filldown INSTANCE (\d+)
+var ShowIpOspfSummary_Template string = `Value Filldown INSTANCE (\d+)
 Value Filldown ROUTER_ID (\d+\.\d+\.\d+\.\d+)
 Value Filldown VRF (\S+)
 Value AREA (\d+\.\d+\.\d+\.\d+)

@@ -1,16 +1,16 @@
-package arista_eos 
+package arista_eos
 
 type ShowEnvironmentCooling struct {
-	Fan	string	`json:"FAN"`
-	Status	string	`json:"STATUS"`
-	Config_speed	string	`json:"CONFIG_SPEED"`
-	Actual_speed	string	`json:"ACTUAL_SPEED"`
-	Sys_cooling_status	string	`json:"SYS_COOLING_STATUS"`
-	Ambient_temp	string	`json:"AMBIENT_TEMP"`
-	Airflow	string	`json:"AIRFLOW"`
+	Sys_cooling_status string `json:"SYS_COOLING_STATUS"`
+	Ambient_temp       string `json:"AMBIENT_TEMP"`
+	Airflow            string `json:"AIRFLOW"`
+	Fan                string `json:"FAN"`
+	Status             string `json:"STATUS"`
+	Config_speed       string `json:"CONFIG_SPEED"`
+	Actual_speed       string `json:"ACTUAL_SPEED"`
 }
 
-var ShowEnvironmentCooling_Template = `Value Required FAN (\S+)
+var ShowEnvironmentCooling_Template string = `Value Required FAN (\S+)
 Value STATUS (\S+\s?\S+)
 Value CONFIG_SPEED (\S+)
 Value ACTUAL_SPEED (\S+)

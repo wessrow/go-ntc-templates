@@ -1,14 +1,14 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowRunningConfigAaa struct {
-	Aaa_group	string	`json:"AAA_GROUP"`
-	Aaa_protocol	string	`json:"AAA_PROTOCOL"`
-	Aaa_command	string	`json:"AAA_COMMAND"`
-	Aaa_config	[]string	`json:"AAA_CONFIG"`
-	Aaa_servers	[]string	`json:"AAA_SERVERS"`
+	Aaa_group    string   `json:"AAA_GROUP"`
+	Aaa_protocol string   `json:"AAA_PROTOCOL"`
+	Aaa_command  string   `json:"AAA_COMMAND"`
+	Aaa_config   []string `json:"AAA_CONFIG"`
+	Aaa_servers  []string `json:"AAA_SERVERS"`
 }
 
-var ShowRunningConfigAaa_Template = `Value Filldown AAA_GROUP (\S+)
+var ShowRunningConfigAaa_Template string = `Value Filldown AAA_GROUP (\S+)
 Value Required AAA_PROTOCOL (authentication|authorization|accounting)
 Value AAA_COMMAND (\w+)
 Value List AAA_CONFIG (.*)

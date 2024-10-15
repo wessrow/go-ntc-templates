@@ -1,20 +1,20 @@
-package huawei_vrp 
+package huawei_vrp
 
 type DisplayIpv6Neighbors struct {
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	State	string	`json:"STATE"`
-	Interface	string	`json:"INTERFACE"`
-	Age	string	`json:"AGE"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Ce_vlan	string	`json:"CE_VLAN"`
-	Vpn_name	string	`json:"VPN_NAME"`
-	Is_router	string	`json:"IS_ROUTER"`
-	Secure_flag	string	`json:"SECURE_FLAG"`
-	Nickname	string	`json:"NICKNAME"`
+	Mac_address  string `json:"MAC_ADDRESS"`
+	State        string `json:"STATE"`
+	Vlan_id      string `json:"VLAN_ID"`
+	Vpn_name     string `json:"VPN_NAME"`
+	Is_router    string `json:"IS_ROUTER"`
+	Secure_flag  string `json:"SECURE_FLAG"`
+	Ipv6_address string `json:"IPV6_ADDRESS"`
+	Interface    string `json:"INTERFACE"`
+	Age          string `json:"AGE"`
+	Ce_vlan      string `json:"CE_VLAN"`
+	Nickname     string `json:"NICKNAME"`
 }
 
-var DisplayIpv6Neighbors_Template = `Value IPV6_ADDRESS (\S+)
+var DisplayIpv6Neighbors_Template string = `Value IPV6_ADDRESS (\S+)
 Value MAC_ADDRESS (([\d\w]{4}-){2}[\d\w]{4})
 Value STATE (INCMP|REACH|STALE|DELAY|PROBE)
 Value INTERFACE (\S+)

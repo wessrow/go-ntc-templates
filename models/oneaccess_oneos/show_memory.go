@@ -1,15 +1,15 @@
-package oneaccess_oneos 
+package oneaccess_oneos
 
 type ShowMemory struct {
-	Ram	string	`json:"RAM"`
-	Boot_size	string	`json:"BOOT_SIZE"`
-	Flash_size	string	`json:"FLASH_SIZE"`
-	User_partition_total	string	`json:"USER_PARTITION_TOTAL"`
-	User_partition_used	string	`json:"USER_PARTITION_USED"`
-	User_partition_free	string	`json:"USER_PARTITION_FREE"`
+	Ram                  string `json:"RAM"`
+	Boot_size            string `json:"BOOT_SIZE"`
+	Flash_size           string `json:"FLASH_SIZE"`
+	User_partition_total string `json:"USER_PARTITION_TOTAL"`
+	User_partition_used  string `json:"USER_PARTITION_USED"`
+	User_partition_free  string `json:"USER_PARTITION_FREE"`
 }
 
-var ShowMemory_Template = `Value RAM (\S+|\d+\s?\d+)
+var ShowMemory_Template string = `Value RAM (\S+|\d+\s?\d+)
 Value BOOT_SIZE (\S+|\d+\s?\d+)
 Value FLASH_SIZE (\S+|\d+\s?\d+)
 Value USER_PARTITION_TOTAL (\S+|\d+\s?\d+)

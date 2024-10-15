@@ -1,18 +1,18 @@
-package avaya_ers 
+package avaya_ers
 
 type ShowMltAllMembers struct {
-	Mltid	string	`json:"MLTID"`
-	Mltname	string	`json:"MLTNAME"`
-	Mltactivemembers	string	`json:"MLTACTIVEMEMBERS"`
-	Mltinactivemembers	string	`json:"MLTINACTIVEMEMBERS"`
-	Mltbpdu	string	`json:"MLTBPDU"`
-	Mltmode	string	`json:"MLTMODE"`
-	Mltstatus	string	`json:"MLTSTATUS"`
-	Mlttype	string	`json:"MLTTYPE"`
-	Mltlacpkey	string	`json:"MLTLACPKEY"`
+	Mltlacpkey         string `json:"MLTLACPKEY"`
+	Mltid              string `json:"MLTID"`
+	Mltname            string `json:"MLTNAME"`
+	Mltactivemembers   string `json:"MLTACTIVEMEMBERS"`
+	Mltstatus          string `json:"MLTSTATUS"`
+	Mlttype            string `json:"MLTTYPE"`
+	Mltinactivemembers string `json:"MLTINACTIVEMEMBERS"`
+	Mltbpdu            string `json:"MLTBPDU"`
+	Mltmode            string `json:"MLTMODE"`
 }
 
-var ShowMltAllMembers_Template = `Value Required MLTID (\d+)
+var ShowMltAllMembers_Template string = `Value Required MLTID (\d+)
 Value MLTNAME (.*?)
 Value MLTACTIVEMEMBERS (\S+?)
 Value MLTINACTIVEMEMBERS (\S+?)

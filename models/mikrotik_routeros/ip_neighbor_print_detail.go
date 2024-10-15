@@ -1,28 +1,28 @@
-package mikrotik_routeros 
+package mikrotik_routeros
 
 type IpNeighborPrintDetail struct {
-	Number	string	`json:"NUMBER"`
-	Interface	string	`json:"INTERFACE"`
-	Ip_address	string	`json:"IP_ADDRESS"`
-	Ipv4_address	string	`json:"IPV4_ADDRESS"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Identity	string	`json:"IDENTITY"`
-	Platform	string	`json:"PLATFORM"`
-	Version	string	`json:"VERSION"`
-	Unpack	string	`json:"UNPACK"`
-	Age	string	`json:"AGE"`
-	Uptime	string	`json:"UPTIME"`
-	Software_id	string	`json:"SOFTWARE_ID"`
-	Board	string	`json:"BOARD"`
-	Ipv6	string	`json:"IPV6"`
-	Interface_name	string	`json:"INTERFACE_NAME"`
-	System_description	string	`json:"SYSTEM_DESCRIPTION"`
-	System_caps	string	`json:"SYSTEM_CAPS"`
-	System_caps_enabled	string	`json:"SYSTEM_CAPS_ENABLED"`
+	Software_id         string `json:"SOFTWARE_ID"`
+	Board               string `json:"BOARD"`
+	Ipv6                string `json:"IPV6"`
+	System_caps         string `json:"SYSTEM_CAPS"`
+	Ipv6_address        string `json:"IPV6_ADDRESS"`
+	Identity            string `json:"IDENTITY"`
+	Age                 string `json:"AGE"`
+	Number              string `json:"NUMBER"`
+	Version             string `json:"VERSION"`
+	Mac_address         string `json:"MAC_ADDRESS"`
+	Platform            string `json:"PLATFORM"`
+	Uptime              string `json:"UPTIME"`
+	System_description  string `json:"SYSTEM_DESCRIPTION"`
+	System_caps_enabled string `json:"SYSTEM_CAPS_ENABLED"`
+	Interface           string `json:"INTERFACE"`
+	Ip_address          string `json:"IP_ADDRESS"`
+	Ipv4_address        string `json:"IPV4_ADDRESS"`
+	Unpack              string `json:"UNPACK"`
+	Interface_name      string `json:"INTERFACE_NAME"`
 }
 
-var IpNeighborPrintDetail_Template = `Value NUMBER (\d+)
+var IpNeighborPrintDetail_Template string = `Value NUMBER (\d+)
 Value INTERFACE (\S+)
 Value IP_ADDRESS (\S+)
 Value IPV4_ADDRESS (\S+)

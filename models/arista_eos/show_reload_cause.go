@@ -1,13 +1,13 @@
-package arista_eos 
+package arista_eos
 
 type ShowReloadCause struct {
-	Reload_cause	string	`json:"RELOAD_CAUSE"`
-	Reload_time	string	`json:"RELOAD_TIME"`
-	Recommended_action	string	`json:"RECOMMENDED_ACTION"`
-	Debug_info	string	`json:"DEBUG_INFO"`
+	Reload_cause       string `json:"RELOAD_CAUSE"`
+	Reload_time        string `json:"RELOAD_TIME"`
+	Recommended_action string `json:"RECOMMENDED_ACTION"`
+	Debug_info         string `json:"DEBUG_INFO"`
 }
 
-var ShowReloadCause_Template = `Value RELOAD_CAUSE (.+)
+var ShowReloadCause_Template string = `Value RELOAD_CAUSE (.+)
 Value RELOAD_TIME (.+)
 Value RECOMMENDED_ACTION (.+)
 Value DEBUG_INFO (.+)

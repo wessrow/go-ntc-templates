@@ -1,13 +1,13 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowInterfacesDescription struct {
-	Port	string	`json:"PORT"`
-	Status	string	`json:"STATUS"`
-	Protocol	string	`json:"PROTOCOL"`
-	Description	string	`json:"DESCRIPTION"`
+	Port        string `json:"PORT"`
+	Status      string `json:"STATUS"`
+	Protocol    string `json:"PROTOCOL"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var ShowInterfacesDescription_Template = `Value PORT (\S+)
+var ShowInterfacesDescription_Template string = `Value PORT (\S+)
 Value STATUS (up|down|deleted|admin\s+down|reset)
 Value PROTOCOL (up|down)
 Value DESCRIPTION (\S.*?)

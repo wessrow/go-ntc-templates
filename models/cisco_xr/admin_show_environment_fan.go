@@ -1,12 +1,12 @@
-package cisco_xr 
+package cisco_xr
 
 type AdminShowEnvironmentFan struct {
-	Module	string	`json:"MODULE"`
-	Type	string	`json:"TYPE"`
-	Fan_speed	[]string	`json:"FAN_SPEED"`
+	Module    string   `json:"MODULE"`
+	Type      string   `json:"TYPE"`
+	Fan_speed []string `json:"FAN_SPEED"`
 }
 
-var AdminShowEnvironmentFan_Template = `Value MODULE (\S+)
+var AdminShowEnvironmentFan_Template string = `Value MODULE (\S+)
 Value TYPE (\S+)
 Value List FAN_SPEED (\d+)
 

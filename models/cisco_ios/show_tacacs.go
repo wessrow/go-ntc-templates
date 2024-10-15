@@ -1,20 +1,20 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowTacacs struct {
-	Tacacs_server_name	string	`json:"TACACS_SERVER_NAME"`
-	Tacacs_server	string	`json:"TACACS_SERVER"`
-	Server_port	string	`json:"SERVER_PORT"`
-	Socket_opens	string	`json:"SOCKET_OPENS"`
-	Socket_closes	string	`json:"SOCKET_CLOSES"`
-	Socket_aborts	string	`json:"SOCKET_ABORTS"`
-	Socket_errors	string	`json:"SOCKET_ERRORS"`
-	Socket_timeouts	string	`json:"SOCKET_TIMEOUTS"`
-	Failed_connections	string	`json:"FAILED_CONNECTIONS"`
-	Packets_sent	string	`json:"PACKETS_SENT"`
-	Packet_received	string	`json:"PACKET_RECEIVED"`
+	Server_port        string `json:"SERVER_PORT"`
+	Socket_aborts      string `json:"SOCKET_ABORTS"`
+	Socket_timeouts    string `json:"SOCKET_TIMEOUTS"`
+	Socket_errors      string `json:"SOCKET_ERRORS"`
+	Failed_connections string `json:"FAILED_CONNECTIONS"`
+	Packets_sent       string `json:"PACKETS_SENT"`
+	Packet_received    string `json:"PACKET_RECEIVED"`
+	Tacacs_server_name string `json:"TACACS_SERVER_NAME"`
+	Tacacs_server      string `json:"TACACS_SERVER"`
+	Socket_opens       string `json:"SOCKET_OPENS"`
+	Socket_closes      string `json:"SOCKET_CLOSES"`
 }
 
-var ShowTacacs_Template = `Value TACACS_SERVER_NAME (.+?)
+var ShowTacacs_Template string = `Value TACACS_SERVER_NAME (.+?)
 Value TACACS_SERVER (.+?)
 Value SERVER_PORT (\d+)
 Value SOCKET_OPENS (\d+)

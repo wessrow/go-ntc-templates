@@ -1,16 +1,16 @@
-package cisco_ios 
+package cisco_ios
 
 type ShowSnmpUser struct {
-	User_name	string	`json:"USER_NAME"`
-	Engine_id	string	`json:"ENGINE_ID"`
-	Storage_type	string	`json:"STORAGE_TYPE"`
-	Access_list	string	`json:"ACCESS_LIST"`
-	Authentication_protocol	string	`json:"AUTHENTICATION_PROTOCOL"`
-	Privacy_protocol	string	`json:"PRIVACY_PROTOCOL"`
-	Group_name	string	`json:"GROUP_NAME"`
+	Group_name              string `json:"GROUP_NAME"`
+	User_name               string `json:"USER_NAME"`
+	Engine_id               string `json:"ENGINE_ID"`
+	Storage_type            string `json:"STORAGE_TYPE"`
+	Access_list             string `json:"ACCESS_LIST"`
+	Authentication_protocol string `json:"AUTHENTICATION_PROTOCOL"`
+	Privacy_protocol        string `json:"PRIVACY_PROTOCOL"`
 }
 
-var ShowSnmpUser_Template = `Value Required USER_NAME (\S+)
+var ShowSnmpUser_Template string = `Value Required USER_NAME (\S+)
 Value ENGINE_ID (\S+)
 Value STORAGE_TYPE (\S+)
 Value ACCESS_LIST (.*)

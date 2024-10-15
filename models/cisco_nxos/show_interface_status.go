@@ -1,16 +1,16 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInterfaceStatus struct {
-	Port	string	`json:"PORT"`
-	Name	string	`json:"NAME"`
-	Status	string	`json:"STATUS"`
-	Vlan_id	string	`json:"VLAN_ID"`
-	Duplex	string	`json:"DUPLEX"`
-	Speed	string	`json:"SPEED"`
-	Type	string	`json:"TYPE"`
+	Port    string `json:"PORT"`
+	Name    string `json:"NAME"`
+	Status  string `json:"STATUS"`
+	Vlan_id string `json:"VLAN_ID"`
+	Duplex  string `json:"DUPLEX"`
+	Speed   string `json:"SPEED"`
+	Type    string `json:"TYPE"`
 }
 
-var ShowInterfaceStatus_Template = `Value PORT (\S+)
+var ShowInterfaceStatus_Template string = `Value PORT (\S+)
 Value NAME (.*?)
 Value STATUS (\S+)
 Value VLAN_ID (\d+|routed|trunk|f-path|--)

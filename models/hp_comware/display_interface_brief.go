@@ -1,18 +1,18 @@
-package hp_comware 
+package hp_comware
 
 type DisplayInterfaceBrief struct {
-	Interface	string	`json:"INTERFACE"`
-	Link	string	`json:"LINK"`
-	Protocol	string	`json:"PROTOCOL"`
-	Main_ip	string	`json:"MAIN_IP"`
-	Speed	string	`json:"SPEED"`
-	Duplex	string	`json:"DUPLEX"`
-	Type	string	`json:"TYPE"`
-	Pvid	string	`json:"PVID"`
-	Description	string	`json:"DESCRIPTION"`
+	Type        string `json:"TYPE"`
+	Pvid        string `json:"PVID"`
+	Interface   string `json:"INTERFACE"`
+	Link        string `json:"LINK"`
+	Speed       string `json:"SPEED"`
+	Duplex      string `json:"DUPLEX"`
+	Protocol    string `json:"PROTOCOL"`
+	Main_ip     string `json:"MAIN_IP"`
+	Description string `json:"DESCRIPTION"`
 }
 
-var DisplayInterfaceBrief_Template = `Value INTERFACE (\S+)
+var DisplayInterfaceBrief_Template string = `Value INTERFACE (\S+)
 Value LINK (\S+)
 Value PROTOCOL ((?:UP|DOWN)(?:\(s\))?)
 Value MAIN_IP (\S+)

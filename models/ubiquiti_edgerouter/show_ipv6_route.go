@@ -1,17 +1,17 @@
-package ubiquiti_edgerouter 
+package ubiquiti_edgerouter
 
 type ShowIpv6Route struct {
-	Code	string	`json:"CODE"`
-	Ipv6_address	string	`json:"IPV6_ADDRESS"`
-	Prefix_length	string	`json:"PREFIX_LENGTH"`
-	Distance	string	`json:"DISTANCE"`
-	Metric	string	`json:"METRIC"`
-	Nexthop_ip	string	`json:"NEXTHOP_IP"`
-	Interface	string	`json:"INTERFACE"`
-	Uptime	string	`json:"UPTIME"`
+	Nexthop_ip    string `json:"NEXTHOP_IP"`
+	Interface     string `json:"INTERFACE"`
+	Uptime        string `json:"UPTIME"`
+	Code          string `json:"CODE"`
+	Ipv6_address  string `json:"IPV6_ADDRESS"`
+	Prefix_length string `json:"PREFIX_LENGTH"`
+	Distance      string `json:"DISTANCE"`
+	Metric        string `json:"METRIC"`
 }
 
-var ShowIpv6Route_Template = `Value CODE (\w{1,2})
+var ShowIpv6Route_Template string = `Value CODE (\w{1,2})
 Value IPV6_ADDRESS ([A-Za-z0-9:]+)
 Value PREFIX_LENGTH (\d{1,3})
 Value DISTANCE (\d+)

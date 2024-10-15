@@ -1,12 +1,12 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowInterfaceSnmpIfindex struct {
-	Port	string	`json:"PORT"`
-	Ifmib	string	`json:"IFMIB"`
-	Ifindex_hex	string	`json:"IFINDEX_HEX"`
+	Port        string `json:"PORT"`
+	Ifmib       string `json:"IFMIB"`
+	Ifindex_hex string `json:"IFINDEX_HEX"`
 }
 
-var ShowInterfaceSnmpIfindex_Template = `Value PORT (\S+)
+var ShowInterfaceSnmpIfindex_Template string = `Value PORT (\S+)
 Value IFMIB (\S+)
 Value IFINDEX_HEX (\S+)
 

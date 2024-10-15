@@ -1,15 +1,15 @@
-package ubiquiti_edgeswitch 
+package ubiquiti_edgeswitch
 
 type ShowVersion struct {
-	Version	string	`json:"VERSION"`
-	Switch_type	string	`json:"SWITCH_TYPE"`
-	Switch_model	string	`json:"SWITCH_MODEL"`
-	Serial	string	`json:"SERIAL"`
-	Mac_address	string	`json:"MAC_ADDRESS"`
-	Hw_revision	string	`json:"HW_REVISION"`
+	Hw_revision  string `json:"HW_REVISION"`
+	Version      string `json:"VERSION"`
+	Switch_type  string `json:"SWITCH_TYPE"`
+	Switch_model string `json:"SWITCH_MODEL"`
+	Serial       string `json:"SERIAL"`
+	Mac_address  string `json:"MAC_ADDRESS"`
 }
 
-var ShowVersion_Template = `Value VERSION (.*)
+var ShowVersion_Template string = `Value VERSION (.*)
 Value SWITCH_TYPE (\S+\s\S+\s\S+)
 Value SWITCH_MODEL (\S+)
 Value SERIAL (\S+)

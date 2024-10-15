@@ -1,16 +1,16 @@
-package hp_procurve 
+package hp_procurve
 
 type ShowInterfaces struct {
-	Port	string	`json:"PORT"`
-	Total_bytes	string	`json:"TOTAL_BYTES"`
-	Total_frames	string	`json:"TOTAL_FRAMES"`
-	Errors_rx	string	`json:"ERRORS_RX"`
-	Drops_tx	string	`json:"DROPS_TX"`
-	Flow_ctrl	string	`json:"FLOW_CTRL"`
-	Bcast_limit	string	`json:"BCAST_LIMIT"`
+	Total_frames string `json:"TOTAL_FRAMES"`
+	Errors_rx    string `json:"ERRORS_RX"`
+	Drops_tx     string `json:"DROPS_TX"`
+	Flow_ctrl    string `json:"FLOW_CTRL"`
+	Bcast_limit  string `json:"BCAST_LIMIT"`
+	Port         string `json:"PORT"`
+	Total_bytes  string `json:"TOTAL_BYTES"`
 }
 
-var ShowInterfaces_Template = `Value PORT (\S+)
+var ShowInterfaces_Template string = `Value PORT (\S+)
 Value TOTAL_BYTES (\S+)
 Value TOTAL_FRAMES (\S+)
 Value ERRORS_RX (\S+)

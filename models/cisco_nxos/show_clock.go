@@ -1,15 +1,15 @@
-package cisco_nxos 
+package cisco_nxos
 
 type ShowClock struct {
-	Time	string	`json:"TIME"`
-	Timezone	string	`json:"TIMEZONE"`
-	Dayweek	string	`json:"DAYWEEK"`
-	Month	string	`json:"MONTH"`
-	Day	string	`json:"DAY"`
-	Year	string	`json:"YEAR"`
+	Time     string `json:"TIME"`
+	Timezone string `json:"TIMEZONE"`
+	Dayweek  string `json:"DAYWEEK"`
+	Month    string `json:"MONTH"`
+	Day      string `json:"DAY"`
+	Year     string `json:"YEAR"`
 }
 
-var ShowClock_Template = `Value TIME (\d+:\d+:\d+\.\d+)
+var ShowClock_Template string = `Value TIME (\d+:\d+:\d+\.\d+)
 Value TIMEZONE (\w+)
 Value DAYWEEK (\w+)
 Value MONTH (\w+)
