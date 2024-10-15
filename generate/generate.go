@@ -37,6 +37,15 @@ func getPlatform(s string) string {
 	return regex.FindString(s)
 }
 
+func createPlatformDirectory(platform string) error {
+	pwd, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+	dirPath := pwd + "/models/" + platform
+	return os.MkdirAll(dirPath, os.ModePerm)
+}
+
 func capitalizeFirstLetterLowerRest(s string) string {
 	if len(s) == 0 {
 		return s
@@ -128,7 +137,7 @@ func generateStruct(structName string, template string, fields map[string]string
 				Values: []ast.Expr{
 					&ast.BasicLit{
 						Kind:  token.STRING,
-						Value: "`" + template + "`", // Use backticks for multiline string
+						Value: "`" + template + "`",
 					},
 				},
 			},
@@ -136,6 +145,11 @@ func generateStruct(structName string, template string, fields map[string]string
 	}
 
 	file.Decls = append(file.Decls, varDecl)
+
+	err := createPlatformDirectory(platform)
+	if err != nil {
+		return err
+	}
 
 	outFile, err := os.Create("models/" + platform + "/" + structName + ".go")
 	if err != nil {
