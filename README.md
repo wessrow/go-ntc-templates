@@ -2,9 +2,9 @@
 
 This package aims to implement further golang functionality when working with network-to-code templates for network device automation by combining the awesome screen-scraping capabilities of TextFSM with the rigid structure of working with `golang structs`.
 
-This package utilizes the the `github.com/sirikothe/gotextfsm` package which parses TextFSM-templates to JSON.
+This package utilizes the `github.com/sirikothe/gotextfsm` package which parses TextFSM-templates to JSON.
 
-Though JSON support for golang is extended, it is not as easy to work with as structs.
+Though JSON support for golang is extended, it is not as easy to work with as `structs`.
 
 This package therefore includes programmatically parsed and rendered golang-structs from the latest ntc-templates release.
 
@@ -32,7 +32,7 @@ The data to be parsed as a string.
 // If the target device is of model cisco_ios, and command is ex. "show version"
 command := "show version"
 // Ssh-execution logic omitted for brevity, see below full example.
-test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](commandReturn, cisco_ios.ShowVersion_Template)
+test, _ := gontc.ParseCommand[cisco_ios.ShowVersion](commandReturn)
 ```
 
 ### Models
