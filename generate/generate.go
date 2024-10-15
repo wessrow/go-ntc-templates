@@ -39,26 +39,23 @@ func getPlatform(s string) string {
 
 func capitalizeFirstLetterLowerRest(s string) string {
 	if len(s) == 0 {
-		return s // return the original string if it's empty
+		return s
 	}
 	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
 }
 
 func toCamelCase(str string) string {
-	// Replace all - and . with spaces
+
 	str = strings.ReplaceAll(str, "-", " ")
 	str = strings.ReplaceAll(str, ".", " ")
 	str = strings.ReplaceAll(str, "_", " ")
 
-	// Split the string by spaces
 	parts := strings.Fields(str)
 
-	// Convert each part to TitleCase (CamelCase)
 	for i, part := range parts {
 		parts[i] = strings.Title(part)
 	}
 
-	// Join them back together to form CamelCase
 	return strings.Join(parts, "")
 }
 
