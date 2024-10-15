@@ -100,10 +100,10 @@ func generateStruct(structName string, template string, fields map[string]string
 	}
 
 	for fieldName, fieldType := range fields {
-		fieldName = capitalizeFirstLetterLowerRest(fieldName)
+		structFieldName := capitalizeFirstLetterLowerRest(fieldName)
 		jsonTag := "`json:\"" + fieldName + "\"`"
 		field := &ast.Field{
-			Names: []*ast.Ident{ast.NewIdent(fieldName)},
+			Names: []*ast.Ident{ast.NewIdent(structFieldName)},
 			Type:  ast.NewIdent(fieldType),
 			Tag:   &ast.BasicLit{Kind: token.STRING, Value: jsonTag},
 		}
